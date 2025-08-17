@@ -38,7 +38,7 @@ const Hero = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <svg 
-          className="w-8 h-8 text-white/70" 
+          className="w-12 h-12 text-white/70" 
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"
