@@ -12,6 +12,10 @@ const CTA = () => {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Kontaktirajte nas danas za besplatnu konsultaciju i ponudu. 
             Naš tim stručnjaka spremno je pomoći vam realizirati vaš projekt.
+            <br></br>
+            <br></br>
+            ⚠️ Zbog velike potražnje, broj termina je ograničen. Pošaljite upit danas.
+
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -32,7 +36,16 @@ const CTA = () => {
               Pošalji upit
             </Button>
           </div>
-          
+          <p>
+          <br></br>
+          <br></br>
+          ✔️ Besplatno savjetovanje
+          <br></br>
+          ✔️ Izlazak na teren i izmjera
+          <br></br>
+          ✔️ Prijedlog idealnog rješenja
+          </p>
+          <br></br>
           <div className="mt-8 text-sm text-muted-foreground">
             <p>📞 <strong>+385 91 234 5678</strong> | ✉️ <strong>info@montazne-garaze.hr</strong></p>
           </div>
