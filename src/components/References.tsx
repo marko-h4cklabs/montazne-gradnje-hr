@@ -16,7 +16,10 @@ const References = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Što kažu naši kupci
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
+            Ljudi više ni ne pitaju "radite li dobro" – nego "imate li još garaža?"
+          </p>
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
             Zadovoljstvo naših kupaca je naš najveći uspjeh
           </p>
         </div>

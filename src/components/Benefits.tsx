@@ -21,6 +21,12 @@ const Benefits = () => {
       icon: Users,
       title: "Lokalna podrška",
       description: "Tim stručnjaka na vašoj strani od planiranja do završetka projekta."
+    },
+    {
+      icon: null,
+      title: "Pametna investicija",
+      description: "Garaža se isplati već prve zime",
+      emoji: "🧠"
     }
   ];
 
@@ -44,7 +50,11 @@ const Benefits = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full hero-gradient mb-6 group-hover:scale-110 smooth-transition">
-                <benefit.icon className="w-8 h-8 text-white" />
+                {benefit.emoji ? (
+                  <span className="text-3xl">{benefit.emoji}</span>
+                ) : (
+                  <benefit.icon className="w-8 h-8 text-white" />
+                )}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-foreground">
                 {benefit.title}
