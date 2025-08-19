@@ -1,7 +1,6 @@
 import FOMOBanner from "./FOMOBanner";
 import Hero from "./Hero";
 import Gallery from "./Gallery";
-import Benefits from "./Benefits";
 import References from "./References";
 import Stats from "./Stats";
 import FAQ from "./FAQ";
@@ -15,11 +14,10 @@ const LandingPage = () => {
       <FOMOBanner />
       <Hero />
       <Gallery />
-      <Benefits />
       <References />
-      <Stats />
-      <FAQ />
       <CTA />
+      <FAQ />
+      <Stats />
       <AdditionalCTA />
       <Footer />
     </div>
