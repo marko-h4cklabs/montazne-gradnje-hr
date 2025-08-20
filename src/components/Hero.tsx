@@ -1,16 +1,44 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-garaza.jpg";
+import { useState, useEffect } from "react";
+import heroGaraza from "@/assets/hero-garaza.jpg";
+import galerijaHala from "@/assets/galerija-hala.jpg";
+import galerijaBungalov from "@/assets/galerija-bungalov.jpg";
 
 const Hero = () => {
+  const images = [
+    { src: heroGaraza, alt: "Moderna montažna garaža" },
+    { src: galerijaHala, alt: "Montažna hala" },
+    { src: galerijaBungalov, alt: "Montažni bungalov" }
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Rotating Background Images */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Moderna montažna garaža"
-          className="w-full h-full object-cover"
-        />
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
