@@ -23,22 +23,22 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Rotating Background Images */}
+      {/* Scrolling Background Images Timeline */}
       <div className="absolute inset-0 z-0">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
+        <div 
+          className="flex w-[300%] h-full transition-transform duration-1000 ease-in-out"
+          style={{ transform: `translateX(-${currentImageIndex * (100 / 3)}%)` }}
+        >
+          {images.map((image, index) => (
+            <div key={index} className="w-1/3 h-full flex-shrink-0">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
