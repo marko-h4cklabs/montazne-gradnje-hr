@@ -1,3 +1,4 @@
+import Navigation from "./Navigation";
 import FOMOBanner from "./FOMOBanner";
 import Hero from "./Hero";
 import Gallery from "./Gallery";
@@ -11,6 +12,7 @@ import Footer from "./Footer";
 const LandingPage = () => {
   return (
     <div className="min-h-screen">
+      <Navigation />
       <FOMOBanner />
       <Hero />
       <Gallery />
