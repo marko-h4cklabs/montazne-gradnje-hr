@@ -8,10 +8,20 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      // Check if we're in the hero section (yellow background)
+      const heroSection = document.querySelector('[class*="bg-gradient"]');
+      if (heroSection) {
+        const heroRect = heroSection.getBoundingClientRect();
+        const isOverHero = heroRect.top <= 80 && heroRect.bottom > 80;
+        setIsScrolled(!isOverHero);
+      } else {
+        setIsScrolled(window.scrollY > 100);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Call initially to set correct state
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
