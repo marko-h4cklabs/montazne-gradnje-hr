@@ -17,33 +17,33 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 24 85% 53%;
-    --primary-foreground: 0 0% 100%;
-    --primary-dark: 24 85% 43%;
+    --primary: 43 100% 50%;
+    --primary-foreground: 0 0% 18%;
+    --primary-dark: 43 100% 45%;
 
     --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 20%;
+    --secondary-foreground: 0 0% 18%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 24 85% 53%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 43 100% 50%;
+    --accent-foreground: 0 0% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 0 0% 90%;
     --input: 0 0% 96%;
-    --ring: 24 85% 53%;
+    --ring: 43 100% 50%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(24 85% 53%), hsl(24 85% 43%));
+    --gradient-hero: linear-gradient(135deg, hsl(43 100% 50%), hsl(43 100% 45%));
     --gradient-section: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
     --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
-    --shadow-hero: 0 8px 32px -8px hsl(24 85% 53% / 0.3);
+    --shadow-hero: 0 8px 32px -8px hsl(43 100% 50% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -76,21 +76,21 @@ All colors MUST be HSL.
     --primary: 0 0% 90%;
     --primary-foreground: 210 51% 24%;
 
-    --secondary: 210 51% 24%;
+    --secondary: 0 0% 18%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 210 10% 20%;
     --muted-foreground: 210 10% 70%;
 
     --accent: 0 0% 18%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 43 100% 50%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 210 10% 25%;
     --input: 210 10% 15%;
-    --ring: 0 0% 90%;
+    --ring: 43 100% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
