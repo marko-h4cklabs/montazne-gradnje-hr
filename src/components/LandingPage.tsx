@@ -27,13 +27,13 @@ const LandingPage = () => {
       </div>
       <References />
       <SocialProof />
-      <FinalCTA />
+      <div id="kontakt">
+        <FinalCTA />
+      </div>
       <div id="o-nama">
         <AboutUs />
       </div>
-      <div id="kontakt">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };
