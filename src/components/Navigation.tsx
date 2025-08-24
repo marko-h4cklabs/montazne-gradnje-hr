@@ -1,80 +1,79 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = [
-    { label: "Početna", href: "#home" },
-    { label: "O nama", href: "#about" },
-    { label: "Proizvodi", href: "#products" },
-    { label: "Galerija", href: "#gallery" },
-    { label: "Reference", href: "#references" },
-    { label: "Kontakt", href: "#contact" },
+  const menuItems = [
+    { name: "NAŠI PROIZVODI", href: "#proizvodi" },
+    { name: "O NAMA", href: "#o-nama" },
+    { name: "PROCES", href: "#proces" },
+    { name: "GALERIJA", href: "#galerija" },
+    { name: "KONTAKT", href: "#kontakt" }
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-primary-dark/20">
+    <nav className="fixed top-0 w-full bg-white/98 backdrop-blur-md z-50 border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="text-xl font-bold text-primary-foreground">
-            Montažne Konstrukcije
+          <div className="flex items-center">
+            <h1 className="text-2xl font-bold text-primary">
+              MONTAŽ-STROY
+            </h1>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {menuItems.map((item) => (
               <a
-                key={item.label}
+                key={item.name}
                 href={item.href}
-                className="text-primary-foreground/90 hover:text-primary-foreground smooth-transition"
+                className="text-foreground hover:text-primary smooth-transition font-medium text-sm tracking-wide"
               >
-                {item.label}
+                {item.name}
               </a>
             ))}
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button 
-              variant="secondary"
-              className="bg-accent text-accent-foreground hover:bg-accent/90 smooth-transition"
-            >
-              Stupite u kontakt
+            <Button className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-8 py-2 font-semibold">
+              KONTAKTIRAJTE NAS
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-primary-foreground"
+            className="lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6 text-foreground" />
+            ) : (
+              <Menu className="h-6 w-6 text-foreground" />
+            )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-primary border-t border-primary-dark/20">
+          <div className="lg:hidden border-t border-border bg-white">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (
+              {menuItems.map((item) => (
                 <a
-                  key={item.label}
+                  key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-primary-foreground/90 hover:text-primary-foreground hover:bg-primary-dark/20 rounded-md smooth-transition"
+                  className="block px-3 py-3 text-foreground hover:text-primary smooth-transition font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.label}
+                  {item.name}
                 </a>
               ))}
-              <div className="px-3 py-2">
-                <Button 
-                  variant="secondary"
-                  className="w-full bg-accent text-accent-foreground hover:bg-accent/90 smooth-transition"
-                >
-                  Stupite u kontakt
+              <div className="px-3 pt-2">
+                <Button className="w-full bg-primary hover:bg-primary-dark text-primary-foreground rounded-full font-semibold">
+                  KONTAKTIRAJTE NAS
                 </Button>
               </div>
             </div>

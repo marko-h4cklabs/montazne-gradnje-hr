@@ -1,26 +1,26 @@
 import Navigation from "./Navigation";
-import FOMOBanner from "./FOMOBanner";
 import Hero from "./Hero";
+import WhyChooseUs from "./WhyChooseUs";
+import Process from "./Process";
+import ProductCategories from "./ProductCategories";
 import Gallery from "./Gallery";
 import References from "./References";
-import Stats from "./Stats";
-import FAQ from "./FAQ";
-import CTA from "./CTA";
-import AdditionalCTA from "./AdditionalCTA";
+import SocialProof from "./SocialProof";
+import FinalCTA from "./FinalCTA";
 import Footer from "./Footer";
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <FOMOBanner />
       <Hero />
+      <WhyChooseUs />
+      <Process />
+      <ProductCategories />
       <Gallery />
       <References />
-      <CTA />
-      <FAQ />
-      <Stats />
-      <AdditionalCTA />
+      <SocialProof />
+      <FinalCTA />
       <Footer />
     </div>
   );
