@@ -17,16 +17,6 @@ const WhyChooseUs = () => {
       icon: <Puzzle className="w-8 h-8" />,
       title: "Modularno i fleksibilno",
       description: "Možeš kasnije da dogradiš, pomeriš, nadogradiš."
-    },
-    {
-      icon: <Sparkles className="w-8 h-8" />,
-      title: "Manje prljavštine, manji haos",
-      description: "Zaboravi na šut i cement u dvorištu."
-    },
-    {
-      icon: <Home className="w-8 h-8" />,
-      title: "Estetika + funkcionalnost",
-      description: "Ne izgleda kao baraka. Izgleda kao dom."
     }
   ];
 
