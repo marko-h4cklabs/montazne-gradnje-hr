@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram } from "lucide-react";
 
 const AboutUs = () => {
   const handleMapClick = () => {
-    window.open("https://www.google.com/maps/place/BERIKO+d.o.o.+montažni+objekti/@45.9848412,17.1389723,17z/data=!4m8!3m7!1s0x4767ce19c0cfff0b:0x689e5a358d483b43!8m2!3d45.9848412!4d17.1415472!9m1!1b1!16s%2Fg%2F119tkwc60?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D", "_blank");
+    window.open("https://www.google.com/maps/place/BERIKO+d.o.o.+montažni+objekti/@45.9848449,17.1389723,17z/data=!3m1!4b1!4m6!3m5!1s0x4767ce19c0cfff0b:0x689e5a358d483b43!8m2!3d45.9848412!4d17.1415472!16s%2Fg%2F119tkwc60?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D", "_blank");
   };
 
   return (
@@ -57,7 +57,8 @@ const AboutUs = () => {
                   <MapPin className="w-5 h-5 text-primary mt-1" />
                   <div>
                     <p className="font-semibold text-card-foreground">Adresa:</p>
-                    <p className="text-muted-foreground">BERIKO d.o.o. montažni objekti</p>
+                    <p className="text-muted-foreground">HR-48362 KLOŠTAR PODRAVSKI</p>
+                    <p className="text-muted-foreground">Stjepana Radića 2</p>
                   </div>
                 </div>
                 
@@ -65,7 +66,7 @@ const AboutUs = () => {
                   <Phone className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-semibold text-card-foreground">Telefon:</p>
-                    <p className="text-muted-foreground">+387 XX XXX XXX</p>
+                    <p className="text-muted-foreground">098 64 62 60</p>
                   </div>
                 </div>
                 
@@ -73,7 +74,7 @@ const AboutUs = () => {
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-semibold text-card-foreground">Email:</p>
-                    <p className="text-muted-foreground">info@beriko.ba</p>
+                    <p className="text-muted-foreground">beriko@beriko.com</p>
                   </div>
                 </div>
               </div>
@@ -89,14 +90,11 @@ const AboutUs = () => {
               <div className="mt-6">
                 <p className="font-semibold mb-3 text-card-foreground">Pratite nas:</p>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-muted-foreground hover:text-primary smooth-transition">
+                  <a href="https://web.facebook.com/profile.php?id=61556832431837" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">
                     <Facebook className="w-5 h-5" />
                   </a>
-                  <a href="#" className="text-muted-foreground hover:text-primary smooth-transition">
+                  <a href="https://www.instagram.com/beriko.buildings/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">
                     <Instagram className="w-5 h-5" />
-                  </a>
-                  <a href="#" className="text-muted-foreground hover:text-primary smooth-transition">
-                    <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
               </div>
