@@ -15,8 +15,8 @@ const AboutUs = () => {
               O Nama
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              BERIKO d.o.o. je kompanija koja se specijalizuje za proizvodnju i montažu kvalitetnih montažnih objekata. 
-              Sa dugogodišnjim iskustvom u branši, pružamo kompletna rešenja za vaše potrebe.
+              BERIKO d.o.o. je kompanija koja se specijalizira za proizvodnju i montažu kvalitetnih montažnih objekata. 
+              Sa dugogodišnjim iskustvom u području (+15 godina), pružamo kompletna rješenja za vaše potrebe.
             </p>
           </div>
 
