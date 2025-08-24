@@ -1,9 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const menuItems = [
     { name: "NAŠI PROIZVODI", href: "#proizvodi" },
@@ -18,9 +28,13 @@ const Navigation = () => {
     const targetId = href.substring(1);
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      const offset = 80; // Account for fixed navbar height
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
       });
     }
     setIsMenuOpen(false);
@@ -44,7 +58,7 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleSmoothScroll(e, item.href)}
-                className="text-white hover:text-primary smooth-transition font-medium text-sm tracking-wide"
+                className={`${isScrolled ? 'text-primary' : 'text-white'} hover:text-primary smooth-transition font-medium text-sm tracking-wide`}
               >
                 {item.name}
               </a>
@@ -79,7 +93,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-3 text-white hover:text-primary smooth-transition font-medium"
+                  className="block px-3 py-3 text-foreground hover:text-primary smooth-transition font-medium"
                   onClick={(e) => handleSmoothScroll(e, item.href)}
                 >
                   {item.name}

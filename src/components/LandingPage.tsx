@@ -7,6 +7,7 @@ import Gallery from "./Gallery";
 import References from "./References";
 import SocialProof from "./SocialProof";
 import FinalCTA from "./FinalCTA";
+import AboutUs from "./AboutUs";
 import Footer from "./Footer";
 
 const LandingPage = () => {
@@ -14,9 +15,7 @@ const LandingPage = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <div id="o-nama">
-        <WhyChooseUs />
-      </div>
+      <WhyChooseUs />
       <div id="proces">
         <Process />
       </div>
@@ -29,6 +28,9 @@ const LandingPage = () => {
       <References />
       <SocialProof />
       <FinalCTA />
+      <div id="o-nama">
+        <AboutUs />
+      </div>
       <div id="kontakt">
         <Footer />
       </div>

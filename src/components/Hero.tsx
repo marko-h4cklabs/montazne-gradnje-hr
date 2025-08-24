@@ -34,11 +34,14 @@ const Hero = () => {
       {/* Background Images */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="flex w-[700%] h-full transition-transform duration-1000 ease-in-out"
-          style={{ transform: `translateX(-${currentImageIndex * (100 / 7)}%)` }}
+          className="flex h-full transition-transform duration-1000 ease-in-out"
+          style={{ 
+            width: `${images.length * 100}%`,
+            transform: `translateX(-${currentImageIndex * (100 / images.length)}%)` 
+          }}
         >
           {images.map((image, index) => (
-            <div key={index} className="w-1/7 h-full flex-shrink-0">
+            <div key={index} className="h-full flex-shrink-0" style={{ width: `${100 / images.length}%` }}>
               <img
                 src={image.src}
                 alt={image.alt}
