@@ -14,14 +14,24 @@ const LandingPage = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <WhyChooseUs />
-      <Process />
-      <ProductCategories />
-      <Gallery />
+      <div id="o-nama">
+        <WhyChooseUs />
+      </div>
+      <div id="proces">
+        <Process />
+      </div>
+      <div id="proizvodi">
+        <ProductCategories />
+      </div>
+      <div id="galerija">
+        <Gallery />
+      </div>
       <References />
       <SocialProof />
       <FinalCTA />
-      <Footer />
+      <div id="kontakt">
+        <Footer />
+      </div>
     </div>
   );
 };

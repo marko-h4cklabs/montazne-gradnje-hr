@@ -13,6 +13,19 @@ const Navigation = () => {
     { name: "KONTAKT", href: "#kontakt" }
   ];
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-white/98 backdrop-blur-md z-50 border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
@@ -30,6 +43,7 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
+                onClick={(e) => handleSmoothScroll(e, item.href)}
                 className="text-white hover:text-primary smooth-transition font-medium text-sm tracking-wide"
               >
                 {item.name}
@@ -66,7 +80,7 @@ const Navigation = () => {
                   key={item.name}
                   href={item.href}
                   className="block px-3 py-3 text-white hover:text-primary smooth-transition font-medium"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => handleSmoothScroll(e, item.href)}
                 >
                   {item.name}
                 </a>

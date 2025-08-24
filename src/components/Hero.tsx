@@ -1,14 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import heroGaraza from "@/assets/hero-garaza.jpg";
-import galerijaHala from "@/assets/galerija-hala.jpg";
-import galerijaBungalov from "@/assets/galerija-bungalov.jpg";
+import heroGarazaModern from "@/assets/hero-garaza-modern.jpg";
+import heroGarazaAlt from "@/assets/hero-garaza-alt.jpg";
+import heroHalaModern from "@/assets/hero-hala-modern.jpg";
+import heroHalaAlt from "@/assets/hero-hala-alt.jpg";
+import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
+import heroBungalovAlt from "@/assets/hero-bungalov-alt.jpg";
 
 const Hero = () => {
   const images = [
     { src: heroGaraza, alt: "Montažna garaža" },
-    { src: galerijaHala, alt: "Montažna hala" },
-    { src: galerijaBungalov, alt: "Montažni bungalov" }
+    { src: heroGarazaModern, alt: "Moderna garaža" },
+    { src: heroGarazaAlt, alt: "Industrijska garaža" },
+    { src: heroHalaModern, alt: "Moderna montažna hala" },
+    { src: heroHalaAlt, alt: "Industrijska hala" },
+    { src: heroBungalovModern, alt: "Moderni montažni bungalov" },
+    { src: heroBungalovAlt, alt: "Savremeni bungalov" }
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -26,11 +34,11 @@ const Hero = () => {
       {/* Background Images */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="flex w-[300%] h-full transition-transform duration-1000 ease-in-out"
-          style={{ transform: `translateX(-${currentImageIndex * (100 / 3)}%)` }}
+          className="flex w-[700%] h-full transition-transform duration-1000 ease-in-out"
+          style={{ transform: `translateX(-${currentImageIndex * (100 / 7)}%)` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="w-1/3 h-full flex-shrink-0">
+            <div key={index} className="w-1/7 h-full flex-shrink-0">
               <img
                 src={image.src}
                 alt={image.alt}
