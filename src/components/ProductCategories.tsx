@@ -5,21 +5,21 @@ import galerijaBungalov from "@/assets/galerija-bungalov.jpg";
 const ProductCategories = () => {
   const products = [
     {
-      icon: "🅿️",
+      icon: "",
       title: "Montažne Garaže",
-      description: "Zaštitite svoje vozilo ili alat — kvalitet, sigurnost i brzo rešenje, bez dozvola u mnogim opštinama.",
+      description: "Zaštitite svoje vozilo ili alat — kvalitetno, sigurno i brzo rješenje, bez dozvola u većini situacija.",
       image: heroGaraza
     },
     {
-      icon: "🛖",
+      icon: "",
       title: "Bungalovi & Vikendice", 
-      description: "Savršeno za odmor, izdavanje ili dodatni prostor na imanju. Sve urađeno po meri.",
+      description: "Savršeno za odmor, izdavanje ili dodatni prostor na zemljištu. Sve napravljeno po mjeri.",
       image: galerijaBungalov
     },
     {
-      icon: "🏢",
-      title: "Montažne Hale i Magacini",
-      description: "Industrijska rešenja, čelične konstrukcije, energetska efikasnost. Sve prema vašim dimenzijama.",
+      icon: "",
+      title: "Montažne Hale",
+      description: "Industrijska rješenja, čelične konstrukcije, energetska efikasnost. Sve prema vašim dimenzijama.",
       image: galerijaHala
     }
   ];
@@ -29,7 +29,7 @@ const ProductCategories = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Šta sve radimo?
+            Što sve radimo?
           </h2>
         </div>
         

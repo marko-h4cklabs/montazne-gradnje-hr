@@ -4,7 +4,7 @@ const SocialProof = () => {
   const proofs = [
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Više od 120 završenih montaža",
+      title: "Više od 210 završenih montaža",
       subtitle: "širom zemlje"
     },
     {
@@ -19,8 +19,8 @@ const SocialProof = () => {
     },
     {
       icon: <HeadphonesIcon className="w-8 h-8" />,
-      title: "Podrška posle ugradnje",
-      subtitle: "ne bežimo kad platite"
+      title: "Podrška nakon ugradnje",
+      subtitle: "ne bježimo kad platite"
     }
   ];
 

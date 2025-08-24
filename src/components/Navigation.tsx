@@ -20,7 +20,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className="text-2xl font-bold text-primary">
-              Bediko
+              Beriko
             </h1>
           </div>
 

@@ -6,17 +6,17 @@ const WhyChooseUs = () => {
     {
       icon: <Clock className="w-8 h-8" />,
       title: "Brzina izgradnje",
-      description: "Uselite se za nedelju dana, ne za šest meseci."
+      description: "Napravljena za nekoliko dana, ne za šest meseci."
     },
     {
       icon: <Calculator className="w-8 h-8" />,
-      title: "Fiksna cena", 
+      title: "Fiksna cijena", 
       description: "Nema dodatnih troškova. Nema \"joj, zaboravili smo\"."
     },
     {
       icon: <Puzzle className="w-8 h-8" />,
       title: "Modularno i fleksibilno",
-      description: "Možeš kasnije da dogradiš, pomeriš, nadogradiš."
+      description: "Kasnije možeš nadograditi, pomaknuti ili nadograditi."
     }
   ];
 

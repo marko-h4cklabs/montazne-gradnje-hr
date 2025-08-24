@@ -12,25 +12,25 @@ const Process = () => {
       icon: <Ruler className="w-10 h-10" />,
       number: "02", 
       title: "Plan + Ponuda",
-      description: "Šaljemo ti predlog rešenja i jasnu ponudu bez skrivenih stavki"
+      description: "Šaljemo ti prijedlog rješenja i jasnu ponudu bez skrivenih stavki"
     },
     {
       icon: <Factory className="w-10 h-10" />,
       number: "03",
       title: "Proizvodnja",
-      description: "Kad kažeš \"idemo\", kreće izrada u fabrici"
+      description: "Kad kažeš \"idemo\", kreće izrada u hali"
     },
     {
       icon: <Truck className="w-10 h-10" />,
       number: "04",
-      title: "Montaža na licu mesta",
+      title: "Montaža na licu mjesta",
       description: "Dolazimo, montiramo, završavamo"
     },
     {
       icon: <Key className="w-10 h-10" />,
       number: "05",
       title: "Ključ u ruke",
-      description: "Gotovo. Radi. Izgleda brutalno."
+      description: "Gotovo. Radi. Izgleda odlično."
     }
   ];
 

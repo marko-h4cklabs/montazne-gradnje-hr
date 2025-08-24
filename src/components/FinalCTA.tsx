@@ -8,11 +8,11 @@ const FinalCTA = () => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-secondary-foreground">
             🔥 Koliko još planiraš da čekaš <br />
-            da "dođe pravo vreme"?
+            da "dođe pravo vrijeme"?
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 text-secondary-foreground/90 leading-relaxed">
-            Sutra je već kasno. Već ti je dosta praznog dvorišta, kiše po haubi i ideje koja nikako da se realizuje.
+            Sutra je već kasno. Već ti je dosta kiše po haubi i ideja koje nikako da se realiziraju.
           </p>
           
           <p className="text-lg mb-12 text-secondary-foreground/80">
