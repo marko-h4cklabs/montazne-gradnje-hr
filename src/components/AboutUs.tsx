@@ -15,8 +15,9 @@ const AboutUs = () => {
               O Nama
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              BERIKO d.o.o. je kompanija koja se specijalizira za proizvodnju i montažu kvalitetnih montažnih objekata. 
-              Sa dugogodišnjim iskustvom u području (+15 godina), pružamo kompletna rješenja za vaše potrebe.
+              Beriko d.o.o. specijalizira se za proizvodnju i montažu kvalitetnih montažnih objekata.<br></br>
+              Sa iskustvom preko 20 godina, iza sebe brojimo više od 2000 projekata u 4 zemalja.<br></br><br></br>
+              <strong>Direktor</strong> i vlasnik: <strong>Bernard Domović</strong> - diplomirani ekonomist
             </p>
           </div>
 
@@ -27,14 +28,13 @@ const AboutUs = () => {
               </h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
                 Naša misija je da pružimo kvalitetne, pouzdane i estetski privlačne montažne objekte koji će služiti našim 
-                klijentima decenijama. Kombinujemo tradicionalno znanje sa modernim tehnologijama kako bismo isporučili 
-                najbolja rešenja na tržištu.
+                klijentima desetljećima. Kombiniramo tradicionalna znanja sa modernim tehnologijama kako bismo uvijek bili u stopi sa trendovima i zadovoljili želje i potrebe svakog kupca.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-foreground">Preko 10 godina iskustva</span>
+                  <span className="text-foreground">21 godina iskustva</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -42,7 +42,7 @@ const AboutUs = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-foreground">Garantovano kvalitet i rokovi</span>
+                  <span className="text-foreground">Garantirana kvaliteta i dogovoreni rokovi</span>
                 </div>
               </div>
             </div>
