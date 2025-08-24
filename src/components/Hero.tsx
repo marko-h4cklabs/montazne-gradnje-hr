@@ -45,14 +45,13 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          🏗️ Brza, Čista i Prava <br />
-          <span className="text-primary">Rešenja Za One Koji Ne Čekaju!</span>
+          Kvalitetno, Brzo, Isplativo <br />
+          <span className="text-primary">Riješenja za one koji traže kvalitetnu uslugu</span>
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          Montažne garaže, bungalovi i hale — postavljene za par dana, bez stresa, 
-          bez muljanja, bez dodatnih troškova. <br />
-          <strong>Sve urađeno kako treba — prvi put.</strong>
+          Montažne garaže, bungalovi i hale — postavljene za par dana, bez stresa <br />
+          <strong>bez muljanja, bez dodatnih troškova.</strong>
         </p>
         
         <Button 
