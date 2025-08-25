@@ -44,7 +44,9 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
         });
         onClose();
       } else {
-        throw new Error('Failed to send email');
+        const errorText = await response.text();
+        console.error('Response error:', response.status, errorText);
+        throw new Error(`Server error: ${response.status} - ${errorText}`);
       }
     } catch (error) {
       console.error('Contact form error:', error);
