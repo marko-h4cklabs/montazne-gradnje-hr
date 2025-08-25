@@ -7,12 +7,11 @@ const FinalCTA = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-secondary-foreground">
-            🔥 Koliko još planiraš da čekaš <br />
-            da "dođe pravo vrijeme"?
+            Garaža na koju će susjedi biti ljubomorni
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 text-secondary-foreground/90 leading-relaxed">
-            Sutra je već kasno. Već ti je dosta kiše po haubi i ideja koje nikako da se realiziraju.
+            Već ti je dosta kiše po haubi i ideja koje nikako da se realiziraju?
           </p>
           
           <p className="text-lg mb-12 text-secondary-foreground/80">
