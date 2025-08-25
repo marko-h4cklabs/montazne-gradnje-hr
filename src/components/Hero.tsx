@@ -1,20 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import heroGaraza from "@/assets/hero-garaza.jpg";
-import heroGarazaModern from "@/assets/hero-garaza-modern.jpg";
 import heroGarazaAlt from "@/assets/hero-garaza-alt.jpg";
-import heroHalaModern from "@/assets/hero-hala-modern.jpg";
-import heroHalaAlt from "@/assets/hero-hala-alt.jpg";
 import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
 import heroBungalovAlt from "@/assets/hero-bungalov-alt.jpg";
 
 const Hero = () => {
   const images = [
     { src: heroGaraza, alt: "Montažna garaža" },
-    { src: heroGarazaModern, alt: "Moderna garaža" },
     { src: heroGarazaAlt, alt: "Industrijska garaža" },
-    { src: heroHalaModern, alt: "Moderna montažna hala" },
-    { src: heroHalaAlt, alt: "Industrijska hala" },
     { src: heroBungalovModern, alt: "Moderni montažni bungalov" },
     { src: heroBungalovAlt, alt: "Savremeni bungalov" }
   ];
