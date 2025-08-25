@@ -9,13 +9,14 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Check if we're in the hero section (yellow background)
-      const heroSection = document.querySelector('[class*="bg-gradient"]');
+      const heroSection = document.querySelector('[class*="hero-gradient"], [class*="bg-gradient"], .hero-gradient');
       if (heroSection) {
         const heroRect = heroSection.getBoundingClientRect();
-        const isOverHero = heroRect.top <= 80 && heroRect.bottom > 80;
+        const isOverHero = heroRect.top <= 100 && heroRect.bottom > 100;
         setIsScrolled(!isOverHero);
       } else {
-        setIsScrolled(window.scrollY > 100);
+        // Fallback: if no hero section found, assume we're over yellow if near top
+        setIsScrolled(window.scrollY > 200);
       }
     };
 
