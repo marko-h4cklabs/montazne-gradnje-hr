@@ -44,7 +44,7 @@ serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'Web stranica <noreply@beriko-montage.com>',
+        from: 'onboarding@resend.dev',
         to: ['marko.srnec5@gmail.com'],
         subject: `Novi upit od ${firstName} ${lastName}`,
         html: emailContent,

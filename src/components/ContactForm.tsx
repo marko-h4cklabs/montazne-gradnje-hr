@@ -47,6 +47,7 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
         throw new Error('Failed to send email');
       }
     } catch (error) {
+      console.error('Contact form error:', error);
       toast({
         title: "Greška",
         description: "Došlo je do greške prilikom slanja upita. Molimo pokušajte ponovno.",
