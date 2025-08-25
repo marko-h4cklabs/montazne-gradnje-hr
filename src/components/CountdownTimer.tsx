@@ -5,13 +5,15 @@ interface CountdownTimerProps {
   showDays?: boolean;
   urgentText?: string;
   discountText?: string;
+  variant?: 'hero' | 'light';
 }
 
 const CountdownTimer = ({ 
   initialDays = 7, 
   showDays = true, 
   urgentText = "OGRANIČENA PONUDA",
-  discountText = "10% POPUST"
+  discountText = "10% POPUST",
+  variant = 'hero'
 }: CountdownTimerProps) => {
   const [timeLeft, setTimeLeft] = useState(() => {
     const totalSeconds = initialDays * 24 * 60 * 60;
@@ -44,23 +46,29 @@ const CountdownTimer = ({
     return () => clearInterval(timer);
   }, []);
 
+  const isLight = variant === 'light';
+
   return (
     <div className="flex flex-col items-center justify-center gap-3 mt-6 animate-pulse">
       <div className="text-center">
-        <div className="text-red-400 font-bold text-sm tracking-wider mb-1">{urgentText}</div>
-        <div className="text-white font-bold text-lg">{discountText}</div>
+        <div className={`font-bold text-sm tracking-wider mb-1 ${isLight ? 'text-red-600' : 'text-red-400'}`}>
+          {urgentText}
+        </div>
+        <div className={`font-bold text-lg ${isLight ? 'text-red-700' : 'text-white'}`}>
+          {discountText}
+        </div>
       </div>
       
-      <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm rounded-lg p-3">
+      <div className={`flex items-center gap-2 rounded-lg p-3 ${isLight ? 'bg-red-50 border border-red-200' : 'bg-black/30 backdrop-blur-sm'}`}>
         {showDays && (
           <>
             <div className="flex flex-col items-center">
               <div className="bg-red-600 text-white px-3 py-2 rounded-lg font-bold text-xl min-w-[50px] text-center shadow-lg">
                 {String(timeLeft.days).padStart(2, '0')}
               </div>
-              <span className="text-white/80 text-xs mt-1 font-medium">DANA</span>
+              <span className={`text-xs mt-1 font-medium ${isLight ? 'text-red-600' : 'text-white/80'}`}>DANA</span>
             </div>
-            <span className="text-white font-bold text-xl">:</span>
+            <span className={`font-bold text-xl ${isLight ? 'text-red-600' : 'text-white'}`}>:</span>
           </>
         )}
         
@@ -68,25 +76,25 @@ const CountdownTimer = ({
           <div className="bg-red-600 text-white px-3 py-2 rounded-lg font-bold text-xl min-w-[50px] text-center shadow-lg">
             {String(timeLeft.hours).padStart(2, '0')}
           </div>
-          <span className="text-white/80 text-xs mt-1 font-medium">SATI</span>
+          <span className={`text-xs mt-1 font-medium ${isLight ? 'text-red-600' : 'text-white/80'}`}>SATI</span>
         </div>
         
-        <span className="text-white font-bold text-xl">:</span>
+        <span className={`font-bold text-xl ${isLight ? 'text-red-600' : 'text-white'}`}>:</span>
         
         <div className="flex flex-col items-center">
           <div className="bg-red-600 text-white px-3 py-2 rounded-lg font-bold text-xl min-w-[50px] text-center shadow-lg">
             {String(timeLeft.minutes).padStart(2, '0')}
           </div>
-          <span className="text-white/80 text-xs mt-1 font-medium">MIN</span>
+          <span className={`text-xs mt-1 font-medium ${isLight ? 'text-red-600' : 'text-white/80'}`}>MIN</span>
         </div>
         
-        <span className="text-white font-bold text-xl">:</span>
+        <span className={`font-bold text-xl ${isLight ? 'text-red-600' : 'text-white'}`}>:</span>
         
         <div className="flex flex-col items-center">
           <div className="bg-red-600 text-white px-3 py-2 rounded-lg font-bold text-xl min-w-[50px] text-center shadow-lg">
             {String(timeLeft.seconds).padStart(2, '0')}
           </div>
-          <span className="text-white/80 text-xs mt-1 font-medium">SEK</span>
+          <span className={`text-xs mt-1 font-medium ${isLight ? 'text-red-600' : 'text-white/80'}`}>SEK</span>
         </div>
       </div>
     </div>

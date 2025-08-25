@@ -19,19 +19,20 @@ const FinalCTA = () => {
             Ako ti treba garaža, bungalov ili hala — <strong>sad je najjeftinije i najbrže što će ikada biti.</strong>
           </p>
           
-          <CountdownTimer 
-            initialDays={7}
-            urgentText="⚡ OGRANIČENA PONUDA - SAMO 7 DANA!"
-            discountText="🔥 10% POPUST NA SVE PROIZVODE"
-          />
-          
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-xl px-12 py-6 rounded-full font-bold mt-8"
+            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-xl px-12 py-6 rounded-full font-bold"
           >
             <MessageCircle className="w-6 h-6 mr-3" />
             Pošalji upit – Rešenje stiže brzo kao i naši majstori
           </Button>
+          
+          <CountdownTimer 
+            initialDays={7}
+            urgentText="⚡ OGRANIČENA PONUDA - SAMO 7 DANA!"
+            discountText="🔥 10% POPUST NA SVE PROIZVODE"
+            variant="light"
+          />
         </div>
       </div>
     </section>
