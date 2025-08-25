@@ -24,7 +24,7 @@ const FinalCTA = () => {
             className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-xl px-12 py-6 rounded-full font-bold"
           >
             <MessageCircle className="w-6 h-6 mr-3" />
-            Pošalji upit – Rešenje stiže brzo kao i naši majstori
+            Pošalji upit – Rješenje stiže brzo kao i naši majstori
           </Button>
           
           <CountdownTimer 

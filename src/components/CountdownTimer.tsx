@@ -94,7 +94,7 @@ const CountdownTimer = ({
           <div className="bg-red-600 text-white px-3 py-2 rounded-lg font-bold text-xl min-w-[50px] text-center shadow-lg">
             {String(timeLeft.seconds).padStart(2, '0')}
           </div>
-          <span className={`text-xs mt-1 font-medium ${isLight ? 'text-red-600' : 'text-white/80'}`}>SEK</span>
+          <span className={`text-xs mt-1 font-medium ${isLight ? 'text-red-600' : 'text-white/80'}`}>SEC</span>
         </div>
       </div>
     </div>
