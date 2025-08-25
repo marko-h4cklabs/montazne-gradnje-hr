@@ -28,10 +28,11 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/send-contact-email', {
+      const response = await fetch('https://kqvpjdhlwktaokzksasl.supabase.co/functions/v1/send-contact-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtxdnBqZGhsd2t0YW9remtzYXNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzUwNzMxOTMsImV4cCI6MjA1MDY0OTE5M30.O7WfRcVCnHsYcQKdQWJ3IZHQq1Nzc-_9VhlgQqd_4KI',
         },
         body: JSON.stringify(formData),
       });
