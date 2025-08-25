@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import CountdownTimer from "./CountdownTimer";
 import { useState, useEffect } from "react";
 import heroGaraza from "@/assets/hero-garaza.jpg";
 import heroGarazaModern from "@/assets/hero-garaza-modern.jpg";
@@ -72,12 +71,6 @@ const Hero = () => {
         >
           ➡️ Pošalji upit – odgovaramo u roku od 24h
         </Button>
-        
-        <CountdownTimer 
-          initialDays={7}
-          urgentText="⚡ OGRANIČENA PONUDA - SAMO 7 DANA!"
-          discountText="🔥 10% POPUST NA SVE PROIZVODE"
-        />
       </div>
     </section>
   );

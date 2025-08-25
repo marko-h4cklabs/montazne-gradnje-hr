@@ -5,9 +5,9 @@ import garazaImage from "@/assets/galerija-garaza.jpg";
 const Gallery = () => {
   const projects = [
     {
-      image: halaImage,
-      title: "Industrijska hala",
-      description: "Velika hala za proizvodnju"
+      image: garazaImage,
+      title: "Dvostruka garaža",
+      description: "Prostorna garaža za dva vozila"
     },
     {
       image: bungalovImage,
@@ -15,9 +15,9 @@ const Gallery = () => {
       description: "Udoban stambeni objekt"
     },
     {
-      image: garazaImage,
-      title: "Dvostruka garaža",
-      description: "Prostorna garaža za dva vozila"
+      image: halaImage,
+      title: "Industrijska hala",
+      description: "Velika hala za proizvodnju"
     }
   ];
 
