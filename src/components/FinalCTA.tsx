@@ -11,7 +11,7 @@ const FinalCTA = () => {
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 text-secondary-foreground/90 leading-relaxed">
-            Već ti je dosta kiše po haubi i ideja koje nikako da se realiziraju?
+            Već ti je dosta kiše po autu i ideja koje nikako da se realiziraju?
           </p>
           
           <p className="text-lg mb-12 text-secondary-foreground/80">
