@@ -8,16 +8,9 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if we're in the hero section (yellow background)
-      const heroSection = document.querySelector('[class*="hero-gradient"], [class*="bg-gradient"], .hero-gradient');
-      if (heroSection) {
-        const heroRect = heroSection.getBoundingClientRect();
-        const isOverHero = heroRect.top <= 100 && heroRect.bottom > 100;
-        setIsScrolled(!isOverHero);
-      } else {
-        // Fallback: if no hero section found, assume we're over yellow if near top
-        setIsScrolled(window.scrollY > 200);
-      }
+      // Simple scroll detection - when we're near the top (hero section), use white text
+      const isOverHero = window.scrollY < 200;
+      setIsScrolled(!isOverHero);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -69,7 +62,7 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleSmoothScroll(e, item.href)}
-                className={`${isScrolled ? 'text-primary' : 'text-white'} hover:text-primary/80 smooth-transition font-medium text-sm tracking-wide drop-shadow-sm`}
+                className={`${isScrolled ? 'text-foreground' : 'text-white'} hover:text-primary/80 smooth-transition font-medium text-sm tracking-wide drop-shadow-sm`}
               >
                 {item.name}
               </a>
