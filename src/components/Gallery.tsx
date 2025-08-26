@@ -37,15 +37,11 @@ const Gallery = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group cursor-pointer animate-slide-up"
+              className={`group animate-slide-up ${index === 0 ? 'cursor-pointer' : ''}`}
               style={{ animationDelay: `${index * 0.2}s` }}
-              onClick={() => {
-                if (index === 0) {
-                  window.open('/garaze', '_blank');
-                } else {
-                  window.open('#', '_blank');
-                }
-              }}
+              {...(index === 0 && {
+                onClick: () => window.open('/garaze', '_blank')
+              })}
             >
               <div className="relative overflow-hidden rounded-xl card-shadow hover:scale-105 smooth-transition">
                 <img
