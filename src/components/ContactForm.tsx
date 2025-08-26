@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Send } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ContactFormProps {
   onClose: () => void;
@@ -28,25 +29,19 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://kqvpjdhlwktaokzksasl.supabase.co/functions/v1/send-contact-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtxdnBqZGhsd2t0YW9remtzYXNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzUwNzMxOTMsImV4cCI6MjA1MDY0OTE5M30.O7WfRcVCnHsYcQKdQWJ3IZHQq1Nzc-_9VhlgQqd_4KI',
-        },
-        body: JSON.stringify(formData),
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData,
       });
 
-      if (response.ok) {
+      if (!error) {
         toast({
           title: "Uspješno poslano!",
           description: "Vaš upit je uspješno poslan. Uskoro ćemo vas kontaktirati.",
         });
         onClose();
       } else {
-        const errorText = await response.text();
-        console.error('Response error:', response.status, errorText);
-        throw new Error(`Server error: ${response.status} - ${errorText}`);
+        console.error('Supabase function error:', error);
+        throw new Error(`Function error: ${error.message}`);
       }
     } catch (error) {
       console.error('Contact form error:', error);
