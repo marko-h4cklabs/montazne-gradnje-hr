@@ -14,7 +14,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.PROD ? '/montazne-gradnje-hr' : ''}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/garaze" element={<Garages />} />
