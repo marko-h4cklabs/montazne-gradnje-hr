@@ -33,7 +33,7 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "Beriko Montage <onboarding@resend.dev>",
       to: ["marko.srnec5@gmail.com"],
-      subject: `Nova upit - ${firstName} ${lastName}`,
+      subject: `Novi upit - ${firstName} ${lastName}`,
       html: `
         <h2>Novi upit sa web stranice</h2>
         <p><strong>Ime:</strong> ${firstName} ${lastName}</p>
