@@ -1,23 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import garazaImage from "@/assets/galerija-garaza.jpg";
-import heroGaraza from "@/assets/hero-garaza.jpg";
-import heroGarazaAlt from "@/assets/hero-garaza-alt.jpg";
 
 const Garages = () => {
-  const images = Array.from({ length: 21 }, (_, index) => {
-    const imageIndex = index + 1;
-    // Use existing images as placeholders, cycling through them
-    const placeholderImages = [garazaImage, heroGaraza, heroGarazaAlt];
-    const placeholderImage = placeholderImages[index % 3];
-    
-    return {
-      src: placeholderImage,
-      alt: `Garaža ${imageIndex} - kvalitetna montažna garaža`,
-      title: `Garaža ${imageIndex}`
-    };
-  });
+  const images: { src: string; alt: string; title: string }[] = [
+    // Add your images here when ready
+  ];
 
   return (
     <div className="min-h-screen bg-background">
