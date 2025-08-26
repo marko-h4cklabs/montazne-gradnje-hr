@@ -64,7 +64,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-primary">
+            <h1 className={`text-2xl font-bold ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-sm'}`}>
               Beriko
             </h1>
           </div>

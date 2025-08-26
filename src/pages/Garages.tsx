@@ -21,6 +21,96 @@ const Garages = () => {
       src: heroGarazaAlt,
       alt: "Garaža - alternativni dizajn",
       title: "Garaža - alternativni dizajn"
+    },
+    {
+      src: garazaImage,
+      alt: "Garaža 4",
+      title: "Garaža 4"
+    },
+    {
+      src: heroGaraza,
+      alt: "Garaža 5",
+      title: "Garaža 5"
+    },
+    {
+      src: heroGarazaAlt,
+      alt: "Garaža 6",
+      title: "Garaža 6"
+    },
+    {
+      src: garazaImage,
+      alt: "Garaža 7",
+      title: "Garaža 7"
+    },
+    {
+      src: heroGaraza,
+      alt: "Garaža 8",
+      title: "Garaža 8"
+    },
+    {
+      src: heroGarazaAlt,
+      alt: "Garaža 9",
+      title: "Garaža 9"
+    },
+    {
+      src: garazaImage,
+      alt: "Garaža 10",
+      title: "Garaža 10"
+    },
+    {
+      src: heroGaraza,
+      alt: "Garaža 11",
+      title: "Garaža 11"
+    },
+    {
+      src: heroGarazaAlt,
+      alt: "Garaža 12",
+      title: "Garaža 12"
+    },
+    {
+      src: garazaImage,
+      alt: "Garaža 13",
+      title: "Garaža 13"
+    },
+    {
+      src: heroGaraza,
+      alt: "Garaža 14",
+      title: "Garaža 14"
+    },
+    {
+      src: heroGarazaAlt,
+      alt: "Garaža 15",
+      title: "Garaža 15"
+    },
+    {
+      src: garazaImage,
+      alt: "Garaža 16",
+      title: "Garaža 16"
+    },
+    {
+      src: heroGaraza,
+      alt: "Garaža 17",
+      title: "Garaža 17"
+    },
+    {
+      src: heroGarazaAlt,
+      alt: "Garaža 18",
+      title: "Garaža 18"
+    },
+    {
+      src: garazaImage,
+      alt: "Garaža 19",
+      title: "Garaža 19"
+    },
+    {
+      src: heroGaraza,
+      alt: "Garaža 20",
+      title: "Garaža 20"
+    },
+    {
+      src: heroGarazaAlt,
+      alt: "Garaža 21",
+      title: "Garaža 21"
     }
   ];
 
@@ -30,7 +120,7 @@ const Garages = () => {
       <div className="bg-gradient-to-r from-primary/90 to-primary text-white py-16">
         <div className="container mx-auto px-4">
           <Link to="/">
-            <Button variant="outline" size="sm" className="mb-6 text-white border-white hover:bg-white hover:text-primary">
+            <Button variant="outline" size="sm" className="mb-6 text-white border-white hover:bg-white hover:text-primary bg-white/10 backdrop-blur-sm">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Nazad na početnu
             </Button>
