@@ -15,6 +15,15 @@ const FOMOBanner = () => {
           <Button 
             size="lg" 
             variant="secondary"
+            onClick={() => {
+              const targetElement = document.getElementById('kontakt');
+              if (targetElement) {
+                const offset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+              }
+            }}
             className="bg-white text-destructive hover:bg-white/90 hover:text-destructive/90 smooth-transition px-8 py-3 rounded-full font-semibold"
           >
             Zatraži ponudu – Dogovori cijenu odmah

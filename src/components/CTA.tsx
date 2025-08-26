@@ -38,6 +38,15 @@ const CTA = () => {
             <Button 
               size="lg" 
               variant="outline"
+              onClick={() => {
+                const targetElement = document.getElementById('kontakt');
+                if (targetElement) {
+                  const offset = 80;
+                  const elementPosition = targetElement.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - offset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
               className="border-primary text-primary hover:bg-primary hover:text-white smooth-transition px-8 py-6 rounded-full text-lg"
             >
               <Mail className="w-5 h-5 mr-2" />

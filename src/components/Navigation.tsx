@@ -44,6 +44,20 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToContact = () => {
+    const targetElement = document.getElementById('kontakt');
+    if (targetElement) {
+      const offset = 80;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-white/98 backdrop-blur-md z-50 border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
@@ -71,7 +85,10 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-8 py-2 font-semibold">
+            <Button 
+              onClick={scrollToContact}
+              className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-8 py-2 font-semibold"
+            >
               KONTAKTIRAJTE NAS
             </Button>
           </div>
@@ -104,7 +121,10 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="px-3 pt-2">
-                <Button className="w-full bg-primary hover:bg-primary-dark text-primary-foreground rounded-full font-semibold">
+                <Button 
+                  onClick={scrollToContact}
+                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground rounded-full font-semibold"
+                >
                   KONTAKTIRAJTE NAS
                 </Button>
               </div>

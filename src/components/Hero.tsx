@@ -61,6 +61,15 @@ const Hero = () => {
         
         <Button 
           size="lg" 
+          onClick={() => {
+            const targetElement = document.getElementById('kontakt');
+            if (targetElement) {
+              const offset = 80;
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - offset;
+              window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            }
+          }}
           className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-lg px-10 py-6 rounded-full font-semibold"
         >
           ➡️ Pošalji upit – odgovaramo u roku od 24h

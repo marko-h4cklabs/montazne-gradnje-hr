@@ -53,6 +53,15 @@ const WhyChooseUs = () => {
         <div className="text-center">
           <Button 
             size="lg" 
+            onClick={() => {
+              const targetElement = document.getElementById('kontakt');
+              if (targetElement) {
+                const offset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+              }
+            }}
             className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-4 rounded-full font-semibold"
           >
             🎯 Zatraži ponudu sad

@@ -13,6 +13,15 @@ const AdditionalCTA = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
+              onClick={() => {
+                const targetElement = document.getElementById('kontakt');
+                if (targetElement) {
+                  const offset = 80;
+                  const elementPosition = targetElement.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - offset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
               className="hero-gradient text-white hover:scale-105 smooth-transition hero-shadow px-8 py-6 rounded-full text-lg"
             >
               ✅ Zatraži ponudu
