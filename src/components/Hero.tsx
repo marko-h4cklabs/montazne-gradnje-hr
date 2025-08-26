@@ -51,7 +51,7 @@ const Hero = () => {
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
           Kvalitetno, Brzo, Isplativo <br />
-          <span className="text-primary text-2xl md:text-4xl lg:text-5xl">Riješenja za one koji traže kvalitetnu uslugu</span>
+          <span className="text-primary text-2xl md:text-4xl lg:text-5xl">Garaže, Bungalovi i Hale po vašoj želji</span>
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
