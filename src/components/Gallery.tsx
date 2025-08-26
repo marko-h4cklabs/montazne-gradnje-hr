@@ -39,7 +39,13 @@ const Gallery = () => {
               key={index}
               className="group cursor-pointer animate-slide-up"
               style={{ animationDelay: `${index * 0.2}s` }}
-              onClick={() => window.open('#', '_blank')}
+              onClick={() => {
+                if (index === 0) {
+                  window.open('/garaze', '_blank');
+                } else {
+                  window.open('#', '_blank');
+                }
+              }}
             >
               <div className="relative overflow-hidden rounded-xl card-shadow hover:scale-105 smooth-transition">
                 <img
