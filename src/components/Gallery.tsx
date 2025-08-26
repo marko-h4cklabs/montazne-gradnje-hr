@@ -56,7 +56,6 @@ const Gallery = () => {
                 <Link 
                   key={index}
                   to="/garaze" 
-                  target="_blank"
                   className="group animate-slide-up cursor-pointer block"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
