@@ -1,26 +1,12 @@
-import halaImage from "@/assets/galerija-hala.jpg";
-import bungalovImage from "@/assets/galerija-bungalov.jpg";
 import garazaImage from "@/assets/galerija-garaza.jpg";
 import { Link } from "react-router-dom";
 
 const Gallery = () => {
-  const projects = [
-    {
-      image: garazaImage,
-      title: "Dvostruka garaža",
-      description: "Prostorna garaža za dva vozila"
-    },
-    {
-      image: bungalovImage,
-      title: "Moderni bungalov",
-      description: "Udoban stambeni objekt"
-    },
-    {
-      image: halaImage,
-      title: "Industrijska hala",
-      description: "Velika hala za proizvodnju"
-    }
-  ];
+  const project = {
+    image: garazaImage,
+    title: "Realizirani projekti",
+    description: "Pogledajte našu galeriju završenih projekata"
+  };
 
   return (
     <section className="py-16 bg-background">
@@ -34,46 +20,24 @@ const Gallery = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => {
-            const content = (
-              <div className="relative overflow-hidden rounded-xl card-shadow hover:scale-105 smooth-transition">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-64 object-cover group-hover:scale-110 smooth-transition"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 smooth-transition"></div>
-                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 smooth-transition">
-                  <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                  <p className="text-sm text-white/80">{project.description}</p>
-                </div>
+        <div className="flex justify-center">
+          <Link 
+            to="/garaze" 
+            className="group animate-slide-up cursor-pointer block max-w-md"
+          >
+            <div className="relative overflow-hidden rounded-xl card-shadow hover:scale-105 smooth-transition">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-64 object-cover group-hover:scale-110 smooth-transition"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 smooth-transition"></div>
+              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 smooth-transition">
+                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                <p className="text-sm text-white/80">{project.description}</p>
               </div>
-            );
-
-            if (index === 0) {
-              return (
-                <Link 
-                  key={index}
-                  to="/garaze" 
-                  className="group animate-slide-up cursor-pointer block"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  {content}
-                </Link>
-              );
-            }
-
-            return (
-              <div 
-                key={index}
-                className="group animate-slide-up"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                {content}
-              </div>
-            );
-          })}
+            </div>
+          </Link>
         </div>
       </div>
     </section>
