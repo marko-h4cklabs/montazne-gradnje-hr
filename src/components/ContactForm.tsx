@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Send } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+
 
 interface ContactFormProps {
   onClose: () => void;
@@ -29,25 +29,20 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData,
+      // Simulate form submission without backend
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Simulacija uspješna!",
+        description: "Forma je simulirana. Potrebno je postaviti backend za stvarno slanje.",
+        variant: "default",
       });
-
-      if (!error) {
-        toast({
-          title: "Uspješno poslano!",
-          description: "Vaš upit je uspješno poslan. Uskoro ćemo vas kontaktirati.",
-        });
-        onClose();
-      } else {
-        console.error('Supabase function error:', error);
-        throw new Error(`Function error: ${error.message}`);
-      }
+      onClose();
     } catch (error) {
       console.error('Contact form error:', error);
       toast({
         title: "Greška",
-        description: "Došlo je do greške prilikom slanja upita. Molimo pokušajte ponovno.",
+        description: "Došlo je do greške prilikom slanja. Molimo pokušajte ponovo.",
         variant: "destructive",
       });
     } finally {
