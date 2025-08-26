@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 // Import all garage images
 import garage1 from "@/assets/garage-1.jpg";
@@ -74,23 +76,29 @@ const Garages = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {images.map((image, index) => (
-            <div 
-              key={index}
-              className="group cursor-pointer animate-slide-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="relative overflow-hidden rounded-xl card-shadow hover:scale-105 smooth-transition">
+            <Dialog key={index}>
+              <DialogTrigger asChild>
+                <div 
+                  className="group cursor-pointer animate-slide-up"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <div className="relative overflow-hidden rounded-xl card-shadow hover:scale-105 smooth-transition">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-80 object-cover group-hover:scale-110 smooth-transition"
+                    />
+                  </div>
+                </div>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl w-full p-0 border-0">
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-80 object-cover group-hover:scale-110 smooth-transition"
+                  className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 smooth-transition"></div>
-                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 smooth-transition">
-                  <h3 className="text-xl font-semibold">{image.title}</h3>
-                </div>
-              </div>
-            </div>
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
 
