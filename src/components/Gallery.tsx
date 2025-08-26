@@ -1,6 +1,7 @@
 import halaImage from "@/assets/galerija-hala.jpg";
 import bungalovImage from "@/assets/galerija-bungalov.jpg";
 import garazaImage from "@/assets/galerija-garaza.jpg";
+import { Link } from "react-router-dom";
 
 const Gallery = () => {
   const projects = [
@@ -34,15 +35,8 @@ const Gallery = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div 
-              key={index}
-              className={`group animate-slide-up ${index === 0 ? 'cursor-pointer' : ''}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-              {...(index === 0 && {
-                onClick: () => window.open('/garaze', '_blank')
-              })}
-            >
+          {projects.map((project, index) => {
+            const content = (
               <div className="relative overflow-hidden rounded-xl card-shadow hover:scale-105 smooth-transition">
                 <img
                   src={project.image}
@@ -55,8 +49,32 @@ const Gallery = () => {
                   <p className="text-sm text-white/80">{project.description}</p>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+
+            if (index === 0) {
+              return (
+                <Link 
+                  key={index}
+                  to="/garaze" 
+                  target="_blank"
+                  className="group animate-slide-up cursor-pointer block"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  {content}
+                </Link>
+              );
+            }
+
+            return (
+              <div 
+                key={index}
+                className="group animate-slide-up"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                {content}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
