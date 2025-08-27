@@ -61,7 +61,7 @@ const Process = () => {
               </div>
               
               <h3 className="text-xl font-bold mb-4 text-secondary-foreground">
-                📞 {step.title}
+                {step.title}
               </h3>
               <p className="text-secondary-foreground/80">
                 {step.description}
