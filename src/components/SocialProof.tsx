@@ -4,8 +4,8 @@ const SocialProof = () => {
   const proofs = [
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Više od 210 završenih montaža",
-      subtitle: "širom zemlje"
+      title: "Više od 2000 završenih montaža",
+      subtitle: "širom Hrvatske i inozemstva"
     },
     {
       icon: <Shield className="w-8 h-8" />,

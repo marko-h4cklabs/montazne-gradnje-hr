@@ -32,8 +32,8 @@ const FinalCTA = () => {
           
           <CountdownTimer 
             initialDays={7}
-            urgentText="⚡ OGRANIČENA PONUDA - SAMO 7 DANA!"
-            discountText="🔥 10% POPUST NA SVE PROIZVODE"
+            urgentText="🔥 JESENSKA PONUDA - SAMO 7 DANA!"
+            discountText="BESPLATNA MONTAŽA"
             variant="light"
           />
         </div>
