@@ -31,7 +31,7 @@ const FinalCTA = () => {
           </Button>
           
           <CountdownTimer 
-            endDate={new Date('2024-09-30T23:59:59')}
+            endDate={new Date('2025-09-30T23:59:59')}
             urgentText="🔥 JESENSKA PONUDA - SAMO OVAJ MJESEC!"
             discountText="BESPLATNA MONTAŽA"
             variant="light"

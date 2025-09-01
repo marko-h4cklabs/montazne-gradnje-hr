@@ -10,7 +10,7 @@ interface CountdownTimerProps {
 }
 
 const CountdownTimer = ({ 
-  endDate = new Date('2024-09-30T23:59:59'), 
+  endDate = new Date('2025-09-30T23:59:59'), 
   showDays = true, 
   urgentText = "OGRANIČENA PONUDA",
   discountText = "10% POPUST",
