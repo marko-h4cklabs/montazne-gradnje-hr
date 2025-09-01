@@ -54,7 +54,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          <span className="text-yellow-400">Montažne garaže, bungalovi i hale</span> — postavljene za par dana, bez stresa <br />
+          <span className="text-yellow-400 font-bold">Montažne garaže, bungalovi i hale</span> — postavljene za par dana, bez stresa <br />
           <strong>bez muljanja, bez dodatnih troškova.</strong>
         </p>
         
