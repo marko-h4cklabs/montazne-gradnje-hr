@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
+import { differenceInSeconds } from 'date-fns';
 
 interface CountdownTimerProps {
-  initialDays?: number;
+  endDate?: Date;
   showDays?: boolean;
   urgentText?: string;
   discountText?: string;
@@ -9,14 +10,15 @@ interface CountdownTimerProps {
 }
 
 const CountdownTimer = ({ 
-  initialDays = 7, 
+  endDate = new Date('2024-09-30T23:59:59'), 
   showDays = true, 
   urgentText = "OGRANIČENA PONUDA",
   discountText = "10% POPUST",
   variant = 'hero'
 }: CountdownTimerProps) => {
   const [timeLeft, setTimeLeft] = useState(() => {
-    const totalSeconds = initialDays * 24 * 60 * 60;
+    const now = new Date();
+    const totalSeconds = Math.max(0, differenceInSeconds(endDate, now));
     const days = Math.floor(totalSeconds / (24 * 3600));
     const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
@@ -26,25 +28,24 @@ const CountdownTimer = ({
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(prevTime => {
-        const totalSeconds = prevTime.days * 24 * 3600 + prevTime.hours * 3600 + prevTime.minutes * 60 + prevTime.seconds;
-        
-        if (totalSeconds <= 1) {
-          return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-        }
-        
-        const newTotalSeconds = totalSeconds - 1;
-        const days = Math.floor(newTotalSeconds / (24 * 3600));
-        const hours = Math.floor((newTotalSeconds % (24 * 3600)) / 3600);
-        const minutes = Math.floor((newTotalSeconds % 3600) / 60);
-        const seconds = newTotalSeconds % 60;
-        
-        return { days, hours, minutes, seconds };
-      });
+      const now = new Date();
+      const totalSeconds = Math.max(0, differenceInSeconds(endDate, now));
+      
+      if (totalSeconds <= 0) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+      
+      const days = Math.floor(totalSeconds / (24 * 3600));
+      const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      
+      setTimeLeft({ days, hours, minutes, seconds });
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [endDate]);
 
   const isLight = variant === 'light';
 
