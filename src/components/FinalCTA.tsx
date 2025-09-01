@@ -31,8 +31,8 @@ const FinalCTA = () => {
           </Button>
           
           <CountdownTimer 
-            initialDays={7}
-            urgentText="🔥 JESENSKA PONUDA - SAMO 7 DANA!"
+            initialDays={30}
+            urgentText="🔥 JESENSKA PONUDA - SAMO OVAJ MJESEC!"
             discountText="BESPLATNA MONTAŽA"
             variant="light"
           />
