@@ -87,7 +87,7 @@ const Hero = () => {
               behavior: 'smooth' 
             });
           }}
-          className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110 animate-[bounce_2s_infinite]"
+          className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110 animate-[bounce_3s_infinite]"
           aria-label="Scroll down"
         >
           <ChevronDown size={40} className="md:w-8 md:h-8" strokeWidth={2} />
