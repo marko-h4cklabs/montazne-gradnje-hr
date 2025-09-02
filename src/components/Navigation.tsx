@@ -99,9 +99,9 @@ const Navigation = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-foreground" />
+              <X className={`h-6 w-6 ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-sm'}`} />
             ) : (
-              <Menu className="h-6 w-6 text-foreground" />
+              <Menu className={`h-6 w-6 ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-sm'}`} />
             )}
           </button>
         </div>

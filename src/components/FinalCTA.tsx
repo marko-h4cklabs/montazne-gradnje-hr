@@ -27,7 +27,11 @@ const FinalCTA = () => {
             onClick={() => setIsContactFormOpen(true)}
           >
             <MessageCircle className="w-6 h-6 mr-3" />
-            Pošalji upit – Rješenje stiže brzo kao i naši majstori
+            <span className="hidden md:inline">Pošalji upit – Rješenje stiže brzo kao i naši majstori</span>
+            <span className="block md:hidden text-center">
+              Pošalji upit<br />
+              Rješenje stiže brzo kao i naši majstori
+            </span>
           </Button>
           
           <CountdownTimer 
