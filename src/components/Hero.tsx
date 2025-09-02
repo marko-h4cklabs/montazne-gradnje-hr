@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { ChevronDown } from "lucide-react";
 import heroGaraza from "@/assets/hero-garaza.jpg";
 import heroGarazaAlt from "@/assets/hero-garaza-alt.jpg";
 import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
@@ -75,6 +76,22 @@ const Hero = () => {
         >
           ➡️ Pošalji upit – odgovaramo u roku od 24h
         </Button>
+      </div>
+
+      {/* Scroll Down Arrow */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <button
+          onClick={() => {
+            window.scrollTo({ 
+              top: window.innerHeight, 
+              behavior: 'smooth' 
+            });
+          }}
+          className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110 animate-bounce"
+          aria-label="Scroll down"
+        >
+          <ChevronDown size={32} strokeWidth={2} />
+        </button>
       </div>
     </section>
   );
