@@ -52,14 +52,11 @@ const Hero = () => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
           <span className="text-primary">Montažne garaže</span><span className="hidden md:inline"> – povoljne i kvalitetne garaže od lima</span> <br className="hidden md:block" />
           <span className="block md:hidden text-primary">bungalovi i hale</span>
-          <span className="block md:hidden">– povoljne i kvalitetne garaže od lima</span>
+          <span className="block md:hidden text-sm">– povoljne i kvalitetne garaže od lima</span>
         </h1>
         
-        <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          <span className="text-primary font-bold hidden md:inline">Montažne garaže, bungalovi i hale</span>
-          <span className="text-primary font-bold block md:hidden">Montažne garaže,<br />bungalovi i hale</span>
-          <span className="hidden md:inline"> — postavljene za par dana, bez stresa</span>
-          <span className="block md:hidden"> — postavljene za par dana,<br />bez stresa</span> <br className="hidden md:block" />
+        <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed hidden md:block">
+          <span className="text-primary font-bold">Montažne garaže, bungalovi i hale</span> — postavljene za par dana, bez stresa <br />
           <strong>bez muljanja, bez dodatnih troškova.</strong>
         </p>
         

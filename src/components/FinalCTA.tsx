@@ -29,8 +29,7 @@ const FinalCTA = () => {
             <MessageCircle className="w-6 h-6 mr-3" />
             <span className="hidden md:inline">Pošalji upit – Rješenje stiže brzo kao i naši majstori</span>
             <span className="block md:hidden text-center">
-              Pošalji upit<br />
-              Rješenje stiže brzo kao i naši majstori
+              Pošalji upit
             </span>
           </Button>
           
