@@ -79,7 +79,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Down Arrow */}
-      <div className="absolute bottom-16 md:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      <div className="absolute bottom-20 md:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
         <button
           onClick={() => {
             window.scrollTo({ 
@@ -87,7 +87,7 @@ const Hero = () => {
               behavior: 'smooth' 
             });
           }}
-          className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110 animate-bounce"
+          className="text-white/80 hover:text-white transition-all duration-300 hover:scale-110 animate-[bounce_2s_infinite]"
           aria-label="Scroll down"
         >
           <ChevronDown size={40} className="md:w-8 md:h-8" strokeWidth={2} />
