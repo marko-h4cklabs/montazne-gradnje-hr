@@ -52,7 +52,7 @@ const Hero = () => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
           <span className="text-primary">Montažne garaže</span><span className="hidden md:inline"> – povoljne i kvalitetne garaže od lima</span> <br className="hidden md:block" />
           <span className="block md:hidden text-primary">bungalovi i hale</span>
-          <span className="block md:hidden text-sm">– povoljne i kvalitetne garaže od lima</span>
+          <span className="block md:hidden text-lg">– povoljne i kvalitetne garaže od lima</span>
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed hidden md:block">
@@ -71,7 +71,7 @@ const Hero = () => {
               window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
             }
           }}
-          className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-lg px-10 py-6 rounded-full font-semibold"
+          className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-base px-16 py-4 rounded-full font-semibold"
         >
           ➡️ Pošalji upit – odgovaramo u roku od 24h
         </Button>
