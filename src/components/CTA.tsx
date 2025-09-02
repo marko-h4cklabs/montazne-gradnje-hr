@@ -32,7 +32,7 @@ const CTA = () => {
               className="hero-gradient text-white hover:scale-105 smooth-transition hero-shadow px-8 py-6 rounded-full text-lg"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Nazovi nas
+              Nazovite nas
             </Button>
             
             <Button 
