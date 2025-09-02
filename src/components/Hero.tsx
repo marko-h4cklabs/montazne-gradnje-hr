@@ -71,7 +71,7 @@ const Hero = () => {
               window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
             }
           }}
-          className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-base px-16 py-4 rounded-full font-semibold"
+          className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-base px-6 py-4 rounded-full font-semibold"
         >
           ➡️ Pošalji upit – odgovaramo u roku od 24h
         </Button>
