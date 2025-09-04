@@ -64,7 +64,7 @@ const WhyChooseUs = () => {
             }}
             className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-4 rounded-full font-semibold"
           >
-            🎯 Zatraži ponudu sad
+            🎯 Zatražite ponudu sada
           </Button>
         </div>
       </div>
