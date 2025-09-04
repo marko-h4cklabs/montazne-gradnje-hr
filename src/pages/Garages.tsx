@@ -43,10 +43,10 @@ const Garages = () => {
             </Button>
           </Link>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Garaže - Naši Projekti
+            Montažni Objekti
           </h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            Pregledajte našu kolekciju kvalitetno izvedenih garaža različitih stilova i veličina
+            Pregledajte dovršene montažne hale, montažne garaže i montažne kuće 
           </p>
         </div>
       </div>

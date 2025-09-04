@@ -14,7 +14,7 @@ const References = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Dosta ti je firma koji obećavaju a ne ispunjavaju svoju riječ?
+            Dosta vam je firmi koje obećavaju a ne ispunjavaju svoju riječ?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
             preko 115 zadovoljnih klijenata koji nas ocjenjuju sa "5" zvijezdica
