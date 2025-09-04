@@ -13,7 +13,7 @@ const FinalCTA = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-secondary-foreground">
-            Garaža na koju će susjedi biti ljubomorni
+            Garaža sa kojom ćete biti zadovoljni
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 text-secondary-foreground/90 leading-relaxed">
