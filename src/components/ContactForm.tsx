@@ -106,50 +106,54 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Basic Information */}
-      <div>
-        <Label htmlFor="firstName">Ime *</Label>
-        <Input
-          id="firstName"
-          value={formData.firstName}
-          onChange={(e) => handleInputChange("firstName", e.target.value)}
-          required
-          className="mt-1"
-        />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label htmlFor="firstName">Ime *</Label>
+          <Input
+            id="firstName"
+            value={formData.firstName}
+            onChange={(e) => handleInputChange("firstName", e.target.value)}
+            required
+            className="mt-1"
+          />
+        </div>
+
+        <div>
+          <Label htmlFor="lastName">Prezime *</Label>
+          <Input
+            id="lastName"
+            value={formData.lastName}
+            onChange={(e) => handleInputChange("lastName", e.target.value)}
+            required
+            className="mt-1"
+          />
+        </div>
       </div>
 
-      <div>
-        <Label htmlFor="lastName">Prezime *</Label>
-        <Input
-          id="lastName"
-          value={formData.lastName}
-          onChange={(e) => handleInputChange("lastName", e.target.value)}
-          required
-          className="mt-1"
-        />
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label htmlFor="phone">Telefon *</Label>
+          <Input
+            id="phone"
+            type="tel"
+            value={formData.phone}
+            onChange={(e) => handleInputChange("phone", e.target.value)}
+            required
+            className="mt-1"
+          />
+        </div>
 
-      <div>
-        <Label htmlFor="phone">Telefon *</Label>
-        <Input
-          id="phone"
-          type="tel"
-          value={formData.phone}
-          onChange={(e) => handleInputChange("phone", e.target.value)}
-          required
-          className="mt-1"
-        />
-      </div>
-
-      <div>
-        <Label htmlFor="email">Email adresa *</Label>
-        <Input
-          id="email"
-          type="email"
-          value={formData.email}
-          onChange={(e) => handleInputChange("email", e.target.value)}
-          required
-          className="mt-1"
-        />
+        <div>
+          <Label htmlFor="email">Email adresa *</Label>
+          <Input
+            id="email"
+            type="email"
+            value={formData.email}
+            onChange={(e) => handleInputChange("email", e.target.value)}
+            required
+            className="mt-1"
+          />
+        </div>
       </div>
 
       <div>
@@ -169,34 +173,36 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
         <p className="text-sm text-muted-foreground mb-4">*mjere u cm</p>
       </div>
 
-      <div>
-        <Label htmlFor="width">Širina</Label>
-        <Input
-          id="width"
-          value={formData.width}
-          onChange={(e) => handleInputChange("width", e.target.value)}
-          className="mt-1"
-        />
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <Label htmlFor="width">Širina</Label>
+          <Input
+            id="width"
+            value={formData.width}
+            onChange={(e) => handleInputChange("width", e.target.value)}
+            className="mt-1"
+          />
+        </div>
 
-      <div>
-        <Label htmlFor="depth">Dubina</Label>
-        <Input
-          id="depth"
-          value={formData.depth}
-          onChange={(e) => handleInputChange("depth", e.target.value)}
-          className="mt-1"
-        />
-      </div>
+        <div>
+          <Label htmlFor="depth">Dubina</Label>
+          <Input
+            id="depth"
+            value={formData.depth}
+            onChange={(e) => handleInputChange("depth", e.target.value)}
+            className="mt-1"
+          />
+        </div>
 
-      <div>
-        <Label htmlFor="height">Visina</Label>
-        <Input
-          id="height"
-          value={formData.height}
-          onChange={(e) => handleInputChange("height", e.target.value)}
-          className="mt-1"
-        />
+        <div>
+          <Label htmlFor="height">Visina</Label>
+          <Input
+            id="height"
+            value={formData.height}
+            onChange={(e) => handleInputChange("height", e.target.value)}
+            className="mt-1"
+          />
+        </div>
       </div>
 
       {/* Dropdown Fields */}
@@ -213,59 +219,63 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
         </Select>
       </div>
 
-      <div>
-        <Label>Krov</Label>
-        <Select value={formData.roofMaterial} onValueChange={(value) => handleInputChange("roofMaterial", value)}>
-          <SelectTrigger className="mt-1">
-            <SelectValue placeholder="Odaberite materijal krova" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="termonapel-30mm">1) termonapel 30mm</SelectItem>
-            <SelectItem value="termopanel-50mm">2) termopanel 50mm</SelectItem>
-            <SelectItem value="imitacija-crijepa">3) Imitacija crijepa</SelectItem>
-          </SelectContent>
-        </Select>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label>Krov</Label>
+          <Select value={formData.roofMaterial} onValueChange={(value) => handleInputChange("roofMaterial", value)}>
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite materijal krova" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="termonapel-30mm">1) termonapel 30mm</SelectItem>
+              <SelectItem value="termopanel-50mm">2) termopanel 50mm</SelectItem>
+              <SelectItem value="imitacija-crijepa">3) Imitacija crijepa</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div>
+          <Label>Boja Krova</Label>
+          <Select value={formData.roofColor} onValueChange={(value) => handleInputChange("roofColor", value)}>
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite boju krova" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="bijeli">1) bijeli</SelectItem>
+              <SelectItem value="crveni">2) crveni</SelectItem>
+              <SelectItem value="antracit">3) antracit</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
 
-      <div>
-        <Label>Boja Krova</Label>
-        <Select value={formData.roofColor} onValueChange={(value) => handleInputChange("roofColor", value)}>
-          <SelectTrigger className="mt-1">
-            <SelectValue placeholder="Odaberite boju krova" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="bijeli">1) bijeli</SelectItem>
-            <SelectItem value="crveni">2) crveni</SelectItem>
-            <SelectItem value="antracit">3) antracit</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label>Zid</Label>
+          <Select value={formData.wallMaterial} onValueChange={(value) => handleInputChange("wallMaterial", value)}>
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite materijal zida" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="termopanel-30mm">1) termopanel 30mm</SelectItem>
+              <SelectItem value="termopanel-50mm">2) termopanel 50mm</SelectItem>
+              <SelectItem value="termopanel-80mm">3) termopanel 80mm</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
 
-      <div>
-        <Label>Zid</Label>
-        <Select value={formData.wallMaterial} onValueChange={(value) => handleInputChange("wallMaterial", value)}>
-          <SelectTrigger className="mt-1">
-            <SelectValue placeholder="Odaberite materijal zida" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="termopanel-30mm">1) termopanel 30mm</SelectItem>
-            <SelectItem value="termopanel-50mm">2) termopanel 50mm</SelectItem>
-            <SelectItem value="termopanel-80mm">3) termopanel 80mm</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div>
-        <Label>Boja Zida</Label>
-        <Select value={formData.wallColor} onValueChange={(value) => handleInputChange("wallColor", value)}>
-          <SelectTrigger className="mt-1">
-            <SelectValue placeholder="Odaberite boju zida" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="bijela">1) bijela</SelectItem>
-            <SelectItem value="antracit">2) antracit</SelectItem>
-          </SelectContent>
-        </Select>
+        <div>
+          <Label>Boja Zida</Label>
+          <Select value={formData.wallColor} onValueChange={(value) => handleInputChange("wallColor", value)}>
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite boju zida" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="bijela">1) bijela</SelectItem>
+              <SelectItem value="antracit">2) antracit</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
 
       <div>
@@ -281,82 +291,88 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
         </Select>
       </div>
 
-      <div>
-        <Label>Garažna sekcijska vrata</Label>
-        <Select value={formData.garageDoorColor} onValueChange={(value) => handleInputChange("garageDoorColor", value)}>
-          <SelectTrigger className="mt-1">
-            <SelectValue placeholder="Odaberite boju vrata" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="bijela">1) bijela</SelectItem>
-            <SelectItem value="antracit">2) antracit</SelectItem>
-            <SelectItem value="zlatni-hrast">3) zlatni hrast</SelectItem>
-          </SelectContent>
-        </Select>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label>Garažna sekcijska vrata</Label>
+          <Select value={formData.garageDoorColor} onValueChange={(value) => handleInputChange("garageDoorColor", value)}>
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite boju vrata" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="bijela">1) bijela</SelectItem>
+              <SelectItem value="antracit">2) antracit</SelectItem>
+              <SelectItem value="zlatni-hrast">3) zlatni hrast</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div>
+          <Label htmlFor="garageDoorSize">Garažna sekcijska vrata - Sirina x Visina</Label>
+          <Input
+            id="garageDoorSize"
+            value={formData.garageDoorSize}
+            onChange={(e) => handleInputChange("garageDoorSize", e.target.value)}
+            placeholder="npr. 240x210"
+            className="mt-1"
+          />
+        </div>
       </div>
 
-      <div>
-        <Label htmlFor="garageDoorSize">Garažna sekcijska vrata - Sirina x Visina</Label>
-        <Input
-          id="garageDoorSize"
-          value={formData.garageDoorSize}
-          onChange={(e) => handleInputChange("garageDoorSize", e.target.value)}
-          placeholder="npr. 240x210"
-          className="mt-1"
-        />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label>PVC vrata vrsta</Label>
+          <Select value={formData.pvcDoorType} onValueChange={(value) => handleInputChange("pvcDoorType", value)}>
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite vrstu PVC vrata" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="jednokrilna">1) jednokrilna</SelectItem>
+              <SelectItem value="dvokrilna">2) dvokrilna</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div>
+          <Label>PVC vrata boja</Label>
+          <Select value={formData.pvcDoorColor} onValueChange={(value) => handleInputChange("pvcDoorColor", value)}>
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite boju PVC vrata" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="antracit">1) antracit</SelectItem>
+              <SelectItem value="bijela">2) bijela</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
 
-      <div>
-        <Label>PVC vrata vrsta</Label>
-        <Select value={formData.pvcDoorType} onValueChange={(value) => handleInputChange("pvcDoorType", value)}>
-          <SelectTrigger className="mt-1">
-            <SelectValue placeholder="Odaberite vrstu PVC vrata" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="jednokrilna">1) jednokrilna</SelectItem>
-            <SelectItem value="dvokrilna">2) dvokrilna</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label>PVC prozor dimenzije</Label>
+          <Select value={formData.pvcWindowSize} onValueChange={(value) => handleInputChange("pvcWindowSize", value)}>
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite dimenzije prozora" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="60x60">1) 60x60</SelectItem>
+              <SelectItem value="100x100">2) 100x100</SelectItem>
+              <SelectItem value="prilagođeno">3) Prilagođeno</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
 
-      <div>
-        <Label>PVC vrata boja</Label>
-        <Select value={formData.pvcDoorColor} onValueChange={(value) => handleInputChange("pvcDoorColor", value)}>
-          <SelectTrigger className="mt-1">
-            <SelectValue placeholder="Odaberite boju PVC vrata" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="antracit">1) antracit</SelectItem>
-            <SelectItem value="bijela">2) bijela</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div>
-        <Label>PVC prozor dimenzije</Label>
-        <Select value={formData.pvcWindowSize} onValueChange={(value) => handleInputChange("pvcWindowSize", value)}>
-          <SelectTrigger className="mt-1">
-            <SelectValue placeholder="Odaberite dimenzije prozora" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="60x60">1) 60x60</SelectItem>
-            <SelectItem value="100x100">2) 100x100</SelectItem>
-            <SelectItem value="prilagođeno">3) Prilagođeno</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div>
-        <Label>PVC prozor boja</Label>
-        <Select value={formData.pvcWindowColor} onValueChange={(value) => handleInputChange("pvcWindowColor", value)}>
-          <SelectTrigger className="mt-1">
-            <SelectValue placeholder="Odaberite boju prozora" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="bijela">1) bijela</SelectItem>
-            <SelectItem value="antracit">2) antracit</SelectItem>
-          </SelectContent>
-        </Select>
+        <div>
+          <Label>PVC prozor boja</Label>
+          <Select value={formData.pvcWindowColor} onValueChange={(value) => handleInputChange("pvcWindowColor", value)}>
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite boju prozora" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="bijela">1) bijela</SelectItem>
+              <SelectItem value="antracit">2) antracit</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
 
       <div>
