@@ -4,31 +4,31 @@ const Process = () => {
   const steps = [
     {
       icon: <Phone className="w-10 h-10" />,
-      number: "01",
-      title: "Kontaktiraj nas",
-      description: "Pošalji upit, mi odgovaramo u roku od 24h"
+      number: "1",
+      title: "Kontaktirajte nas",
+      description: "Pošaljite upit, mi odgovaramo u roku od 24h"
     },
     {
       icon: <Ruler className="w-10 h-10" />,
-      number: "02", 
+      number: "2", 
       title: "Plan + Ponuda",
-      description: "Šaljemo ti prijedlog rješenja i jasnu ponudu bez skrivenih stavki"
+      description: "Šaljemo vam prijedlog rješenja i jasnu ponudu bez skrivenih stavki"
     },
     {
       icon: <Factory className="w-10 h-10" />,
-      number: "03",
+      number: "3",
       title: "Proizvodnja",
-      description: "Kad kažeš \"idemo\", kreće izrada u hali"
+      description: "Kada kažete \"idemo\", kreće izrada u hali"
     },
     {
       icon: <Truck className="w-10 h-10" />,
-      number: "04",
+      number: "4",
       title: "Montaža na licu mjesta",
       description: "Dolazimo, montiramo, završavamo"
     },
     {
       icon: <Key className="w-10 h-10" />,
-      number: "05",
+      number: "5",
       title: "Ključ u ruke",
       description: "Gotovo. Radi. Izgleda odlično."
     }

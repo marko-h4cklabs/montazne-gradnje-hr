@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
     {
       icon: <Puzzle className="w-8 h-8" />,
       title: "Modularno i fleksibilno",
-      description: "Kasnije možeš nadograditi, pomaknuti ili nadograditi."
+      description: "Kasnije možete nadograditi, pomaknuti ili preseliti."
     }
   ];
 
@@ -25,8 +25,8 @@ const WhyChooseUs = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Zašto ljudi biraju montažnu <br />
-            izgradnju preko klasične?
+            Zašto ljudi biraju montažne <br />
+            objekte a ne klasične?
           </h2>
         </div>
         

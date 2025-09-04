@@ -34,11 +34,11 @@ const AboutUs = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-foreground">21 godina iskustva</span>
+                  <span className="text-foreground">23 godina iskustva</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-foreground">Kompletna rešenja "ključ u ruke"</span>
+                  <span className="text-foreground">Kompletna rješenja "ključ u ruke"</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>

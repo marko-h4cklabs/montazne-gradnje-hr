@@ -24,11 +24,11 @@ const FinalCTA = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-secondary-foreground">
-            Garaža sa kojom ćete biti zadovoljni
+            Montažni objekti sa kojima ćete biti zadovoljni
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 text-secondary-foreground/90 leading-relaxed">
-            Dosta ti je kiše po autu i ideja koje se nikad ne ostvare?
+            Dosta vam je kiše, leda po autu i ideja koje nikako da se ostvare?
           </p>
           
           
@@ -38,9 +38,9 @@ const FinalCTA = () => {
             onClick={() => setIsContactFormOpen(true)}
           >
             <MessageCircle className="w-6 h-6 mr-3" />
-            <span className="hidden md:inline">Pošalji upit – Rješenje stiže brzo kao i naši majstori</span>
+            <span className="hidden md:inline">Pošaljite upit – Rješenje stiže brzo kao i naši majstori</span>
             <span className="block md:hidden text-center">
-              Pošalji upit
+              Pošaljite upit
             </span>
           </Button>
           
