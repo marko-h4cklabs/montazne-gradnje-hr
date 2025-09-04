@@ -51,8 +51,38 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
     setIsSubmitting(true);
 
     try {
+      // Map form fields to match email function expectations
+      const emailData = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        description: formData.description,
+        contactPreference: formData.contactPreference,
+        selectedService,
+        // Map form fields to service-specific fields
+        garageSize: formData.width && formData.length ? `${formData.width}x${formData.length}` : undefined,
+        location: formData.location,
+        foundationType: formData.roofType, // Mapping roof type as foundation type for now
+        roofType: formData.roofCovering,
+        doorType: formData.garageDoors,
+        additionalFeatures: [
+          formData.height && `Visina: ${formData.height}`,
+          formData.wallIsolation && `Zidna izolacija: ${formData.wallIsolation}`,
+          formData.wallColor && `Krovni oluk: ${formData.wallColor}`,
+          formData.doorWidth && `Dimenzije vrata: ${formData.doorWidth}`,
+          formData.pvcWindowsDimensions && `PVC vrata: ${formData.pvcWindowsDimensions}`,
+          formData.pvcWindowsNumber && `Broj PVC vrata: ${formData.pvcWindowsNumber}`,
+          formData.pvcDoorDimensions && `PVC prozori: ${formData.pvcDoorDimensions}`,
+          formData.pvcDoorNumber && `Broj PVC prozora: ${formData.pvcDoorNumber}`,
+          formData.ventilation && `Ventilacija: ${formData.ventilation}`,
+          formData.electricalInstallations && `Električne instalacije: ${formData.electricalInstallations}`,
+          formData.additionalInfo
+        ].filter(Boolean).join(', ')
+      };
+
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData
+        body: emailData
       });
 
       if (error) {
