@@ -60,11 +60,11 @@ const Hero = () => {
           <span className="text-primary">Montažni Objekti</span>
           <span className="hidden md:inline"> – povoljne i kvalitetne montažne hale, garaže i kuće</span>
           <br className="hidden md:block" />
-          <span className="block md:hidden text-2xl sm:text-3xl mt-2">garaže & bungalovi</span>
+          <span className="block md:hidden text-2xl sm:text-3xl mt-2">hale, garaže I kuće</span>
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed block md:hidden">
-          <span className="text-primary font-semibold">Kvalitetne montažne konstrukcije</span> — brza montaža bez stresa
+          Kvalitetne montažne konstrukcije - postavljene za par dana bez stresa i dodatnih troškova
         </p>
         
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed hidden md:block">
