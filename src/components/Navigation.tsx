@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import berikoLogo from "@/assets/beriko-logo.png";
+
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,11 +65,6 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src={berikoLogo} 
-              alt="Beriko Logo" 
-              className="h-10 w-10 sm:h-12 sm:w-12"
-            />
             <h1 className={`text-xl sm:text-2xl font-bold ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-sm'}`}>
               BERIKO d.o.o.
             </h1>
