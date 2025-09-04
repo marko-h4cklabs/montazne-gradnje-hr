@@ -63,7 +63,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed hidden md:block">
-          <span className="text-primary font-bold">Montažne hale, garaže i kuće</span> — postavljene za par dana, bez stresa <br />
+          <span className="text-primary font-bold">Montažne hale, montažne garaže i montažne kuće</span> — postavljene za par dana, bez stresa <br />
           <strong>bez čekanja i bez dodatnih troškova.</strong>
         </p>
         
