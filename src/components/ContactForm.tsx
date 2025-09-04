@@ -380,14 +380,13 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
       </div>
 
       <div>
-        <Label htmlFor="additionalInfo">Dodatne informacije *</Label>
+        <Label htmlFor="additionalInfo">Dodatne informacije</Label>
         <Textarea
           id="additionalInfo"
           value={formData.additionalInfo}
           onChange={(e) => handleInputChange("additionalInfo", e.target.value)}
           placeholder="Unesite dodatne informacije..."
           className="mt-1"
-          required
         />
       </div>
 
