@@ -6,21 +6,21 @@ const ProductCategories = () => {
   const products = [
     {
       icon: "",
+      title: "Montažne Hale",
+      description: "Industrijska rješenja, čelične konstrukcije, energetska efikasnost. Sve prema vašim dimenzijama.",
+      image: galerijaHala
+    },
+    {
+      icon: "",
       title: "Montažne Garaže",
       description: "Zaštitite svoje vozilo ili alat — kvalitetno, sigurno i brzo rješenje, bez dozvola u većini situacija.",
       image: heroGaraza
     },
     {
       icon: "",
-      title: "Bungalovi & Vikendice", 
+      title: "Montažne kuće", 
       description: "Savršeno za odmor, izdavanje ili dodatni prostor na zemljištu. Sve napravljeno po mjeri.",
       image: galerijaVikendice
-    },
-    {
-      icon: "",
-      title: "Montažne Hale",
-      description: "Industrijska rješenja, čelične konstrukcije, energetska efikasnost. Sve prema vašim dimenzijama.",
-      image: galerijaHala
     }
   ];
 
