@@ -40,7 +40,7 @@ const Process = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-secondary-foreground">
             Od javljanja do ključa – <br />
-            evo kako to kod nas ide:
+            kako to kod nas ide:
           </h2>
         </div>
         
