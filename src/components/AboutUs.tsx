@@ -28,7 +28,7 @@ const AboutUs = () => {
               </h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
                 Naša misija je da pružimo kvalitetne, pouzdane i estetski privlačne montažne objekte koji će služiti našim 
-                klijentima desetljećima. Kombiniramo tradicionalna znanja sa modernim tehnologijama kako bismo uvijek bili u stopi sa trendovima i zadovoljili želje i potrebe svakog kupca.
+                klijentima desetljećima. Kombiniramo tradicionalna znanja sa modernim tehnologijama kako bismo uvijek bili u koraku sa trendovima i zadovoljili želje i potrebe svakog kupca.
               </p>
               
               <div className="space-y-4">
