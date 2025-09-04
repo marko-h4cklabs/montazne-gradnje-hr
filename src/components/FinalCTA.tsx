@@ -4,9 +4,20 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { MessageCircle } from "lucide-react";
 import CountdownTimer from "./CountdownTimer";
 import ContactForm from "./ContactForm";
+import ServiceSelection from "./ServiceSelection";
 
 const FinalCTA = () => {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+
+  const handleServiceSelect = (service: string) => {
+    setSelectedService(service);
+  };
+
+  const handleCloseDialog = () => {
+    setIsContactFormOpen(false);
+    setSelectedService(null);
+  };
 
   return (
     <section className="py-20 bg-secondary">
@@ -42,14 +53,21 @@ const FinalCTA = () => {
         </div>
       </div>
 
-      <Dialog open={isContactFormOpen} onOpenChange={setIsContactFormOpen}>
+      <Dialog open={isContactFormOpen} onOpenChange={handleCloseDialog}>
         <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-center">
-              Pošaljite nam upit
+              {!selectedService ? "Zatražite ponudu za:" : "Pošaljite nam upit"}
             </DialogTitle>
           </DialogHeader>
-          <ContactForm onClose={() => setIsContactFormOpen(false)} />
+          {!selectedService ? (
+            <ServiceSelection onServiceSelect={handleServiceSelect} />
+          ) : (
+            <ContactForm 
+              onClose={handleCloseDialog} 
+              selectedService={selectedService}
+            />
+          )}
         </DialogContent>
       </Dialog>
     </section>

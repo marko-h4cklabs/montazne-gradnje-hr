@@ -11,16 +11,37 @@ import { supabase } from "@/integrations/supabase/client";
 
 interface ContactFormProps {
   onClose: () => void;
+  selectedService?: string;
 }
 
-const ContactForm = ({ onClose }: ContactFormProps) => {
+const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     phone: "",
     email: "",
     description: "",
-    contactPreference: "email"
+    contactPreference: "email",
+    // Optional detailed fields
+    address: "",
+    location: "",
+    width: "",
+    length: "",
+    height: "",
+    roofType: "",
+    roofCovering: "",
+    wallIsolation: "",
+    wallColor: "",
+    garageDoors: "",
+    doorWidth: "",
+    doorHeight: "",
+    pvcWindowsDimensions: "",
+    pvcWindowsNumber: "",
+    pvcDoorDimensions: "",
+    pvcDoorNumber: "",
+    ventilation: "",
+    electricalInstallations: "",
+    additionalInfo: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -120,6 +141,254 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
           className="mt-1 min-h-[100px]"
         />
       </div>
+
+      {selectedService && (
+        <>
+          <div className="border-t pt-6">
+            <h3 className="text-lg font-semibold mb-4">Dodatne informacije (opcionalno)</h3>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="address">Adresa</Label>
+              <Input
+                id="address"
+                value={formData.address}
+                onChange={(e) => handleInputChange("address", e.target.value)}
+                className="mt-1"
+              />
+            </div>
+            <div>
+              <Label htmlFor="location">Lokacija gradilišta</Label>
+              <Input
+                id="location"
+                value={formData.location}
+                onChange={(e) => handleInputChange("location", e.target.value)}
+                placeholder="Adresa ili Google lokacija"
+                className="mt-1"
+              />
+            </div>
+          </div>
+
+          <div>
+            <Label className="text-base font-semibold">Mjere u cm</Label>
+            <div className="grid grid-cols-3 gap-4 mt-2">
+              <div>
+                <Label htmlFor="width">Širina</Label>
+                <Input
+                  id="width"
+                  value={formData.width}
+                  onChange={(e) => handleInputChange("width", e.target.value)}
+                  className="mt-1"
+                />
+              </div>
+              <div>
+                <Label htmlFor="length">Dubina</Label>
+                <Input
+                  id="length"
+                  value={formData.length}
+                  onChange={(e) => handleInputChange("length", e.target.value)}
+                  className="mt-1"
+                />
+              </div>
+              <div>
+                <Label htmlFor="height">Visina</Label>
+                <Input
+                  id="height"
+                  value={formData.height}
+                  onChange={(e) => handleInputChange("height", e.target.value)}
+                  placeholder="Ostale mjere (nadstrešnice ako je ima i sl.)"
+                  className="mt-1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="roofType">Vrsta krova i padina</Label>
+              <select
+                id="roofType"
+                value={formData.roofType}
+                onChange={(e) => handleInputChange("roofType", e.target.value)}
+                className="w-full mt-1 px-3 py-2 border border-input bg-background rounded-md text-sm"
+              >
+                <option value="">Vrsta krova i padina</option>
+                <option value="jednosmerni">Jednosmerni</option>
+                <option value="dvosmerni">Dvosmerni</option>
+              </select>
+            </div>
+            <div>
+              <Label htmlFor="roofCovering">Pokrov</Label>
+              <select
+                id="roofCovering"
+                value={formData.roofCovering}
+                onChange={(e) => handleInputChange("roofCovering", e.target.value)}
+                className="w-full mt-1 px-3 py-2 border border-input bg-background rounded-md text-sm"
+              >
+                <option value="">Pokrov</option>
+                <option value="trapezni-lim">Trapezni lim</option>
+                <option value="crijep">Crijep</option>
+                <option value="ostalo">Ostalo</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="wallIsolation">Zidna izolacija</Label>
+              <select
+                id="wallIsolation"
+                value={formData.wallIsolation}
+                onChange={(e) => handleInputChange("wallIsolation", e.target.value)}
+                className="w-full mt-1 px-3 py-2 border border-input bg-background rounded-md text-sm"
+              >
+                <option value="">Ukrasni limovi</option>
+                <option value="da">Da</option>
+                <option value="ne">Ne</option>
+              </select>
+            </div>
+            <div>
+              <Label htmlFor="wallColor">Krovni oluk</Label>
+              <select
+                id="wallColor"
+                value={formData.wallColor}
+                onChange={(e) => handleInputChange("wallColor", e.target.value)}
+                className="w-full mt-1 px-3 py-2 border border-input bg-background rounded-md text-sm"
+              >
+                <option value="">Krovni oluk</option>
+                <option value="da">Da</option>
+                <option value="ne">Ne</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="garageDoors">Garažna sekcijska vrata</Label>
+              <select
+                id="garageDoors"
+                value={formData.garageDoors}
+                onChange={(e) => handleInputChange("garageDoors", e.target.value)}
+                className="w-full mt-1 px-3 py-2 border border-input bg-background rounded-md text-sm"
+              >
+                <option value="">Boja</option>
+                <option value="bijela">Bijela</option>
+                <option value="siva">Siva</option>
+                <option value="smedja">Smeđa</option>
+                <option value="zelena">Zelena</option>
+              </select>
+            </div>
+            <div>
+              <Label htmlFor="doorWidth">Širina x visina</Label>
+              <Input
+                id="doorWidth"
+                value={formData.doorWidth}
+                onChange={(e) => handleInputChange("doorWidth", e.target.value)}
+                placeholder="Upiši širinu i visinu"
+                className="mt-1"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="pvcWindowsDimensions">PVC vrata (dimenzije)</Label>
+              <select
+                id="pvcWindowsDimensions"
+                value={formData.pvcWindowsDimensions}
+                onChange={(e) => handleInputChange("pvcWindowsDimensions", e.target.value)}
+                className="w-full mt-1 px-3 py-2 border border-input bg-background rounded-md text-sm"
+              >
+                <option value="">Dimenzije</option>
+                <option value="80x200">80x200</option>
+                <option value="90x200">90x200</option>
+                <option value="custom">Prilagođeno</option>
+              </select>
+            </div>
+            <div>
+              <Label htmlFor="pvcWindowsNumber">PVC vrata (komada)</Label>
+              <Input
+                id="pvcWindowsNumber"
+                value={formData.pvcWindowsNumber}
+                onChange={(e) => handleInputChange("pvcWindowsNumber", e.target.value)}
+                placeholder="Upiši broj komada"
+                className="mt-1"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="pvcDoorDimensions">PVC prozor (dimenzije)</Label>
+              <select
+                id="pvcDoorDimensions"
+                value={formData.pvcDoorDimensions}
+                onChange={(e) => handleInputChange("pvcDoorDimensions", e.target.value)}
+                className="w-full mt-1 px-3 py-2 border border-input bg-background rounded-md text-sm"
+              >
+                <option value="">Dimenzije</option>
+                <option value="60x60">60x60</option>
+                <option value="80x80">80x80</option>
+                <option value="custom">Prilagođeno</option>
+              </select>
+            </div>
+            <div>
+              <Label htmlFor="pvcDoorNumber">PVC prozor (komada)</Label>
+              <Input
+                id="pvcDoorNumber"
+                value={formData.pvcDoorNumber}
+                onChange={(e) => handleInputChange("pvcDoorNumber", e.target.value)}
+                placeholder="Upiši broj komada"
+                className="mt-1"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="ventilation">Ventilacija</Label>
+              <select
+                id="ventilation"
+                value={formData.ventilation}
+                onChange={(e) => handleInputChange("ventilation", e.target.value)}
+                className="w-full mt-1 px-3 py-2 border border-input bg-background rounded-md text-sm"
+              >
+                <option value="">Ventilacija</option>
+                <option value="da">Da</option>
+                <option value="ne">Ne</option>
+              </select>
+            </div>
+            <div>
+              <Label htmlFor="electricalInstallations">Električne instalacije</Label>
+              <select
+                id="electricalInstallations"
+                value={formData.electricalInstallations}
+                onChange={(e) => handleInputChange("electricalInstallations", e.target.value)}
+                className="w-full mt-1 px-3 py-2 border border-input bg-background rounded-md text-sm"
+              >
+                <option value="">Električne instalacije</option>
+                <option value="da">Da</option>
+                <option value="ne">Ne</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <Label htmlFor="additionalInfo">Dodatne informacije</Label>
+            <Textarea
+              id="additionalInfo"
+              value={formData.additionalInfo}
+              onChange={(e) => handleInputChange("additionalInfo", e.target.value)}
+              placeholder="Dodatne informacije"
+              className="mt-1"
+            />
+            <p className="text-xs text-muted-foreground mt-1">
+              * Polja označena zvjezdicom su obavezna
+            </p>
+          </div>
+        </>
+      )}
 
       <div>
         <Label>Kako biste željeli da vas kontaktiramo? *</Label>
