@@ -5,13 +5,19 @@ import heroGaraza from "@/assets/hero-garaza.jpg";
 import heroGarazaAlt from "@/assets/hero-garaza-alt.jpg";
 import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
 import heroBungalovAlt from "@/assets/hero-bungalov-alt.jpg";
+import galerijaBungalov from "@/assets/galerija-bungalov.jpg";
+import galerijaGaraza from "@/assets/galerija-garaza.jpg";
+import galerijaHala from "@/assets/galerija-hala.jpg";
 
 const Hero = () => {
   const images = [
     { src: heroGaraza, alt: "Montažna garaža" },
     { src: heroGarazaAlt, alt: "Industrijska garaža" },
     { src: heroBungalovModern, alt: "Moderni montažni bungalov" },
-    { src: heroBungalovAlt, alt: "Savremeni bungalov" }
+    { src: heroBungalovAlt, alt: "Savremeni bungalov" },
+    { src: galerijaBungalov, alt: "Galerija bungalova" },
+    { src: galerijaGaraza, alt: "Galerija garaža" },
+    { src: galerijaHala, alt: "Industrijske hale" }
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
