@@ -65,7 +65,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className={`text-2xl font-bold ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-sm'}`}>
-              Beriko
+              BERIKO d.o.o.
             </h1>
           </div>
 
