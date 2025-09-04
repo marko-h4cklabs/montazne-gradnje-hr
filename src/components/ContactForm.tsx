@@ -42,6 +42,9 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
     ventilation: "",
     electricalInstallations: "",
     additionalInfo: "",
+    // Custom dimension fields
+    customPvcWindowDimensions: "",
+    customPvcDoorDimensions: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -71,9 +74,9 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
           formData.wallIsolation && `Zidna izolacija: ${formData.wallIsolation}`,
           formData.wallColor && `Krovni oluk: ${formData.wallColor}`,
           formData.doorWidth && `Dimenzije vrata: ${formData.doorWidth}`,
-          formData.pvcWindowsDimensions && `PVC vrata: ${formData.pvcWindowsDimensions}`,
+          formData.pvcWindowsDimensions && `PVC vrata: ${formData.pvcWindowsDimensions === 'custom' ? formData.customPvcWindowDimensions : formData.pvcWindowsDimensions}`,
           formData.pvcWindowsNumber && `Broj PVC vrata: ${formData.pvcWindowsNumber}`,
-          formData.pvcDoorDimensions && `PVC prozori: ${formData.pvcDoorDimensions}`,
+          formData.pvcDoorDimensions && `PVC prozori: ${formData.pvcDoorDimensions === 'custom' ? formData.customPvcDoorDimensions : formData.pvcDoorDimensions}`,
           formData.pvcDoorNumber && `Broj PVC prozora: ${formData.pvcDoorNumber}`,
           formData.ventilation && `Ventilacija: ${formData.ventilation}`,
           formData.electricalInstallations && `Električne instalacije: ${formData.electricalInstallations}`,
@@ -335,6 +338,14 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
                 <option value="90x200">90x200</option>
                 <option value="custom">Prilagođeno</option>
               </select>
+              {formData.pvcWindowsDimensions === "custom" && (
+                <Input
+                  value={formData.customPvcWindowDimensions}
+                  onChange={(e) => handleInputChange("customPvcWindowDimensions", e.target.value)}
+                  placeholder="Unesite prilagođene dimenzije"
+                  className="mt-2"
+                />
+              )}
             </div>
             <div>
               <Label htmlFor="pvcWindowsNumber">PVC vrata (komada)</Label>
@@ -362,6 +373,14 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
                 <option value="80x80">80x80</option>
                 <option value="custom">Prilagođeno</option>
               </select>
+              {formData.pvcDoorDimensions === "custom" && (
+                <Input
+                  value={formData.customPvcDoorDimensions}
+                  onChange={(e) => handleInputChange("customPvcDoorDimensions", e.target.value)}
+                  placeholder="Unesite prilagođene dimenzije"
+                  className="mt-2"
+                />
+              )}
             </div>
             <div>
               <Label htmlFor="pvcDoorNumber">PVC prozor (komada)</Label>

@@ -58,7 +58,7 @@ const handler = async (req: Request): Promise<Response> => {
     if (selectedService) {
       serviceDetails += `<p><strong>Usluga:</strong> ${selectedService}</p>`;
       
-      if (selectedService === 'Montažne garaže' && (garageSize || location || foundationType || roofType || doorType || additionalFeatures)) {
+      if (selectedService === 'garaze' && (garageSize || location || foundationType || roofType || doorType || additionalFeatures)) {
         serviceDetails += '<h3>Detalji garaže:</h3>';
         if (garageSize) serviceDetails += `<p><strong>Veličina:</strong> ${garageSize}</p>`;
         if (location) serviceDetails += `<p><strong>Lokacija:</strong> ${location}</p>`;
@@ -68,7 +68,7 @@ const handler = async (req: Request): Promise<Response> => {
         if (additionalFeatures) serviceDetails += `<p><strong>Dodatne opcije:</strong> ${additionalFeatures}</p>`;
       }
       
-      if (selectedService === 'Bungalovi ili vikendice' && (bungalowSize || floorPlan || utilities || exteriorFinish)) {
+      if (selectedService === 'bungalovi' && (bungalowSize || floorPlan || utilities || exteriorFinish)) {
         serviceDetails += '<h3>Detalji bungalova/vikendice:</h3>';
         if (bungalowSize) serviceDetails += `<p><strong>Veličina:</strong> ${bungalowSize}</p>`;
         if (floorPlan) serviceDetails += `<p><strong>Osnova:</strong> ${floorPlan}</p>`;
@@ -76,7 +76,7 @@ const handler = async (req: Request): Promise<Response> => {
         if (exteriorFinish) serviceDetails += `<p><strong>Spoljašnja završnica:</strong> ${exteriorFinish}</p>`;
       }
       
-      if (selectedService === 'Hale' && (hallSize || usage || buildingHeight || hallFoundationType)) {
+      if (selectedService === 'hale' && (hallSize || usage || buildingHeight || hallFoundationType)) {
         serviceDetails += '<h3>Detalji hale:</h3>';
         if (hallSize) serviceDetails += `<p><strong>Veličina:</strong> ${hallSize}</p>`;
         if (usage) serviceDetails += `<p><strong>Namena:</strong> ${usage}</p>`;
