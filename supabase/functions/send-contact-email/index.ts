@@ -14,26 +14,26 @@ interface ContactEmailRequest {
   lastName: string;
   email: string;
   phone: string;
-  description: string;
-  contactPreference: string;
   selectedService?: string;
-  // Garage specific fields
-  garageSize?: string;
-  location?: string;
-  foundationType?: string;
+  mjestoPrebivalidta?: string;
+  // Object dimensions
+  width?: string;
+  depth?: string;
+  height?: string;
+  // Material and color selections
   roofType?: string;
-  doorType?: string;
-  additionalFeatures?: string;
-  // Bungalow specific fields
-  bungalowSize?: string;
-  floorPlan?: string;
-  utilities?: string;
-  exteriorFinish?: string;
-  // Hall specific fields
-  hallSize?: string;
-  usage?: string;
-  buildingHeight?: string;
-  hallFoundationType?: string;
+  roofMaterial?: string;
+  roofColor?: string;
+  wallMaterial?: string;
+  wallColor?: string;
+  drainage?: string;
+  garageDoorColor?: string;
+  garageDoorSize?: string;
+  pvcDoorType?: string;
+  pvcDoorColor?: string;
+  pvcWindowSize?: string;
+  pvcWindowColor?: string;
+  additionalInfo?: string;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -45,44 +45,54 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const requestData: ContactEmailRequest = await req.json();
     const { 
-      firstName, lastName, email, phone, description, contactPreference, selectedService,
-      garageSize, location, foundationType, roofType, doorType, additionalFeatures,
-      bungalowSize, floorPlan, utilities, exteriorFinish,
-      hallSize, usage, buildingHeight, hallFoundationType
+      firstName, lastName, email, phone, selectedService,
+      mjestoPrebivalidta, width, depth, height,
+      roofType, roofMaterial, roofColor, wallMaterial, wallColor,
+      drainage, garageDoorColor, garageDoorSize, pvcDoorType,
+      pvcDoorColor, pvcWindowSize, pvcWindowColor, additionalInfo
     } = requestData;
 
-    console.log("Sending contact email:", { firstName, lastName, email, contactPreference, selectedService });
+    console.log("Sending contact email:", { firstName, lastName, email, selectedService });
 
-    // Create service-specific details
-    let serviceDetails = '';
-    if (selectedService) {
-      serviceDetails += `<p><strong>Usluga:</strong> ${selectedService}</p>`;
-      
-      if (selectedService === 'garaze' && (garageSize || location || foundationType || roofType || doorType || additionalFeatures)) {
-        serviceDetails += '<h3>Detalji garaže:</h3>';
-        if (garageSize) serviceDetails += `<p><strong>Veličina:</strong> ${garageSize}</p>`;
-        if (location) serviceDetails += `<p><strong>Lokacija:</strong> ${location}</p>`;
-        if (foundationType) serviceDetails += `<p><strong>Tip temelja:</strong> ${foundationType}</p>`;
-        if (roofType) serviceDetails += `<p><strong>Tip krova:</strong> ${roofType}</p>`;
-        if (doorType) serviceDetails += `<p><strong>Tip vrata:</strong> ${doorType}</p>`;
-        if (additionalFeatures) serviceDetails += `<p><strong>Dodatne opcije:</strong> ${additionalFeatures}</p>`;
-      }
-      
-      if (selectedService === 'bungalovi' && (bungalowSize || floorPlan || utilities || exteriorFinish)) {
-        serviceDetails += '<h3>Detalji bungalova/vikendice:</h3>';
-        if (bungalowSize) serviceDetails += `<p><strong>Veličina:</strong> ${bungalowSize}</p>`;
-        if (floorPlan) serviceDetails += `<p><strong>Osnova:</strong> ${floorPlan}</p>`;
-        if (utilities) serviceDetails += `<p><strong>Instalacije:</strong> ${utilities}</p>`;
-        if (exteriorFinish) serviceDetails += `<p><strong>Spoljašnja završnica:</strong> ${exteriorFinish}</p>`;
-      }
-      
-      if (selectedService === 'hale' && (hallSize || usage || buildingHeight || hallFoundationType)) {
-        serviceDetails += '<h3>Detalji hale:</h3>';
-        if (hallSize) serviceDetails += `<p><strong>Veličina:</strong> ${hallSize}</p>`;
-        if (usage) serviceDetails += `<p><strong>Namena:</strong> ${usage}</p>`;
-        if (buildingHeight) serviceDetails += `<p><strong>Visina objekta:</strong> ${buildingHeight}</p>`;
-        if (hallFoundationType) serviceDetails += `<p><strong>Tip temelja:</strong> ${hallFoundationType}</p>`;
-      }
+    // Create detailed information section
+    let detailsSection = '';
+    
+    // Basic information
+    if (mjestoPrebivalidta) {
+      detailsSection += `<p><strong>Mjesto Prebivališta:</strong> ${mjestoPrebivalidta}</p>`;
+    }
+    
+    // Object dimensions
+    if (width || depth || height) {
+      detailsSection += '<h3>Podaci I mjere objekta:</h3>';
+      if (width) detailsSection += `<p><strong>Širina:</strong> ${width} cm</p>`;
+      if (depth) detailsSection += `<p><strong>Dubina:</strong> ${depth} cm</p>`;
+      if (height) detailsSection += `<p><strong>Visina:</strong> ${height} cm</p>`;
+    }
+    
+    // Technical specifications
+    const hasSpecs = roofType || roofMaterial || roofColor || wallMaterial || wallColor || 
+                    drainage || garageDoorColor || garageDoorSize || pvcDoorType || 
+                    pvcDoorColor || pvcWindowSize || pvcWindowColor;
+    
+    if (hasSpecs) {
+      detailsSection += '<h3>Tehnički podaci:</h3>';
+      if (roofType) detailsSection += `<p><strong>Vrsta krovova i padina:</strong> ${roofType}</p>`;
+      if (roofMaterial) detailsSection += `<p><strong>Krov:</strong> ${roofMaterial}</p>`;
+      if (roofColor) detailsSection += `<p><strong>Boja Krova:</strong> ${roofColor}</p>`;
+      if (wallMaterial) detailsSection += `<p><strong>Zid:</strong> ${wallMaterial}</p>`;
+      if (wallColor) detailsSection += `<p><strong>Boja Zida:</strong> ${wallColor}</p>`;
+      if (drainage) detailsSection += `<p><strong>Odvodnja krovne vode:</strong> ${drainage}</p>`;
+      if (garageDoorColor) detailsSection += `<p><strong>Garažna sekcijska vrata:</strong> ${garageDoorColor}</p>`;
+      if (garageDoorSize) detailsSection += `<p><strong>Garažna vrata dimenzije:</strong> ${garageDoorSize}</p>`;
+      if (pvcDoorType) detailsSection += `<p><strong>PVC vrata vrsta:</strong> ${pvcDoorType}</p>`;
+      if (pvcDoorColor) detailsSection += `<p><strong>PVC vrata boja:</strong> ${pvcDoorColor}</p>`;
+      if (pvcWindowSize) detailsSection += `<p><strong>PVC prozor dimenzije:</strong> ${pvcWindowSize}</p>`;
+      if (pvcWindowColor) detailsSection += `<p><strong>PVC prozor boja:</strong> ${pvcWindowColor}</p>`;
+    }
+    
+    if (additionalInfo) {
+      detailsSection += `<h3>Dodatne informacije:</h3><p>${additionalInfo}</p>`;
     }
 
     // Send email to your business address
@@ -95,10 +105,8 @@ const handler = async (req: Request): Promise<Response> => {
         <p><strong>Ime:</strong> ${firstName} ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Telefon:</strong> ${phone}</p>
-        <p><strong>Preferirani kontakt:</strong> ${contactPreference}</p>
-        ${serviceDetails}
-        <h3>Opis posla:</h3>
-        <p>${description}</p>
+        ${selectedService ? `<p><strong>Usluga:</strong> ${selectedService}</p>` : ''}
+        ${detailsSection}
         <hr>
         <p><em>Ovaj email je poslat sa web stranice Beriko Montage</em></p>
       `,
@@ -113,10 +121,7 @@ const handler = async (req: Request): Promise<Response> => {
         <h2>Hvala ${firstName}!</h2>
         <p>Primili smo vaš upit${selectedService ? ` za ${selectedService.toLowerCase()}` : ''} i kontaktiraćemo vas u najkraćem mogućem roku.</p>
         ${selectedService ? `<p><strong>Usluga:</strong> ${selectedService}</p>` : ''}
-        <p><strong>Vaš upit:</strong></p>
-        <blockquote style="background: #f5f5f5; padding: 10px; border-left: 4px solid #007bff;">
-          ${description}
-        </blockquote>
+        ${detailsSection ? `<div style="background: #f5f5f5; padding: 15px; border-left: 4px solid #007bff; margin: 15px 0;">${detailsSection}</div>` : ''}
         <p>Srdačan pozdrav,<br>Beriko Montage tim</p>
       `,
     });
