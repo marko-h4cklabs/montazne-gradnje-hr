@@ -46,7 +46,6 @@ const ProductCategories = () => {
                   alt={product.title}
                   className="w-full h-full object-cover group-hover:scale-110 smooth-transition"
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 smooth-transition"></div>
                 <div className="absolute top-4 left-4 text-4xl">
                   {product.icon}
                 </div>
