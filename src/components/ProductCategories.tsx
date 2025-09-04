@@ -1,6 +1,6 @@
 import heroGaraza from "@/assets/hero-garaza.jpg";
 import galerijaHala from "@/assets/galerija-hala.jpg";
-import galerijaVikendice from "@/assets/galerija-vikendice-bungalovi.jpg";
+import galerijaBungalov from "@/assets/galerija-bungalov.jpg";
 
 const ProductCategories = () => {
   const products = [
@@ -14,7 +14,7 @@ const ProductCategories = () => {
       icon: "",
       title: "Bungalovi & Vikendice", 
       description: "Savršeno za odmor, izdavanje ili dodatni prostor na zemljištu. Sve napravljeno po mjeri.",
-      image: galerijaVikendice
+      image: galerijaBungalov
     },
     {
       icon: "",
