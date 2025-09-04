@@ -47,7 +47,7 @@ const References = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-3 rounded-full font-semibold smooth-transition hover:scale-105"
           >
-            Pregledaj sve recenzije
+            Pregledajte sve recenzije
           </a>
         </div>
       </div>
