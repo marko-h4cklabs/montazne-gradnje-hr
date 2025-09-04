@@ -1,7 +1,7 @@
 const Stats = () => {
   const stats = [
     {
-      number: "15+",
+      number: "17+",
       label: "Godina iskustva",
       description: "u montažnim konstrukcijama"
     },
