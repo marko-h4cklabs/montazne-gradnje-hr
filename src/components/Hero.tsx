@@ -55,12 +55,17 @@ const Hero = () => {
       </div>
       
       {/* Hero Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          <span className="text-primary">Montažni Objekti</span><span className="hidden md:inline"> – povoljne i kvalitetne montažne hale, garaže i kuće</span> <br className="hidden md:block" />
-          <span className="block md:hidden text-primary">bungalovi i hale</span>
-          <span className="block md:hidden text-lg">– povoljne i kvalitetne garaže od lima</span>
+      <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+          <span className="text-primary">Montažni Objekti</span>
+          <span className="hidden md:inline"> – povoljne i kvalitetne montažne hale, garaže i kuće</span>
+          <br className="hidden md:block" />
+          <span className="block md:hidden text-2xl sm:text-3xl mt-2">garaže & bungalovi</span>
         </h1>
+        
+        <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed block md:hidden">
+          <span className="text-primary font-semibold">Kvalitetne montažne konstrukcije</span> — brza montaža bez stresa
+        </p>
         
         <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed hidden md:block">
           <span className="text-primary font-bold">Montažne hale, montažne garaže i montažne kuće</span> — postavljene za par dana, bez stresa <br />
@@ -78,9 +83,10 @@ const Hero = () => {
               window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
             }
           }}
-          className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-base px-6 py-4 rounded-full font-semibold"
+          className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4 rounded-full font-semibold"
         >
-          ➡️ Pošaljite nam upit – odgovaramo u roku od 24h
+          <span className="hidden sm:inline">➡️ Pošaljite nam upit – odgovaramo u roku od 24h</span>
+          <span className="sm:hidden">📧 Pošaljite upit</span>
         </Button>
       </div>
 
