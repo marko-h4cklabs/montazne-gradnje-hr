@@ -15,7 +15,7 @@ const SocialProof = () => {
     {
       icon: <Award className="w-8 h-8" />,
       title: "Naši majstori ne odlaze",
-      subtitle: "dok ne kažeš: \"To je to.\""
+      subtitle: "dok ne kažete: \"To je to.\""
     },
     {
       icon: <HeadphonesIcon className="w-8 h-8" />,
