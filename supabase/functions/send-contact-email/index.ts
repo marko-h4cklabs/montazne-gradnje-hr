@@ -98,7 +98,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email to your business addresses (individually for better tracking)
     const businessEmails = ["marko.srnec5@gmail.com", "beriko@beriko.com", "berikob247@gmail.com", "rubenprstec1@gmail.com"];
     const emailContent = {
-      from: "Beriko Montage <onboarding@resend.dev>",
+      from: "Beriko Montage <noreply@mail.beriko.com>",
       subject: `Novi upit - ${firstName} ${lastName}${selectedService ? ` (${selectedService})` : ''}`,
       html: `
         <h2>Novi upit sa web stranice</h2>
@@ -124,7 +124,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to the customer
     await resend.emails.send({
-      from: "Beriko Montage <onboarding@resend.dev>",
+      from: "Beriko Montage <noreply@mail.beriko.com>",
       to: [email],
       subject: `Hvala na upitu - Beriko Montage${selectedService ? ` (${selectedService})` : ''}`,
       html: `
