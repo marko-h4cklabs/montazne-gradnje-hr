@@ -95,10 +95,10 @@ const handler = async (req: Request): Promise<Response> => {
       detailsSection += `<h3>Dodatne informacije:</h3><p>${additionalInfo}</p>`;
     }
 
-    // Send email to your business address
-    const emailResponse = await resend.emails.send({
+    // Send email to your business addresses (individually for better tracking)
+    const businessEmails = ["marko.srnec5@gmail.com", "beriko@beriko.com", "berikob247@gmail.com"];
+    const emailContent = {
       from: "Beriko Montage <onboarding@resend.dev>",
-      to: ["marko.srnec5@gmail.com", "beriko@beriko.com", "berikob247@gmail.com"],
       subject: `Novi upit - ${firstName} ${lastName}${selectedService ? ` (${selectedService})` : ''}`,
       html: `
         <h2>Novi upit sa web stranice</h2>
@@ -110,7 +110,17 @@ const handler = async (req: Request): Promise<Response> => {
         <hr>
         <p><em>Ovaj email je poslat sa web stranice Beriko Montage</em></p>
       `,
-    });
+    };
+
+    // Send individual emails to each business address
+    const emailPromises = businessEmails.map(email => 
+      resend.emails.send({
+        ...emailContent,
+        to: [email],
+      })
+    );
+    
+    const emailResponse = await Promise.all(emailPromises);
 
     // Send confirmation email to the customer
     await resend.emails.send({
