@@ -98,7 +98,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email to your business address
     const emailResponse = await resend.emails.send({
       from: "Beriko Montage <onboarding@resend.dev>",
-      to: ["marko.srnec5@gmail.com", "beriko@beriko.com"],
+      to: ["marko.srnec5@gmail.com", "beriko@beriko.com", "berikob247@gmail.com"],
       subject: `Novi upit - ${firstName} ${lastName}${selectedService ? ` (${selectedService})` : ''}`,
       html: `
         <h2>Novi upit sa web stranice</h2>
