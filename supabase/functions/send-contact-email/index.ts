@@ -112,15 +112,28 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     };
 
-    // Send individual emails to each business address
-    const emailPromises = businessEmails.map(email => 
-      resend.emails.send({
-        ...emailContent,
-        to: [email],
-      })
-    );
+    // Send individual emails to each business address with rate limiting
+    const emailResponses = [];
+    for (let i = 0; i < businessEmails.length; i++) {
+      const email = businessEmails[i];
+      try {
+        const response = await resend.emails.send({
+          ...emailContent,
+          to: [email],
+        });
+        emailResponses.push(response);
+        
+        // Add delay between emails to respect rate limit (2 requests per second max)
+        if (i < businessEmails.length - 1) {
+          await new Promise(resolve => setTimeout(resolve, 600)); // 600ms delay
+        }
+      } catch (error) {
+        console.error(`Failed to send email to ${email}:`, error);
+        emailResponses.push({ error });
+      }
+    }
     
-    const emailResponse = await Promise.all(emailPromises);
+    const emailResponse = emailResponses;
 
     // Send confirmation email to the customer
     await resend.emails.send({
