@@ -96,7 +96,7 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     // Send email to your business addresses (individually for better tracking)
-    const businessEmails = ["marko.srnec5@gmail.com", "beriko@beriko.com", "berikob247@gmail.com"];
+    const businessEmails = ["marko.srnec5@gmail.com", "beriko@beriko.com", "berikob247@gmail.com", "rubenprstec1@gmail.com"];
     const emailContent = {
       from: "Beriko Montage <onboarding@resend.dev>",
       subject: `Novi upit - ${firstName} ${lastName}${selectedService ? ` (${selectedService})` : ''}`,
