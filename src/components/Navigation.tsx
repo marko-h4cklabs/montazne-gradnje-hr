@@ -65,9 +65,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <h1 className={`text-xl sm:text-2xl font-bold ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-sm'}`}>
-              BERIKO d.o.o.
-            </h1>
+            <img 
+              src="/lovable-uploads/624af0ec-f1aa-481d-bae5-9b3145b561c5.png" 
+              alt="Beriko d.o.o. logo" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Menu */}
