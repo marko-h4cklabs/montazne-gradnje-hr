@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-import heroGaraza from "@/assets/hero-garaza.jpg";
 import heroGarazaAlt from "@/assets/hero-garaza-alt.jpg";
 import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
 import heroBungalovAlt from "@/assets/hero-bungalov-alt.jpg";
@@ -11,7 +10,7 @@ import galerijaHala from "@/assets/galerija-hala.jpg";
 
 const Hero = () => {
   const images = [
-    { src: heroGaraza, alt: "Montažna garaža" },
+    { src: "/lovable-uploads/fcc31405-5071-46a1-ac40-b422991656a3.png", alt: "Moderna montažna kuća" },
     { src: heroGarazaAlt, alt: "Industrijska garaža" },
     { src: heroBungalovModern, alt: "Moderni montažni bungalov" },
     { src: heroBungalovAlt, alt: "Savremeni bungalov" },
@@ -51,16 +50,16 @@ const Hero = () => {
             </div>
           ))}
         </div>
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
       {/* Hero Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight text-white/90">
           <span className="text-primary">Montažni Objekti</span>
           <span className="hidden md:inline"> – povoljne i kvalitetne montažne Hale, Garaže i Kuće</span>
           <br className="hidden md:block" />
-          <span className="block md:hidden text-2xl sm:text-3xl mt-2">Hale, Garaže I Kuće</span>
+          <span className="block md:hidden text-xl sm:text-2xl mt-2">Hale, Garaže I Kuće</span>
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed block md:hidden">
