@@ -294,33 +294,36 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
         </Select>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <Label>Garažna sekcijska vrata *</Label>
-          <Select value={formData.garageDoorColor} onValueChange={(value) => handleInputChange("garageDoorColor", value)} required>
-            <SelectTrigger className="mt-1">
-              <SelectValue placeholder="Odaberite boju vrata" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="bijela">bijela</SelectItem>
-              <SelectItem value="antracit">antracit</SelectItem>
-              <SelectItem value="zlatni-hrast">zlatni hrast</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+      {/* Only show garage door fields for garages and halls, not for bungalows */}
+      {selectedService !== "bungalovi" && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <Label>Garažna sekcijska vrata *</Label>
+            <Select value={formData.garageDoorColor} onValueChange={(value) => handleInputChange("garageDoorColor", value)} required>
+              <SelectTrigger className="mt-1">
+                <SelectValue placeholder="Odaberite boju vrata" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="bijela">bijela</SelectItem>
+                <SelectItem value="antracit">antracit</SelectItem>
+                <SelectItem value="zlatni-hrast">zlatni hrast</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
 
-        <div>
-          <Label htmlFor="garageDoorSize">Garažna sekcijska vrata - Sirina x Visina *</Label>
-          <Input
-            id="garageDoorSize"
-            value={formData.garageDoorSize}
-            onChange={(e) => handleInputChange("garageDoorSize", e.target.value)}
-            placeholder="npr. 240x210"
-            className="mt-1"
-            required
-          />
+          <div>
+            <Label htmlFor="garageDoorSize">Garažna sekcijska vrata - Sirina x Visina *</Label>
+            <Input
+              id="garageDoorSize"
+              value={formData.garageDoorSize}
+              onChange={(e) => handleInputChange("garageDoorSize", e.target.value)}
+              placeholder="npr. 240x210"
+              className="mt-1"
+              required
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
