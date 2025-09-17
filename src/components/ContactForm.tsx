@@ -232,7 +232,7 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
             <SelectContent>
               <SelectItem value="termonapel-30mm">termonapel 30mm</SelectItem>
               <SelectItem value="termopanel-50mm">termopanel 50mm</SelectItem>
-              <SelectItem value="imitacija-crijepa">Imitacija crijepa</SelectItem>
+              <SelectItem value="imitacija-crijepa">imitacija crijepa 40-80mm</SelectItem>
             </SelectContent>
           </Select>
         </div>
