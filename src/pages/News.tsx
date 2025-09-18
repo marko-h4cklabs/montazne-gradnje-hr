@@ -53,7 +53,7 @@ const News = () => {
 
               <div className="bg-card p-6 rounded-lg shadow-sm border flex flex-col">
                 <h3 className="font-semibold text-foreground mb-3 text-xl">
-                  "Oluja u Zagrebu rušila stabla"
+                  "Oluja u Zagrebu rušila stabla na automobile"
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   Al Jazeera Balkans, 7. srpnja 2025.
@@ -73,7 +73,7 @@ const News = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="bg-card p-6 rounded-lg shadow-sm border">
                 <h3 className="font-semibold text-foreground mb-3 text-xl">
-                  "Dvije osobe u Splitu teško ozlijeđene"
+                  "Ekstremni vremenski uvjeti"
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   Tportal.hr, 8. srpnja 2025.
@@ -91,7 +91,7 @@ const News = () => {
 
               <div className="bg-card p-6 rounded-lg shadow-sm border">
                 <h3 className="font-semibold text-foreground mb-3 text-xl">
-                  "Dijelove Hrvatske pogodila tuča: Voćnjaci pod ledom"
+                  "Dijelove Hrvatske pogodila tuča: Auti pod ledom"
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   Dnevnik.hr, 17. kolovoza 2025.
