@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import vijest2 from "@/assets/vijest2.png";
 
 const News = () => {
   return (
@@ -56,9 +57,11 @@ const News = () => {
                   "Snažno olujno nevrijeme pogodilo je dijelove Hrvatske. U prijepodnevnim satima uslijed oluje u Zagrebu stablo se <strong>srušilo na četiri automobila</strong>..."
                 </p>
                 {/* Space for image */}
-                <div className="h-48 bg-muted/30 rounded-md flex items-center justify-center text-muted-foreground text-sm">
-                  Dodajte vijest2.png u src/assets folder
-                </div>
+                <img 
+                  src={vijest2} 
+                  alt="Oluja u Zagrebu rušila stabla" 
+                  className="w-full h-48 object-cover rounded-md"
+                />
               </div>
             </div>
 
