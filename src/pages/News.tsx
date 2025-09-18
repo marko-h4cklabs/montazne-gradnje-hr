@@ -33,14 +33,14 @@ const News = () => {
             <h2 className="text-3xl font-bold mb-8 text-foreground">Nedavni vremenski događaji - 2025.</h2>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
+              <div className="bg-card p-6 rounded-lg shadow-sm border flex flex-col">
                 <h3 className="font-semibold text-foreground mb-3 text-xl">
                   "Najavljivana nevera stigla je u Hrvatsku"
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   Slobodna Dalmacija, 20. kolovoza 2025.
                 </p>
-                <p className="text-foreground mb-4">
+                <p className="text-foreground mb-4 flex-grow">
                   "Promjena vremena je stigla u Hrvatsku. U srijedu u večernjim satima snažno nevrijeme je pogodilo dijelove Istre, a po trenutnim informacijama, na snažnom udaru je bio Umag u kojem je pao led i jaka kiša, a ulice su potpuno završile pod vodom."
                 </p>
                 <img
@@ -51,21 +51,21 @@ const News = () => {
                 />
               </div>
 
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
+              <div className="bg-card p-6 rounded-lg shadow-sm border flex flex-col">
                 <h3 className="font-semibold text-foreground mb-3 text-xl">
                   "Oluja u Zagrebu rušila stabla"
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   Al Jazeera Balkans, 7. srpnja 2025.
                 </p>
-                <p className="text-foreground mb-4">
+                <p className="text-foreground mb-4 flex-grow">
                   "Snažno olujno nevrijeme pogodilo je dijelove Hrvatske. U prijepodnevnim satima uslijed oluje u Zagrebu stablo se <strong>srušilo na četiri automobila</strong>..."
                 </p>
-                {/* Space for image */}
                 <img 
                   src={vijest2} 
                   alt="Oluja u Zagrebu rušila stabla" 
-                  className="w-full h-48 object-cover rounded-md"
+                  className="w-full aspect-[16/9] object-cover rounded-md"
+                  loading="lazy"
                 />
               </div>
             </div>
