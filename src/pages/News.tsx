@@ -1,10 +1,22 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const News = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
+      {/* Back Arrow */}
+      <div className="fixed top-20 left-4 z-10">
+        <Link to="/">
+          <Button variant="outline" size="sm" className="flex items-center gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Povratak
+          </Button>
+        </Link>
+      </div>
       <main className="pt-32 pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl font-bold text-center mb-4">Vijesti</h1>
@@ -160,9 +172,11 @@ const News = () => {
             <p className="text-muted-foreground mb-6">
               Montažne garaže i bungalovi pružaju sigurnu zaštitu za vaša vozila i vrijednu imovinu
             </p>
-            <div className="h-32 bg-muted/30 rounded-md flex items-center justify-center text-muted-foreground text-sm mb-6">
-              [Prostor za sliku zaštićenog vozila u garaži]
-            </div>
+            <Link to="/garaze">
+              <Button size="lg" className="px-8 py-3">
+                Pregled ponude
+              </Button>
+            </Link>
           </section>
         </div>
       </main>
