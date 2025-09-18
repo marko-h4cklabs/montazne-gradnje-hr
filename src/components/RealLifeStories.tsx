@@ -40,7 +40,7 @@ const RealLifeStories = () => {
               Al Jazeera Balkans, 7. srpnja 2025.
             </p>
             <p className="text-sm text-foreground">
-              „Snažno olujno nevrijeme pogodilo je dijelove Hrvatske … U prijepodnevnim satima uslijed oluje u Zagrebu stablo se srušilo na četiri automobila …"
+              „Snažno olujno nevrijeme pogodilo je dijelove Hrvatske … U prijepodnevnim satima uslijed oluje u Zagrebu stablo se <strong>srušilo na četiri automobila …</strong>"
             </p>
           </div>
 
@@ -53,14 +53,14 @@ const RealLifeStories = () => {
               Jutarnji.hr
             </p>
             <p className="text-sm text-foreground">
-              „Nakon velikih oluja u srpnju, koje su pogodile gotovo sve hrvatske krajeve, samo u Zagrebu je prijavljeno 6.285 materijalnih šteta, a uključivale su štetu na građevinama, poljoprivrednim površinama i – osobnim vozilima."
+              „Nakon velikih oluja u srpnju, koje su pogodile gotovo sve hrvatske krajeve, samo u Zagrebu je prijavljeno 6.285 materijalnih šteta, a uključivale su štetu na građevinama, poljoprivrednim površinama i – <strong>osobnim vozilima.</strong>"
             </p>
           </div>
         </div>
 
         <div className="text-center">
           <Button onClick={handleNewsClick} size="lg">
-            Pročitajte više vijesti
+            Pročitajte više o vremenskim nepogodbama
           </Button>
         </div>
       </div>
