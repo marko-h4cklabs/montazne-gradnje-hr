@@ -21,7 +21,7 @@ const RealLifeStories = () => {
           {/* First story */}
           <div className="bg-card p-6 rounded-lg shadow-sm border">
             <h3 className="font-semibold text-foreground mb-2">
-              „Stigla promjena vremena, dijelove Hrvatske pogodila tuča: Voćnjaci pod ledom."
+              „Stigla promjena vremena, dijelove Hrvatske pogodila tuča: Auti pod ledom."
             </h3>
             <p className="text-sm text-muted-foreground mb-3">
               Dnevnik.hr, 17. kolovoza 2025.
