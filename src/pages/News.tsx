@@ -9,9 +9,9 @@ const News = () => {
     <div className="min-h-screen">
       <Navigation />
       {/* Back Arrow */}
-      <div className="fixed top-20 left-4 z-10">
+      <div className="fixed top-28 left-4 z-10">
         <Link to="/">
-          <Button variant="outline" size="sm" className="flex items-center gap-2">
+          <Button size="sm" className="flex items-center gap-2">
             <ArrowLeft className="w-4 h-4" />
             Povratak
           </Button>
