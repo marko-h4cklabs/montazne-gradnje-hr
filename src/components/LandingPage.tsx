@@ -7,6 +7,7 @@ import Gallery from "./Gallery";
 import References from "./References";
 import SocialProof from "./SocialProof";
 import FinalCTA from "./FinalCTA";
+import RealLifeStories from "./RealLifeStories";
 import AboutUs from "./AboutUs";
 import Footer from "./Footer";
 
@@ -30,6 +31,7 @@ const LandingPage = () => {
       <div id="kontakt">
         <FinalCTA />
       </div>
+      <RealLifeStories />
       <div id="o-nama">
         <AboutUs />
       </div>
