@@ -3,10 +3,6 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import vijest1 from "@/assets/vijest1.png";
-import vijest2 from "@/assets/vijest2.png";
-import vijest3 from "@/assets/vijest3.png";
-import vijest4 from "@/assets/vijest4.png";
 
 const News = () => {
   return (
@@ -44,11 +40,9 @@ const News = () => {
                   "Promjena vremena je stigla u Hrvatsku. U srijedu u večernjim satima snažno nevrijeme je pogodilo dijelove Istre, a po trenutnim informacijama, na snažnom udaru je bio Umag u kojem je pao led i jaka kiša, a ulice su potpuno završile pod vodom."
                 </p>
                 {/* Space for image */}
-                <img 
-                  src={vijest1} 
-                  alt="Poplavljene ulice u Umagu nakon nevrijemea"
-                  className="w-full h-48 object-cover rounded-md"
-                />
+                <div className="h-48 bg-muted/30 rounded-md flex items-center justify-center text-muted-foreground text-sm">
+                  Dodajte vijest1.png u src/assets folder
+                </div>
               </div>
 
               <div className="bg-card p-6 rounded-lg shadow-sm border">
@@ -62,11 +56,9 @@ const News = () => {
                   "Snažno olujno nevrijeme pogodilo je dijelove Hrvatske. U prijepodnevnim satima uslijed oluje u Zagrebu stablo se <strong>srušilo na četiri automobila</strong>..."
                 </p>
                 {/* Space for image */}
-                <img 
-                  src={vijest2} 
-                  alt="Srušena stabla na automobilima u Zagrebu"
-                  className="w-full h-48 object-cover rounded-md"
-                />
+                <div className="h-48 bg-muted/30 rounded-md flex items-center justify-center text-muted-foreground text-sm">
+                  Dodajte vijest2.png u src/assets folder
+                </div>
               </div>
             </div>
 
@@ -82,11 +74,9 @@ const News = () => {
                   "Nad područjem Hrvatske formirala se snažna ciklona koja je donijela ekstremne vremenske uvjete, uz značajna oštećenja u više regija. Katastrofalno nevrijeme, krupa i olujni vjetar pogodili su Split i okolicu..."
                 </p>
                 {/* Space for image */}
-                <img 
-                  src={vijest3} 
-                  alt="Štete od oluje u Splitu"
-                  className="w-full h-48 object-cover rounded-md"
-                />
+                <div className="h-48 bg-muted/30 rounded-md flex items-center justify-center text-muted-foreground text-sm">
+                  Dodajte vijest3.png u src/assets folder
+                </div>
               </div>
 
               <div className="bg-card p-6 rounded-lg shadow-sm border">
@@ -100,11 +90,9 @@ const News = () => {
                   "Dijelove Slavonije jutros je pogodilo nevrijeme ‐ uz pljuskove, krenula je i tuča. Mreže u voćnjacima Gornje Vrbe i Tomice savile su se pod težinom leda, a dijelovi polja su se zabijeljeli."
                 </p>
                 {/* Space for image */}
-                <img 
-                  src={vijest4} 
-                  alt="Oštećeni voćnjaci nakon tuče"
-                  className="w-full h-48 object-cover rounded-md"
-                />
+                <div className="h-48 bg-muted/30 rounded-md flex items-center justify-center text-muted-foreground text-sm">
+                  Dodajte vijest4.png u src/assets folder
+                </div>
               </div>
             </div>
           </section>
