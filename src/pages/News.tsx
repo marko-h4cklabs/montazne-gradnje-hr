@@ -35,24 +35,6 @@ const News = () => {
 
               <div className="bg-card p-6 rounded-lg shadow-sm border">
                 <h3 className="font-semibold text-foreground mb-3 text-xl">
-                  "Dijelove Hrvatske pogodila tuča: Voćnjaci pod ledom"
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Dnevnik.hr, 17. kolovoza 2025.
-                </p>
-                <p className="text-foreground mb-4">
-                  "Dijelove Slavonije jutros je pogodilo nevrijeme ‐ uz pljuskove, krenula je i tuča. Mreže u voćnjacima Gornje Vrbe i Tomice savile su se pod težinom leda, a dijelovi polja su se zabijeljeli."
-                </p>
-                {/* Space for image */}
-                <div className="h-48 bg-muted/30 rounded-md flex items-center justify-center text-muted-foreground text-sm">
-                  [Prostor za sliku oštećenih voćnjaka]
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-foreground mb-3 text-xl">
                   "Oluja u Zagrebu rušila stabla"
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
@@ -66,7 +48,9 @@ const News = () => {
                   [Prostor za sliku srušenih stabala na automobilima]
                 </div>
               </div>
+            </div>
 
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="bg-card p-6 rounded-lg shadow-sm border">
                 <h3 className="font-semibold text-foreground mb-3 text-xl">
                   "Dvije osobe u Splitu teško ozlijeđene"
@@ -80,6 +64,22 @@ const News = () => {
                 {/* Space for image */}
                 <div className="h-48 bg-muted/30 rounded-md flex items-center justify-center text-muted-foreground text-sm">
                   [Prostor za sliku šteta od oluje]
+                </div>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg shadow-sm border">
+                <h3 className="font-semibold text-foreground mb-3 text-xl">
+                  "Dijelove Hrvatske pogodila tuča: Voćnjaci pod ledom"
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Dnevnik.hr, 17. kolovoza 2025.
+                </p>
+                <p className="text-foreground mb-4">
+                  "Dijelove Slavonije jutros je pogodilo nevrijeme ‐ uz pljuskove, krenula je i tuča. Mreže u voćnjacima Gornje Vrbe i Tomice savile su se pod težinom leda, a dijelovi polja su se zabijeljeli."
+                </p>
+                {/* Space for image */}
+                <div className="h-48 bg-muted/30 rounded-md flex items-center justify-center text-muted-foreground text-sm">
+                  [Prostor za sliku oštećenih voćnjaka]
                 </div>
               </div>
             </div>
