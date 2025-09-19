@@ -1,7 +1,5 @@
 import Navigation from "./Navigation";
 import Hero from "./Hero";
-import WhyChooseUs from "./WhyChooseUs";
-import Process from "./Process";
 import ProductCategories from "./ProductCategories";
 import Gallery from "./Gallery";
 import References from "./References";
@@ -10,16 +8,14 @@ import FinalCTA from "./FinalCTA";
 import RealLifeStories from "./RealLifeStories";
 import AboutUs from "./AboutUs";
 import Footer from "./Footer";
+import NewIntroSection from "./NewIntroSection";
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <WhyChooseUs />
-      <div id="proces">
-        <Process />
-      </div>
+      <NewIntroSection />
       <div id="proizvodi">
         <ProductCategories />
       </div>
@@ -31,7 +27,6 @@ const LandingPage = () => {
       <div id="kontakt">
         <FinalCTA />
       </div>
-      <RealLifeStories />
       <div id="o-nama">
         <AboutUs />
       </div>
