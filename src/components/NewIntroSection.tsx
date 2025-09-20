@@ -27,9 +27,9 @@ const NewIntroSection = () => {
         {/* News stories section */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Priče iz stvarnosti: nevrijeme i šteta
-            </h2>
+          <h2 className="text-3xl font-bold text-foreground mb-4">
+            Priče iz stvarnosti:
+          </h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
