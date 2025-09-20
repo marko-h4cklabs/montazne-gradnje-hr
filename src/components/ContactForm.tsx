@@ -157,7 +157,7 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
       </div>
 
       <div>
-        <Label htmlFor="mjestoPrebivalidta">Mjesto Prebivališta *</Label>
+        <Label htmlFor="mjestoPrebivalidta">Mjesto, ulica I broj *</Label>
         <Input
           id="mjestoPrebivalidta"
           value={formData.mjestoPrebivalidta}
