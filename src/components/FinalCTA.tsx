@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { MessageCircle } from "lucide-react";
-import CountdownTimer from "./CountdownTimer";
 import ContactForm from "./ContactForm";
 import ServiceSelection from "./ServiceSelection";
 
@@ -43,13 +42,6 @@ const FinalCTA = () => {
               Pošaljite upit
             </span>
           </Button>
-          
-          <CountdownTimer 
-            endDate={new Date('2025-09-30T23:59:59')}
-            urgentText="🔥 JESENSKA PONUDA - SAMO OVAJ MJESEC!"
-            discountText="BESPLATNA MONTAŽA"
-            variant="light"
-          />
         </div>
       </div>
 

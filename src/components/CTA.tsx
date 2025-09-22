@@ -1,18 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
-import CountdownTimer from "./CountdownTimer";
 
 const CTA = () => {
   return (
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-3xl mx-auto animate-fade-in">
-          <div className="bg-destructive/10 border border-destructive/20 rounded-xl p-6 mb-8">
-            <p className="text-destructive font-semibold text-lg mb-2">
-              ⚠️ Zbog velike potražnje, ostalo samo 4 garaže po trenutnoj cijeni. Sljedeća serija ide 23% skuplje. Rezerviraj prije nego istekne timer.
-            </p>
-            <CountdownTimer />
-          </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
             Spreman za svoj novi objekt?
