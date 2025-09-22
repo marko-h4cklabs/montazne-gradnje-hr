@@ -3,7 +3,6 @@ import Hero from "./Hero";
 import ProductCategories from "./ProductCategories";
 import Gallery from "./Gallery";
 import References from "./References";
-import SocialProof from "./SocialProof";
 import FinalCTA from "./FinalCTA";
 import RealLifeStories from "./RealLifeStories";
 import AboutUs from "./AboutUs";
@@ -23,7 +22,6 @@ const LandingPage = () => {
         <Gallery />
       </div>
       <References />
-      <SocialProof />
       <div id="kontakt">
         <FinalCTA />
       </div>
