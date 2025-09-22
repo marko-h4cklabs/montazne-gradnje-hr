@@ -59,7 +59,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          Kvalitetne montažne konstrukcije -postavljene za par dana, bez stresa bez čekanja i bez dodatnih troškova.<br />
+          Kvalitetne montažne konstrukcije -postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong><br />
         </p>
         
         <Button 
