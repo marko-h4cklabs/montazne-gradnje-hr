@@ -55,12 +55,11 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight text-white/90">
-          <span className="text-primary font-bold">Montažne hale, garaže</span>
+          <span className="text-primary font-bold">Montažne hale, garaže i montažne kuće</span>
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          i montažne kuće — postavljene za par dana, bez stresa bez čekanja i bez dodatnih troškova.<br />
-          Kvalitetne montažne konstrukcije - postavljene za par dana bez stresa i dodatnih troškova
+          Kvalitetne montažne konstrukcije -postavljene za par dana, bez stresa bez čekanja i bez dodatnih troškova.<br />
         </p>
         
         <Button 
