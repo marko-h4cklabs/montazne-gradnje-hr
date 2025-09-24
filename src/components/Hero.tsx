@@ -29,7 +29,7 @@ const Hero = () => {
   }, [images.length]);
 
   return (
-    <section className="relative h-[42vh] md:h-[65vh] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[42vh] md:h-[65vh] flex items-center justify-center overflow-hidden mt-20">
       {/* Background Images */}
       <div className="absolute inset-0 z-0">
         <div 

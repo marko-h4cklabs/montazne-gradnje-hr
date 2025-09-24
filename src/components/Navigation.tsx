@@ -64,7 +64,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="hidden md:flex items-center space-x-3">
             <img 
               src="/lovable-uploads/624af0ec-f1aa-481d-bae5-9b3145b561c5.png" 
               alt="Beriko d.o.o. logo" 
