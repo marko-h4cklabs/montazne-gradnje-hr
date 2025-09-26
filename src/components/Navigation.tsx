@@ -60,7 +60,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-gradient-to-r from-primary/10 via-white/95 to-primary/10 backdrop-blur-md z-50 border-b border-border shadow-sm">
+    <nav className="fixed top-0 w-full bg-primary md:bg-gradient-to-r md:from-primary/10 md:via-white/95 md:to-primary/10 backdrop-blur-md z-50 border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -96,15 +96,20 @@ const Navigation = () => {
             </Button>
           </div>
 
+          {/* Mobile Beriko text */}
+          <div className="md:hidden">
+            <span className="text-white font-bold text-sm">Beriko d.o.o.</span>
+          </div>
+
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className={`h-6 w-6 ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-sm'}`} />
+              <X className="h-6 w-6 text-white drop-shadow-sm" />
             ) : (
-              <Menu className={`h-6 w-6 ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-sm'}`} />
+              <Menu className="h-6 w-6 text-white drop-shadow-sm" />
             )}
           </button>
         </div>

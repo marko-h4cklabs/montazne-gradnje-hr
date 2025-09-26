@@ -37,10 +37,6 @@ const Hero = () => {
           <h1 className="text-2xl font-bold mb-4 leading-tight text-foreground">
             <span className="text-primary font-bold">Montažne hale, garaže i montažne kuće</span>
           </h1>
-          
-          <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
-          </p>
         </div>
 
         {/* Scrolling Images with Static Button */}
@@ -66,8 +62,11 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black/30"></div>
           </div>
           
-          {/* Static Button Overlay */}
-          <div className="absolute inset-0 z-10 flex items-center justify-center">
+          {/* Content Overlay */}
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
+            <p className="text-white text-base text-center mb-6 leading-relaxed max-w-lg drop-shadow-lg">
+              Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
+            </p>
             <Button 
               size="lg" 
               onClick={() => {
