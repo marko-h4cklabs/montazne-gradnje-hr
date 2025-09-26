@@ -41,7 +41,7 @@ const Hero = () => {
         </div>
 
         {/* Scrolling Images with Static Button */}
-        <div className="relative h-[50vh] overflow-hidden">
+        <div className="relative h-[43vh] overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div 
               className="flex h-full transition-transform duration-1000 ease-in-out"
@@ -60,15 +60,15 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            <div className="absolute inset-0 bg-black/30"></div>
+            <div className="absolute inset-0 bg-black/50"></div>
           </div>
           
           {/* Content Overlay */}
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
             <div className="text-white text-base text-center mb-6 leading-relaxed max-w-lg drop-shadow-lg font-poppins font-bold">
               <div className="mb-1">Postavljene za par dana,</div>
-              <div className="mb-1">bez stresa ili čekanja i</div>
-              <div>bez dodatnih troškova!</div>
+              <div className="mb-1">-bez stresa ili čekanja!</div>
+              <div>-bez dodatnih troškova!</div>
             </div>
             <Button 
               size="lg" 
