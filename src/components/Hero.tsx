@@ -29,57 +29,116 @@ const Hero = () => {
   }, [images.length]);
 
   return (
-    <section className="relative h-[42vh] md:h-[65vh] flex items-center justify-center overflow-hidden mt-20">
-      {/* Background Images */}
-      <div className="absolute inset-0 z-0">
-        <div 
-          className="flex h-full transition-transform duration-1000 ease-in-out"
-          style={{ 
-            width: `${images.length * 100}%`,
-            transform: `translateX(-${currentImageIndex * (100 / images.length)}%)` 
-          }}
-        >
-          {images.map((image, index) => (
-            <div key={index} className="h-full flex-shrink-0" style={{ width: `${100 / images.length}%` }}>
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
+    <>
+      {/* Mobile Layout */}
+      <div className="md:hidden mt-20">
+        {/* Headlines Section */}
+        <div className="bg-gradient-to-b from-primary/5 to-white px-4 py-8 text-center">
+          <h1 className="text-2xl font-bold mb-4 leading-tight text-foreground">
+            <span className="text-primary font-bold">Montažne hale, garaže i montažne kuće</span>
+          </h1>
+          
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
+          </p>
         </div>
-        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Scrolling Images with Static Button */}
+        <div className="relative h-[50vh] overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <div 
+              className="flex h-full transition-transform duration-1000 ease-in-out"
+              style={{ 
+                width: `${images.length * 100}%`,
+                transform: `translateX(-${currentImageIndex * (100 / images.length)}%)` 
+              }}
+            >
+              {images.map((image, index) => (
+                <div key={index} className="h-full flex-shrink-0" style={{ width: `${100 / images.length}%` }}>
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="absolute inset-0 bg-black/30"></div>
+          </div>
+          
+          {/* Static Button Overlay */}
+          <div className="absolute inset-0 z-10 flex items-center justify-center">
+            <Button 
+              size="lg" 
+              onClick={() => {
+                const targetElement = document.getElementById('kontakt');
+                if (targetElement) {
+                  const offset = 80;
+                  const elementPosition = targetElement.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - offset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
+              className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow px-6 py-4 rounded-full font-semibold"
+            >
+              📧 Pošaljite upit
+            </Button>
+          </div>
+        </div>
       </div>
-      
-      {/* Hero Content */}
-      <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight text-white/90">
-          <span className="text-primary font-bold">Montažne hale, garaže i montažne kuće</span>
-        </h1>
+
+      {/* Desktop Layout */}
+      <section className="hidden md:flex relative h-[65vh] items-center justify-center overflow-hidden mt-20">
+        {/* Background Images */}
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="flex h-full transition-transform duration-1000 ease-in-out"
+            style={{ 
+              width: `${images.length * 100}%`,
+              transform: `translateX(-${currentImageIndex * (100 / images.length)}%)` 
+            }}
+          >
+            {images.map((image, index) => (
+              <div key={index} className="h-full flex-shrink-0" style={{ width: `${100 / images.length}%` }}>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
         
-        <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          Kvalitetne montažne konstrukcije -postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong><br />
-        </p>
-        
-        <Button 
-          size="lg" 
-          onClick={() => {
-            const targetElement = document.getElementById('kontakt');
-            if (targetElement) {
-              const offset = 80;
-              const elementPosition = targetElement.getBoundingClientRect().top;
-              const offsetPosition = elementPosition + window.pageYOffset - offset;
-              window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-            }
-          }}
-          className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4 rounded-full font-semibold"
-        >
-          <span className="hidden sm:inline">➡️ Pošaljite nam upit – odgovaramo u roku od 24h</span>
-          <span className="sm:hidden">📧 Pošaljite upit</span>
-        </Button>
-      </div>
-    </section>
+        {/* Hero Content */}
+        <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white/90">
+            <span className="text-primary font-bold">Montažne hale, garaže i montažne kuće</span>
+          </h1>
+          
+          <p className="text-lg md:text-xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
+            Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
+          </p>
+          
+          <Button 
+            size="lg" 
+            onClick={() => {
+              const targetElement = document.getElementById('kontakt');
+              if (targetElement) {
+                const offset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+              }
+            }}
+            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-base px-6 py-4 rounded-full font-semibold"
+          >
+            ➡️ Pošaljite nam upit – odgovaramo u roku od 24h
+          </Button>
+        </div>
+      </section>
+    </>
   );
 };
 

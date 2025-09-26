@@ -60,7 +60,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white/98 backdrop-blur-md z-50 border-b border-border shadow-sm">
+    <nav className="fixed top-0 w-full bg-gradient-to-r from-primary/10 via-white/95 to-primary/10 backdrop-blur-md z-50 border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
