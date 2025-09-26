@@ -17,7 +17,7 @@ const RealLifeStories = () => {
           </h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* First story */}
           <div className="bg-card p-6 rounded-lg shadow-sm border">
             <h3 className="font-semibold text-foreground mb-2">
@@ -41,19 +41,6 @@ const RealLifeStories = () => {
             </p>
             <p className="text-sm text-foreground">
               „Snažno olujno nevrijeme pogodilo je dijelove Hrvatske … U prijepodnevnim satima uslijed oluje u Zagrebu stablo se <strong>srušilo na četiri automobila …</strong>"
-            </p>
-          </div>
-
-          {/* Third story */}
-          <div className="bg-card p-6 rounded-lg shadow-sm border">
-            <h3 className="font-semibold text-foreground mb-2">
-              „Stigla promjena vremena, dijelove Hrvatske pogodila tuča: Auti pod ledom."
-            </h3>
-            <p className="text-sm text-muted-foreground mb-3">
-              Dnevnik.hr, 17. kolovoza 2025.
-            </p>
-            <p className="text-sm text-foreground">
-              „Dijelove Slavonije jutros je pogodilo nevrijeme ‐ uz pljuskove, krenula je i tuča. … Gornje Vrbe i Tomice savile su se pod težinom leda, a dijelovi polja su se zabijeljeli."
             </p>
           </div>
         </div>
