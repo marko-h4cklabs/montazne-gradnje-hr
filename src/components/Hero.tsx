@@ -65,9 +65,10 @@ const Hero = () => {
           
           {/* Content Overlay */}
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
-            <p className="text-white text-base text-center mb-6 leading-relaxed max-w-lg drop-shadow-lg font-nunito font-bold">
-              Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong className="font-black">bez dodatnih troškova.</strong>
-            </p>
+            <div className="text-white text-base text-center mb-6 leading-relaxed max-w-lg drop-shadow-lg font-poppins font-bold">
+              <div className="mb-2">Kvalitetne montažne konstrukcije</div>
+              <div>postavljene za par dana, bez stresa bez čekanja i <span className="font-black">bez dodatnih troškova.</span></div>
+            </div>
             <Button 
               size="lg" 
               onClick={() => {
