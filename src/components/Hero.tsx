@@ -34,9 +34,9 @@ const Hero = () => {
       <div className="md:hidden mt-20">
         {/* Headlines Section */}
         <div className="bg-gradient-to-b from-primary/5 to-white px-4 py-6 text-center">
-          <h1 className="text-2xl font-bold mb-2 leading-tight text-foreground">
-            <div className="text-primary">Montažne <span className="font-bold">hale</span>, <span className="font-bold">garaže</span> i</div>
-            <div className="text-primary">montažne <span className="font-bold">kuće</span></div>
+          <h1 className="text-2xl font-medium mb-2 leading-tight text-foreground">
+            <div className="text-primary">Montažne <span className="font-black">hale</span>, <span className="font-black">garaže</span> i</div>
+            <div className="text-primary">montažne <span className="font-black">kuće</span></div>
           </h1>
         </div>
 
