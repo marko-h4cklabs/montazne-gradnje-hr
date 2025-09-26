@@ -65,8 +65,8 @@ const Hero = () => {
           
           {/* Content Overlay */}
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
-            <p className="text-white text-base text-center mb-6 leading-relaxed max-w-lg drop-shadow-lg">
-              Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
+            <p className="text-white text-base text-center mb-6 leading-relaxed max-w-lg drop-shadow-lg font-nunito font-bold">
+              Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong className="font-black">bez dodatnih troškova.</strong>
             </p>
             <Button 
               size="lg" 
