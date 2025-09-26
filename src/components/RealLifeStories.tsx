@@ -18,16 +18,16 @@ const RealLifeStories = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {/* First story - switched back */}
+          {/* First story */}
           <div className="bg-card p-6 rounded-lg shadow-sm border">
             <h3 className="font-semibold text-foreground mb-2">
-              „Stigla promjena vremena, dijelove Hrvatske pogodila tuča: Auti pod ledom."
+              Štete nakon velikih oluja u srpnju
             </h3>
             <p className="text-sm text-muted-foreground mb-3">
-              Dnevnik.hr, 17. kolovoza 2025.
+              Jutarnji.hr
             </p>
             <p className="text-sm text-foreground">
-              „Dijelove Slavonije jutros je pogodilo nevrijeme ‐ uz pljuskove, krenula je i tuča. … Gornje Vrbe i Tomice savile su se pod težinom leda, a dijelovi polja su se zabijeljeli."
+              „Nakon velikih oluja u srpnju, koje su pogodile gotovo sve hrvatske krajeve, samo u Zagrebu je prijavljeno 6.285 materijalnih šteta, a uključivale su štetu na građevinama, poljoprivrednim površinama i – <strong>osobnim vozilima.</strong>"
             </p>
           </div>
 
@@ -44,16 +44,16 @@ const RealLifeStories = () => {
             </p>
           </div>
 
-          {/* Third story - switched back */}
+          {/* Third story */}
           <div className="bg-card p-6 rounded-lg shadow-sm border">
             <h3 className="font-semibold text-foreground mb-2">
-              Štete nakon velikih oluja u srpnju
+              „Stigla promjena vremena, dijelove Hrvatske pogodila tuča: Auti pod ledom."
             </h3>
             <p className="text-sm text-muted-foreground mb-3">
-              Jutarnji.hr
+              Dnevnik.hr, 17. kolovoza 2025.
             </p>
             <p className="text-sm text-foreground">
-              „Nakon velikih oluja u srpnju, koje su pogodile gotovo sve hrvatske krajeve, samo u Zagrebu je prijavljeno 6.285 materijalnih šteta, a uključivale su štetu na građevinama, poljoprivrednim površinama i – <strong>osobnim vozilima.</strong>"
+              „Dijelove Slavonije jutros je pogodilo nevrijeme ‐ uz pljuskove, krenula je i tuča. … Gornje Vrbe i Tomice savile su se pod težinom leda, a dijelovi polja su se zabijeljeli."
             </p>
           </div>
         </div>
