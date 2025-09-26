@@ -98,7 +98,7 @@ const Navigation = () => {
 
           {/* Mobile Beriko text */}
           <div className="md:hidden">
-            <span className="text-white font-bold text-sm">Beriko d.o.o.</span>
+            <span className="text-white font-bold text-lg">Beriko d.o.o.</span>
           </div>
 
           {/* Mobile Menu Button */}
