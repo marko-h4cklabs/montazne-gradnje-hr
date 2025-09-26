@@ -60,7 +60,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-primary md:bg-transparent backdrop-blur-md z-50 border-b border-border md:border-transparent shadow-sm md:shadow-none">
+    <nav className="fixed top-0 w-full bg-primary md:bg-transparent z-50 border-b border-border md:border-transparent shadow-sm md:shadow-none">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -79,7 +79,7 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleSmoothScroll(e, item.href)}
-                className={`${isScrolled ? 'text-foreground' : 'text-white'} hover:text-primary/80 smooth-transition font-medium text-sm tracking-wide drop-shadow-sm`}
+                className={`${isScrolled ? 'text-foreground' : 'text-white'} hover:text-primary/80 smooth-transition font-medium text-sm tracking-wide drop-shadow-lg text-shadow-lg`}
               >
                 {item.name}
               </a>
