@@ -32,25 +32,7 @@ const News = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-foreground">Nedavni vremenski događaji - 2025.</h2>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-              <div className="bg-card p-6 rounded-lg shadow-sm border flex flex-col">
-                <h3 className="font-semibold text-foreground mb-3 text-xl">
-                  "Najavljivana nevera stigla je u Hrvatsku"
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Slobodna Dalmacija, 20. kolovoza 2025.
-                </p>
-                <p className="text-foreground mb-4 flex-grow">
-                  "Promjena vremena je stigla u Hrvatsku. U srijedu u večernjim satima snažno nevrijeme je pogodilo dijelove Istre, a po trenutnim informacijama, na snažnom udaru je bio Umag u kojem je pao led i jaka kiša, a ulice su potpuno završile pod vodom."
-                </p>
-                <img
-                  src={vijest1}
-                  alt="Nevera u Istri – poplavljene ulice u Umagu"
-                  className="w-full aspect-[16/9] object-cover rounded-md"
-                  loading="lazy"
-                />
-              </div>
-
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="bg-card p-6 rounded-lg shadow-sm border flex flex-col">
                 <h3 className="font-semibold text-foreground mb-3 text-xl">
                   "Oluja u Zagrebu rušila stabla na automobile"
@@ -64,26 +46,6 @@ const News = () => {
                 <img 
                   src={vijest2} 
                   alt="Oluja u Zagrebu rušila stabla" 
-                  className="w-full aspect-[16/9] object-cover rounded-md"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-foreground mb-3 text-xl">
-                  "Ekstremni vremenski uvjeti"
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Tportal.hr, 8. srpnja 2025.
-                </p>
-                <p className="text-foreground mb-4">
-                  "Nad područjem Hrvatske formirala se snažna ciklona koja je donijela ekstremne vremenske uvjete, uz značajna oštećenja u više regija. Katastrofalno nevrijeme, krupa i olujni vjetar pogodili su Split i okolicu..."
-                </p>
-                <img
-                  src={vijest3}
-                  alt="Split pogođen olujom – oštećenja i krupa"
                   className="w-full aspect-[16/9] object-cover rounded-md"
                   loading="lazy"
                 />
