@@ -67,8 +67,8 @@ const Hero = () => {
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
             <div className="text-white text-base text-center mb-6 leading-relaxed max-w-lg drop-shadow-lg font-poppins font-bold">
               <div className="mb-1">Postavljene za par dana,</div>
-              <div className="mb-1">bez stresa, cekanja i</div>
-              <div className="font-normal">bez dodatnih troškova!</div>
+              <div className="mb-1">bez stresa ili čekanja i</div>
+              <div>bez dodatnih troškova!</div>
             </div>
             <Button 
               size="lg" 
