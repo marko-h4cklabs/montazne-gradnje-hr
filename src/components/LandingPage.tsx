@@ -22,6 +22,7 @@ const LandingPage = () => {
         <Gallery />
       </div>
       <References />
+      <RealLifeStories />
       <div id="kontakt">
         <FinalCTA />
       </div>
