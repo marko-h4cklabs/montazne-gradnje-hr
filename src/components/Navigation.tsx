@@ -79,7 +79,7 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleSmoothScroll(e, item.href)}
-                className={`${isScrolled ? 'text-foreground' : 'text-white'} hover:text-primary/80 smooth-transition font-medium text-sm tracking-wide drop-shadow-lg text-shadow-lg`}
+                className={`text-foreground hover:text-primary/80 smooth-transition font-medium text-sm tracking-wide drop-shadow-lg`}
               >
                 {item.name}
               </a>
