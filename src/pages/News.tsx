@@ -3,9 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import vijest1 from "@/assets/vijest1.png";
 import vijest2 from "@/assets/vijest2.png";
-import vijest3 from "@/assets/vijest3.png";
 import vijest4 from "@/assets/vijest4.png";
 
 const News = () => {
