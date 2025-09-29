@@ -38,9 +38,6 @@ const Hero = () => {
             <div className="text-primary">Montažne <span className="font-black">hale</span>, montažne <span className="font-black">garaže</span> i</div>
             <div className="text-primary">montažne <span className="font-black">kuće</span></div>
           </h1>
-          <p className="text-lg text-foreground leading-relaxed">
-            Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
-          </p>
         </div>
 
         {/* Scrolling Images */}
@@ -65,6 +62,13 @@ const Hero = () => {
             </div>
             <div className="absolute inset-0 bg-black/50"></div>
           </div>
+        </div>
+        
+        {/* Text below slider */}
+        <div className="px-4 py-4 bg-background text-center">
+          <p className="text-lg text-foreground leading-relaxed">
+            Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
+          </p>
         </div>
         
         {/* Button below slider */}
@@ -116,12 +120,15 @@ const Hero = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white/90">
             <span className="text-primary font-bold">Montažne hale, montažne garaže i montažne kuće</span>
           </h1>
-          
-          <p className="text-lg md:text-xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
-          </p>
         </div>
       </section>
+      
+      {/* Text below desktop slider */}
+      <div className="hidden md:block px-4 py-6 bg-background text-center">
+        <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
+          Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
+        </p>
+      </div>
       
       {/* Desktop Button below hero */}
       <div className="hidden md:block text-center py-8 bg-background">
