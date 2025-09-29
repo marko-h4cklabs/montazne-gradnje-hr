@@ -67,7 +67,7 @@ const DetailedInfo = () => {
 
           {/* What You Need to Know - New Comprehensive Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-foreground text-center">ŠTO TREBATE ZNATI PRIJE NEGO KUPITE NOVU GARAŽU</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#B5280D' }}>ŠTO TREBATE ZNATI PRIJE NEGO KUPITE NOVU GARAŽU</h2>
             
             <div className="max-w-4xl mx-auto space-y-8 text-center">
               <p className="text-lg text-foreground leading-relaxed">
@@ -100,7 +100,7 @@ const DetailedInfo = () => {
 
           {/* Business and Hobby Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-foreground text-center">AKO STE PODUZETNIK ILI IMATE HOBI - ODABERITE RADIONICU, SKLADIŠTE ILI GARAŽU</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#B5280D' }}>AKO STE PODUZETNIK ILI IMATE HOBI - ODABERITE RADIONICU, SKLADIŠTE ILI GARAŽU</h2>
             
             <div className="max-w-4xl mx-auto space-y-6 text-center">
               <p className="text-lg text-foreground leading-relaxed">
@@ -115,7 +115,7 @@ const DetailedInfo = () => {
 
           {/* Value Preservation Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-foreground text-center">OTKRIJTE TAJNU KAKO OČUVATI VRIJEDNOST</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#B5280D' }}>OTKRIJTE TAJNU KAKO OČUVATI VRIJEDNOST</h2>
             
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -151,7 +151,7 @@ const DetailedInfo = () => {
 
           {/* Time and Money Savings Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-foreground text-center">KAKO UŠTEDJETI VRIJEME I NOVAC</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#B5280D' }}>KAKO UŠTEDJETI VRIJEME I NOVAC</h2>
             
             <div className="max-w-4xl mx-auto space-y-6 text-center">
               <p className="text-lg text-foreground leading-relaxed">
@@ -170,7 +170,7 @@ const DetailedInfo = () => {
 
           {/* Design Details Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-foreground text-center">MALE SITNICE KOJE ČINE VELIKE STVARI</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#B5280D' }}>MALE SITNICE KOJE ČINE VELIKE STVARI</h2>
             
             <div className="max-w-4xl mx-auto space-y-8 text-center">
               <div>
@@ -233,7 +233,7 @@ const DetailedInfo = () => {
 
           {/* Best Solution Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-foreground text-center">NAJBOLJE RJEŠENJE ZA VAŠE PROBLEME</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#B5280D' }}>NAJBOLJE RJEŠENJE ZA VAŠE PROBLEME</h2>
             
             <div className="max-w-4xl mx-auto space-y-6 text-center">
               <p className="text-lg text-foreground leading-relaxed">
@@ -279,7 +279,7 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-8 rounded-lg border-2 border-primary/20">
-                <h2 className="text-3xl font-bold mb-6 text-foreground text-center">100% BEZUVJETNA GARANCIJA</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center" style={{ color: '#B5280D' }}>100% BEZUVJETNA GARANCIJA</h2>
                 
                 <p className="text-lg text-foreground leading-relaxed mb-6 text-center">
                   Moja vjera u efikasnost i vaše zadovoljstvo je tolika da objekt dolazi sa bezuvjetnom petgodišnjom 100% garancijom. I to nije sve: oba vrijedna bonusa ne naplaćujemo po povratu kao zahvalu što ste imali povjerenja u nas. Tako ne riskirate ništa, a dobivate sve!
