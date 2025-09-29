@@ -10,17 +10,17 @@ const DetailedInfo = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      {/* Back Arrow */}
-      <div className="fixed top-28 left-4 z-10">
-        <Link to="/">
-          <Button size="sm" className="flex items-center gap-2">
-            <ArrowLeft className="w-4 h-4" />
-            Povratak
-          </Button>
-        </Link>
-      </div>
-      <main className="pt-0 pb-16">
+      {/* Back Arrow moved into content flow below */}
+      <main className="pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
+          <div className="mb-6">
+            <Link to="/">
+              <Button size="sm" className="flex items-center gap-2">
+                <ArrowLeft className="w-4 h-4" />
+                Povratak
+              </Button>
+            </Link>
+          </div>
           
           {/* Recent Weather Events 2025 */}
           <section className="mb-16">
