@@ -56,19 +56,13 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black/50"></div>
           </div>
           
-          {/* Mobile Headline Overlay */}
-          <div className="absolute inset-0 z-10 flex items-center justify-center">
-            <div className="text-center px-4">
-              <h1 className="text-3xl font-bold leading-tight">
-                <div className="text-primary">Montažne <span className="font-black">hale</span>, montažne <span className="font-black">garaže</span> i</div>
-                <div className="text-primary">montažne <span className="font-black">kuće</span></div>
-              </h1>
-            </div>
-          </div>
         </div>
         
-        {/* Text below slider */}
-        <div className="px-4 py-4 bg-background text-center">
+        {/* Headline below slider */}
+        <div className="px-4 py-6 bg-background text-center">
+          <h1 className="text-3xl font-bold leading-tight mb-4">
+            Montažne hale, montažne garaže i montažne kuće
+          </h1>
           <p className="text-lg text-foreground leading-relaxed">
             Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
           </p>
@@ -117,17 +111,13 @@ const Hero = () => {
           </div>
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        
-        {/* Hero Content */}
-        <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-            <span className="text-primary font-bold">Montažne hale, montažne garaže i montažne kuće</span>
-          </h1>
-        </div>
       </section>
       
-      {/* Text below desktop slider */}
-      <div className="hidden md:block px-4 py-6 bg-background text-center">
+      {/* Headline below desktop slider */}
+      <div className="hidden md:block px-4 py-8 bg-background text-center">
+        <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
+          Montažne hale, montažne garaže i montažne kuće
+        </h1>
         <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
           Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
         </p>
