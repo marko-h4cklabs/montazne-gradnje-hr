@@ -300,37 +300,6 @@ const DetailedInfo = () => {
             </div>
           </section>
 
-          {/* Damage Statistics */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-foreground text-center">Statistike šteta</h2>
-            
-            <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-8 rounded-lg border max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="text-center">
-                  <h3 className="font-semibold text-foreground mb-4 text-xl">
-                    Štete nakon srpanjskih oluja
-                  </h3>
-                  <p className="text-foreground mb-4">
-                    "Nakon velikih oluja u srpnju, koje su pogodile gotovo sve hrvatske krajeve, samo u Zagrebu je prijavljeno <strong>6.285 materijalnih šteta</strong>, a uključivale su štetu na građevinama, poljoprivrednim površinama i – <strong>osobnim vozilima</strong>."
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <h3 className="font-semibold text-foreground mb-4 text-xl">
-                    Vandaliziranje vozila u Osijeku
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    Priopćenje PU Osječko-baranjske od 4. lipanj 2010.
-                  </p>
-                  <p className="text-foreground">
-                    "U vremenskom razdoblju od 1. do 3. lipnja na više lokacija u Osijeku i okolici nepoznata osoba ili više njih oštetili su parkirane automobile. Automobili su oštećeni grebanjem oštrim predmetima, skakanjem po njima, te lomljenjem brisača i razbijanjem svjetlosne signalizacije. <strong>Ukupna šteta iznosi oko 20.000 kuna.</strong>"
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-
           {/* Call to Action */}
           <section className="text-center bg-card p-8 rounded-lg shadow-sm border">
             <h2 className="text-2xl font-bold mb-4 text-foreground">
