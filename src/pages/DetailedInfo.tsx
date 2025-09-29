@@ -13,13 +13,13 @@ const DetailedInfo = () => {
       {/* Back Arrow */}
       <div className="fixed top-28 left-4 z-10">
         <Link to="/">
-          <Button size="sm" className="flex items-center gap-2">
+          <Button size="sm" className="flex items-center gap-2 mb-8">
             <ArrowLeft className="w-4 h-4" />
             Povratak
           </Button>
         </Link>
       </div>
-      <main className="pt-40 md:pt-32 pb-16">
+      <main className="pt-32 pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           
           {/* Recent Weather Events 2025 */}
