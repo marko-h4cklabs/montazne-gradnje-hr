@@ -115,42 +115,6 @@ const DetailedInfo = () => {
             </div>
           </section>
 
-          {/* Historical Weather Events */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-foreground">Povijesni vremenski događaji</h2>
-            
-            <div className="space-y-6">
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-foreground mb-3 text-xl">
-                  Snježne nepogode na jugu Hrvatske
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">Dalmacijanews</p>
-                <p className="text-foreground">
-                  "Snijeg je pao na Pelješcu, Splitu i Šibeniku. U Orebiću ima više od 10 centimetara snijega, a on je padao i u Trpnju. Prvi snijeg ove sezone pao je i na području Ploča. U Vrgorcu je u nedjelju oko 22 sata bilo 20 centimetara snijega, a do 30 cm u zaleđu grada."
-                </p>
-              </div>
-
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-foreground mb-3 text-xl">
-                  Nevjerojatne scene u Istri
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">Večernji list, 26.7.2017.</p>
-                <p className="text-foreground">
-                  "Neviđene scene u Istri, zbog tuče na cesti i ralica: Jako nevrijeme s tučom je oko 14 sati zahvatilo dijelove istočne Istre. Gotovo nevjerojatne scene dolaze iz istočnih dijelova Istre gdje je tuča potpuno prekrila ceste, a na terenu je čak i ralica. Ovako nešto na autocesti nitko nije očekivao."
-                </p>
-              </div>
-
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-foreground mb-3 text-xl">
-                  Olujno nevrijeme u Zagrebu i Zagorju
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">24 SATA.hr, 21. lipanj 2017.</p>
-                <p className="text-foreground">
-                  "Kiša, tuča, grmljavina! Jako nevrijeme u srijedu pogodilo je dijelove Krapinsko-zagorske županije, Zagrebačke te dijelove grada Zagreba. Zbog tuče se na pojedinim dionicama prometovalo otežano, a očekuju se informacije o eventualnim štetama."
-                </p>
-              </div>
-            </div>
-          </section>
 
           {/* Damage Statistics */}
           <section className="mb-16">
