@@ -24,7 +24,7 @@ const DetailedInfo = () => {
           
           {/* Recent Weather Events 2025 */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-foreground text-center">Nedavni vremenski događaji - 2025.</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#1F1F78' }}>Nedavni vremenski događaji - 2025.</h2>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="bg-card p-6 rounded-lg shadow-sm border flex flex-col text-center">
@@ -75,24 +75,24 @@ const DetailedInfo = () => {
               </p>
               
               <p className="text-lg text-foreground leading-relaxed">
-                Beriko osigurava KVALITETAN sustav malih objekata i pogodni su za vaše potrebe kao što su: garažiranje automobila, motocikala, sktera, bicikala, spremanje plovila zimi, spremanje poljoprivrednih strojeva, stvari i opreme, skladištenje, radionice i servisi i mnoge druge svrhe.
+                Beriko osigurava KVALITETAN sustav malih objekata i pogodni su za vaše potrebe kao što su: <span style={{ color: '#1F1F78' }}>garažiranje automobila, motocikala, sktera, bicikala, spremanje plovila zimi, spremanje poljoprivrednih strojeva, stvari i opreme, skladištenje, radionice i servisi i</span> mnoge druge svrhe.
               </p>
               
               <p className="text-lg text-foreground leading-relaxed">
-                Prednosti su velike, nema samo automobil koristi od ovog komfornog prostora; ukućanima može poslužiti kao dodatni prostor za odlaganje ili kao mala radionica.
+                Prednosti su velike, nema samo automobil koristi od ovog komfornog prostora; ukućanima može poslužiti kao dodatni <span style={{ color: '#1F1F78' }}>prostor za odlaganje ili kao mala radionica.</span>
               </p>
               
               <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Lokacija:</h3>
                 <p className="text-foreground leading-relaxed">
-                  Mjesta za postavljanje objekta mogu biti razna i uključivati većinu vaših želja a nije potrebna građevinska dozvola: uz kuće i okućnice, uz stambene zgrade i kuće u nizu, na privatnim parkiralištima, uz restorane, pokraj tvornica, radiona i servisa, kraj vikendica i kleti, u kampanjama, maslinicima i voćnjacima,...
+                  Mjesta za postavljanje objekta mogu biti razna i uključivati većinu vaših želja a nije potrebna građevinska dozvola: <span style={{ color: '#1F1F78' }}>uz kuće i okućnice, uz stambene zgrade i kuće u nizu, na privatnim parkiralištima, uz restorane, pokraj tvornica, radiona i servisa, kraj vikendica i kleti, u kampanjama, maslinicima i voćnjacima,...</span>
                 </p>
               </div>
               
               <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Zaštita:</h3>
                 <p className="text-foreground leading-relaxed">
-                  U izradi se koristi višegodišnja švedska proizvodna iskustva, prema promišljenoj koncepciji koja obuhvaća svaki detalj, a namjensko i servisno osoblje stoji vam na raspolaganju da dopremi i montira objekte na vašu željenu lokaciju. Montažna garaža pruža zaštitu od leda, kiše, snijega, sunca, oluja, životinja, UV zraka i vrućine.
+                  U izradi se koristi višegodišnja švedska proizvodna iskustva, prema promišljenoj koncepciji koja obuhvaća svaki detalj, a namjensko i servisno osoblje stoji vam na raspolaganju da dopremi i montira objekte na vašu željenu lokaciju. Montažna garaža <span style={{ color: '#1F1F78' }}>pruža zaštitu od leda, kiše, snijega, sunca, oluja, životinja, UV zraka i vrućine.</span>
               </p>
               </div>
             </div>
@@ -120,28 +120,28 @@ const DetailedInfo = () => {
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Automobil duže vrijeme ostaje nov:</h3>
+                  <h3 className="text-lg font-semibold mb-3" style={{ color: '#1F1F78' }}>Automobil duže vrijeme ostaje nov:</h3>
                   <p className="text-foreground">Garažiran automobil ima veću vrijednost kod prodaje.</p>
                 </div>
                 
                 <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Prije dođete na posao:</h3>
+                  <h3 className="text-lg font-semibold mb-3" style={{ color: '#1F1F78' }}>Prije dođete na posao:</h3>
                   <p className="text-foreground">Ujutro nema čišćenja vjetrobranskih stakala i ne kasnite na radno mjesto.</p>
                 </div>
                 
                 <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Dulji vijek akomulatora:</h3>
+                  <h3 className="text-lg font-semibold mb-3" style={{ color: '#1F1F78' }}>Dulji vijek akumulatora:</h3>
                   <p className="text-foreground">Zatvoreni prostor je i topliji te se automobil lakše pali a akomulator dulje traje.</p>
                 </div>
                 
                 <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Zaštita od drugih vozila:</h3>
+                  <h3 className="text-lg font-semibold mb-3" style={{ color: '#1F1F78' }}>Zaštita od drugih vozila:</h3>
                   <p className="text-foreground">Kod otvaranja vrata ali i mimoilaženja drugih vozila automobili se oštećuju na otvorenome.</p>
                 </div>
               </div>
               
               <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-6 rounded-lg border text-center">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Neprocijenjiva vrijednost ulaganja:</h3>
+                <h3 className="text-xl font-semibold mb-4" style={{ color: '#1F1F78' }}>Neprocijenjiva vrijednost ulaganja:</h3>
                 <p className="text-foreground leading-relaxed">
                   Zbog svega navedenog za vas je investicija u garažu neprocjenjiva a ostaje vam i za drugi automobil. Investicija se vraća u roku od 5 godina kroz očuvaniji automobil a kod spriječavanja vandalizma vraća se trenutno.
                 </p>
@@ -174,24 +174,24 @@ const DetailedInfo = () => {
             
             <div className="max-w-4xl mx-auto space-y-8 text-center">
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">Objekti ugodni za oko:</h3>
+                <h3 className="text-xl font-semibold mb-4" style={{ color: '#1F1F78' }}>Objekti ugodni za oko:</h3>
                 <p className="text-foreground leading-relaxed mb-4">
                   S obzirom na dizajn svojih sastavnih elemenata, objekti su tehnicki precizan i lijep proizvod. Nudimo tri vrste vrata:
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="bg-card p-4 rounded-lg shadow-sm border text-center">
-                    <h4 className="font-semibold text-foreground mb-2">1. Sekcijska vrata</h4>
+                    <h4 className="font-semibold mb-2" style={{ color: '#1F1F78' }}>1. Sekcijska vrata</h4>
                     <p className="text-foreground text-sm">s motorom i daljinskim otvaraju se i u udobnosti automobila.</p>
                   </div>
                   
                   <div className="bg-card p-4 rounded-lg shadow-sm border text-center">
-                    <h4 className="font-semibold text-foreground mb-2">2. Kip vrata na opruge</h4>
+                    <h4 className="font-semibold mb-2" style={{ color: '#1F1F78' }}>2. Kip vrata na opruge</h4>
                     <p className="text-foreground text-sm">su lijepa a otvaraju se u jednom pokretu ruke i</p>
                   </div>
                   
                   <div className="bg-card p-4 rounded-lg shadow-sm border text-center">
-                    <h4 className="font-semibold text-foreground mb-2">3. Dvokrilna vrata</h4>
+                    <h4 className="font-semibold mb-2" style={{ color: '#1F1F78' }}>3. Dvokrilna vrata</h4>
                     <p className="text-foreground text-sm">s bravom i ključem koja se lagano otvaraju,</p>
                   </div>
                 </div>
