@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <>
       {/* Mobile Layout */}
-      <div className="md:hidden mt-20">
+      <div className="md:hidden">
         {/* Headlines Section */}
         <div className="bg-gradient-to-b from-primary/5 to-white px-4 py-6 text-center">
           <h1 className="text-2xl font-medium mb-2 leading-tight text-foreground">
@@ -90,7 +90,7 @@ const Hero = () => {
       </div>
 
       {/* Desktop Layout */}
-      <section className="hidden md:flex relative h-[65vh] items-center justify-center overflow-hidden mt-20">
+      <section className="hidden md:flex relative h-[65vh] items-center justify-center overflow-hidden">
         {/* Background Images */}
         <div className="absolute inset-0 z-0">
           <div 
