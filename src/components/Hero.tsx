@@ -35,12 +35,15 @@ const Hero = () => {
         {/* Headlines Section */}
         <div className="bg-gradient-to-b from-primary/5 to-white px-4 py-6 text-center">
           <h1 className="text-2xl font-medium mb-2 leading-tight text-foreground">
-            <div className="text-primary">Montažne <span className="font-black">hale</span>, <span className="font-black">garaže</span> i</div>
+            <div className="text-primary">Montažne <span className="font-black">hale</span>, montažne <span className="font-black">garaže</span> i</div>
             <div className="text-primary">montažne <span className="font-black">kuće</span></div>
           </h1>
+          <p className="text-lg text-foreground leading-relaxed">
+            Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
+          </p>
         </div>
 
-        {/* Scrolling Images with Static Button */}
+        {/* Scrolling Images */}
         <div className="relative h-[43vh] overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div 
@@ -62,30 +65,25 @@ const Hero = () => {
             </div>
             <div className="absolute inset-0 bg-black/50"></div>
           </div>
-          
-          {/* Content Overlay */}
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
-            <div className="text-white text-base text-center mb-6 leading-relaxed max-w-lg drop-shadow-lg font-poppins font-bold">
-              <div className="mb-1">Postavljene za par dana,</div>
-              <div className="mb-1">-bez stresa ili čekanja!</div>
-              <div>-bez dodatnih troškova!</div>
-            </div>
-            <Button 
-              size="lg" 
-              onClick={() => {
-                const targetElement = document.getElementById('kontakt');
-                if (targetElement) {
-                  const offset = 80;
-                  const elementPosition = targetElement.getBoundingClientRect().top;
-                  const offsetPosition = elementPosition + window.pageYOffset - offset;
-                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                }
-              }}
-              className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow px-6 py-4 rounded-full font-semibold"
-            >
-              📧 Pošaljite upit
-            </Button>
-          </div>
+        </div>
+        
+        {/* Button below slider */}
+        <div className="text-center py-6 bg-background">
+          <Button 
+            size="lg" 
+            onClick={() => {
+              const targetElement = document.getElementById('kontakt');
+              if (targetElement) {
+                const offset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+              }
+            }}
+            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow px-6 py-4 rounded-full font-semibold"
+          >
+            📧 Pošaljite upit
+          </Button>
         </div>
       </div>
 
@@ -116,30 +114,33 @@ const Hero = () => {
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white/90">
-            <span className="text-primary font-bold">Montažne hale, garaže i montažne kuće</span>
+            <span className="text-primary font-bold">Montažne hale, montažne garaže i montažne kuće</span>
           </h1>
           
           <p className="text-lg md:text-xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
             Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
           </p>
-          
-          <Button 
-            size="lg" 
-            onClick={() => {
-              const targetElement = document.getElementById('kontakt');
-              if (targetElement) {
-                const offset = 80;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - offset;
-                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-              }
-            }}
-            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-base px-6 py-4 rounded-full font-semibold"
-          >
-            ➡️ Pošaljite nam upit – odgovaramo u roku od 24h
-          </Button>
         </div>
       </section>
+      
+      {/* Desktop Button below hero */}
+      <div className="hidden md:block text-center py-8 bg-background">
+        <Button 
+          size="lg" 
+          onClick={() => {
+            const targetElement = document.getElementById('kontakt');
+            if (targetElement) {
+              const offset = 80;
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - offset;
+              window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            }
+          }}
+          className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-base px-6 py-4 rounded-full font-semibold"
+        >
+          ➡️ Pošaljite nam upit – odgovaramo u roku od 24h
+        </Button>
+      </div>
     </>
   );
 };
