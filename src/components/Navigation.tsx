@@ -113,9 +113,13 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile Beriko text */}
+          {/* Mobile Beriko logo */}
           <div className="md:hidden">
-            <span className="text-white font-bold text-lg">Beriko d.o.o.</span>
+            <img 
+              src="/lovable-uploads/624af0ec-f1aa-481d-bae5-9b3145b561c5.png" 
+              alt="Beriko d.o.o. logo" 
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Mobile Menu Button */}
