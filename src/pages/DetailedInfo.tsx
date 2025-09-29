@@ -22,62 +22,12 @@ const DetailedInfo = () => {
       <main className="pt-32 pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           
-          {/* Stories from Reality Section */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h1 className="text-3xl font-bold text-foreground mb-4">
-                Priče iz stvarnosti:
-              </h1>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {/* First story */}
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-foreground mb-2">
-                  Štete nakon velikih oluja u srpnju
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Jutarnji.hr
-                </p>
-                <p className="text-sm text-foreground">
-                  „Nakon velikih oluja u srpnju, koje su pogodile gotovo sve hrvatske krajeve, samo u Zagrebu je prijavljeno 6.285 materijalnih šteta, a uključivale su štetu na građevinama, poljoprivrednim površinama i – <strong>osobnim vozilima.</strong>"
-                </p>
-              </div>
-
-              {/* Second story */}
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-foreground mb-2">
-                  „Oluja u Zagrebu rušila stabla, prevrnuo se katamaran kod Šibenika."
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Al Jazeera Balkans, 7. srpnja 2025.
-                </p>
-                <p className="text-sm text-foreground">
-                  „Snažno olujno nevrijeme pogodilo je dijelove Hrvatske … U prijepodnevnim satima uslijed oluje u Zagrebu stablo se <strong>srušilo na četiri automobila …</strong>"
-                </p>
-              </div>
-
-              {/* Third story */}
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
-                <h3 className="font-semibold text-foreground mb-2">
-                  „Stigla promjena vremena, dijelove Hrvatske pogodila tuča: Auti pod ledom."
-                </h3>
-                <p className="text-sm text-muted-foregroup mb-3">
-                  Dnevnik.hr, 17. kolovoza 2025.
-                </p>
-                <p className="text-sm text-foreground">
-                  „Dijelove Slavonije jutros je pogodilo nevrijeme ‐ uz pljuskove, krenula je i tuča. … Gornje Vrbe i Tomice savile su se pod težinom leda, a dijelovi polja su se zabijeljeli."
-                </p>
-              </div>
-            </div>
-          </section>
-
           {/* Recent Weather Events 2025 */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-foreground">Nedavni vremenski događaji - 2025.</h2>
+            <h2 className="text-3xl font-bold mb-8 text-foreground text-center">Nedavni vremenski događaji - 2025.</h2>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-card p-6 rounded-lg shadow-sm border flex flex-col">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="bg-card p-6 rounded-lg shadow-sm border flex flex-col text-center">
                 <h3 className="font-semibold text-foreground mb-3 text-xl">
                   "Oluja u Zagrebu rušila stabla na automobile"
                 </h3>
@@ -95,7 +45,7 @@ const DetailedInfo = () => {
                 />
               </div>
 
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
+              <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                 <h3 className="font-semibold text-foreground mb-3 text-xl">
                   "Dijelove Hrvatske pogodila tuča: Auti pod ledom"
                 </h3>
@@ -119,7 +69,7 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-foreground text-center">ŠTO TREBATE ZNATI PRIJE NEGO KUPITE NOVU GARAŽU</h2>
             
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-4xl mx-auto space-y-8 text-center">
               <p className="text-lg text-foreground leading-relaxed">
                 Vjerujemo da će se obitelji s početka priče nakon popravka automobila zakleti da više NIKAD neće izložiti svoju imovinu nepotrebnom riziku izlaganja vremenskim nepogodama. Nažalost, potrebna je tragedija da nas se trgne. Nemoj je čekati.
               </p>
@@ -132,18 +82,18 @@ const DetailedInfo = () => {
                 Prednosti su velike, nema samo automobil koristi od ovog komfornog prostora; ukućanima može poslužiti kao dodatni prostor za odlaganje ili kao mala radionica.
               </p>
               
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
+              <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Lokacija:</h3>
                 <p className="text-foreground leading-relaxed">
                   Mjesta za postavljanje objekta mogu biti razna i uključivati većinu vaših želja a nije potrebna građevinska dozvola: uz kuće i okućnice, uz stambene zgrade i kuće u nizu, na privatnim parkiralištima, uz restorane, pokraj tvornica, radiona i servisa, kraj vikendica i kleti, u kampanjama, maslinicima i voćnjacima,...
                 </p>
               </div>
               
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
+              <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Zaštita:</h3>
                 <p className="text-foreground leading-relaxed">
                   U izradi se koristi višegodišnja švedska proizvodna iskustva, prema promišljenoj koncepciji koja obuhvaća svaki detalj, a namjensko i servisno osoblje stoji vam na raspolaganju da dopremi i montira objekte na vašu željenu lokaciju. Montažna garaža pruža zaštitu od leda, kiše, snijega, sunca, oluja, životinja, UV zraka i vrućine.
-                </p>
+              </p>
               </div>
             </div>
           </section>
@@ -152,7 +102,7 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-foreground text-center">AKO STE PODUZETNIK ILI IMATE HOBI - ODABERITE RADIONICU, SKLADIŠTE ILI GARAŽU</h2>
             
-            <div className="max-w-4xl mx-auto space-y-6">
+            <div className="max-w-4xl mx-auto space-y-6 text-center">
               <p className="text-lg text-foreground leading-relaxed">
                 Objekt može poslužiti kao garaža, skladište ili radionica a isto tako i za sakupljanje vode u voćnjaku ili masliniku. Automobilske gume, skuteri i alat tradicionalno se smještaju u garažni prostor.
               </p>
@@ -169,28 +119,28 @@ const DetailedInfo = () => {
             
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-card p-6 rounded-lg shadow-sm border">
+                <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                   <h3 className="text-lg font-semibold text-foreground mb-3">Automobil duže vrijeme ostaje nov:</h3>
                   <p className="text-foreground">Garažiran automobil ima veću vrijednost kod prodaje.</p>
                 </div>
                 
-                <div className="bg-card p-6 rounded-lg shadow-sm border">
+                <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                   <h3 className="text-lg font-semibold text-foreground mb-3">Prije dođete na posao:</h3>
                   <p className="text-foreground">Ujutro nema čišćenja vjetrobranskih stakala i ne kasnite na radno mjesto.</p>
                 </div>
                 
-                <div className="bg-card p-6 rounded-lg shadow-sm border">
+                <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                   <h3 className="text-lg font-semibold text-foreground mb-3">Dulji vijek akomulatora:</h3>
                   <p className="text-foreground">Zatvoreni prostor je i topliji te se automobil lakše pali a akomulator dulje traje.</p>
                 </div>
                 
-                <div className="bg-card p-6 rounded-lg shadow-sm border">
+                <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                   <h3 className="text-lg font-semibold text-foreground mb-3">Zaštita od drugih vozila:</h3>
                   <p className="text-foreground">Kod otvaranja vrata ali i mimoilaženja drugih vozila automobili se oštećuju na otvorenome.</p>
                 </div>
               </div>
               
-              <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-6 rounded-lg border">
+              <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-6 rounded-lg border text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Neprocijenjiva vrijednost ulaganja:</h3>
                 <p className="text-foreground leading-relaxed">
                   Zbog svega navedenog za vas je investicija u garažu neprocjenjiva a ostaje vam i za drugi automobil. Investicija se vraća u roku od 5 godina kroz očuvaniji automobil a kod spriječavanja vandalizma vraća se trenutno.
@@ -203,7 +153,7 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-foreground text-center">KAKO UŠTEDJETI VRIJEME I NOVAC</h2>
             
-            <div className="max-w-4xl mx-auto space-y-6">
+            <div className="max-w-4xl mx-auto space-y-6 text-center">
               <p className="text-lg text-foreground leading-relaxed">
                 Pronalazak građevinske firme, nabava materijala, zidanje, višednevni nered u dvorištu glavni su razlog zašto većina ljudi ne dolazi lako do svoje garaže. Tako gubite dragocijeno vrijeme i novac.
               </p>
@@ -222,7 +172,7 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-foreground text-center">MALE SITNICE KOJE ČINE VELIKE STVARI</h2>
             
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-4xl mx-auto space-y-8 text-center">
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-4">Objekti ugodni za oko:</h3>
                 <p className="text-foreground leading-relaxed mb-4">
@@ -230,24 +180,24 @@ const DetailedInfo = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-card p-4 rounded-lg shadow-sm border">
+                  <div className="bg-card p-4 rounded-lg shadow-sm border text-center">
                     <h4 className="font-semibold text-foreground mb-2">1. Sekcijska vrata</h4>
                     <p className="text-foreground text-sm">s motorom i daljinskim otvaraju se i u udobnosti automobila.</p>
                   </div>
                   
-                  <div className="bg-card p-4 rounded-lg shadow-sm border">
+                  <div className="bg-card p-4 rounded-lg shadow-sm border text-center">
                     <h4 className="font-semibold text-foreground mb-2">2. Kip vrata na opruge</h4>
                     <p className="text-foreground text-sm">su lijepa a otvaraju se u jednom pokretu ruke i</p>
                   </div>
                   
-                  <div className="bg-card p-4 rounded-lg shadow-sm border">
+                  <div className="bg-card p-4 rounded-lg shadow-sm border text-center">
                     <h4 className="font-semibold text-foreground mb-2">3. Dvokrilna vrata</h4>
                     <p className="text-foreground text-sm">s bravom i ključem koja se lagano otvaraju,</p>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
+              <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Dug vijek trajanja a bez održavanja:</h3>
                 <p className="text-foreground leading-relaxed mb-4">
                   Nemate nikakvih briga oko održavanje objekta jer se obloge zasnivaju na kvalitetnim čeličnim, obostrano pocinčanim i bojanim profiliranim neizoliranim pločama ili izoliranim TERMOPANELIMA, a pocinčani profili čine rešetkastu konstrukciju objekta.
@@ -257,19 +207,19 @@ const DetailedInfo = () => {
                 </p>
               </div>
               
-              <div className="bg-card p-6 rounded-lg shadow-sm border">
+              <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                 <p className="text-foreground leading-relaxed">
                   Čelična i pocinčana konstrukcija izvedena je radi antikorozivne zaštite prema uvjetima za zaštitu čeličnih konstrukcija od korozije. Zbog toga su objekti pogodni za montiranje u priobalju i na otocima.
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-card p-6 rounded-lg shadow-sm border">
+                <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                   <h3 className="text-lg font-semibold text-foreground mb-3">Nema kapanja kondenzata:</h3>
                   <p className="text-foreground">Sloj filca uprešan na pokrovu sprečava kondenziranje pare i kapanje u unutrašnjosti objekta.</p>
                 </div>
                 
-                <div className="bg-card p-6 rounded-lg shadow-sm border">
+                <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                   <h3 className="text-lg font-semibold text-foreground mb-3">Ugodna klima:</h3>
                   <p className="text-foreground">Ispod ploča je manja temperatura u ljeti a viša u zimi što stvara ugodnu klimu u objektima.</p>
                 </div>
@@ -285,7 +235,7 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-foreground text-center">NAJBOLJE RJEŠENJE ZA VAŠE PROBLEME</h2>
             
-            <div className="max-w-4xl mx-auto space-y-6">
+            <div className="max-w-4xl mx-auto space-y-6 text-center">
               <p className="text-lg text-foreground leading-relaxed">
                 Dobra vijest glasi da baš Vi možete u potpunosti riješiti svoj radni, skladišni ili garažni prostor - i sve to pomoću jednostavnog načina kojeg ćemo Vam mi osigurati.
                 Da bi ste kupili montažni objekt, trebate se javiti telefonski. Ali sada to isto možete uraditi i putem interneta brže i jeftinije.
@@ -306,7 +256,7 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-6 rounded-lg border border-green-200 dark:border-green-700">
+                <div className="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-6 rounded-lg border border-green-200 dark:border-green-700 text-center">
                   <h3 className="text-xl font-bold text-foreground mb-4">BESPLATNI bonus #1:</h3>
                   <h4 className="text-lg font-semibold text-foreground mb-3">pocinčana konstrukcija</h4>
                   <p className="text-foreground">
@@ -314,7 +264,7 @@ const DetailedInfo = () => {
                   </p>
                 </div>
                 
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-6 rounded-lg border border-blue-200 dark:border-blue-700">
+                <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-6 rounded-lg border border-blue-200 dark:border-blue-700 text-center">
                   <h3 className="text-xl font-bold text-foreground mb-4">BESPLATNI bonus #2:</h3>
                   <h4 className="text-lg font-semibold text-foreground mb-3">montaža objekta</h4>
                   <p className="text-foreground">
@@ -331,19 +281,19 @@ const DetailedInfo = () => {
               <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-8 rounded-lg border-2 border-primary/20">
                 <h2 className="text-3xl font-bold mb-6 text-foreground text-center">100% BEZUVJETNA GARANCIJA</h2>
                 
-                <p className="text-lg text-foreground leading-relaxed mb-6">
+                <p className="text-lg text-foreground leading-relaxed mb-6 text-center">
                   Moja vjera u efikasnost i vaše zadovoljstvo je tolika da objekt dolazi sa bezuvjetnom petgodišnjom 100% garancijom. I to nije sve: oba vrijedna bonusa ne naplaćujemo po povratu kao zahvalu što ste imali povjerenja u nas. Tako ne riskirate ništa, a dobivate sve!
                 </p>
                 
-                <p className="text-lg text-foreground leading-relaxed mb-6">
+                <p className="text-lg text-foreground leading-relaxed mb-6 text-center">
                   Potreba za vaš dodatni prostor je jasna i neposredna. Zato nemojte čekati da bude vaša imovina na otvorenome nego odmah naručite montažni objekt. Kvalitetan je. Bez rizika je. Promijenit će vam život!
                 </p>
                 
-                <p className="text-lg text-foreground leading-relaxed mb-6">
+                <p className="text-lg text-foreground leading-relaxed mb-6 text-center">
                   Montažni objekt i oba poklona dostavljamo sa stručnom ekipom montažera već isti tjedan ili najkasnije idućeg tjedna!
                 </p>
                 
-                <p className="text-lg text-foreground leading-relaxed">
+                <p className="text-lg text-foreground leading-relaxed text-center">
                   Nakon toga ćemo postaviti objekt na vaše mjesto pripremljeno za montažu. U međuvremenu vi se udobno smjestite, a za to vrijeme vaš će objekat biti spreman za uporabu.
                 </p>
               </div>
@@ -352,11 +302,11 @@ const DetailedInfo = () => {
 
           {/* Damage Statistics */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-foreground">Statistike šteta</h2>
+            <h2 className="text-3xl font-bold mb-8 text-foreground text-center">Statistike šteta</h2>
             
-            <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-8 rounded-lg border">
+            <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-8 rounded-lg border max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
+                <div className="text-center">
                   <h3 className="font-semibold text-foreground mb-4 text-xl">
                     Štete nakon srpanjskih oluja
                   </h3>
@@ -365,7 +315,7 @@ const DetailedInfo = () => {
                   </p>
                 </div>
                 
-                <div>
+                <div className="text-center">
                   <h3 className="font-semibold text-foreground mb-4 text-xl">
                     Vandaliziranje vozila u Osijeku
                   </h3>
