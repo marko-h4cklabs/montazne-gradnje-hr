@@ -19,7 +19,7 @@ const DetailedInfo = () => {
           </Button>
         </Link>
       </div>
-      <main className="pt-32 pb-16">
+      <main className="pt-40 md:pt-32 pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           
           {/* Recent Weather Events 2025 */}
