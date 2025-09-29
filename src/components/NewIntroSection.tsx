@@ -9,7 +9,7 @@ const NewIntroSection = () => {
   };
 
   return (
-    <section className="py-16 bg-background">
+    <section className="pt-16 pb-8 bg-background">
       <div className="container mx-auto px-4">
         {/* Opening text */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
