@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +33,14 @@ const Navigation = () => {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.substring(1);
+    
+    // If we're not on the main page, navigate to it first
+    if (location.pathname !== '/') {
+      navigate('/' + href);
+      return;
+    }
+    
+    // If we're on the main page, scroll to the section
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       const offset = 80; // Account for fixed navbar height
@@ -45,6 +56,13 @@ const Navigation = () => {
   };
 
   const scrollToContact = () => {
+    // If we're not on the main page, navigate to it first
+    if (location.pathname !== '/') {
+      navigate('/#kontakt');
+      return;
+    }
+    
+    // If we're on the main page, scroll to contact section
     const targetElement = document.getElementById('kontakt');
     if (targetElement) {
       const offset = 80;
