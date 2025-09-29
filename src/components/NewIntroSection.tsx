@@ -12,7 +12,7 @@ const NewIntroSection = () => {
     <section className="pt-16 bg-background">
       <div className="container mx-auto px-4">
         {/* Opening text */}
-        <div className="max-w-4xl mx-auto mb-4 text-center">
+        <div className="max-w-4xl mx-auto mb-1 text-center">
           <p className="text-2xl md:text-3xl text-foreground leading-relaxed mb-8">
             <strong>Dragi graditelju montažnog objekta,</strong>
           </p>
