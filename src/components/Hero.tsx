@@ -59,7 +59,7 @@ const Hero = () => {
           {/* Mobile Headline Overlay */}
           <div className="absolute inset-0 z-10 flex items-center justify-center">
             <div className="text-center px-4">
-              <h1 className="text-2xl font-medium leading-tight text-foreground">
+              <h1 className="text-3xl font-bold leading-tight">
                 <div className="text-primary">Montažne <span className="font-black">hale</span>, montažne <span className="font-black">garaže</span> i</div>
                 <div className="text-primary">montažne <span className="font-black">kuće</span></div>
               </h1>
