@@ -69,31 +69,31 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#B5280D' }}>ŠTO TREBATE ZNATI PRIJE NEGO KUPITE NOVU GARAŽU</h2>
             
-            <div className="max-w-4xl mx-auto space-y-8 text-center">
-              <p className="text-lg text-foreground leading-relaxed">
+            <div className="max-w-4xl mx-auto space-y-8">
+              <p className="text-lg text-foreground leading-relaxed text-justify">
                 Vjerujemo da će se obitelji s početka priče nakon popravka automobila zakleti da više NIKAD neće izložiti svoju imovinu nepotrebnom riziku izlaganja vremenskim nepogodama. Nažalost, potrebna je tragedija da nas se trgne. Nemoj je čekati.
               </p>
               
-              <p className="text-lg text-foreground leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed text-justify">
                 Beriko osigurava KVALITETAN sustav malih objekata i pogodni su za vaše potrebe kao što su: <span style={{ color: '#1F1F78' }}>garažiranje automobila, motocikala, sktera, bicikala, spremanje plovila zimi, spremanje poljoprivrednih strojeva, stvari i opreme, skladištenje, radionice i servisi i</span> mnoge druge svrhe.
               </p>
               
-              <p className="text-lg text-foreground leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed text-justify">
                 Prednosti su velike, nema samo automobil koristi od ovog komfornog prostora; ukućanima može poslužiti kao dodatni <span style={{ color: '#1F1F78' }}>prostor za odlaganje ili kao mala radionica.</span>
               </p>
               
               <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Lokacija:</h3>
-                <p className="text-foreground leading-relaxed">
+                <p className="text-foreground leading-relaxed text-justify">
                   Mjesta za postavljanje objekta mogu biti razna i uključivati većinu vaših želja a nije potrebna građevinska dozvola: <span style={{ color: '#1F1F78' }}>uz kuće i okućnice, uz stambene zgrade i kuće u nizu, na privatnim parkiralištima, uz restorane, pokraj tvornica, radiona i servisa, kraj vikendica i kleti, u kampanjama, maslinicima i voćnjacima,...</span>
                 </p>
               </div>
               
               <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Zaštita:</h3>
-                <p className="text-foreground leading-relaxed">
+                <p className="text-foreground leading-relaxed text-justify">
                   U izradi se koristi višegodišnja švedska proizvodna iskustva, prema promišljenoj koncepciji koja obuhvaća svaki detalj, a namjensko i servisno osoblje stoji vam na raspolaganju da dopremi i montira objekte na vašu željenu lokaciju. Montažna garaža <span style={{ color: '#1F1F78' }}>pruža zaštitu od leda, kiše, snijega, sunca, oluja, životinja, UV zraka i vrućine.</span>
-              </p>
+                </p>
               </div>
             </div>
           </section>
@@ -102,12 +102,12 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#B5280D' }}>AKO STE PODUZETNIK ILI IMATE HOBI - ODABERITE RADIONICU, SKLADIŠTE ILI GARAŽU</h2>
             
-            <div className="max-w-4xl mx-auto space-y-6 text-center">
-              <p className="text-lg text-foreground leading-relaxed">
+            <div className="max-w-4xl mx-auto space-y-6">
+              <p className="text-lg text-foreground leading-relaxed text-justify">
                 Objekt može poslužiti kao garaža, skladište ili radionica a isto tako i za sakupljanje vode u voćnjaku ili masliniku. Automobilske gume, skuteri i alat tradicionalno se smještaju u garažni prostor.
               </p>
               
-              <p className="text-lg text-foreground leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed text-justify">
                 Ako je garaža duža od automobila, na njezinom kraju može se izgraditi mala radna ploha. Nadstrešnica služi za zaštitu automobila i brzo sušenje mokrog automobila. Zimi se stakla ne lede, a ljeti automobil ostaje u hladu.
               </p>
             </div>
@@ -142,7 +142,7 @@ const DetailedInfo = () => {
               
               <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-6 rounded-lg border text-center">
                 <h3 className="text-xl font-semibold mb-4" style={{ color: '#1F1F78' }}>Neprocijenjiva vrijednost ulaganja:</h3>
-                <p className="text-foreground leading-relaxed">
+                <p className="text-foreground leading-relaxed text-justify">
                   Zbog svega navedenog za vas je investicija u garažu neprocjenjiva a ostaje vam i za drugi automobil. Investicija se vraća u roku od 5 godina kroz očuvaniji automobil a kod spriječavanja vandalizma vraća se trenutno.
                 </p>
               </div>
@@ -153,16 +153,16 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#B5280D' }}>KAKO UŠTEDJETI VRIJEME I NOVAC</h2>
             
-            <div className="max-w-4xl mx-auto space-y-6 text-center">
-              <p className="text-lg text-foreground leading-relaxed">
+            <div className="max-w-4xl mx-auto space-y-6">
+              <p className="text-lg text-foreground leading-relaxed text-justify">
                 Pronalazak građevinske firme, nabava materijala, zidanje, višednevni nered u dvorištu glavni su razlog zašto većina ljudi ne dolazi lako do svoje garaže. Tako gubite dragocijeno vrijeme i novac.
               </p>
               
-              <p className="text-lg text-foreground leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed text-justify">
                 Za razliku od ostalih garaža, naše ukrašavaju vaš prostor jer su modernog dizajna. Ušteda na vremenu i novcu se postiže zato što je pocinčana konstrukcija i bojani pokrov te ih se zbog toga ne treba održavati kroz dugi niz godina.
               </p>
               
-              <p className="text-lg text-foreground leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed text-justify">
                 Naš sustav garaže može biti dovršen u 1/5 vremena u odnosu na većinu drugih proizvođača. Pobijediti ćemo i bilo koju cijenu konkurenata. Dostavite nam svoje dimenzije a mi ćemo ispuniti vašu želju.
               </p>
             </div>
@@ -172,10 +172,10 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#B5280D' }}>MALE SITNICE KOJE ČINE VELIKE STVARI</h2>
             
-            <div className="max-w-4xl mx-auto space-y-8 text-center">
+            <div className="max-w-4xl mx-auto space-y-8">
               <div>
                 <h3 className="text-xl font-semibold mb-4" style={{ color: '#1F1F78' }}>Objekti ugodni za oko:</h3>
-                <p className="text-foreground leading-relaxed mb-4">
+                <p className="text-foreground leading-relaxed mb-4 text-justify">
                   S obzirom na dizajn svojih sastavnih elemenata, objekti su tehnicki precizan i lijep proizvod. Nudimo tri vrste vrata:
                 </p>
                 
@@ -199,16 +199,16 @@ const DetailedInfo = () => {
               
               <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Dug vijek trajanja a bez održavanja:</h3>
-                <p className="text-foreground leading-relaxed mb-4">
+                <p className="text-foreground leading-relaxed mb-4 text-justify">
                   Nemate nikakvih briga oko održavanje objekta jer se obloge zasnivaju na kvalitetnim čeličnim, obostrano pocinčanim i bojanim profiliranim neizoliranim pločama ili izoliranim TERMOPANELIMA, a pocinčani profili čine rešetkastu konstrukciju objekta.
                 </p>
-                <p className="text-foreground leading-relaxed">
+                <p className="text-foreground leading-relaxed text-justify">
                   Obloge su učvršćene pocinčanim samourezujućim vijcima a u dodatnu opremu za oblaganje krova ubrajamo samourezujuće pocinčane vijke s brtvom i filc protiv kondenzacije!
                 </p>
               </div>
               
               <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
-                <p className="text-foreground leading-relaxed">
+                <p className="text-foreground leading-relaxed text-justify">
                   Čelična i pocinčana konstrukcija izvedena je radi antikorozivne zaštite prema uvjetima za zaštitu čeličnih konstrukcija od korozije. Zbog toga su objekti pogodni za montiranje u priobalju i na otocima.
                 </p>
               </div>
@@ -225,7 +225,7 @@ const DetailedInfo = () => {
                 </div>
               </div>
               
-              <p className="text-foreground leading-relaxed">
+              <p className="text-foreground leading-relaxed text-justify">
                 Krov može imati i oblik valovitog crijepa mediterana raznih boja koji se prvenstveno koristi zbog estetskog izgleda montažnih kućica. Montažna garaža može imati krovište koje je jednostrešno ili dvostrešno.
               </p>
             </div>
@@ -235,18 +235,18 @@ const DetailedInfo = () => {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#B5280D' }}>NAJBOLJE RJEŠENJE ZA VAŠE PROBLEME</h2>
             
-            <div className="max-w-4xl mx-auto space-y-6 text-center">
-              <p className="text-lg text-foreground leading-relaxed">
+            <div className="max-w-4xl mx-auto space-y-6">
+              <p className="text-lg text-foreground leading-relaxed text-justify">
                 Dobra vijest glasi da baš Vi možete u potpunosti riješiti svoj radni, skladišni ili garažni prostor - i sve to pomoću jednostavnog načina kojeg ćemo Vam mi osigurati.
                 Da bi ste kupili montažni objekt, trebate se javiti telefonski. Ali sada to isto možete uraditi i putem interneta brže i jeftinije.
               </p>
               
-              <p className="text-lg text-foreground leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed text-justify">
                 Za sakupiti sve informacije, razne ponude i izvoditelje koji bi vam riješili potrebu za dodatnim prostorom trebali bi potrošiti vremena i živaca, a da sve to ne bude dovoljno.
                 Ali sada, sve što trebate kako bi eliminirali manjak prostora i dobili baš onakav objekt kakav vam treba, ostvarit ćete kada naručite montažni objekt u firmi Beriko.
               </p>
               
-              <p className="text-lg text-foreground leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed text-justify">
                 Mi već desetu godinu proizvodimo za vas montažne objekte. Zbog toga smo ponosni da vam možemo ponuditi montažne objekte koji imaju tolike prednosti i upotrebljivosti koje samo možete poželjeti.
               </p>
             </div>
