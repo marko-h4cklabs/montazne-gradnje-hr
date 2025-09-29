@@ -13,7 +13,7 @@ const DetailedInfo = () => {
       {/* Back Arrow */}
       <div className="fixed top-28 left-4 z-10">
         <Link to="/">
-          <Button size="sm" className="flex items-center gap-2 mb-8">
+          <Button size="sm" className="flex items-center gap-2">
             <ArrowLeft className="w-4 h-4" />
             Povratak
           </Button>
