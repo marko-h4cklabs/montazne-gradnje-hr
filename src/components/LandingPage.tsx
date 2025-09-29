@@ -4,7 +4,6 @@ import ProductCategories from "./ProductCategories";
 import Gallery from "./Gallery";
 import References from "./References";
 import FinalCTA from "./FinalCTA";
-import RealLifeStories from "./RealLifeStories";
 import AboutUs from "./AboutUs";
 import Footer from "./Footer";
 import NewIntroSection from "./NewIntroSection";
@@ -22,7 +21,6 @@ const LandingPage = () => {
         <Gallery />
       </div>
       <References />
-      <RealLifeStories />
       <div id="kontakt">
         <FinalCTA />
       </div>
