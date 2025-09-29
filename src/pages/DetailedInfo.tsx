@@ -380,20 +380,6 @@ const DetailedInfo = () => {
             </div>
           </section>
 
-          {/* What You Need to Know Section */}
-          <section className="mb-16">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
-                ŠTO TREBATE ZNATI PRIJE NEGO KUPITE NOVU GARAŽU
-              </h2>
-              <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8">
-                Vjerujemo da će se obitelji s početka priče nakon popravka automobila zakleti da više NIKAD neće izložiti svoju imovinu nepotrebnom riziku izlaganja vremenskim nepogodama. Nažalost, potrebna je tragedija da nas se trgne. Nemoj je čekati.
-              </p>
-              <p className="text-lg md:text-xl text-foreground leading-relaxed">
-                U izradi se koristi višegodišnja švedska proizvodna iskustva, prema promišljenoj koncepciji koja obuhvaća svaki detalj, a namjensko i servisno osoblje stoji vam na raspolaganju da dopremi i montira objekte na vašu željenu lokaciju. Montažna garaža pruža zaštitu od leda, kiše, snijega, sunca, oluja, životinja, UV zraka i vrućine.
-              </p>
-            </div>
-          </section>
 
           {/* Call to Action */}
           <section className="text-center bg-card p-8 rounded-lg shadow-sm border">
