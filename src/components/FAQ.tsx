@@ -11,7 +11,7 @@ const FAQ = () => {
     },
     {
       question: "Koliko dugo traje montaža?",
-      answer: "Ovisno o veličini i složenosti objekta, montaža traje od 1 do 5 dana. Jednostavne garaže montiraju se u jednom danu, dok veće hale mogu zahtijevati nekoliko dana rada."
+      answer: "Ovisno o veličini i složenosti objekta, montaža traje od 1 do 5 dana. Jednostavne garaže montiraju se u jednom danu, dok veće hale mogu zahtijevati nekoliko dana rada!"
     },
     {
       question: "Koje dozvole su potrebne?",
