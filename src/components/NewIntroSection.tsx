@@ -12,14 +12,14 @@ const NewIntroSection = () => {
     <section className="pt-16 bg-background">
       <div className="container mx-auto px-4">
         {/* Opening text */}
-        <div className="max-w-4xl mx-auto mb-1 text-center px-4">
-          <p className="text-2xl md:text-3xl leading-relaxed mb-8">
+        <div className="max-w-4xl mx-auto mb-1 px-4">
+          <p className="text-2xl md:text-3xl leading-relaxed mb-8 text-center">
             <strong className="text-beriko-blue">Dragi graditelju montažnog objekta,</strong>
           </p>
-          <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8">
+          <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8 text-justify">
             dajemo svakom vlasniku dodatnu vrijednost njegovom automobilu i dva poklon bonusa ako se odazovete na niže navedenu ponudu.
           </p>
-          <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8">
+          <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8 text-justify">
             Svake godine, posebno u zimskoj sezoni, u hrvatskoj nastrada od leda, snijega i olujnog nevremena sve više automobila. Praksa je nažalost pokazala da nitko, pa čak ni stanovnici urbanih sredina nisu pošteđeni od problema kako da zaštite svoje metalne ljubimce i imovinu.
           </p>
           
