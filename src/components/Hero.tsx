@@ -109,7 +109,6 @@ const Hero = () => {
               </div>
             ))}
           </div>
-          <div className="absolute inset-0 bg-black/5"></div>
         </div>
       </section>
       
