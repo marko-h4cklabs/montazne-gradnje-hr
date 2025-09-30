@@ -169,7 +169,7 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
 
       {/* Podaci I mjere objekta */}
       <div className="border-t pt-6">
-        <h3 className="text-lg font-semibold mb-4">Podaci I mjere objekta</h3>
+        <h3 className="text-lg font-semibold mb-4">Podaci i mjere objekta</h3>
         <p className="text-sm text-muted-foreground mb-4">*mjere u cm</p>
       </div>
 
@@ -233,6 +233,7 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
               <SelectItem value="termonapel-30mm">termonapel 30mm</SelectItem>
               <SelectItem value="termopanel-50mm">termopanel 50mm</SelectItem>
               <SelectItem value="imitacija-crijepa">imitacija crijepa 40-80mm</SelectItem>
+              <SelectItem value="trapezni-lim-05mm">trapezni lim 0,5mm</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -263,6 +264,7 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
               <SelectItem value="termopanel-30mm">termopanel 30mm</SelectItem>
               <SelectItem value="termopanel-50mm">termopanel 50mm</SelectItem>
               <SelectItem value="termopanel-80mm">termopanel 80mm</SelectItem>
+              <SelectItem value="trapezni-lim-05mm">trapezni lim 0,5mm</SelectItem>
             </SelectContent>
           </Select>
         </div>
