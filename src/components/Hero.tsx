@@ -53,7 +53,7 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            <div className="absolute inset-0 bg-black/20"></div>
+            <div className="absolute inset-0 bg-black/5"></div>
           </div>
           
         </div>
@@ -109,7 +109,7 @@ const Hero = () => {
               </div>
             ))}
           </div>
-          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="absolute inset-0 bg-black/5"></div>
         </div>
       </section>
       
