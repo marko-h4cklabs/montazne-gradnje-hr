@@ -66,7 +66,7 @@ const AboutUs = () => {
                   <Phone className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-semibold text-card-foreground">Telefon:</p>
-                    <p className="text-muted-foreground">098 64 62 60</p>
+                    <p className="text-muted-foreground">098 64 62 60 - Bernard Domović</p>
                   </div>
                 </div>
                 
