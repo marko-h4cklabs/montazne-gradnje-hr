@@ -54,7 +54,7 @@ const AboutUs = () => {
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-primary mt-1" />
+                  <MapPin className="w-5 h-5 text-beriko-blue mt-1" />
                   <div>
                     <p className="font-semibold text-beriko-blue">Adresa:</p>
                     <p className="text-muted-foreground">HR-48362 KLOŠTAR PODRAVSKI</p>
@@ -63,7 +63,7 @@ const AboutUs = () => {
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-primary" />
+                  <Phone className="w-5 h-5 text-beriko-blue" />
                   <div>
                     <p className="font-semibold text-beriko-blue">Telefon:</p>
                     <p className="text-muted-foreground">098 64 62 60 - Bernard Domović</p>
@@ -71,7 +71,7 @@ const AboutUs = () => {
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-primary" />
+                  <Mail className="w-5 h-5 text-beriko-blue" />
                   <div>
                     <p className="font-semibold text-beriko-blue">Email:</p>
                     <p className="text-muted-foreground">beriko@beriko.com</p>
