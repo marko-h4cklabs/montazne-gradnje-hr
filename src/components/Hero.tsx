@@ -23,7 +23,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 6500);
+    }, 5700);
 
     return () => clearInterval(interval);
   }, [images.length]);
