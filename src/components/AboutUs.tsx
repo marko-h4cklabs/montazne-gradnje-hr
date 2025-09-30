@@ -48,7 +48,7 @@ const AboutUs = () => {
             </div>
 
             <div className="bg-card p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold mb-6 text-card-foreground">
+              <h3 className="text-2xl font-bold mb-6 text-beriko-blue">
                 Kontakt Informacije
               </h3>
               
@@ -56,7 +56,7 @@ const AboutUs = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-primary mt-1" />
                   <div>
-                    <p className="font-semibold text-card-foreground">Adresa:</p>
+                    <p className="font-semibold text-beriko-blue">Adresa:</p>
                     <p className="text-muted-foreground">HR-48362 KLOŠTAR PODRAVSKI</p>
                     <p className="text-muted-foreground">Stjepana Radića 2</p>
                   </div>
@@ -65,7 +65,7 @@ const AboutUs = () => {
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-primary" />
                   <div>
-                    <p className="font-semibold text-card-foreground">Telefon:</p>
+                    <p className="font-semibold text-beriko-blue">Telefon:</p>
                     <p className="text-muted-foreground">098 64 62 60 - Bernard Domović</p>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ const AboutUs = () => {
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
-                    <p className="font-semibold text-card-foreground">Email:</p>
+                    <p className="font-semibold text-beriko-blue">Email:</p>
                     <p className="text-muted-foreground">beriko@beriko.com</p>
                   </div>
                 </div>
