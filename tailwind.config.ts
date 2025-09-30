@@ -32,6 +32,7 @@ export default {
 					foreground: 'hsl(var(--primary-foreground))',
 					dark: 'hsl(var(--primary-dark))'
 				},
+				'beriko-blue': 'hsl(var(--beriko-blue))',
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
