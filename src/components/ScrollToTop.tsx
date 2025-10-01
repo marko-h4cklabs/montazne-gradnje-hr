@@ -6,14 +6,21 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     if (hash) {
-      // If there's a hash in the URL, scroll to that element
-      const element = document.querySelector(hash);
-      if (element) {
+      // Special case for #kontakt - scroll to the very bottom
+      if (hash === "#kontakt") {
         setTimeout(() => {
-          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-          const offsetPosition = elementPosition - 100;
-          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+          window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
         }, 100);
+      } else {
+        // For other hashes, scroll to that element with offset
+        const element = document.querySelector(hash);
+        if (element) {
+          setTimeout(() => {
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - 100;
+            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+          }, 100);
+        }
       }
     } else {
       // Otherwise, reset scroll to top on route change
