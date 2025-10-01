@@ -19,8 +19,22 @@ const FinalCTA = () => {
   };
 
   return (
-    <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-4 text-center">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPageElement",
+            "@id": "#posalji-upit",
+            "name": "Pošalji upit",
+            "description": "Kontaktirajte nas za montažne objekte",
+            "url": window.location.origin + "/#posalji-upit"
+          })
+        }}
+      />
+      <section id="posalji-upit" className="py-20 bg-secondary">
+        <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-secondary-foreground">
             Montažni objekti sa kojima ćete biti zadovoljni
@@ -62,7 +76,8 @@ const FinalCTA = () => {
           )}
         </DialogContent>
       </Dialog>
-    </section>
+      </section>
+    </>
   );
 };
 
