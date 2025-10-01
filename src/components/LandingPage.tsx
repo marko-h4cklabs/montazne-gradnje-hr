@@ -21,7 +21,7 @@ const LandingPage = () => {
         <Gallery />
       </div>
       <References />
-      <div id="kontakt">
+      <div id="posalji-upit">
         <FinalCTA />
       </div>
       <div id="o-nama">

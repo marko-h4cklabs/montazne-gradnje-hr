@@ -47,7 +47,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="bg-card p-8 rounded-lg shadow-lg">
+            <div id="kontakt" className="bg-card p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-bold mb-6 text-beriko-blue">
                 Kontakt Informacije
               </h3>
