@@ -10,7 +10,9 @@ const ScrollToTop = () => {
       const element = document.querySelector(hash);
       if (element) {
         setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - 100;
+          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
         }, 100);
       }
     } else {
