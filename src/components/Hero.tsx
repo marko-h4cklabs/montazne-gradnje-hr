@@ -73,7 +73,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             onClick={() => {
-              const targetElement = document.getElementById('kontakt');
+              const targetElement = document.getElementById('posalji-upit');
               if (targetElement) {
                 const offset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
@@ -127,7 +127,7 @@ const Hero = () => {
         <Button 
           size="lg" 
           onClick={() => {
-            const targetElement = document.getElementById('kontakt');
+            const targetElement = document.getElementById('posalji-upit');
             if (targetElement) {
               const offset = 80;
               const elementPosition = targetElement.getBoundingClientRect().top;
