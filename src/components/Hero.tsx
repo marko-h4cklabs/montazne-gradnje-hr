@@ -75,7 +75,7 @@ const Hero = () => {
             onClick={() => {
               const targetElement = document.getElementById('posalji-upit');
               if (targetElement) {
-                const offset = 80;
+                const offset = window.innerHeight / 3;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - offset;
                 window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
@@ -129,7 +129,7 @@ const Hero = () => {
           onClick={() => {
             const targetElement = document.getElementById('posalji-upit');
             if (targetElement) {
-              const offset = 80;
+              const offset = window.innerHeight / 3;
               const elementPosition = targetElement.getBoundingClientRect().top;
               const offsetPosition = elementPosition + window.pageYOffset - offset;
               window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
