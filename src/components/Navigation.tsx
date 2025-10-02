@@ -77,7 +77,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-primary md:bg-white backdrop-blur-md z-50 border-b border-border shadow-sm safe-inset-top">
+    <nav className="fixed top-0 w-full bg-white backdrop-blur-md z-50 border-b border-border shadow-sm safe-inset-top">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -128,9 +128,9 @@ const Navigation = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-white drop-shadow-sm" />
+              <X className="h-6 w-6 text-foreground drop-shadow-sm" />
             ) : (
-              <Menu className="h-6 w-6 text-white drop-shadow-sm" />
+              <Menu className="h-6 w-6 text-foreground drop-shadow-sm" />
             )}
           </button>
         </div>
