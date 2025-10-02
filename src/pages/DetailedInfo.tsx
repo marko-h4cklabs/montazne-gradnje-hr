@@ -303,14 +303,11 @@ const DetailedInfo = () => {
           {/* Call to Action */}
           <section className="text-center bg-card p-8 rounded-lg shadow-sm border">
             <h2 className="text-2xl font-bold mb-4 text-foreground">
-              Zaštitite svoju imovinu od vremenskih nepogoda
+              Zatražite cijenu svog objekta
             </h2>
-            <p className="text-muted-foreground mb-6">
-              Montažne garaže i bungalovi pružaju sigurnu zaštitu za vaša vozila i vrijednu imovinu
-            </p>
-            <Link to="/garaze">
+            <Link to="/#posalji-upit">
               <Button size="lg" className="px-8 py-3">
-                Pregled ponude
+                Popunite upit
               </Button>
             </Link>
           </section>
