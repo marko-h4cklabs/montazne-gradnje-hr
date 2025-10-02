@@ -61,7 +61,7 @@ const Hero = () => {
         {/* Headline below slider */}
         <div className="px-4 py-6 bg-background text-center">
           <h1 className="text-3xl font-bold leading-tight mb-4 text-[hsl(var(--beriko-blue))]">
-            Montažne hale, montažne garaže<br />i montažne kuće
+            Montažne Hale, Montažne Garaže<br />I Montažne Kuće
           </h1>
           <p className="text-lg text-foreground leading-relaxed">
             Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
@@ -115,7 +115,7 @@ const Hero = () => {
       {/* Headline below desktop slider */}
       <div className="hidden md:block px-4 py-8 bg-background text-center">
         <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6 text-[hsl(var(--beriko-blue))]">
-          Montažne hale, montažne garaže<br />i montažne kuće
+          Montažne Hale, Montažne Garaže<br />I Montažne Kuće
         </h1>
         <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
           Kvalitetne montažne konstrukcije - postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
