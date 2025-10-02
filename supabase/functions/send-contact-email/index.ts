@@ -64,7 +64,7 @@ const handler = async (req: Request): Promise<Response> => {
     
     // Object dimensions
     if (width || depth || height) {
-      detailsSection += '<h3>Podaci I mjere objekta:</h3>';
+      detailsSection += '<h3>Podaci i mjere objekta:</h3>';
       if (width) detailsSection += `<p><strong>Širina:</strong> ${width} cm</p>`;
       if (depth) detailsSection += `<p><strong>Dubina:</strong> ${depth} cm</p>`;
       if (height) detailsSection += `<p><strong>Visina:</strong> ${height} cm</p>`;
