@@ -48,7 +48,10 @@ const FinalCTA = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-xl px-12 py-6 rounded-full font-bold"
-            onClick={() => setIsContactFormOpen(true)}
+            onClick={() => {
+              (window as any).gtag_report_conversion();
+              setIsContactFormOpen(true);
+            }}
           >
             <MessageCircle className="w-6 h-6 mr-3" />
             <span className="hidden md:inline">Pošaljite upit – Rješenje stiže brzo kao i naši majstori</span>
