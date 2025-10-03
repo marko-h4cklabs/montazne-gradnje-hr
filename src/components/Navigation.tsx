@@ -27,6 +27,7 @@ const Navigation = () => {
     { name: "NAŠI PROIZVODI", href: "#proizvodi" },
     { name: "O NAMA", href: "#o-nama" },
     { name: "GALERIJA", href: "#galerija" },
+    { name: "RECENZIJE", href: "#recenzije" },
     { name: "KONTAKT", href: "#kontakt" }
   ];
 

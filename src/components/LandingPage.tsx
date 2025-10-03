@@ -20,7 +20,9 @@ const LandingPage = () => {
       <div id="galerija">
         <Gallery />
       </div>
-      <References />
+      <div id="recenzije">
+        <References />
+      </div>
       <div id="posalji-upit">
         <FinalCTA />
       </div>
