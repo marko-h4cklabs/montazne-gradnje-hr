@@ -5,6 +5,19 @@ const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    // Handle /recenzije route - scroll to reviews section
+    if (pathname === '/recenzije' && !hash) {
+      setTimeout(() => {
+        const element = document.getElementById('recenzije');
+        if (element) {
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - 80;
+          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+        }
+      }, 100);
+      return;
+    }
+    
     if (hash) {
       // Special case for #kontakt - scroll to the very bottom
       if (hash === "#kontakt") {

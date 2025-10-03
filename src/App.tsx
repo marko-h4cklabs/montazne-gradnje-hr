@@ -21,6 +21,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/recenzije" element={<Index />} />
           <Route path="/garaze" element={<Garages />} />
           <Route path="/vijesti" element={<News />} />
           <Route path="/detaljne-informacije" element={<DetailedInfo />} />
