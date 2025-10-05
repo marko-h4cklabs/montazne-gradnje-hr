@@ -79,12 +79,11 @@ const Reviews = () => {
 
         <section className="pb-16 bg-background">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-0">
               {reviewImages.map((review, index) => (
                 <div 
                   key={index}
-                  className="animate-slide-up hover:scale-105 smooth-transition"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="break-inside-avoid mb-0"
                 >
                   <img
                     src={review.src}
