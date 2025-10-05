@@ -14,6 +14,11 @@ import reviewMuratKaya from "@/assets/review-murat-kaya.png";
 import reviewPavoHandabaka from "@/assets/review-pavo-handabaka.png";
 import reviewNikolaTurkalj from "@/assets/review-nikola-turkalj.png";
 import reviewFilipAgnic from "@/assets/review-filip-agnic.png";
+import reviewElvijaPernar from "@/assets/review-elvija-pernar.png";
+import reviewPetarMuzar from "@/assets/review-petar-muzar.png";
+import reviewMarkoNovko from "@/assets/review-marko-novko.png";
+import reviewBrankoCvetnic from "@/assets/review-branko-cvetnic.png";
+import reviewSlavko from "@/assets/review-slavko.png";
 
 const Reviews = () => {
   const navigate = useNavigate();
@@ -49,7 +54,12 @@ const Reviews = () => {
     { src: reviewMuratKaya, alt: "Recenzija - Murat Kaya" },
     { src: reviewPavoHandabaka, alt: "Recenzija - Pavo Handabaka" },
     { src: reviewNikolaTurkalj, alt: "Recenzija - Nikola Turkalj" },
-    { src: reviewFilipAgnic, alt: "Recenzija - Filip Agnič" }
+    { src: reviewFilipAgnic, alt: "Recenzija - Filip Agnič" },
+    { src: reviewElvijaPernar, alt: "Recenzija - Elvija Pernar Ivezić" },
+    { src: reviewPetarMuzar, alt: "Recenzija - Petar Mužar" },
+    { src: reviewMarkoNovko, alt: "Recenzija - Marko Novko" },
+    { src: reviewBrankoCvetnic, alt: "Recenzija - Branko Cvetnić" },
+    { src: reviewSlavko, alt: "Recenzija - Slavko" }
   ];
 
   return (
