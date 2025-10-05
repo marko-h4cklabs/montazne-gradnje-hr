@@ -44,7 +44,12 @@ const Navigation = () => {
     // If we're on the main page, scroll to the section
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      const offset = 80; // Account for fixed navbar height
+      // Special handling for contact section - scroll above footer
+      let offset = 80; // Account for fixed navbar height
+      if (targetId === 'kontakt') {
+        offset = 200; // Larger offset to show content above footer
+      }
+      
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
       
@@ -56,25 +61,9 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
-  const scrollToContact = () => {
-    // If we're not on the main page, navigate to it first
-    if (location.pathname !== '/') {
-      navigate('/#kontakt');
-      return;
-    }
-    
-    // If we're on the main page, scroll to contact section
-    const targetElement = document.getElementById('kontakt');
-    if (targetElement) {
-      const offset = 80;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+  const navigateToReviews = () => {
+    navigate('/recenzije');
+    setIsMenuOpen(false);
   };
 
   return (
@@ -107,10 +96,10 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button 
-              onClick={scrollToContact}
+              onClick={navigateToReviews}
               className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-8 py-2 font-semibold"
             >
-              KONTAKTIRAJTE NAS
+              RECENZIJE
             </Button>
           </div>
 
@@ -152,10 +141,10 @@ const Navigation = () => {
               ))}
               <div className="px-3 pt-2">
                 <Button 
-                  onClick={scrollToContact}
+                  onClick={navigateToReviews}
                   className="w-full bg-primary hover:bg-primary-dark text-primary-foreground rounded-full font-semibold"
                 >
-                  KONTAKTIRAJTE NAS
+                  RECENZIJE
                 </Button>
               </div>
             </div>

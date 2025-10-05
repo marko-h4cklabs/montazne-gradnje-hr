@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Garages from "./pages/Garages";
 import News from "./pages/News";
+import Reviews from "./pages/Reviews";
 import DetailedInfo from "./pages/DetailedInfo";
 import GarageInquiry from "./pages/GarageInquiry";
 import HouseInquiry from "./pages/HouseInquiry";
@@ -24,7 +25,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/recenzije" element={<Index />} />
+          <Route path="/recenzije" element={<Reviews />} />
           <Route path="/garaze" element={<Garages />} />
           <Route path="/vijesti" element={<News />} />
           <Route path="/detaljne-informacije" element={<DetailedInfo />} />
