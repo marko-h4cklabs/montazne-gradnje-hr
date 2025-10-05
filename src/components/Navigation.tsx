@@ -44,10 +44,12 @@ const Navigation = () => {
     // If we're on the main page, scroll to the section
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      // Special handling for contact section - scroll above footer
+      // Special handling for specific sections
       let offset = 80; // Account for fixed navbar height
       if (targetId === 'kontakt') {
         offset = 200; // Larger offset to show content above footer
+      } else if (targetId === 'posalji-upit') {
+        offset = 150; // Show more content for offer section
       }
       
       const elementPosition = targetElement.getBoundingClientRect().top;
