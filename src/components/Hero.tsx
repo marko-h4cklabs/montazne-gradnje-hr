@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import ServiceSelection from "./ServiceSelection";
 import heroGarazaAlt from "@/assets/hero-garaza-alt.jpg";
 import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
 import heroBungalovAlt from "@/assets/hero-bungalov-alt.jpg";
@@ -19,6 +21,17 @@ const Hero = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isServiceDialogOpen, setIsServiceDialogOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+
+  const handleServiceSelect = (service: string) => {
+    setSelectedService(service);
+  };
+
+  const handleCloseDialog = () => {
+    setIsServiceDialogOpen(false);
+    setSelectedService(null);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -73,13 +86,8 @@ const Hero = () => {
           <Button 
             size="lg" 
             onClick={() => {
-              const targetElement = document.getElementById('posalji-upit');
-              if (targetElement) {
-                const offset = window.innerHeight / 3;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - offset;
-                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-              }
+              (window as any).gtag_report_conversion();
+              setIsServiceDialogOpen(true);
             }}
             className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow px-6 py-4 rounded-full font-semibold"
           >
@@ -127,19 +135,25 @@ const Hero = () => {
         <Button 
           size="lg" 
           onClick={() => {
-            const targetElement = document.getElementById('posalji-upit');
-            if (targetElement) {
-              const offset = window.innerHeight / 3;
-              const elementPosition = targetElement.getBoundingClientRect().top;
-              const offsetPosition = elementPosition + window.pageYOffset - offset;
-              window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-            }
+            (window as any).gtag_report_conversion();
+            setIsServiceDialogOpen(true);
           }}
           className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-base px-6 py-4 rounded-full font-semibold"
         >
           ➡️ Pošaljite nam upit – odgovaramo u roku od 24h
         </Button>
       </div>
+
+      <Dialog open={isServiceDialogOpen} onOpenChange={handleCloseDialog}>
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-center">
+              Zatražite ponudu za:
+            </DialogTitle>
+          </DialogHeader>
+          <ServiceSelection onServiceSelect={handleServiceSelect} />
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
