@@ -1,6 +1,8 @@
 import heroGaraza from "@/assets/hero-garaza.jpg";
 import galerijaHala from "@/assets/galerija-hala.jpg";
 import galerijaVikendice from "@/assets/galerija-vikendice-bungalovi.jpg";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const ProductCategories = () => {
   const products = [
@@ -31,6 +33,11 @@ const ProductCategories = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Čime se sve bavimo?
           </h2>
+          <Link to="/#galerija">
+            <Button variant="outline" size="sm" className="rounded-full">
+              Galerija
+            </Button>
+          </Link>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
