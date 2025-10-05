@@ -1,25 +1,31 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface ServiceSelectionProps {
   onServiceSelect: (service: string) => void;
 }
 
 const ServiceSelection = ({ onServiceSelect }: ServiceSelectionProps) => {
+  const navigate = useNavigate();
+  
   const services = [
     {
       id: "garaze",
       title: "MONTAŽNE GARAŽE",
-      description: "Kvalitetne montažne garaže po mjeri"
+      description: "Kvalitetne montažne garaže po mjeri",
+      url: "/garaze-upit"
     },
     {
       id: "bungalovi", 
       title: "BUNGALOVI ILI VIKENDICE",
-      description: "Moderni bungalovi i vikendice"
+      description: "Moderni bungalovi i vikendice",
+      url: "/kuce-upit"
     },
     {
       id: "hale",
       title: "HALE", 
-      description: "Industrijske i komercijalne hale"
+      description: "Industrijske i komercijalne hale",
+      url: "/hale-upit"
     }
   ];
 
@@ -35,7 +41,10 @@ const ServiceSelection = ({ onServiceSelect }: ServiceSelectionProps) => {
             key={service.id}
             variant="outline"
             className="w-full h-auto py-6 px-8 text-left bg-muted/50 hover:bg-primary hover:text-primary-foreground border-2 hover:border-primary transition-all duration-300"
-            onClick={() => onServiceSelect(service.id)}
+            onClick={() => {
+              onServiceSelect(service.id);
+              navigate(service.url);
+            }}
           >
             <div>
               <div className="font-bold text-lg mb-2">{service.title}</div>
