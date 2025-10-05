@@ -1,7 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import RealLifeStories from "@/components/RealLifeStories";
-import References from "@/components/References";
 
 const Reviews = () => {
   return (
@@ -18,9 +16,6 @@ const Reviews = () => {
             </p>
           </div>
         </section>
-        
-        <RealLifeStories />
-        <References />
         
         <section className="py-16 bg-secondary/5">
           <div className="container mx-auto px-4 text-center">
