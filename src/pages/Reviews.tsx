@@ -4,6 +4,16 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useNavigate } from "react-router-dom";
 import { Home, Warehouse, Car } from "lucide-react";
+import reviewDianaJustic from "@/assets/review-diana-justic.png";
+import reviewNickFrehner from "@/assets/review-nick-frehner.png";
+import reviewBellySwt from "@/assets/review-belly-swt.png";
+import reviewMatijaSimunovic from "@/assets/review-matija-simunovic.png";
+import reviewStjepanHofer from "@/assets/review-stjepan-hofer.png";
+import reviewMateCustic from "@/assets/review-mate-custic.png";
+import reviewMuratKaya from "@/assets/review-murat-kaya.png";
+import reviewPavoHandabaka from "@/assets/review-pavo-handabaka.png";
+import reviewNikolaTurkalj from "@/assets/review-nikola-turkalj.png";
+import reviewFilipAgnic from "@/assets/review-filip-agnic.png";
 
 const Reviews = () => {
   const navigate = useNavigate();
@@ -29,6 +39,19 @@ const Reviews = () => {
     }
   ];
 
+  const reviewImages = [
+    { src: reviewDianaJustic, alt: "Recenzija - Diana Justic" },
+    { src: reviewNickFrehner, alt: "Recenzija - Nick Frehner" },
+    { src: reviewBellySwt, alt: "Recenzija - Belly-SWT" },
+    { src: reviewMatijaSimunovic, alt: "Recenzija - Matija Šimunović" },
+    { src: reviewStjepanHofer, alt: "Recenzija - Stjepan Hofer" },
+    { src: reviewMateCustic, alt: "Recenzija - mate custic" },
+    { src: reviewMuratKaya, alt: "Recenzija - Murat Kaya" },
+    { src: reviewPavoHandabaka, alt: "Recenzija - Pavo Handabaka" },
+    { src: reviewNikolaTurkalj, alt: "Recenzija - Nikola Turkalj" },
+    { src: reviewFilipAgnic, alt: "Recenzija - Filip Agnič" }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -41,6 +64,26 @@ const Reviews = () => {
             <p className="text-xl text-center text-muted-foreground max-w-3xl mx-auto mb-12">
               Pročitajte iskustva naših zadovoljnih klijenata i njihove priče o saradnji sa Beriko d.o.o.
             </p>
+          </div>
+        </section>
+
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {reviewImages.map((review, index) => (
+                <div 
+                  key={index}
+                  className="animate-slide-up hover:scale-105 smooth-transition"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <img
+                    src={review.src}
+                    alt={review.alt}
+                    className="w-full rounded-xl card-shadow object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
         
