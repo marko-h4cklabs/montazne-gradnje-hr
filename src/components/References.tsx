@@ -1,6 +1,7 @@
 import reviewDanijela from "@/assets/review-danijela.png";
 import reviewDiana from "@/assets/review-diana.png";
 import reviewBranko from "@/assets/review-branko.png";
+import { Link } from "react-router-dom";
 
 const References = () => {
   const reviewImages = [
@@ -41,14 +42,12 @@ const References = () => {
         </div>
         
         <div className="text-center">
-          <a
-            href="https://www.google.com/maps/place/BERIKO+d.o.o.+montažni+objekti/@45.9848412,17.1389723,17z/data=!4m8!3m7!1s0x4767ce19c0cfff0b:0x689e5a358d483b43!8m2!3d45.9848412!4d17.1415472!9m1!1b1!16s%2Fg%2F119tkwc60?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D#:~:text=Recenzije"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/recenzije"
             className="inline-flex items-center bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-3 rounded-full font-semibold smooth-transition hover:scale-105"
           >
             Pregledajte sve recenzije
-          </a>
+          </Link>
         </div>
       </div>
     </section>
