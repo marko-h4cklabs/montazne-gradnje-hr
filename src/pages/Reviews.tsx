@@ -106,7 +106,7 @@ const Reviews = () => {
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <Button size="lg" className="rounded-full px-8 py-3 font-semibold">
+                <Button size="lg" className="rounded-full px-12 py-6 text-lg font-semibold h-auto">
                   Pošaljite nam upit
                 </Button>
               </DialogTrigger>
