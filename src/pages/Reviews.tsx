@@ -99,10 +99,10 @@ const Reviews = () => {
         <section className="py-16 bg-secondary/5">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">
-              Želite da podelite svoje iskustvo?
+              Ako se želite pridružiti listi zadovoljnih kupaca pošaljite nam upit i započnimo dogovor
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Vaše mišljenje je važno za nas i pomaže budućim klijentima da donesu pravu odluku.
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto invisible">
+              Hidden text
             </p>
             <Dialog>
               <DialogTrigger asChild>
