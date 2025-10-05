@@ -79,7 +79,7 @@ const Reviews = () => {
 
         <section className="pb-16 bg-background">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
               {reviewImages.map((review, index) => (
                 <div 
                   key={index}
@@ -89,7 +89,7 @@ const Reviews = () => {
                   <img
                     src={review.src}
                     alt={review.alt}
-                    className="w-full rounded-xl card-shadow object-cover"
+                    className="w-full object-cover"
                   />
                 </div>
               ))}
