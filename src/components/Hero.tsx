@@ -11,13 +11,13 @@ import galerijaHala from "@/assets/galerija-hala.jpg";
 
 const Hero = () => {
   const images = [
-    { src: "/lovable-uploads/fcc31405-5071-46a1-ac40-b422991656a3.png", alt: "Moderna montažna kuća" },
+    { src: galerijaHala, alt: "Industrijske hale" },
     { src: heroGarazaAlt, alt: "Industrijska garaža" },
     { src: heroBungalovModern, alt: "Moderni montažni bungalov" },
     { src: heroBungalovAlt, alt: "Savremeni bungalov" },
     { src: galerijaBungalov, alt: "Galerija bungalova" },
     { src: galerijaGaraza, alt: "Galerija garaža" },
-    { src: galerijaHala, alt: "Industrijske hale" }
+    { src: "/lovable-uploads/fcc31405-5071-46a1-ac40-b422991656a3.png", alt: "Moderna montažna kuća" }
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -36,7 +36,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 5700);
+    }, 5200);
 
     return () => clearInterval(interval);
   }, [images.length]);
