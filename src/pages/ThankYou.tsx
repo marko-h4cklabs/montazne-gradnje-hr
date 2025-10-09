@@ -110,7 +110,7 @@ const ThankYou = () => {
                   Povratak na početnu
                 </Button>
                 <Button
-                  onClick={() => navigate("/garaze")}
+                  onClick={() => navigate("/galerija")}
                   variant="outline"
                   size="lg"
                 >

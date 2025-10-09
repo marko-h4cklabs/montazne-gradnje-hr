@@ -22,7 +22,7 @@ const Gallery = () => {
         
         <div className="flex justify-center">
           <Link 
-            to="/garaze" 
+            to="/galerija"
             className="group animate-slide-up cursor-pointer block max-w-md"
           >
             <div className="relative overflow-hidden rounded-xl card-shadow hover:scale-105 smooth-transition">
