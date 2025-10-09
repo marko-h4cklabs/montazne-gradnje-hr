@@ -34,7 +34,7 @@ const ProductCategories = () => {
             Čime se sve bavimo?
           </h2>
           <Link to="/#galerija">
-            <Button variant="outline" size="sm" className="rounded-full">
+            <Button variant="default" size="lg" className="rounded-full">
               Galerija
             </Button>
           </Link>
@@ -47,11 +47,11 @@ const ProductCategories = () => {
               className="group bg-card rounded-xl overflow-hidden card-shadow hover:scale-105 smooth-transition"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-64 overflow-hidden bg-muted/20">
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-110 smooth-transition"
+                  className="w-full h-full object-contain group-hover:scale-105 smooth-transition"
                 />
                 <div className="absolute top-4 left-4 text-4xl">
                   {product.icon}
