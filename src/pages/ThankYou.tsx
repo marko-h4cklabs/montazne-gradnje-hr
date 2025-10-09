@@ -83,18 +83,18 @@ const ThankYou = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
-                    href="tel:+385994748085"
+                    href="tel:+385986462260"
                     className="flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-colors"
                   >
                     <Phone className="w-4 h-4" />
-                    <span className="font-semibold">+385 99 474 8085</span>
+                    <span className="font-semibold">+385 98 646 260</span>
                   </a>
                   <a 
-                    href="mailto:info@beriko.com"
+                    href="mailto:beriko@beriko.com"
                     className="flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-colors"
                   >
                     <Mail className="w-4 h-4" />
-                    <span className="font-semibold">info@beriko.com</span>
+                    <span className="font-semibold">beriko@beriko.com</span>
                   </a>
                 </div>
               </div>
