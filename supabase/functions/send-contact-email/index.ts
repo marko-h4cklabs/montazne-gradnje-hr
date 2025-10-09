@@ -59,7 +59,7 @@ const handler = async (req: Request): Promise<Response> => {
     
     // Basic information
     if (mjestoPrebivalidta) {
-      detailsSection += `<p><strong>Mjesto Prebivališta:</strong> ${mjestoPrebivalidta}</p>`;
+      detailsSection += `<p><strong>Grad i Ulica:</strong> ${mjestoPrebivalidta}</p>`;
     }
     
     // Object dimensions
