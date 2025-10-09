@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,6 +15,7 @@ interface ContactFormProps {
 }
 
 const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -81,12 +83,8 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
         throw error;
       }
       
-      toast({
-        title: "Upit uspješno poslan!",
-        description: "Hvala na upitu. Kontaktiraćemo vas u najkraćem mogućem roku.",
-        variant: "default",
-      });
-      onClose();
+      // Redirect to thank you page for conversion tracking
+      navigate("/hvala");
     } catch (error) {
       console.error('Contact form error:', error);
       toast({

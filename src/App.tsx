@@ -11,6 +11,7 @@ import DetailedInfo from "./pages/DetailedInfo";
 import GarageInquiry from "./pages/GarageInquiry";
 import HouseInquiry from "./pages/HouseInquiry";
 import HallInquiry from "./pages/HallInquiry";
+import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/garaze-upit" element={<GarageInquiry />} />
           <Route path="/kuce-upit" element={<HouseInquiry />} />
           <Route path="/hale-upit" element={<HallInquiry />} />
+          <Route path="/hvala" element={<ThankYou />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
