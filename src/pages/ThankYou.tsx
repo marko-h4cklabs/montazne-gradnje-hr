@@ -9,13 +9,12 @@ const ThankYou = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Track conversion event for analytics
-    // Google Analytics example:
+    // Track conversion event for Google Ads
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL', // Replace with your conversion ID
-        'event_category': 'Form',
-        'event_label': 'Inquiry Submitted'
+        'send_to': 'AW-17494249772/YOUR_CONVERSION_LABEL', // Replace YOUR_CONVERSION_LABEL with actual label from Google Ads
+        'value': 1.0,
+        'currency': 'EUR'
       });
     }
 
