@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Menu, X, Home, Warehouse, Building2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -7,6 +8,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isPonudaOpen, setIsPonudaOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -27,11 +29,37 @@ const Navigation = () => {
     { name: "NAŠI PROIZVODI", href: "#proizvodi" },
     { name: "O NAMA", href: "#o-nama" },
     { name: "PONUDA", href: "#posalji-upit" },
-    { name: "KONTAKT", href: "#kontakt" }
+    { name: "RECENZIJE", href: "/recenzije" }
+  ];
+
+  const services = [
+    {
+      icon: Building2,
+      title: "Montažne Garaže",
+      path: "/garaza-upit"
+    },
+    {
+      icon: Home,
+      title: "Montažne Kuće",
+      path: "/kuca-upit"
+    },
+    {
+      icon: Warehouse,
+      title: "Montažne Hale",
+      path: "/hala-upit"
+    }
   ];
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
+    
+    // Check if it's the reviews link
+    if (href === '/recenzije') {
+      navigate('/recenzije');
+      setIsMenuOpen(false);
+      return;
+    }
+    
     const targetId = href.substring(1);
     
     // If we're not on the main page, navigate to it first
@@ -45,9 +73,7 @@ const Navigation = () => {
     if (targetElement) {
       // Special handling for specific sections
       let offset = 80; // Account for fixed navbar height
-      if (targetId === 'kontakt') {
-        offset = 200; // Larger offset to show content above footer
-      } else if (targetId === 'posalji-upit') {
+      if (targetId === 'posalji-upit') {
         offset = 150; // Show more content for offer section
       }
       
@@ -62,8 +88,9 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
-  const navigateToReviews = () => {
-    navigate('/recenzije');
+  const handleServiceClick = (path: string) => {
+    navigate(path);
+    setIsPonudaOpen(false);
     setIsMenuOpen(false);
   };
 
@@ -97,10 +124,10 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button 
-              onClick={navigateToReviews}
+              onClick={() => setIsPonudaOpen(true)}
               className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-8 py-2 font-semibold"
             >
-              RECENZIJE
+              PONUDA
             </Button>
           </div>
 
@@ -142,16 +169,37 @@ const Navigation = () => {
               ))}
               <div className="px-3 pt-2">
                 <Button 
-                  onClick={navigateToReviews}
+                  onClick={() => setIsPonudaOpen(true)}
                   className="w-full bg-primary hover:bg-primary-dark text-primary-foreground rounded-full font-semibold"
                 >
-                  RECENZIJE
+                  PONUDA
                 </Button>
               </div>
             </div>
           </div>
         )}
       </div>
+
+      {/* Ponuda Dialog */}
+      <Dialog open={isPonudaOpen} onOpenChange={setIsPonudaOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-center">Odaberite uslugu</DialogTitle>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            {services.map((service) => (
+              <button
+                key={service.path}
+                onClick={() => handleServiceClick(service.path)}
+                className="flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary hover:bg-accent transition-all group"
+              >
+                <service.icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
+                <span className="text-lg font-semibold">{service.title}</span>
+              </button>
+            ))}
+          </div>
+        </DialogContent>
+      </Dialog>
     </nav>
   );
 };
