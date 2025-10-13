@@ -1,0 +1,73 @@
+import { useEffect } from "react";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import galerijaVikendice from "@/assets/galerija-vikendice-bungalovi.jpg";
+import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
+import heroBungalovAlt from "@/assets/hero-bungalov-alt.jpg";
+import heroModernHouse from "@/assets/hero-modern-house.png";
+
+const HousesGallery = () => {
+  useEffect(() => {
+    const title = "Montažne Kuće - Galerija | Beriko";
+    const description = "Galerija montažnih kuća, bungalova i vikendica Beriko – inspirirajte se!";
+    document.title = title;
+    let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+    meta.content = description;
+
+    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "canonical";
+      document.head.appendChild(link);
+    }
+    link.href = window.location.href;
+  }, []);
+
+  const images = [galerijaVikendice, heroBungalovModern, heroBungalovAlt, heroModernHouse];
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Montažne kuće - galerija',
+    url: typeof window !== 'undefined' ? window.location.href : '',
+    hasPart: images.map((src) => ({ '@type': 'ImageObject', contentUrl: src, name: 'Montažne kuće - primjer' })),
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-grow pt-20 pb-12 bg-gradient-to-b from-background to-muted/20">
+        <div className="container mx-auto px-4">
+          <header className="text-center mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">Montažne kuće — galerija</h1>
+            <p className="text-muted-foreground">Ideje i reference za bungalove i vikendice</p>
+          </header>
+
+          <section aria-label="Galerija montažnih kuća">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {images.map((src, idx) => (
+                <img
+                  key={idx}
+                  src={src}
+                  alt={`Montažne kuće - slika ${idx + 1}`}
+                  loading="lazy"
+                  className="w-full h-64 object-cover rounded-lg card-shadow"
+                />
+              ))}
+            </div>
+          </section>
+
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default HousesGallery;

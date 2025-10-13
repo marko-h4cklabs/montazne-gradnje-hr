@@ -17,9 +17,6 @@ const LandingPage = () => {
       <div id="proizvodi">
         <ProductCategories />
       </div>
-      <div id="galerija">
-        <Gallery />
-      </div>
       <div id="recenzije">
         <References />
       </div>
