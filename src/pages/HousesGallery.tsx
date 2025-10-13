@@ -1,12 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import galerijaVikendice from "@/assets/galerija-vikendice-bungalovi.jpg";
 import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
 import heroBungalovAlt from "@/assets/hero-bungalov-alt.jpg";
 import heroModernHouse from "@/assets/hero-modern-house.png";
 
 const HousesGallery = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   useEffect(() => {
     const title = "Montažne Kuće - Galerija | Beriko";
     const description = "Galerija montažnih kuća, bungalova i vikendica Beriko – inspirirajte se!";
@@ -41,7 +44,7 @@ const HousesGallery = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="flex-grow pt-20 pb-12 bg-gradient-to-b from-background to-muted/20">
+      <main className="flex-grow pt-32 pb-12 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
           <header className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Montažne kuće — galerija</h1>
@@ -56,11 +59,24 @@ const HousesGallery = () => {
                   src={src}
                   alt={`Montažne kuće - slika ${idx + 1}`}
                   loading="lazy"
-                  className="w-full h-64 object-cover rounded-lg card-shadow"
+                  className="w-full h-64 object-cover rounded-lg card-shadow cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => setSelectedImage(src)}
                 />
               ))}
             </div>
           </section>
+
+          <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+            <DialogContent className="max-w-4xl w-full">
+              {selectedImage && (
+                <img
+                  src={selectedImage}
+                  alt="Montažne kuće - puna veličina"
+                  className="w-full h-auto"
+                />
+              )}
+            </DialogContent>
+          </Dialog>
 
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         </div>
