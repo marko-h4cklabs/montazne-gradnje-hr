@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 import galerijaVikendice from "@/assets/galerija-vikendice-bungalovi.jpg";
 import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
 import heroBungalovAlt from "@/assets/hero-bungalov-alt.jpg";
@@ -9,6 +12,7 @@ import heroModernHouse from "@/assets/hero-modern-house.png";
 
 const HousesGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const title = "Montažne Kuće - Galerija | Beriko";
@@ -46,6 +50,15 @@ const HousesGallery = () => {
       <Navigation />
       <main className="flex-grow pt-32 pb-12 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
+          <Button
+            onClick={() => navigate('/')}
+            variant="outline"
+            className="mb-6"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Natrag
+          </Button>
+          
           <header className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Montažne kuće — galerija</h1>
             <p className="text-muted-foreground">Ideje i reference za bungalove i vikendice</p>

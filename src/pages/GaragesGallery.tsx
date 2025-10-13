@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const GaragesGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const title = "Montažne Garaže - Galerija | Beriko";
@@ -48,6 +52,15 @@ const GaragesGallery = () => {
       <Navigation />
       <main className="flex-grow pt-32 pb-12 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
+          <Button
+            onClick={() => navigate('/')}
+            variant="outline"
+            className="mb-6"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Natrag
+          </Button>
+          
           <header className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Montažne garaže — galerija</h1>
             <p className="text-muted-foreground">Pogledajte dio naših uspješno realiziranih garaža</p>
