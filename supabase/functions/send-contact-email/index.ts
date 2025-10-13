@@ -20,20 +20,6 @@ interface ContactEmailRequest {
   width?: string;
   depth?: string;
   height?: string;
-  // Material and color selections
-  roofType?: string;
-  roofMaterial?: string;
-  roofColor?: string;
-  wallMaterial?: string;
-  wallColor?: string;
-  drainage?: string;
-  garageDoorColor?: string;
-  garageDoorSize?: string;
-  pvcDoorType?: string;
-  pvcDoorColor?: string;
-  pvcWindowSize?: string;
-  pvcWindowColor?: string;
-  additionalInfo?: string;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -46,10 +32,7 @@ const handler = async (req: Request): Promise<Response> => {
     const requestData: ContactEmailRequest = await req.json();
     const { 
       firstName, lastName, email, phone, selectedService,
-      mjestoPrebivalidta, width, depth, height,
-      roofType, roofMaterial, roofColor, wallMaterial, wallColor,
-      drainage, garageDoorColor, garageDoorSize, pvcDoorType,
-      pvcDoorColor, pvcWindowSize, pvcWindowColor, additionalInfo
+      mjestoPrebivalidta, width, depth, height
     } = requestData;
 
     console.log("Sending contact email:", { firstName, lastName, email, selectedService });
@@ -59,40 +42,15 @@ const handler = async (req: Request): Promise<Response> => {
     
     // Basic information
     if (mjestoPrebivalidta) {
-      detailsSection += `<p><strong>Grad i Ulica:</strong> ${mjestoPrebivalidta}</p>`;
+      detailsSection += `<p><strong>Mjesto, ulica i broj:</strong> ${mjestoPrebivalidta}</p>`;
     }
     
     // Object dimensions
     if (width || depth || height) {
-      detailsSection += '<h3>Podaci i mjere objekta:</h3>';
+      detailsSection += '<h3>Podaci i mjere objekta (cm):</h3>';
       if (width) detailsSection += `<p><strong>Širina:</strong> ${width} cm</p>`;
       if (depth) detailsSection += `<p><strong>Dubina:</strong> ${depth} cm</p>`;
       if (height) detailsSection += `<p><strong>Visina:</strong> ${height} cm</p>`;
-    }
-    
-    // Technical specifications
-    const hasSpecs = roofType || roofMaterial || roofColor || wallMaterial || wallColor || 
-                    drainage || garageDoorColor || garageDoorSize || pvcDoorType || 
-                    pvcDoorColor || pvcWindowSize || pvcWindowColor;
-    
-    if (hasSpecs) {
-      detailsSection += '<h3>Tehnički podaci:</h3>';
-      if (roofType) detailsSection += `<p><strong>Vrsta krovova i padina:</strong> ${roofType}</p>`;
-      if (roofMaterial) detailsSection += `<p><strong>Krov:</strong> ${roofMaterial}</p>`;
-      if (roofColor) detailsSection += `<p><strong>Boja Krova:</strong> ${roofColor}</p>`;
-      if (wallMaterial) detailsSection += `<p><strong>Zid:</strong> ${wallMaterial}</p>`;
-      if (wallColor) detailsSection += `<p><strong>Boja Zida:</strong> ${wallColor}</p>`;
-      if (drainage) detailsSection += `<p><strong>Odvodnja krovne vode:</strong> ${drainage}</p>`;
-      if (garageDoorColor) detailsSection += `<p><strong>Garažna sekcijska vrata:</strong> ${garageDoorColor}</p>`;
-      if (garageDoorSize) detailsSection += `<p><strong>Garažna vrata dimenzije:</strong> ${garageDoorSize}</p>`;
-      if (pvcDoorType) detailsSection += `<p><strong>PVC vrata vrsta:</strong> ${pvcDoorType}</p>`;
-      if (pvcDoorColor) detailsSection += `<p><strong>PVC vrata boja:</strong> ${pvcDoorColor}</p>`;
-      if (pvcWindowSize) detailsSection += `<p><strong>PVC prozor dimenzije:</strong> ${pvcWindowSize}</p>`;
-      if (pvcWindowColor) detailsSection += `<p><strong>PVC prozor boja:</strong> ${pvcWindowColor}</p>`;
-    }
-    
-    if (additionalInfo) {
-      detailsSection += `<h3>Dodatne informacije:</h3><p>${additionalInfo}</p>`;
     }
 
     // Send email to your business addresses (individually for better tracking)
