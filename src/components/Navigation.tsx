@@ -36,17 +36,17 @@ const Navigation = () => {
     {
       icon: Building2,
       title: "Montažne Garaže",
-      path: "/garaza-upit"
+      path: "/garaze-upit"
     },
     {
       icon: Home,
       title: "Montažne Kuće",
-      path: "/kuca-upit"
+      path: "/kuce-upit"
     },
     {
       icon: Warehouse,
       title: "Montažne Hale",
-      path: "/hala-upit"
+      path: "/hale-upit"
     }
   ];
 
