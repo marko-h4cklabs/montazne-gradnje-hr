@@ -38,7 +38,7 @@ const NewIntroSection = () => {
       {/* Wave cut design */}
       <div className="absolute top-0 left-0 right-0 h-16 bg-background overflow-hidden">
         <svg 
-          className="absolute bottom-0 w-full h-16" 
+          className="absolute bottom-[-1px] w-full h-16 block" 
           viewBox="0 0 1200 60" 
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
