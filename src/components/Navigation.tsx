@@ -127,7 +127,7 @@ const Navigation = () => {
               onClick={() => setIsPonudaOpen(true)}
               className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-8 py-2 font-semibold"
             >
-              PONUDA
+              Zatražite ponudu
             </Button>
           </div>
 
@@ -172,7 +172,7 @@ const Navigation = () => {
                   onClick={() => setIsPonudaOpen(true)}
                   className="w-full bg-primary hover:bg-primary-dark text-primary-foreground rounded-full font-semibold py-3"
                 >
-                  PONUDA
+                  Zatražite ponudu
                 </Button>
               </div>
             </div>
