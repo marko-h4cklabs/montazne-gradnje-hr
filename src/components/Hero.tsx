@@ -153,7 +153,7 @@ const Hero = () => {
       {/* Headline above desktop slider */}
       <div className="hidden md:block px-4 py-12 pt-24 bg-background text-center">
         <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-[hsl(var(--beriko-blue))]">
-          Kvalitetne montažne konstrukcije
+          Kvalitetne Montažne Konstrukcije
         </h1>
       </div>
 
