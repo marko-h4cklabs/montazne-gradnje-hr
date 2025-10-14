@@ -20,6 +20,7 @@ interface ContactEmailRequest {
   width?: string;
   depth?: string;
   height?: string;
+  message?: string;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -32,7 +33,7 @@ const handler = async (req: Request): Promise<Response> => {
     const requestData: ContactEmailRequest = await req.json();
     const { 
       firstName, lastName, email, phone, selectedService,
-      mjestoPrebivalidta, width, depth, height
+      mjestoPrebivalidta, width, depth, height, message
     } = requestData;
 
     console.log("Sending contact email:", { firstName, lastName, email, selectedService });
@@ -51,6 +52,11 @@ const handler = async (req: Request): Promise<Response> => {
       if (width) detailsSection += `<p><strong>Širina:</strong> ${width} cm</p>`;
       if (depth) detailsSection += `<p><strong>Dubina:</strong> ${depth} cm</p>`;
       if (height) detailsSection += `<p><strong>Visina:</strong> ${height} cm</p>`;
+    }
+    
+    // Additional message
+    if (message) {
+      detailsSection += `<h3>Dodatna poruka:</h3><p>${message}</p>`;
     }
 
     // Send email to your business addresses (individually for better tracking)
