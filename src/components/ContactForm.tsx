@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Send } from "lucide-react";
@@ -24,6 +25,7 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
     width: "",
     depth: "",
     height: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -43,6 +45,7 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
         width: formData.width,
         depth: formData.depth,
         height: formData.height,
+        message: formData.message,
       };
 
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
@@ -174,6 +177,17 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
             required
           />
         </div>
+      </div>
+
+      <div>
+        <Label htmlFor="message">Dodatna poruka</Label>
+        <Textarea
+          id="message"
+          value={formData.message}
+          onChange={(e) => handleInputChange("message", e.target.value)}
+          placeholder="Unesite dodatne informacije ili pitanja..."
+          className="mt-1 min-h-[100px]"
+        />
       </div>
 
       <div className="flex gap-3 pt-4">
