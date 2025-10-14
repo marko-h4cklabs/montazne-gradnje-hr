@@ -85,27 +85,13 @@ const Hero = () => {
         </div>
         
         {/* Headline below slider */}
-        <div className="px-4 py-6 bg-background text-center">
-        <h1 className="text-3xl font-bold leading-tight mb-4 text-[hsl(var(--beriko-blue))]">
-          Kvalitetne montažne konstrukcije
-        </h1>
-        <p className="text-lg text-foreground leading-relaxed">
-          postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
-        </p>
-        </div>
-        
-        {/* Button below slider */}
-        <div className="text-center py-6 bg-background">
-          <Button 
-            size="lg" 
-            onClick={() => {
-              (window as any).gtag_report_conversion();
-              setIsServiceDialogOpen(true);
-            }}
-            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow px-6 py-4 rounded-full font-semibold"
-          >
-            📧 Pošaljite upit
-          </Button>
+        <div className="px-4 py-8 bg-background text-center">
+          <h1 className="text-3xl font-bold leading-tight mb-4 text-[hsl(var(--beriko-blue))]">
+            Kvalitetne montažne konstrukcije
+          </h1>
+          <p className="text-lg text-foreground leading-relaxed">
+            postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
+          </p>
         </div>
       </div>
 
@@ -134,27 +120,13 @@ const Hero = () => {
       </section>
       
       {/* Headline below desktop slider */}
-      <div className="hidden md:block px-4 py-8 bg-background text-center">
-      <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6 text-[hsl(var(--beriko-blue))]">
-        Kvalitetne montažne konstrukcije
-      </h1>
-      <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
-        postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
-      </p>
-      </div>
-      
-      {/* Desktop Button below hero */}
-      <div className="hidden md:block text-center py-8 bg-background">
-        <Button 
-          size="lg" 
-          onClick={() => {
-            (window as any).gtag_report_conversion();
-            setIsServiceDialogOpen(true);
-          }}
-          className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-base px-6 py-4 rounded-full font-semibold"
-        >
-          ➡️ Pošaljite nam upit – odgovaramo u roku od 24h
-        </Button>
+      <div className="hidden md:block px-4 py-12 bg-background text-center">
+        <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6 text-[hsl(var(--beriko-blue))]">
+          Kvalitetne montažne konstrukcije
+        </h1>
+        <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
+          postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
+        </p>
       </div>
 
       <Dialog open={isServiceDialogOpen} onOpenChange={setIsServiceDialogOpen}>
