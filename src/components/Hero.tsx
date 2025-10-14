@@ -109,7 +109,7 @@ const Hero = () => {
         </div>
         
         {/* Features rotating section */}
-        <div className="px-4 py-8 bg-background">
+        <div className="px-4 py-2 bg-background">
           <div className="max-w-2xl mx-auto">
             <div className="relative h-40 overflow-hidden">
               <div className="absolute inset-0">
@@ -181,7 +181,7 @@ const Hero = () => {
       </section>
       
       {/* Features rotating section - Desktop */}
-      <div className="hidden md:block px-4 py-12 bg-background">
+      <div className="hidden md:block px-4 py-4 bg-background">
         <div className="max-w-5xl mx-auto">
           <div className="relative h-48 overflow-hidden">
             <div className="absolute inset-0">
