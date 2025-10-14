@@ -157,7 +157,7 @@ const Hero = () => {
         </h1>
       </div>
 
-      <section className="hidden md:flex relative h-[65vh] items-center justify-center overflow-hidden bg-background">
+      <section className="hidden md:flex relative h-[45vh] items-center justify-center overflow-hidden bg-background">
         {/* Background Images */}
         <div className="absolute inset-0 z-0">
           <div 
