@@ -157,7 +157,7 @@ const Hero = () => {
         </h1>
       </div>
 
-      <section className="hidden md:flex relative h-[45vh] items-center justify-center overflow-hidden bg-background">
+      <section className="hidden md:flex relative h-[52vh] items-center justify-center overflow-hidden bg-background">
         {/* Background Images */}
         <div className="absolute inset-0 z-0">
           <div 
@@ -180,41 +180,25 @@ const Hero = () => {
         </div>
       </section>
       
-      {/* Features rotating section - Desktop */}
-      <div className="hidden md:block px-4 py-4 bg-background">
-        <div className="max-w-5xl mx-auto">
-          <div className="relative h-48 overflow-hidden">
-            <div className="absolute inset-0">
-              {/* First pair */}
-              <div 
-                className={`absolute inset-0 flex gap-12 justify-center items-center px-8 transition-opacity duration-700 ${
-                  currentFeatureIndex === 0 ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
-                <div className="flex flex-col items-center text-center flex-1">
-                  <FeatureIcon Icon={Truck} />
-                  <p className="text-lg font-medium text-foreground leading-tight">Izrada u nekoliko dana</p>
-                </div>
-                <div className="flex flex-col items-center text-center flex-1">
-                  <FeatureIcon Icon={Ruler} />
-                  <p className="text-lg font-medium text-foreground leading-tight">Prilagođeno vašoj mjeri</p>
-                </div>
-              </div>
-              {/* Second pair */}
-              <div 
-                className={`absolute inset-0 flex gap-12 justify-center items-center px-8 transition-opacity duration-700 ${
-                  currentFeatureIndex === 1 ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
-                <div className="flex flex-col items-center text-center flex-1">
-                  <FeatureIcon Icon={Key} />
-                  <p className="text-lg font-medium text-foreground leading-tight">Ključ u ruke i garancija</p>
-                </div>
-                <div className="flex flex-col items-center text-center flex-1">
-                  <FeatureIcon Icon={Star} filled />
-                  <p className="text-lg font-medium text-foreground leading-tight">119 recenzija, 4.9 ocjena</p>
-                </div>
-              </div>
+      {/* Features static section - Desktop */}
+      <div className="hidden md:block px-4 py-6 bg-background">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex gap-8 justify-center items-center px-8">
+            <div className="flex flex-col items-center text-center flex-1">
+              <FeatureIcon Icon={Truck} />
+              <p className="text-lg font-medium text-foreground leading-tight">Izrada u nekoliko dana</p>
+            </div>
+            <div className="flex flex-col items-center text-center flex-1">
+              <FeatureIcon Icon={Ruler} />
+              <p className="text-lg font-medium text-foreground leading-tight">Prilagođeno vašoj mjeri</p>
+            </div>
+            <div className="flex flex-col items-center text-center flex-1">
+              <FeatureIcon Icon={Key} />
+              <p className="text-lg font-medium text-foreground leading-tight">Ključ u ruke i garancija</p>
+            </div>
+            <div className="flex flex-col items-center text-center flex-1">
+              <FeatureIcon Icon={Star} filled />
+              <p className="text-lg font-medium text-foreground leading-tight">119 recenzija, 4.9 ocjena</p>
             </div>
           </div>
         </div>
