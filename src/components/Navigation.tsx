@@ -28,7 +28,7 @@ const Navigation = () => {
   const menuItems = [
     { name: "NAŠI PROIZVODI", href: "#proizvodi" },
     { name: "O NAMA", href: "#o-nama" },
-    { name: "PONUDA", href: "#posalji-upit" },
+    { name: "FAQ", href: "#faq" },
     { name: "RECENZIJE", href: "/recenzije" }
   ];
 
@@ -155,22 +155,22 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-border bg-white">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="lg:hidden border-t border-border bg-gradient-to-b from-background to-accent/20 shadow-lg">
+            <div className="px-4 py-6 space-y-3">
               {menuItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-3 text-foreground hover:text-primary smooth-transition font-medium"
+                  className="block px-4 py-3 text-center text-foreground hover:text-primary hover:bg-accent/50 smooth-transition font-semibold rounded-lg border border-border/50"
                   onClick={(e) => handleSmoothScroll(e, item.href)}
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="px-3 pt-2">
+              <div className="pt-2">
                 <Button 
                   onClick={() => setIsPonudaOpen(true)}
-                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground rounded-full font-semibold"
+                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground rounded-full font-semibold py-3"
                 >
                   PONUDA
                 </Button>
