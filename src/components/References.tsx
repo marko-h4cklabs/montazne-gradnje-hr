@@ -1,13 +1,11 @@
 import reviewDanijela from "@/assets/review-danijela.png";
 import reviewDiana from "@/assets/review-diana.png";
-import reviewBranko from "@/assets/review-branko.png";
 import { Link } from "react-router-dom";
 
 const References = () => {
   const reviewImages = [
     reviewDanijela,
-    reviewDiana,
-    reviewBranko
+    reviewDiana
   ];
 
   return (
