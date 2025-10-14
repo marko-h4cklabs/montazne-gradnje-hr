@@ -57,10 +57,10 @@ const NewIntroSection = () => {
             <strong>Dragi graditelju montažnog objekta,</strong>
           </p>
           <p className="text-lg md:text-xl leading-relaxed mb-8 text-justify">
-            dajemo svakom vlasniku dodatnu vrijednost njegovom automobilu i dva poklon bonusa ako se odazovete na niže navedenu ponudu.
+            Svake godine, posebno u zimskoj sezoni, u hrvatskoj nastrada od leda, snijega i olujnog nevremena sve više automobila. Praksa je nažalost pokazala da nitko, pa čak ni stanovnici urbanih sredina nisu pošteđeni od problema kako da zaštite svoje metalne ljubimce i imovinu.
           </p>
           <p className="text-lg md:text-xl leading-relaxed mb-8 text-justify">
-            Svake godine, posebno u zimskoj sezoni, u hrvatskoj nastrada od leda, snijega i olujnog nevremena sve više automobila. Praksa je nažalost pokazala da nitko, pa čak ni stanovnici urbanih sredina nisu pošteđeni od problema kako da zaštite svoje metalne ljubimce i imovinu.
+            Zato dajemo svakom vlasniku dodatnu vrijednost njegovom automobilu i dva poklon bonusa ako se odazovete na niže navedenu ponudu.
           </p>
           
           <div className="text-center flex gap-4 justify-center flex-wrap">
