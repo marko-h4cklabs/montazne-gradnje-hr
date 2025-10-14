@@ -58,6 +58,12 @@ const Hero = () => {
     <>
       {/* Mobile Layout */}
       <div className="md:hidden">
+        {/* Headline above slider */}
+        <div className="px-4 py-8 bg-background text-center">
+          <h1 className="text-3xl font-bold leading-tight text-[hsl(var(--beriko-blue))]">
+            Kvalitetne montažne konstrukcije
+          </h1>
+        </div>
 
         {/* Scrolling Images */}
         <div className="relative h-[43vh] overflow-hidden">
@@ -84,11 +90,8 @@ const Hero = () => {
           
         </div>
         
-        {/* Headline below slider */}
+        {/* Sub-headline below slider */}
         <div className="px-4 py-8 bg-background text-center">
-          <h1 className="text-3xl font-bold leading-tight mb-4 text-[hsl(var(--beriko-blue))]">
-            Kvalitetne montažne konstrukcije
-          </h1>
           <p className="text-lg text-foreground leading-relaxed">
             postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
           </p>
@@ -96,6 +99,13 @@ const Hero = () => {
       </div>
 
       {/* Desktop Layout */}
+      {/* Headline above desktop slider */}
+      <div className="hidden md:block px-4 py-12 bg-background text-center">
+        <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-[hsl(var(--beriko-blue))]">
+          Kvalitetne montažne konstrukcije
+        </h1>
+      </div>
+
       <section className="hidden md:flex relative h-[65vh] items-center justify-center overflow-hidden bg-background">
         {/* Background Images */}
         <div className="absolute inset-0 z-0">
@@ -119,11 +129,8 @@ const Hero = () => {
         </div>
       </section>
       
-      {/* Headline below desktop slider */}
+      {/* Sub-headline below desktop slider */}
       <div className="hidden md:block px-4 py-12 bg-background text-center">
-        <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6 text-[hsl(var(--beriko-blue))]">
-          Kvalitetne montažne konstrukcije
-        </h1>
         <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
           postavljene za par dana, bez stresa bez čekanja i <strong>bez dodatnih troškova.</strong>
         </p>
