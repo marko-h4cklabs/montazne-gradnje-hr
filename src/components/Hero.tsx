@@ -57,7 +57,7 @@ const Hero = () => {
   return (
     <>
       {/* Mobile Layout */}
-      <div className="md:hidden">
+      <div className="md:hidden pt-20">
         {/* Headline above slider */}
         <div className="px-4 py-8 bg-background text-center">
           <h1 className="text-3xl font-bold leading-tight text-[hsl(var(--beriko-blue))]">
@@ -100,7 +100,7 @@ const Hero = () => {
 
       {/* Desktop Layout */}
       {/* Headline above desktop slider */}
-      <div className="hidden md:block px-4 py-12 bg-background text-center">
+      <div className="hidden md:block px-4 py-12 pt-24 bg-background text-center">
         <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-[hsl(var(--beriko-blue))]">
           Kvalitetne montažne konstrukcije
         </h1>
