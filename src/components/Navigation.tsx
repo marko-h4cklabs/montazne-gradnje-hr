@@ -155,13 +155,13 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-border bg-gradient-to-b from-background to-accent/20 shadow-lg">
+          <div className="lg:hidden border-t border-border bg-gradient-to-b from-blue-50 to-blue-100/50 shadow-lg">
             <div className="px-4 py-6 space-y-3">
               {menuItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-3 text-center text-foreground hover:text-primary hover:bg-accent/50 smooth-transition font-semibold rounded-lg border border-border/50"
+                  className="block px-4 py-3 text-center text-foreground hover:text-primary hover:bg-white/70 smooth-transition font-semibold rounded-lg border border-blue-200/50"
                   onClick={(e) => handleSmoothScroll(e, item.href)}
                 >
                   {item.name}
