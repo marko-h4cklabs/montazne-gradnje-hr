@@ -64,9 +64,9 @@ const Hero = () => {
   }, []);
 
   const FeatureIcon = ({ Icon, filled = false }: { Icon: any, filled?: boolean }) => (
-    <div className="w-16 h-16 md:w-24 md:h-24 mb-3 md:mb-4 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
+    <div className="w-16 h-16 md:w-16 md:h-16 mb-3 md:mb-3 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
       <Icon 
-        className="w-9 h-9 md:w-14 md:h-14 text-[hsl(var(--beriko-blue))]" 
+        className="w-9 h-9 md:w-9 md:h-9 text-[hsl(var(--beriko-blue))]" 
         strokeWidth={2.5} 
         fill={filled ? "hsl(var(--beriko-blue))" : "none"}
       />
