@@ -90,11 +90,50 @@ const Hero = () => {
           
         </div>
         
-        {/* Sub-headline below slider */}
-        <div className="px-4 py-8 bg-background text-center">
-          <p className="text-lg text-foreground leading-relaxed">
-            postavljene za <strong>nekoliko</strong> dana. bez <strong>skrivenih</strong> troškova.
-          </p>
+        {/* Features rotating section */}
+        <div className="px-4 py-8 bg-background">
+          <div className="max-w-2xl mx-auto">
+            <div className="relative h-32 overflow-hidden">
+              <div 
+                className="flex transition-transform duration-1000 ease-in-out h-full"
+                style={{ 
+                  transform: `translateX(-${Math.floor(currentImageIndex / 2) % 2 * 100}%)`,
+                  width: '200%'
+                }}
+              >
+                {/* First pair */}
+                <div className="w-1/2 flex gap-8 justify-center items-center px-4">
+                  <div className="flex flex-col items-center text-center flex-1">
+                    <div className="w-12 h-12 mb-3 text-[hsl(var(--beriko-blue))]">
+                      🚚
+                    </div>
+                    <p className="text-sm text-foreground leading-tight">Izrada u nekoliko dana</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center flex-1">
+                    <div className="w-12 h-12 mb-3 text-[hsl(var(--beriko-blue))]">
+                      ✏️
+                    </div>
+                    <p className="text-sm text-foreground leading-tight">Prilagođeno vašoj mjeri</p>
+                  </div>
+                </div>
+                {/* Second pair */}
+                <div className="w-1/2 flex gap-8 justify-center items-center px-4">
+                  <div className="flex flex-col items-center text-center flex-1">
+                    <div className="w-12 h-12 mb-3 text-[hsl(var(--beriko-blue))]">
+                      🔑
+                    </div>
+                    <p className="text-sm text-foreground leading-tight">Ključ u ruke i garancija</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center flex-1">
+                    <div className="w-12 h-12 mb-3 text-[hsl(var(--beriko-blue))]">
+                      ⭐️
+                    </div>
+                    <p className="text-sm text-foreground leading-tight">119 recenzija, 4.9 ocjena</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -129,11 +168,50 @@ const Hero = () => {
         </div>
       </section>
       
-      {/* Sub-headline below desktop slider */}
-      <div className="hidden md:block px-4 py-12 bg-background text-center">
-        <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
-          postavljene za <strong>nekoliko</strong> dana. bez <strong>skrivenih</strong> troškova.
-        </p>
+      {/* Features rotating section - Desktop */}
+      <div className="hidden md:block px-4 py-12 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <div className="relative h-40 overflow-hidden">
+            <div 
+              className="flex transition-transform duration-1000 ease-in-out h-full"
+              style={{ 
+                transform: `translateX(-${Math.floor(currentImageIndex / 2) % 2 * 100}%)`,
+                width: '200%'
+              }}
+            >
+              {/* First pair */}
+              <div className="w-1/2 flex gap-12 justify-center items-center px-8">
+                <div className="flex flex-col items-center text-center flex-1">
+                  <div className="w-16 h-16 mb-4 text-[hsl(var(--beriko-blue))] text-4xl">
+                    🚚
+                  </div>
+                  <p className="text-base text-foreground leading-tight">Izrada u nekoliko dana</p>
+                </div>
+                <div className="flex flex-col items-center text-center flex-1">
+                  <div className="w-16 h-16 mb-4 text-[hsl(var(--beriko-blue))] text-4xl">
+                    ✏️
+                  </div>
+                  <p className="text-base text-foreground leading-tight">Prilagođeno vašoj mjeri</p>
+                </div>
+              </div>
+              {/* Second pair */}
+              <div className="w-1/2 flex gap-12 justify-center items-center px-8">
+                <div className="flex flex-col items-center text-center flex-1">
+                  <div className="w-16 h-16 mb-4 text-[hsl(var(--beriko-blue))] text-4xl">
+                    🔑
+                  </div>
+                  <p className="text-base text-foreground leading-tight">Ključ u ruke i garancija</p>
+                </div>
+                <div className="flex flex-col items-center text-center flex-1">
+                  <div className="w-16 h-16 mb-4 text-[hsl(var(--beriko-blue))] text-4xl">
+                    ⭐️
+                  </div>
+                  <p className="text-base text-foreground leading-tight">119 recenzija, 4.9 ocjena</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Dialog open={isServiceDialogOpen} onOpenChange={setIsServiceDialogOpen}>
