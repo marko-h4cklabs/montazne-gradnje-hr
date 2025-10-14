@@ -2,57 +2,36 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
+import { Home, Warehouse, Car } from "lucide-react";
 
 const NewIntroSection = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
-  const [isPonudaDialogOpen, setIsPonudaDialogOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
+  const [isServiceDialogOpen, setIsServiceDialogOpen] = useState(false);
 
   const handleDetailsClick = () => {
     navigate("/detaljne-informacije");
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.phone) {
-      toast({
-        title: "Greška",
-        description: "Molimo popunite sva obavezna polja",
-        variant: "destructive",
-      });
-      return;
+  const services = [
+    {
+      title: "Garaže",
+      icon: Car,
+      path: "/garaze-upit",
+      description: "Zatražite ponudu za garažu"
+    },
+    {
+      title: "Kuće i Bungalovi",
+      icon: Home,
+      path: "/kuce-upit",
+      description: "Zatražite ponudu za kuću"
+    },
+    {
+      title: "Hale",
+      icon: Warehouse,
+      path: "/hale-upit",
+      description: "Zatražite ponudu za halu"
     }
-
-    // Here you would typically send to your backend/supabase
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Uspješno poslano!",
-      description: "Kontaktirat ćemo vas uskoro.",
-    });
-
-    setIsPonudaDialogOpen(false);
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
+  ];
 
   return (
     <section className="relative bg-[hsl(220,60%,30%)] text-white">
@@ -88,65 +67,40 @@ const NewIntroSection = () => {
             <Button onClick={handleDetailsClick} size="lg" className="bg-white text-[hsl(220,60%,30%)] hover:bg-white/90">
               Pročitajte više
             </Button>
-            <Button onClick={() => setIsPonudaDialogOpen(true)} size="lg" className="bg-[hsl(var(--beriko-yellow))] text-[hsl(220,60%,30%)] hover:bg-[hsl(var(--beriko-yellow))]/90">
+            <Button onClick={() => setIsServiceDialogOpen(true)} size="lg" className="bg-yellow-400 text-gray-900 hover:bg-yellow-500 font-semibold">
               Ponuda
             </Button>
           </div>
         </div>
       </div>
 
-      <Dialog open={isPonudaDialogOpen} onOpenChange={setIsPonudaDialogOpen}>
+      <Dialog open={isServiceDialogOpen} onOpenChange={setIsServiceDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-2xl">Zatražite ponudu</DialogTitle>
+            <DialogTitle className="text-2xl text-center mb-4">
+              Izaberite tip objekta
+            </DialogTitle>
           </DialogHeader>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="name">Ime i prezime *</Label>
-              <Input
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="email">Email *</Label>
-              <Input
-                id="email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="phone">Telefon *</Label>
-              <Input
-                id="phone"
-                name="phone"
-                type="tel"
-                value={formData.phone}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="message">Poruka (opcionalno)</Label>
-              <Textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleInputChange}
-                rows={4}
-              />
-            </div>
-            <Button type="submit" className="w-full bg-[hsl(var(--beriko-yellow))] text-[hsl(220,60%,30%)] hover:bg-[hsl(var(--beriko-yellow))]/90">
-              Pošalji zahtjev
-            </Button>
-          </form>
+          <div className="grid gap-4">
+            {services.map((service) => (
+              <button
+                key={service.path}
+                onClick={() => {
+                  setIsServiceDialogOpen(false);
+                  navigate(service.path);
+                }}
+                className="flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary hover:bg-primary/5 transition-all group"
+              >
+                <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-semibold text-foreground">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground">{service.description}</p>
+                </div>
+              </button>
+            ))}
+          </div>
         </DialogContent>
       </Dialog>
     </section>
