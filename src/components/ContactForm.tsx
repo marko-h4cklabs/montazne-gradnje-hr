@@ -48,16 +48,21 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
         message: formData.message,
       };
 
+      console.log("Submitting contact form...", { selectedService });
+
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: emailData
       });
 
       if (error) {
+        console.error("Edge function error:", error);
         throw error;
       }
+
+      console.log("Form submitted successfully, redirecting to /hvala");
       
-      // Redirect to thank you page for conversion tracking
-      navigate("/hvala");
+      // Success - redirect to thank you page for conversion tracking
+      window.location.href = "/hvala";
     } catch (error) {
       console.error('Contact form error:', error);
       toast({
@@ -65,7 +70,6 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
         description: "Došlo je do greške prilikom slanja. Molimo pokušajte ponovo.",
         variant: "destructive",
       });
-    } finally {
       setIsSubmitting(false);
     }
   };
