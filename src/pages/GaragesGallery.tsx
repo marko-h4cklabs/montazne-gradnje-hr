@@ -32,7 +32,7 @@ const GaragesGallery = () => {
   }, []);
 
   const images = (Object.values(
-    import.meta.glob('/src/assets/garage-*.jpg', { eager: true, import: 'default' })
+    import.meta.glob('/src/assets/garage-*.{jpg,png}', { eager: true, import: 'default' })
   ) as string[]).sort();
 
   const jsonLd = {
