@@ -1,11 +1,13 @@
 import reviewDanijela from "@/assets/review-danijela.png";
 import reviewDiana from "@/assets/review-diana.png";
+import reviewBranko from "@/assets/review-branko.png";
 import { Link } from "react-router-dom";
 
 const References = () => {
   const reviewImages = [
     reviewDanijela,
-    reviewDiana
+    reviewDiana,
+    reviewBranko
   ];
 
   return (
@@ -27,7 +29,7 @@ const References = () => {
           {reviewImages.map((reviewImage, index) => (
             <div 
               key={index}
-              className="animate-slide-up hover:scale-105 smooth-transition"
+              className={`animate-slide-up hover:scale-105 smooth-transition ${index === 2 ? 'hidden md:block' : ''}`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <img
