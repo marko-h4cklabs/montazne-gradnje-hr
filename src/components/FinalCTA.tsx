@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { MessageCircle, Home, Warehouse, Car } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import FAQ from "./FAQ";
 
 const FinalCTA = () => {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
@@ -44,32 +45,27 @@ const FinalCTA = () => {
           })
         }}
       />
-      <section id="posalji-upit" className="py-20 bg-secondary">
+      <FAQ />
+      
+      <section id="posalji-upit" className="py-16 bg-[#003d82]">
         <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-secondary-foreground">
-            Montažni objekti sa kojima ćete biti zadovoljni
-          </h2>
-          
-          <p className="text-xl md:text-2xl mb-8 text-secondary-foreground/90 leading-relaxed">
-            Dosta vam je kiše, leda po autu i ideja koje nikako da se ostvare?
-          </p>
-          
           
           <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition hero-shadow text-xl px-12 py-6 rounded-full font-bold"
+            size="lg"
+            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition shadow-2xl text-xl px-12 py-6 rounded-full font-bold"
             onClick={() => {
               (window as any).gtag_report_conversion();
               setIsContactFormOpen(true);
             }}
           >
             <MessageCircle className="w-6 h-6 mr-3" />
-            <span className="hidden md:inline">Pošaljite upit – Rješenje stiže brzo kao i naši majstori</span>
-            <span className="block md:hidden text-center">
-              Pošaljite upit
-            </span>
+            💬 Zatražite ponudu sada
           </Button>
+          
+          <p className="text-white/80 mt-6 text-lg">
+            Besplatna konzultacija • Brza ponuda • Bez obveza
+          </p>
         </div>
       </div>
 

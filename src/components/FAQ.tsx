@@ -6,35 +6,31 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "Kako naručiti montažnu garažu ili halu?",
-      answer: "Postupak je jednostavan: kontaktirajte nas putem telefona ili e-maila, dogovorit ćemo besplatni pregled lokacije i izradu ponude. Nakon prihvaćanja ponude, pristupamo planiranju i realizaciji projekta."
+      question: "Koliko traje izrada objekta i montaža?",
+      answer: "Odgovor će biti dodan uskoro."
     },
     {
-      question: "Koliko dugo traje montaža?",
-      answer: "Ovisno o veličini i složenosti objekta, montaža traje od 1 do 5 dana. Jednostavne garaže montiraju se u jednom danu, dok veće hale mogu zahtijevati nekoliko dana rada!"
+      question: "Trebam li građevinsku dozvolu?",
+      answer: "Odgovor će biti dodan uskoro."
     },
     {
-      question: "Koje dozvole su potrebne?",
-      answer: "Za većinu objekata potrebna je građevinska dozvola. Pomažemo vam u pribavljanju svih potrebnih dozvola i dokumentacije kroz naše partnere."
+      question: "Kolika je cijena i što je uključeno?",
+      answer: "Odgovor će biti dodan uskoro."
     },
     {
-      question: "Kakva je garancija na objekte?",
-      answer: "Nudimo 10 godina garancije na konstrukciju i 5 godina garancije na pokrivače. Također imate 30 dana garancije povrata novca ako niste zadovoljni."
-    },
-    {
-      question: "Mogu li prilagoditi dizajn objekta?",
-      answer: "Apsolutno! Svi naši objekti mogu se prilagoditi vašim specifičnim potrebama - veličina, boja, dodatna vrata, prozori, izolacija i drugi detalji."
+      question: "Je li objekt izoliran i koliko traje/koja je garancija?",
+      answer: "Odgovor će biti dodan uskoro."
     }
   ];
 
   return (
-    <section className="py-16 section-gradient">
+    <section id="faq" className="py-20 bg-[#003d82]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Često postavljena pitanja
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Odgovori na najčešća pitanja o našim uslugama
           </p>
         </div>
@@ -47,10 +43,10 @@ const FAQ = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <button
-                className="w-full text-left p-6 bg-card rounded-xl card-shadow hover:bg-secondary/50 smooth-transition flex justify-between items-center"
+                className="w-full text-left p-6 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/20 smooth-transition flex justify-between items-center border border-white/20"
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
               >
-                <span className="font-semibold text-foreground pr-4">
+                <span className="font-semibold text-white pr-4">
                   {faq.question}
                 </span>
                 <ChevronDown 
@@ -61,7 +57,7 @@ const FAQ = () => {
               </button>
               
               {openFaq === index && (
-                <div className="px-6 pb-6 text-muted-foreground leading-relaxed animate-fade-in">
+                <div className="px-6 pb-6 pt-4 text-white/90 leading-relaxed animate-fade-in">
                   {faq.answer}
                 </div>
               )}
