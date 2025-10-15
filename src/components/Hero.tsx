@@ -3,19 +3,19 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Home, Warehouse, Car, Truck, Ruler, Key, Star } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
-import heroSlider1 from "@/assets/hero-slider-1.png";
+import heroSlider1 from "@/assets/hero-slider-new-1.png";
 import heroSlider2 from "@/assets/hero-slider-2.png";
 import heroSlider3 from "@/assets/hero-slider-3.png";
-import heroSlider4 from "@/assets/hero-slider-4.png";
+import heroSlider4 from "@/assets/hero-slider-new-4.png";
 import heroSlider5 from "@/assets/hero-slider-5.png";
 import heroSlider6 from "@/assets/hero-slider-6.png";
 
 const Hero = () => {
   const images = [
-    { src: heroSlider1, alt: "Montažna garaža s četvoro vrata" },
+    { src: heroSlider1, alt: "Industrijska montažna hala" },
     { src: heroSlider2, alt: "Moderna bijela garaža" },
     { src: heroSlider3, alt: "Industrijska montažna hala" },
-    { src: heroSlider4, alt: "Garaža s klasičnom fasadom" },
+    { src: heroSlider4, alt: "Moderna garaža s bijelom fasadom" },
     { src: heroSlider5, alt: "Moderna crna garaža" },
     { src: heroSlider6, alt: "Crna montažna garaža sa sivim krovom" }
   ];
