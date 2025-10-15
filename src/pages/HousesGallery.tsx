@@ -5,10 +5,6 @@ import Footer from "@/components/Footer";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import galerijaVikendice from "@/assets/galerija-vikendice-bungalovi.jpg";
-import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
-import heroBungalovAlt from "@/assets/hero-bungalov-alt.jpg";
-import heroModernHouse from "@/assets/hero-modern-house.png";
 import house1 from "@/assets/house-1.png";
 import house2 from "@/assets/house-2.png";
 import house3 from "@/assets/house-3.png";
@@ -40,7 +36,7 @@ const HousesGallery = () => {
     link.href = window.location.href;
   }, []);
 
-  const images = [galerijaVikendice, heroBungalovModern, heroBungalovAlt, heroModernHouse, house1, house2, house3, house4, house5];
+  const images = [house1, house2, house3, house4, house5];
 
   const jsonLd = {
     '@context': 'https://schema.org',
