@@ -7,19 +7,19 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Koliko traje izrada objekta i montaža?",
-      answer: "Odgovor će biti dodan uskoro."
+      answer: "Rok isporuke je do 20 dana a montaža ovisi o veličini objekta: od 1 do 5 dana!"
     },
     {
       question: "Trebam li građevinsku dozvolu?",
-      answer: "Odgovor će biti dodan uskoro."
+      answer: "Prema pravilniku o jednostavnim građevinama, bez građevinske dozvole, a u skladu s glavnim projektom, mogu se graditi pomoćne zgrade površine do 50 m2."
     },
     {
       question: "Kolika je cijena i što je uključeno?",
-      answer: "Odgovor će biti dodan uskoro."
+      answer: "Cijena je od 200-300€/m2 i uključuje pocinčanu konstrukciju s termopanelima i montažom."
     },
     {
       question: "Je li objekt izoliran i koliko traje/koja je garancija?",
-      answer: "Odgovor će biti dodan uskoro."
+      answer: "Objekti su izolirani od 30-80mm i imaju bezuvjetnu garanciju do 5 godina."
     }
   ];
 
