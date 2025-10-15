@@ -47,7 +47,7 @@ const FinalCTA = () => {
       />
       <FAQ />
       
-      <section id="posalji-upit" className="py-12 bg-[#003d82]">
+      <section id="posalji-upit" className="py-8 bg-[#003d82]">
         <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           
@@ -60,10 +60,10 @@ const FinalCTA = () => {
             }}
           >
             <MessageCircle className="w-6 h-6 mr-3" />
-            💬 Zatražite ponudu sada
+            Besplatna ponuda
           </Button>
           
-          <p className="text-white/80 mt-6 text-lg">
+          <p className="text-white/80 mt-6 text-base">
             Besplatna konzultacija • Brza ponuda • Bez obveza
           </p>
         </div>

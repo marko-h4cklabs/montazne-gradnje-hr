@@ -24,7 +24,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="relative py-12 bg-[#003d82]">
+    <section id="faq" className="relative py-12 pb-6 bg-[#003d82]">
       {/* Transition wave */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg className="relative block w-full h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
