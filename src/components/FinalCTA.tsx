@@ -47,25 +47,21 @@ const FinalCTA = () => {
       />
       <FAQ />
       
-      <section id="posalji-upit" className="py-8 bg-[#003d82]">
+      <section id="posalji-upit" className="py-6 bg-[#003d82]">
         <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           
           <Button 
             size="lg"
-            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition shadow-2xl text-xl px-12 py-6 rounded-full font-bold"
+            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition shadow-2xl text-lg px-10 py-5 rounded-full font-bold"
             onClick={() => {
               (window as any).gtag_report_conversion();
               setIsContactFormOpen(true);
             }}
           >
-            <MessageCircle className="w-6 h-6 mr-3" />
+            <MessageCircle className="w-5 h-5 mr-2" />
             Besplatna ponuda
           </Button>
-          
-          <p className="text-white/80 mt-6 text-base">
-            Besplatna konzultacija • Brza ponuda • Bez obveza
-          </p>
         </div>
       </div>
 
