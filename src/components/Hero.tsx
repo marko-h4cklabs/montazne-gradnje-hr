@@ -12,10 +12,10 @@ import heroSlider6 from "@/assets/hero-slider-6.png";
 
 const Hero = () => {
   const images = [
-    { src: heroSlider1, alt: "Industrijska montažna hala" },
+    { src: heroSlider4, alt: "Moderna garaža s bijelom fasadom" },
     { src: heroSlider2, alt: "Moderna bijela garaža" },
     { src: heroSlider3, alt: "Industrijska montažna hala" },
-    { src: heroSlider4, alt: "Moderna garaža s bijelom fasadom" },
+    { src: heroSlider1, alt: "Industrijska montažna hala" },
     { src: heroSlider5, alt: "Moderna crna garaža" },
     { src: heroSlider6, alt: "Crna montažna garaža sa sivim krovom" }
   ];
