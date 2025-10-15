@@ -10,6 +10,7 @@ import house2 from "@/assets/house-2.png";
 import house3 from "@/assets/house-3.png";
 import house4 from "@/assets/house-4.png";
 import house5 from "@/assets/house-5.png";
+import house6 from "@/assets/house-6.png";
 
 const HousesGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -36,7 +37,7 @@ const HousesGallery = () => {
     link.href = window.location.href;
   }, []);
 
-  const images = [house1, house2, house3, house4, house5];
+  const images = [house1, house2, house3, house4, house5, house6];
 
   const jsonLd = {
     '@context': 'https://schema.org',
