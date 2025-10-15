@@ -108,41 +108,35 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Features rotating section */}
-        <div className="px-4 py-2 bg-background">
-          <div className="max-w-2xl mx-auto">
-            <div className="relative h-40 overflow-hidden">
-              <div className="absolute inset-0">
-                {/* First pair */}
-                <div 
-                  className={`absolute inset-0 flex gap-6 justify-center items-center px-4 transition-opacity duration-700 ${
-                    currentFeatureIndex === 0 ? 'opacity-100' : 'opacity-0'
-                  }`}
-                >
-                  <div className="flex flex-col items-center text-center flex-1">
-                    <FeatureIcon Icon={Truck} />
-                    <p className="text-sm font-medium text-foreground leading-tight">Izrada u nekoliko dana</p>
-                  </div>
-                  <div className="flex flex-col items-center text-center flex-1">
-                    <FeatureIcon Icon={Ruler} />
-                    <p className="text-sm font-medium text-foreground leading-tight">Prilagođeno vašoj mjeri</p>
-                  </div>
+        {/* Features 2x2 grid - Mobile */}
+        <div className="px-4 py-3 bg-background">
+          <div className="max-w-xl mx-auto">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-4">
+              {/* First row */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
+                  <Key className="w-6 h-6 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} />
                 </div>
-                {/* Second pair */}
-                <div 
-                  className={`absolute inset-0 flex gap-6 justify-center items-center px-4 transition-opacity duration-700 ${
-                    currentFeatureIndex === 1 ? 'opacity-100' : 'opacity-0'
-                  }`}
-                >
-                  <div className="flex flex-col items-center text-center flex-1">
-                    <FeatureIcon Icon={Key} />
-                    <p className="text-sm font-medium text-foreground leading-tight">Ključ u ruke i garancija</p>
-                  </div>
-                  <div className="flex flex-col items-center text-center flex-1">
-                    <FeatureIcon Icon={Star} filled />
-                    <p className="text-sm font-medium text-foreground leading-tight">119 recenzija, 4.9 ocjena</p>
-                  </div>
+                <p className="text-xs font-medium text-foreground leading-tight">Ključ u ruke i garancija</p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
+                  <Ruler className="w-6 h-6 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} />
                 </div>
+                <p className="text-xs font-medium text-foreground leading-tight">Prilagođeno vašoj mjeri</p>
+              </div>
+              {/* Second row */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
+                  <Star className="w-6 h-6 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} fill="hsl(var(--beriko-blue))" />
+                </div>
+                <p className="text-xs font-medium text-foreground leading-tight">119 recenzija, 4.9 ocjena</p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
+                  <Truck className="w-6 h-6 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} />
+                </div>
+                <p className="text-xs font-medium text-foreground leading-tight">Izrada u nekoliko dana</p>
               </div>
             </div>
           </div>
