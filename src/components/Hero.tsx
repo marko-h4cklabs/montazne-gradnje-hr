@@ -109,34 +109,34 @@ const Hero = () => {
         </div>
         
         {/* Features 2x2 grid - Mobile */}
-        <div className="px-4 py-3 bg-background">
+        <div className="px-4 py-6 bg-background">
           <div className="max-w-xl mx-auto">
-            <div className="grid grid-cols-2 gap-x-4 gap-y-4">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-6">
               {/* First row */}
               <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
-                  <Key className="w-6 h-6 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} />
+                <div className="w-14 h-14 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
+                  <Key className="w-7 h-7 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} />
                 </div>
-                <p className="text-xs font-medium text-foreground leading-tight">Ključ u ruke i garancija</p>
+                <p className="text-sm font-medium text-foreground leading-tight">Ključ u ruke i garancija</p>
               </div>
               <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
-                  <Ruler className="w-6 h-6 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} />
+                <div className="w-14 h-14 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
+                  <Ruler className="w-7 h-7 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} />
                 </div>
-                <p className="text-xs font-medium text-foreground leading-tight">Prilagođeno vašoj mjeri</p>
+                <p className="text-sm font-medium text-foreground leading-tight">Prilagođeno vašoj mjeri</p>
               </div>
               {/* Second row */}
               <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
-                  <Star className="w-6 h-6 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} fill="hsl(var(--beriko-blue))" />
+                <div className="w-14 h-14 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
+                  <Star className="w-7 h-7 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} fill="hsl(var(--beriko-blue))" />
                 </div>
-                <p className="text-xs font-medium text-foreground leading-tight">119 recenzija, 4.9 ocjena</p>
+                <p className="text-sm font-medium text-foreground leading-tight">119 recenzija, 4.9 ocjena</p>
               </div>
               <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
-                  <Truck className="w-6 h-6 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} />
+                <div className="w-14 h-14 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
+                  <Truck className="w-7 h-7 text-[hsl(var(--beriko-blue))]" strokeWidth={2.5} />
                 </div>
-                <p className="text-xs font-medium text-foreground leading-tight">Izrada u nekoliko dana</p>
+                <p className="text-sm font-medium text-foreground leading-tight">Izrada u nekoliko dana</p>
               </div>
             </div>
           </div>
