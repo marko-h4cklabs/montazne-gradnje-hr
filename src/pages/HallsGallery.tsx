@@ -6,6 +6,10 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import galerijaHala from "@/assets/galerija-hala.jpg";
+import hall1 from "@/assets/hall-1.png";
+import hall2 from "@/assets/hall-2.png";
+import hall3 from "@/assets/hall-3.png";
+import hall4 from "@/assets/hall-4.png";
 
 const HallsGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -32,7 +36,7 @@ const HallsGallery = () => {
     link.href = window.location.href;
   }, []);
 
-  const images = [galerijaHala];
+  const images = [galerijaHala, hall1, hall2, hall3, hall4];
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -62,7 +66,7 @@ const HallsGallery = () => {
           </header>
 
           <section aria-label="Galerija montažnih hala">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 [&>*:last-child:nth-child(3n+1)]:md:col-start-2">
               {images.map((src, idx) => (
                 <img
                   key={idx}
@@ -74,6 +78,19 @@ const HallsGallery = () => {
                 />
               ))}
             </div>
+          </section>
+
+          <section className="mt-16 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Pridružite se zadovoljnim kupcima
+            </h2>
+            <Button
+              onClick={() => navigate('/hale-upit')}
+              size="lg"
+              className="text-lg"
+            >
+              Pošaljite upit
+            </Button>
           </section>
 
           <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
