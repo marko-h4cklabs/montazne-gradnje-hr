@@ -6,26 +6,22 @@ import { Link, useNavigate } from "react-router-dom";
 
 // Static imports for instant loading
 import garage1 from "@/assets/garage-1.png";
-import garage2 from "@/assets/garage-2.png";
 import garage3 from "@/assets/garage-3.png";
 import garage4 from "@/assets/garage-4.png";
 import garage5 from "@/assets/garage-5.png";
 import garage6 from "@/assets/garage-6.png";
 import garage7 from "@/assets/garage-7.png";
 import garage8 from "@/assets/garage-8.png";
-import garage9 from "@/assets/garage-9.png";
 
 // Static images array for instant loading
 const images = [
   { src: garage1, alt: "Montažna garaža - moderna bijela garaža s tamnim vratima", title: "Garaža 1" },
-  { src: garage2, alt: "Montažna garaža - velika siva garaža u prirodi", title: "Garaža 2" },
   { src: garage3, alt: "Montažna garaža - bijelo-siva garaža s modernim vratima", title: "Garaža 3" },
   { src: garage4, alt: "Montažna garaža - svijetla garaža s elegantnim dizajnom", title: "Garaža 4" },
   { src: garage5, alt: "Montažna garaža - moderna garaža s nadstrešnicom", title: "Garaža 5" },
   { src: garage6, alt: "Montažna garaža - tamna garaža s bijelim prozorima", title: "Garaža 6" },
   { src: garage7, alt: "Montažna garaža - svijetla garaža s nadstrešnicom", title: "Garaža 7" },
   { src: garage8, alt: "Montažna garaža - moderna bijela garaža", title: "Garaža 8" },
-  { src: garage9, alt: "Montažna garaža - tamna garaža sa srebrnim krovom", title: "Garaža 9" },
 ];
 
 const Garages = () => {
