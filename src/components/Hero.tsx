@@ -22,7 +22,8 @@ const Hero = () => {
 
   const [emblaRefMobile, emblaApiMobile] = useEmblaCarousel({ loop: true, dragFree: false });
   const [emblaRefDesktop, emblaApiDesktop] = useEmblaCarousel({ loop: true, dragFree: false });
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentMobileIndex, setCurrentMobileIndex] = useState(0);
+  const [currentDesktopIndex, setCurrentDesktopIndex] = useState(0);
   const [isServiceDialogOpen, setIsServiceDialogOpen] = useState(false);
   const [mobileIntervalId, setMobileIntervalId] = useState<NodeJS.Timeout | null>(null);
   const [desktopIntervalId, setDesktopIntervalId] = useState<NodeJS.Timeout | null>(null);
@@ -54,7 +55,7 @@ const Hero = () => {
     if (!emblaApiMobile) return;
 
     const onSelect = () => {
-      setCurrentImageIndex(emblaApiMobile.selectedScrollSnap());
+      setCurrentMobileIndex(emblaApiMobile.selectedScrollSnap());
     };
 
     emblaApiMobile.on("select", onSelect);
@@ -81,7 +82,7 @@ const Hero = () => {
     if (!emblaApiDesktop) return;
 
     const onSelect = () => {
-      setCurrentImageIndex(emblaApiDesktop.selectedScrollSnap());
+      setCurrentDesktopIndex(emblaApiDesktop.selectedScrollSnap());
     };
 
     emblaApiDesktop.on("select", onSelect);
@@ -176,7 +177,7 @@ const Hero = () => {
                 key={index}
                 onClick={() => handleMobileDotClick(index)}
                 className={`h-2 rounded-full transition-all ${
-                  index === currentImageIndex
+                  index === currentMobileIndex
                     ? "bg-black w-6"
                     : "bg-black/40 w-2"
                 }`}
@@ -256,7 +257,7 @@ const Hero = () => {
               key={index}
               onClick={() => handleDesktopDotClick(index)}
               className={`h-3 rounded-full transition-all ${
-                index === currentImageIndex
+                index === currentDesktopIndex
                   ? "bg-black w-8"
                   : "bg-black/40 w-3"
               }`}
