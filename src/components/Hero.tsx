@@ -143,7 +143,7 @@ const Hero = () => {
       {/* Mobile Layout */}
       <div className="md:hidden pt-20">
         {/* Headline above slider */}
-        <div className="px-4 py-8 bg-background text-center">
+        <div className="px-4 py-4 pb-2 bg-background text-center">
           <h1 className="text-3xl font-bold leading-tight text-[hsl(var(--beriko-blue))]">
             Kvalitetne Montažne Konstrukcije
           </h1>
@@ -171,7 +171,7 @@ const Hero = () => {
           </div>
 
           {/* Slide Indicators - Below Image */}
-          <div className="py-4 bg-background flex justify-center gap-2">
+          <div className="py-2 bg-background flex justify-center gap-2">
             {images.map((_, index) => (
               <button
                 key={index}
