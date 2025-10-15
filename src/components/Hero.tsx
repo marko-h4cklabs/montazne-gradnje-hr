@@ -20,7 +20,8 @@ const Hero = () => {
     { src: heroSlider6, alt: "Crna montažna garaža sa sivim krovom" }
   ];
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, dragFree: false });
+  const [emblaRefMobile, emblaApiMobile] = useEmblaCarousel({ loop: true, dragFree: false });
+  const [emblaRefDesktop, emblaApiDesktop] = useEmblaCarousel({ loop: true, dragFree: false });
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isServiceDialogOpen, setIsServiceDialogOpen] = useState(false);
   const navigate = useNavigate();
@@ -46,25 +47,47 @@ const Hero = () => {
     }
   ];
 
+  // Mobile carousel auto-scroll
   useEffect(() => {
-    if (!emblaApi) return;
+    if (!emblaApiMobile) return;
 
     const onSelect = () => {
-      setCurrentImageIndex(emblaApi.selectedScrollSnap());
+      setCurrentImageIndex(emblaApiMobile.selectedScrollSnap());
     };
 
-    emblaApi.on("select", onSelect);
+    emblaApiMobile.on("select", onSelect);
     onSelect();
 
     const interval = setInterval(() => {
-      emblaApi.scrollNext();
+      emblaApiMobile.scrollNext();
     }, 3000);
 
     return () => {
       clearInterval(interval);
-      emblaApi.off("select", onSelect);
+      emblaApiMobile.off("select", onSelect);
     };
-  }, [emblaApi]);
+  }, [emblaApiMobile]);
+
+  // Desktop carousel auto-scroll
+  useEffect(() => {
+    if (!emblaApiDesktop) return;
+
+    const onSelect = () => {
+      setCurrentImageIndex(emblaApiDesktop.selectedScrollSnap());
+    };
+
+    emblaApiDesktop.on("select", onSelect);
+    onSelect();
+
+    const interval = setInterval(() => {
+      emblaApiDesktop.scrollNext();
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+      emblaApiDesktop.off("select", onSelect);
+    };
+  }, [emblaApiDesktop]);
 
   const FeatureIcon = ({ Icon, filled = false }: { Icon: any, filled?: boolean }) => (
     <div className="w-16 h-16 md:w-16 md:h-16 mb-3 md:mb-3 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
@@ -89,7 +112,7 @@ const Hero = () => {
 
         {/* Scrolling Images with Embla */}
         <div className="relative h-[43vh] overflow-hidden">
-          <div className="overflow-hidden" ref={emblaRef}>
+          <div className="overflow-hidden" ref={emblaRefMobile}>
             <div className="flex">
               {images.map((image, index) => (
                 <div 
@@ -111,7 +134,7 @@ const Hero = () => {
             {images.map((_, index) => (
               <button
                 key={index}
-                onClick={() => emblaApi?.scrollTo(index)}
+                onClick={() => emblaApiMobile?.scrollTo(index)}
                 className={`w-2 h-2 rounded-full transition-all ${
                   index === currentImageIndex
                     ? "bg-[hsl(var(--beriko-yellow))] w-6"
@@ -167,7 +190,7 @@ const Hero = () => {
       </div>
 
       <section className="hidden md:flex relative h-[52vh] items-center justify-center overflow-hidden bg-background">
-        <div className="overflow-hidden w-full h-full" ref={emblaRef}>
+        <div className="overflow-hidden w-full h-full" ref={emblaRefDesktop}>
           <div className="flex h-full">
             {images.map((image, index) => (
               <div 
@@ -189,7 +212,7 @@ const Hero = () => {
           {images.map((_, index) => (
             <button
               key={index}
-              onClick={() => emblaApi?.scrollTo(index)}
+              onClick={() => emblaApiDesktop?.scrollTo(index)}
               className={`w-3 h-3 rounded-full transition-all ${
                 index === currentImageIndex
                   ? "bg-[hsl(var(--beriko-yellow))] w-8"
