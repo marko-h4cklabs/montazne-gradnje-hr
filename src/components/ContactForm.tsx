@@ -132,7 +132,7 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
       </div>
 
       <div>
-        <Label htmlFor="mjestoPrebivalidta">Mjesto, ulica i broj *</Label>
+        <Label htmlFor="mjestoPrebivalidta">Grad, ulica i broj *</Label>
         <Input
           id="mjestoPrebivalidta"
           value={formData.mjestoPrebivalidta}
