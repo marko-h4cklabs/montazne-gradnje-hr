@@ -1,28 +1,28 @@
-import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Home, Warehouse, Car, Truck, Ruler, Key, Star } from "lucide-react";
+import { Home, Warehouse, Car, Truck, Ruler, Key, Star, ZoomIn, ZoomOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import heroGarazaAlt from "@/assets/hero-garaza-alt.jpg";
-import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
-import heroBungalovAlt from "@/assets/hero-bungalov-alt.jpg";
-import galerijaBungalov from "@/assets/galerija-bungalov.jpg";
-import galerijaGaraza from "@/assets/galerija-garaza.jpg";
-import galerijaHala from "@/assets/galerija-hala.jpg";
+import useEmblaCarousel from "embla-carousel-react";
+import heroSlider1 from "@/assets/hero-slider-1.png";
+import heroSlider2 from "@/assets/hero-slider-2.png";
+import heroSlider3 from "@/assets/hero-slider-3.png";
+import heroSlider4 from "@/assets/hero-slider-4.png";
+import heroSlider5 from "@/assets/hero-slider-5.png";
+import heroSlider6 from "@/assets/hero-slider-6.png";
 
 const Hero = () => {
   const images = [
-    { src: galerijaHala, alt: "Industrijske hale" },
-    { src: heroGarazaAlt, alt: "Industrijska garaža" },
-    { src: heroBungalovModern, alt: "Moderni montažni bungalov" },
-    { src: heroBungalovAlt, alt: "Savremeni bungalov" },
-    { src: galerijaBungalov, alt: "Galerija bungalova" },
-    { src: galerijaGaraza, alt: "Galerija garaža" },
-    { src: "/lovable-uploads/fcc31405-5071-46a1-ac40-b422991656a3.png", alt: "Moderna montažna kuća" }
+    { src: heroSlider1, alt: "Montažna garaža s četvoro vrata" },
+    { src: heroSlider2, alt: "Moderna bijela garaža" },
+    { src: heroSlider3, alt: "Industrijska montažna hala" },
+    { src: heroSlider4, alt: "Garaža s klasičnom fasadom" },
+    { src: heroSlider5, alt: "Moderna crna garaža" },
+    { src: heroSlider6, alt: "Crna montažna garaža sa sivim krovom" }
   ];
 
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, dragFree: false });
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
+  const [zoomLevel, setZoomLevel] = useState(1);
   const [isServiceDialogOpen, setIsServiceDialogOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -48,20 +48,32 @@ const Hero = () => {
   ];
 
   useEffect(() => {
+    if (!emblaApi) return;
+
+    const onSelect = () => {
+      setCurrentImageIndex(emblaApi.selectedScrollSnap());
+    };
+
+    emblaApi.on("select", onSelect);
+    onSelect();
+
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 5200);
+      emblaApi.scrollNext();
+    }, 5000);
 
-    return () => clearInterval(interval);
-  }, [images.length]);
+    return () => {
+      clearInterval(interval);
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeatureIndex((prev) => (prev + 1) % 2);
-    }, 4000);
+  const handleZoomIn = () => {
+    setZoomLevel((prev) => Math.min(prev + 0.25, 2));
+  };
 
-    return () => clearInterval(interval);
-  }, []);
+  const handleZoomOut = () => {
+    setZoomLevel((prev) => Math.max(prev - 0.25, 1));
+  };
 
   const FeatureIcon = ({ Icon, filled = false }: { Icon: any, filled?: boolean }) => (
     <div className="w-16 h-16 md:w-16 md:h-16 mb-3 md:mb-3 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
@@ -84,27 +96,60 @@ const Hero = () => {
           </h1>
         </div>
 
-        {/* Scrolling Images */}
+        {/* Scrolling Images with Embla */}
         <div className="relative h-[43vh] overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <div 
-              className="flex h-full transition-transform duration-1000 ease-in-out"
-              style={{ 
-                width: `${images.length * 100}%`,
-                transform: `translateX(-${currentImageIndex * (100 / images.length)}%)` 
-              }}
-            >
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
               {images.map((image, index) => (
-                <div key={index} className="h-full flex-shrink-0" style={{ width: `${100 / images.length}%` }}>
+                <div 
+                  key={index} 
+                  className="flex-[0_0_100%] min-w-0 h-[43vh] flex items-center justify-center bg-background"
+                >
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transition-transform duration-300"
+                    style={{ transform: `scale(${zoomLevel})` }}
                   />
                 </div>
               ))}
             </div>
-            <div className="absolute inset-0 bg-black/5"></div>
+          </div>
+
+          {/* Zoom Controls */}
+          <div className="absolute bottom-4 right-4 flex gap-2 z-10">
+            <button
+              onClick={handleZoomOut}
+              disabled={zoomLevel <= 1}
+              className="p-2 rounded-full bg-white/90 shadow-lg hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-label="Zoom out"
+            >
+              <ZoomOut className="w-5 h-5 text-[hsl(var(--beriko-blue))]" />
+            </button>
+            <button
+              onClick={handleZoomIn}
+              disabled={zoomLevel >= 2}
+              className="p-2 rounded-full bg-white/90 shadow-lg hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-label="Zoom in"
+            >
+              <ZoomIn className="w-5 h-5 text-[hsl(var(--beriko-blue))]" />
+            </button>
+          </div>
+
+          {/* Slide Indicators */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => emblaApi?.scrollTo(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === currentImageIndex
+                    ? "bg-[hsl(var(--beriko-yellow))] w-6"
+                    : "bg-white/60"
+                }`}
+                aria-label={`Slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
         
@@ -152,25 +197,58 @@ const Hero = () => {
       </div>
 
       <section className="hidden md:flex relative h-[52vh] items-center justify-center overflow-hidden bg-background">
-        {/* Background Images */}
-        <div className="absolute inset-0 z-0">
-          <div 
-            className="flex h-full transition-transform duration-1000 ease-in-out"
-            style={{ 
-              width: `${images.length * 100}%`,
-              transform: `translateX(-${currentImageIndex * (100 / images.length)}%)` 
-            }}
-          >
+        <div className="overflow-hidden w-full h-full" ref={emblaRef}>
+          <div className="flex h-full">
             {images.map((image, index) => (
-              <div key={index} className="h-full flex-shrink-0" style={{ width: `${100 / images.length}%` }}>
+              <div 
+                key={index} 
+                className="flex-[0_0_100%] min-w-0 h-full flex items-center justify-center"
+              >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain transition-transform duration-300"
+                  style={{ transform: `scale(${zoomLevel})` }}
                 />
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Zoom Controls - Desktop */}
+        <div className="absolute bottom-8 right-8 flex gap-2 z-10">
+          <button
+            onClick={handleZoomOut}
+            disabled={zoomLevel <= 1}
+            className="p-3 rounded-full bg-white/90 shadow-lg hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            aria-label="Zoom out"
+          >
+            <ZoomOut className="w-6 h-6 text-[hsl(var(--beriko-blue))]" />
+          </button>
+          <button
+            onClick={handleZoomIn}
+            disabled={zoomLevel >= 2}
+            className="p-3 rounded-full bg-white/90 shadow-lg hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            aria-label="Zoom in"
+          >
+            <ZoomIn className="w-6 h-6 text-[hsl(var(--beriko-blue))]" />
+          </button>
+        </div>
+
+        {/* Slide Indicators - Desktop */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => emblaApi?.scrollTo(index)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                index === currentImageIndex
+                  ? "bg-[hsl(var(--beriko-yellow))] w-8"
+                  : "bg-white/60"
+              }`}
+              aria-label={`Slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
       
