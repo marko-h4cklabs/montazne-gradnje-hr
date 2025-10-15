@@ -54,7 +54,7 @@ const ThankYou = () => {
               </h1>
               
               <p className="text-lg text-muted-foreground mb-6">
-                Vaš upit je uspješno poslan. Kontaktiraćemo vas u najkraćem mogućem roku.
+                Vaš upit je uspješno poslan. Kontaktirati ćemo vas u najkraćem mogućem roku.
               </p>
 
               <div className="bg-muted/30 rounded-lg p-6 mb-8">
@@ -64,22 +64,22 @@ const ThankYou = () => {
                 <ul className="text-left space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Pregledaćemo vaš upit i pripremiti prilagođenu ponudu</span>
+                    <span>Pregledati ćemo vaš upit i pripremiti prilagođenu ponudu</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Kontaktiraćemo vas telefonom ili email-om u roku od 24 sata</span>
+                    <span>Kontaktirati ćemo vas telefonom ili email-om u roku od 24 sata</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Odgovorićemo na sva vaša pitanja i pomoći vam pri odabiru</span>
+                    <span>Odgovoriti ćemo vam na sva vaša pitanja i pomoći vam pri odabiru</span>
                   </li>
                 </ul>
               </div>
 
               <div className="border-t pt-6 mb-8">
                 <p className="text-sm text-muted-foreground mb-4">
-                  Trebate hitnu pomoć? Kontaktirajte nas direktno:
+                  Trebate li hitnu pomoć? Kontaktirajte nas direktno:
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
@@ -113,7 +113,7 @@ const ThankYou = () => {
                   variant="outline"
                   size="lg"
                 >
-                  Pogledaj galeriju
+                  Pregledajte galeriju
                 </Button>
               </div>
             </div>
