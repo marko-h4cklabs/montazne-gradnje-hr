@@ -22,7 +22,7 @@ const AboutUs = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full"></div>
             </div>
             
-            <p className="text-muted-foreground mb-8 leading-relaxed text-justify text-xl">
+            <p className="text-muted-foreground mb-8 leading-relaxed text-left text-xl">
               Naša misija je da pružimo kvalitetne, pouzdane i estetski privlačne montažne objekte koji će služiti našim 
               klijentima desetljećima. Kombiniramo tradicionalna znanja sa modernim tehnologijama kako bismo uvijek bili u koraku sa trendovima i zadovoljili želje i potrebe svakog kupca. Započnimo suradnju!
             </p>
