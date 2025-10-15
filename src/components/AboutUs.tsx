@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Facebook, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Heart } from "lucide-react";
 
 const AboutUs = () => {
   const handleMapClick = () => {
@@ -11,33 +11,40 @@ const AboutUs = () => {
       <div className="container mx-auto px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-2xl font-bold mb-6 text-foreground text-center">
-              Naša Misija
-            </h3>
-            <p className="text-muted-foreground mb-8 leading-relaxed text-center">
+          <div className="relative bg-gradient-to-br from-primary/5 to-transparent border-l-4 border-primary p-8 rounded-lg shadow-sm">
+            <div className="flex flex-col items-center mb-6">
+              <div className="bg-primary/10 p-4 rounded-full mb-4 animate-fade-in">
+                <Heart className="w-8 h-8 text-primary" fill="currentColor" />
+              </div>
+              <h3 className="text-4xl font-bold text-foreground text-center mb-2">
+                Naša Misija
+              </h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full"></div>
+            </div>
+            
+            <p className="text-muted-foreground mb-8 leading-relaxed text-center text-lg">
               Naša misija je da pružimo kvalitetne, pouzdane i estetski privlačne montažne objekte koji će služiti našim 
               klijentima desetljećima. Kombiniramo tradicionalna znanja sa modernim tehnologijama kako bismo uvijek bili u koraku sa trendovima i zadovoljili želje i potrebe svakog kupca.
             </p>
             
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
+            <div className="space-y-4 mt-8">
+              <div className="flex items-center space-x-3 hover:translate-x-2 smooth-transition">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span className="text-foreground">23 godina iskustva</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 hover:translate-x-2 smooth-transition">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span className="text-foreground">Kompletna rješenja "ključ u ruke"</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 hover:translate-x-2 smooth-transition">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span className="text-foreground">Garantirana kvaliteta i dogovoreni rokovi</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 hover:translate-x-2 smooth-transition">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span className="text-foreground">Više od 2000 projekata</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 hover:translate-x-2 smooth-transition">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span className="text-foreground">4 zemalja</span>
               </div>
