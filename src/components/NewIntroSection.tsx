@@ -67,7 +67,7 @@ const NewIntroSection = () => {
             <Button onClick={handleDetailsClick} size="lg" className="bg-white text-[hsl(220,60%,30%)] hover:bg-white/90">
               Pročitajte više
             </Button>
-            <Button onClick={() => setIsServiceDialogOpen(true)} size="lg" className="bg-yellow-400 text-gray-900 hover:bg-yellow-500 font-semibold">
+            <Button onClick={() => setIsServiceDialogOpen(true)} size="lg" className="bg-primary text-primary-foreground hover:bg-primary-dark font-semibold">
               Ponuda
             </Button>
           </div>
