@@ -52,14 +52,12 @@ const FinalCTA = () => {
         <div className="max-w-4xl mx-auto">
           
           <Button 
-            size="lg"
-            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition shadow-2xl text-lg px-10 py-5 rounded-full font-bold"
+            className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 smooth-transition px-8 py-3 rounded-full font-semibold"
             onClick={() => {
               (window as any).gtag_report_conversion();
               setIsContactFormOpen(true);
             }}
           >
-            <MessageCircle className="w-5 h-5 mr-2" />
             Besplatna ponuda
           </Button>
         </div>
