@@ -24,7 +24,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="relative py-12 pb-6 bg-[#003d82]">
+    <section id="faq" className="relative py-12 pb-6 bg-[hsl(var(--beriko-blue))]">
       {/* Transition wave */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg className="relative block w-full h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -46,24 +46,24 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="mb-3"
+              className="mb-3 rounded-lg overflow-hidden bg-white border border-gray-200"
             >
               <button
-                className="w-full text-left p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 smooth-transition flex justify-between items-center border border-white/20"
+                className="w-full text-left p-4 hover:bg-gray-50 smooth-transition flex justify-between items-center"
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
               >
-                <span className="font-medium text-white pr-4 text-sm md:text-base">
+                <span className="font-medium text-gray-900 pr-4 text-sm md:text-base">
                   {faq.question}
                 </span>
                 <ChevronDown 
-                  className={`w-4 h-4 text-primary smooth-transition flex-shrink-0 ${
+                  className={`w-5 h-5 text-[hsl(var(--beriko-yellow))] smooth-transition flex-shrink-0 ${
                     openFaq === index ? 'rotate-180' : ''
                   }`}
                 />
               </button>
               
               {openFaq === index && (
-                <div className="px-4 pb-4 pt-3 text-white/80 text-sm leading-relaxed animate-fade-in">
+                <div className="px-4 pb-4 pt-2 text-gray-700 text-sm leading-relaxed animate-fade-in bg-gray-50 border-t border-gray-200">
                   {faq.answer}
                 </div>
               )}
