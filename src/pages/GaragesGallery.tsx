@@ -67,7 +67,7 @@ const GaragesGallery = () => {
           </header>
 
           <section aria-label="Galerija montažnih garaža">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 [&>*:last-child:nth-child(3n+1)]:md:col-start-2">
               {images.map((src, idx) => (
                 <img
                   key={idx}
