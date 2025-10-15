@@ -24,6 +24,8 @@ const Hero = () => {
   const [emblaRefDesktop, emblaApiDesktop] = useEmblaCarousel({ loop: true, dragFree: false });
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isServiceDialogOpen, setIsServiceDialogOpen] = useState(false);
+  const [mobileIntervalId, setMobileIntervalId] = useState<NodeJS.Timeout | null>(null);
+  const [desktopIntervalId, setDesktopIntervalId] = useState<NodeJS.Timeout | null>(null);
   const navigate = useNavigate();
 
   const services = [
@@ -58,9 +60,15 @@ const Hero = () => {
     emblaApiMobile.on("select", onSelect);
     onSelect();
 
-    const interval = setInterval(() => {
-      emblaApiMobile.scrollNext();
-    }, 3000);
+    const startInterval = () => {
+      const interval = setInterval(() => {
+        emblaApiMobile.scrollNext();
+      }, 5000);
+      setMobileIntervalId(interval);
+      return interval;
+    };
+
+    const interval = startInterval();
 
     return () => {
       clearInterval(interval);
@@ -79,15 +87,45 @@ const Hero = () => {
     emblaApiDesktop.on("select", onSelect);
     onSelect();
 
-    const interval = setInterval(() => {
-      emblaApiDesktop.scrollNext();
-    }, 3000);
+    const startInterval = () => {
+      const interval = setInterval(() => {
+        emblaApiDesktop.scrollNext();
+      }, 5000);
+      setDesktopIntervalId(interval);
+      return interval;
+    };
+
+    const interval = startInterval();
 
     return () => {
       clearInterval(interval);
       emblaApiDesktop.off("select", onSelect);
     };
   }, [emblaApiDesktop]);
+
+  const handleMobileDotClick = (index: number) => {
+    emblaApiMobile?.scrollTo(index);
+    // Reset interval
+    if (mobileIntervalId) {
+      clearInterval(mobileIntervalId);
+    }
+    const newInterval = setInterval(() => {
+      emblaApiMobile?.scrollNext();
+    }, 5000);
+    setMobileIntervalId(newInterval);
+  };
+
+  const handleDesktopDotClick = (index: number) => {
+    emblaApiDesktop?.scrollTo(index);
+    // Reset interval
+    if (desktopIntervalId) {
+      clearInterval(desktopIntervalId);
+    }
+    const newInterval = setInterval(() => {
+      emblaApiDesktop?.scrollNext();
+    }, 5000);
+    setDesktopIntervalId(newInterval);
+  };
 
   const FeatureIcon = ({ Icon, filled = false }: { Icon: any, filled?: boolean }) => (
     <div className="w-16 h-16 md:w-16 md:h-16 mb-3 md:mb-3 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
@@ -111,34 +149,36 @@ const Hero = () => {
         </div>
 
         {/* Scrolling Images with Embla */}
-        <div className="relative h-[43vh] overflow-hidden">
-          <div className="overflow-hidden" ref={emblaRefMobile}>
-            <div className="flex">
-              {images.map((image, index) => (
-                <div 
-                  key={index} 
-                  className="flex-[0_0_100%] min-w-0 h-[43vh] flex items-center justify-center bg-background"
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              ))}
+        <div className="relative overflow-hidden">
+          <div className="h-[43vh]">
+            <div className="overflow-hidden" ref={emblaRefMobile}>
+              <div className="flex">
+                {images.map((image, index) => (
+                  <div 
+                    key={index} 
+                    className="flex-[0_0_100%] min-w-0 h-[43vh] flex items-center justify-center bg-background"
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Slide Indicators */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+          {/* Slide Indicators - Below Image */}
+          <div className="py-4 bg-background flex justify-center gap-2">
             {images.map((_, index) => (
               <button
                 key={index}
-                onClick={() => emblaApiMobile?.scrollTo(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
+                onClick={() => handleMobileDotClick(index)}
+                className={`h-2 rounded-full transition-all ${
                   index === currentImageIndex
-                    ? "bg-[hsl(var(--beriko-yellow))] w-6"
-                    : "bg-white/60"
+                    ? "bg-black w-6"
+                    : "bg-black/40 w-2"
                 }`}
                 aria-label={`Slide ${index + 1}`}
               />
@@ -189,34 +229,36 @@ const Hero = () => {
         </h1>
       </div>
 
-      <section className="hidden md:flex relative h-[52vh] items-center justify-center overflow-hidden bg-background">
-        <div className="overflow-hidden w-full h-full" ref={emblaRefDesktop}>
-          <div className="flex h-full">
-            {images.map((image, index) => (
-              <div 
-                key={index} 
-                className="flex-[0_0_100%] min-w-0 h-full flex items-center justify-center"
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            ))}
+      <section className="hidden md:flex relative flex-col items-center justify-center overflow-hidden bg-background">
+        <div className="h-[52vh] w-full">
+          <div className="overflow-hidden w-full h-full" ref={emblaRefDesktop}>
+            <div className="flex h-full">
+              {images.map((image, index) => (
+                <div 
+                  key={index} 
+                  className="flex-[0_0_100%] min-w-0 h-full flex items-center justify-center"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Slide Indicators - Desktop */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+        {/* Slide Indicators - Below Image Desktop */}
+        <div className="py-6 bg-background flex justify-center gap-3">
           {images.map((_, index) => (
             <button
               key={index}
-              onClick={() => emblaApiDesktop?.scrollTo(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
+              onClick={() => handleDesktopDotClick(index)}
+              className={`h-3 rounded-full transition-all ${
                 index === currentImageIndex
-                  ? "bg-[hsl(var(--beriko-yellow))] w-8"
-                  : "bg-white/60"
+                  ? "bg-black w-8"
+                  : "bg-black/40 w-3"
               }`}
               aria-label={`Slide ${index + 1}`}
             />
