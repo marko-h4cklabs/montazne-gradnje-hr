@@ -9,19 +9,8 @@ const AboutUs = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              O Nama
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Beriko d.o.o. specijalizira se za proizvodnju i montažu kvalitetnih montažnih objekata.<br></br>
-              Sa iskustvom preko 20 godina, iza sebe brojimo više od 2000 projekata u 4 zemalja.<br></br><br></br>
-              <strong>Direktor</strong> i vlasnik: <strong>Bernard Domović</strong> - diplomirani ekonomist
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-bold mb-6 text-foreground">
                 Naša Misija
