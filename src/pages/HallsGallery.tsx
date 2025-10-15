@@ -10,6 +10,7 @@ import hall1 from "@/assets/hall-1.png";
 import hall2 from "@/assets/hall-2.png";
 import hall3 from "@/assets/hall-3.png";
 import hall4 from "@/assets/hall-4.png";
+import hall5 from "@/assets/hall-5.png";
 
 const HallsGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -36,7 +37,7 @@ const HallsGallery = () => {
     link.href = window.location.href;
   }, []);
 
-  const images = [galerijaHala, hall1, hall2, hall3, hall4];
+  const images = [galerijaHala, hall1, hall2, hall3, hall4, hall5];
 
   const jsonLd = {
     '@context': 'https://schema.org',
