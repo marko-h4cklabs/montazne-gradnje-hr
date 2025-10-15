@@ -9,6 +9,11 @@ import galerijaVikendice from "@/assets/galerija-vikendice-bungalovi.jpg";
 import heroBungalovModern from "@/assets/hero-bungalov-modern.jpg";
 import heroBungalovAlt from "@/assets/hero-bungalov-alt.jpg";
 import heroModernHouse from "@/assets/hero-modern-house.png";
+import house1 from "@/assets/house-1.png";
+import house2 from "@/assets/house-2.png";
+import house3 from "@/assets/house-3.png";
+import house4 from "@/assets/house-4.png";
+import house5 from "@/assets/house-5.png";
 
 const HousesGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -35,7 +40,7 @@ const HousesGallery = () => {
     link.href = window.location.href;
   }, []);
 
-  const images = [galerijaVikendice, heroBungalovModern, heroBungalovAlt, heroModernHouse];
+  const images = [galerijaVikendice, heroBungalovModern, heroBungalovAlt, heroModernHouse, house1, house2, house3, house4, house5];
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -65,7 +70,7 @@ const HousesGallery = () => {
           </header>
 
           <section aria-label="Galerija montažnih kuća">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 [&>*:last-child:nth-child(3n+1)]:md:col-start-2">
               {images.map((src, idx) => (
                 <img
                   key={idx}
@@ -77,6 +82,19 @@ const HousesGallery = () => {
                 />
               ))}
             </div>
+          </section>
+
+          <section className="mt-16 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Pridružite se zadovoljnim kupcima
+            </h2>
+            <Button
+              onClick={() => navigate('/kuce-upit')}
+              size="lg"
+              className="text-lg"
+            >
+              Pošaljite upit
+            </Button>
           </section>
 
           <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
