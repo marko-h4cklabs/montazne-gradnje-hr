@@ -81,6 +81,19 @@ const GaragesGallery = () => {
             </div>
           </section>
 
+          <section className="mt-16 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Pridružite se zadovoljnim kupcima
+            </h2>
+            <Button
+              onClick={() => navigate('/garaze-upit')}
+              size="lg"
+              className="text-lg"
+            >
+              Pošaljite upit
+            </Button>
+          </section>
+
           <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
             <DialogContent className="max-w-4xl w-full">
               {selectedImage && (
