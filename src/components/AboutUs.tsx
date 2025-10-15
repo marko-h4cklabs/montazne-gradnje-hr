@@ -11,30 +11,38 @@ const AboutUs = () => {
       <div className="container mx-auto px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-foreground">
-                Naša Misija
-              </h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Naša misija je da pružimo kvalitetne, pouzdane i estetski privlačne montažne objekte koji će služiti našim 
-                klijentima desetljećima. Kombiniramo tradicionalna znanja sa modernim tehnologijama kako bismo uvijek bili u koraku sa trendovima i zadovoljili želje i potrebe svakog kupca.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-foreground">23 godina iskustva</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-foreground">Kompletna rješenja "ključ u ruke"</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-foreground">Garantirana kvaliteta i dogovoreni rokovi</span>
-                </div>
+          <div>
+            <h3 className="text-2xl font-bold mb-6 text-foreground text-center">
+              Naša Misija
+            </h3>
+            <p className="text-muted-foreground mb-8 leading-relaxed text-center">
+              Naša misija je da pružimo kvalitetne, pouzdane i estetski privlačne montažne objekte koji će služiti našim 
+              klijentima desetljećima. Kombiniramo tradicionalna znanja sa modernim tehnologijama kako bismo uvijek bili u koraku sa trendovima i zadovoljili želje i potrebe svakog kupca.
+            </p>
+            
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span className="text-foreground">23 godina iskustva</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span className="text-foreground">Kompletna rješenja "ključ u ruke"</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span className="text-foreground">Garantirana kvaliteta i dogovoreni rokovi</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span className="text-foreground">Više od 2000 projekata</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span className="text-foreground">4 zemalja</span>
               </div>
             </div>
+          </div>
 
             <div id="kontakt" className="bg-card p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-bold mb-6 text-beriko-blue">
