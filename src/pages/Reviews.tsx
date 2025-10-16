@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useNavigate } from "react-router-dom";
-import { Home, Warehouse, Car } from "lucide-react";
+import { Home, Warehouse, Car, ArrowLeft } from "lucide-react";
 import reviewDianaJustic from "@/assets/review-diana-justic.png";
 import reviewNickFrehner from "@/assets/review-nick-frehner.png";
 import reviewBellySwt from "@/assets/review-belly-swt.png";
@@ -70,6 +70,14 @@ const Reviews = () => {
       <main className="pt-[140px]">
         <section className="pt-16 pb-4 bg-gradient-to-b from-background to-secondary/5">
           <div className="container mx-auto px-4">
+            <Button
+              variant="ghost"
+              onClick={() => navigate("/")}
+              className="mb-6"
+            >
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Nazad na početnu
+            </Button>
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
               Recenzije i Preporuke
             </h1>
