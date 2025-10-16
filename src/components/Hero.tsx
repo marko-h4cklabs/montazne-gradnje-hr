@@ -224,13 +224,13 @@ const Hero = () => {
 
       {/* Desktop Layout */}
       {/* Headline above desktop slider */}
-      <div className="hidden md:block px-4 py-12 pt-24 bg-background text-center">
+      <div className="hidden md:block px-4 py-12 pt-[140px] bg-background text-center">
         <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-[hsl(var(--beriko-blue))]">
           Kvalitetne Montažne Konstrukcije
         </h1>
       </div>
 
-      <section className="hidden md:flex relative flex-col items-center justify-center overflow-hidden bg-background pt-[140px]">
+      <section className="hidden md:flex relative flex-col items-center justify-center overflow-hidden bg-background">
         <div className="h-[52vh] w-full">
           <div className="overflow-hidden w-full h-full" ref={emblaRefDesktop}>
             <div className="flex h-full">
