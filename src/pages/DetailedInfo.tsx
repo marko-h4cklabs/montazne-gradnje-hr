@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import PromoBanner from "@/components/PromoBanner";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -9,9 +10,10 @@ import vijest4 from "@/assets/vijest4.png";
 const DetailedInfo = () => {
   return (
     <div className="min-h-screen">
+      <PromoBanner />
       <Navigation />
       {/* Back Arrow moved into content flow below */}
-      <main className="pt-24 pb-16">
+      <main className="pt-32 pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="mb-6">
             <Link to="/">

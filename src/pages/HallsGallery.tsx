@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import PromoBanner from "@/components/PromoBanner";
 import Footer from "@/components/Footer";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -49,8 +50,9 @@ const HallsGallery = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PromoBanner />
       <Navigation />
-      <main className="flex-grow pt-32 pb-12 bg-gradient-to-b from-background to-muted/20">
+      <main className="flex-grow pt-40 pb-12 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
           <Button
             onClick={() => navigate('/')}

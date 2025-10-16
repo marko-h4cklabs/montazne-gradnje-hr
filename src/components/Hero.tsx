@@ -141,7 +141,7 @@ const Hero = () => {
   return (
     <>
       {/* Mobile Layout */}
-      <div className="md:hidden pt-20">
+      <div className="md:hidden pt-30">
         {/* Headline above slider */}
         <div className="px-4 py-4 pb-2 bg-background text-center">
           <h1 className="text-3xl font-bold leading-tight text-[hsl(var(--beriko-blue))]">
@@ -230,7 +230,7 @@ const Hero = () => {
         </h1>
       </div>
 
-      <section className="hidden md:flex relative flex-col items-center justify-center overflow-hidden bg-background">
+      <section className="hidden md:flex relative flex-col items-center justify-center overflow-hidden bg-background pt-30">
         <div className="h-[52vh] w-full">
           <div className="overflow-hidden w-full h-full" ref={emblaRefDesktop}>
             <div className="flex h-full">

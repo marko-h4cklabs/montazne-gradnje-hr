@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import PromoBanner from "@/components/PromoBanner";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -9,9 +10,10 @@ import vijest4 from "@/assets/vijest4.png";
 const News = () => {
   return (
     <div className="min-h-screen">
+      <PromoBanner />
       <Navigation />
       {/* Back Arrow */}
-      <div className="fixed top-28 left-4 z-10">
+      <div className="fixed top-38 left-4 z-10">
         <Link to="/">
           <Button size="sm" className="flex items-center gap-2">
             <ArrowLeft className="w-4 h-4" />
@@ -19,7 +21,7 @@ const News = () => {
           </Button>
         </Link>
       </div>
-      <main className="pt-32 pb-16">
+      <main className="pt-40 pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl font-bold text-center mb-4">Vijesti</h1>
           <p className="text-center text-muted-foreground mb-12 text-lg">

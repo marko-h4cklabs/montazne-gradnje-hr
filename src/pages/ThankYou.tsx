@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import PromoBanner from "@/components/PromoBanner";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Home, Phone, Mail } from "lucide-react";
@@ -28,18 +29,18 @@ const ThankYou = () => {
     // Custom dataLayer push for Google Tag Manager
     if (typeof window !== 'undefined' && (window as any).dataLayer) {
       (window as any).dataLayer.push({
-        'event': 'form_submission',
-        'form_type': 'inquiry',
-        'form_name': 'contact_inquiry'
+        event: 'formSubmission',
+        formType: 'inquiry'
       });
     }
   }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PromoBanner />
       <Navigation />
       
-      <main className="flex-grow pt-20 pb-12 bg-gradient-to-b from-background to-muted/20">
+      <main className="flex-grow pt-30 pb-12 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-card rounded-lg shadow-lg p-8 md:p-12">
