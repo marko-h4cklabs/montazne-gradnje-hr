@@ -68,7 +68,7 @@ const Reviews = () => {
       <Navigation />
       <PromoBanner />
       <main className="pt-[140px]">
-        <section className="pt-16 pb-4 bg-gradient-to-b from-background to-secondary/5">
+        <section className="pt-6 pb-4 bg-gradient-to-b from-background to-secondary/5">
           <div className="container mx-auto px-4">
             <Button
               variant="ghost"
