@@ -12,8 +12,8 @@ import PromoBanner from "./PromoBanner";
 const LandingPage = () => {
   return (
     <div className="min-h-screen">
-      <PromoBanner />
       <Navigation />
+      <PromoBanner />
       <Hero />
       <NewIntroSection />
       <div id="proizvodi">

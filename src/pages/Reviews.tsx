@@ -65,9 +65,9 @@ const Reviews = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PromoBanner />
       <Navigation />
-      <main className="pt-30">
+      <PromoBanner />
+      <main className="pt-[128px]">
         <section className="pt-16 pb-4 bg-gradient-to-b from-background to-secondary/5">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">

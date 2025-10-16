@@ -10,10 +10,10 @@ import vijest4 from "@/assets/vijest4.png";
 const DetailedInfo = () => {
   return (
     <div className="min-h-screen">
-      <PromoBanner />
       <Navigation />
+      <PromoBanner />
       {/* Back Arrow moved into content flow below */}
-      <main className="pt-32 pb-16">
+      <main className="pt-[152px] pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="mb-6">
             <Link to="/">
