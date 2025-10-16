@@ -14,7 +14,7 @@ const HallInquiry = () => {
       <Navigation />
       <PromoBanner />
       
-      <main className="flex-grow pt-[128px] pb-12 bg-gradient-to-b from-background to-muted/20">
+      <main className="flex-grow pt-[140px] pb-12 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
           <Button
             variant="ghost"

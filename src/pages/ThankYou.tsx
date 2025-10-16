@@ -40,7 +40,7 @@ const ThankYou = () => {
       <Navigation />
       <PromoBanner />
       
-      <main className="flex-grow pt-[128px] pb-12 bg-gradient-to-b from-background to-muted/20">
+      <main className="flex-grow pt-[140px] pb-12 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-card rounded-lg shadow-lg p-8 md:p-12">

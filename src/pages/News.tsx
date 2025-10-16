@@ -13,7 +13,7 @@ const News = () => {
       <Navigation />
       <PromoBanner />
       {/* Back Arrow */}
-      <div className="fixed top-[128px] left-4 z-10">
+      <div className="fixed top-[140px] left-4 z-10">
         <Link to="/">
           <Button size="sm" className="flex items-center gap-2">
             <ArrowLeft className="w-4 h-4" />
@@ -21,7 +21,7 @@ const News = () => {
           </Button>
         </Link>
       </div>
-      <main className="pt-[152px] pb-16">
+      <main className="pt-[164px] pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl font-bold text-center mb-4">Vijesti</h1>
           <p className="text-center text-muted-foreground mb-12 text-lg">
