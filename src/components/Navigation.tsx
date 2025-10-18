@@ -27,8 +27,8 @@ const Navigation = () => {
 
   const menuItems = [
     { name: "NAŠI PROIZVODI", href: "#proizvodi" },
-    { name: "O NAMA", href: "/o-nama" },
-    { name: "FAQ", href: "/faq" },
+    { name: "O NAMA", href: "#o-nama" },
+    { name: "FAQ", href: "#faq" },
     { name: "RECENZIJE", href: "/recenzije" }
   ];
 

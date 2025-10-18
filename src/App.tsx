@@ -17,8 +17,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 import GaragesGallery from "./pages/GaragesGallery";
 import HousesGallery from "./pages/HousesGallery";
 import HallsGallery from "./pages/HallsGallery";
-import ONama from "./pages/ONama";
-import FAQPage from "./pages/FAQPage";
 
 const queryClient = new QueryClient();
 
@@ -41,8 +39,6 @@ const App = () => (
           <Route path="/montazne-garaze-galerija" element={<GaragesGallery />} />
           <Route path="/montazne-kuce-galerija" element={<HousesGallery />} />
           <Route path="/montazne-hale-galerija" element={<HallsGallery />} />
-          <Route path="/o-nama" element={<ONama />} />
-          <Route path="/faq" element={<FAQPage />} />
           <Route path="/hvala" element={<ThankYou />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
