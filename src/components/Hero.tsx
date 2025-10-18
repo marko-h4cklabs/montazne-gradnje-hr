@@ -147,7 +147,7 @@ const Hero = () => {
           <h1 className="text-3xl font-bold leading-tight text-[hsl(var(--beriko-blue))] mb-2">
             Brzo. Prilagodljivo. Dugotrajno.
           </h1>
-          <p className="text-lg text-foreground/80">
+          <p className="text-lg font-bold text-foreground/80">
             Montažne konstrukcije po vašoj mjeri.
           </p>
         </div>
@@ -231,7 +231,7 @@ const Hero = () => {
         <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-[hsl(var(--beriko-blue))] mb-3">
           Brzo. Prilagodljivo. Dugotrajno.
         </h1>
-        <p className="text-xl text-foreground/80">
+        <p className="text-xl font-bold text-foreground/80">
           Montažne konstrukcije po vašoj mjeri.
         </p>
       </div>
