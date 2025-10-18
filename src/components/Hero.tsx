@@ -230,7 +230,7 @@ const Hero = () => {
         </h1>
       </div>
 
-      <section className="hidden md:flex relative flex-col items-center justify-center overflow-hidden bg-background">
+      <section className="hidden md:flex relative flex-col items-center justify-center overflow-hidden bg-background pt-4">
         <div className="h-[52vh] w-full">
           <div className="overflow-hidden w-full h-full" ref={emblaRefDesktop}>
             <div className="flex h-full">
