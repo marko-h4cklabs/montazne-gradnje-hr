@@ -8,7 +8,6 @@ import AboutUs from "./AboutUs";
 import Footer from "./Footer";
 import NewIntroSection from "./NewIntroSection";
 import PromoBanner from "./PromoBanner";
-import FAQ from "./FAQ";
 
 const LandingPage = () => {
   return (
@@ -29,7 +28,6 @@ const LandingPage = () => {
       <div id="o-nama">
         <AboutUs />
       </div>
-      <FAQ />
       <Footer />
     </div>
   );
