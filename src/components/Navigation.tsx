@@ -27,8 +27,8 @@ const Navigation = () => {
 
   const menuItems = [
     { name: "NAŠI PROIZVODI", href: "#proizvodi" },
-    { name: "O NAMA", href: "#o-nama" },
-    { name: "FAQ", href: "#faq" },
+    { name: "O NAMA", href: "/o-nama" },
+    { name: "FAQ", href: "/faq" },
     { name: "RECENZIJE", href: "/recenzije" }
   ];
 
@@ -53,9 +53,9 @@ const Navigation = () => {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     
-    // Check if it's the reviews link
-    if (href === '/recenzije') {
-      navigate('/recenzije');
+    // Check if it's a full route (not a hash link)
+    if (href.startsWith('/')) {
+      navigate(href);
       setIsMenuOpen(false);
       return;
     }
