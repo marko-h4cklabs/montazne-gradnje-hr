@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Home, Warehouse, Car } from "lucide-react";
-import stormZagrebImage from "@/assets/storm-zagreb-cars.jpg";
-import hailCroatiaImage from "@/assets/hail-croatia-cars.jpg";
+import stormZagrebImage from "@/assets/storm-zagreb-real.png";
+import hailCroatiaImage from "@/assets/hail-croatia-real.png";
 
 const NewIntroSection = () => {
   const navigate = useNavigate();
