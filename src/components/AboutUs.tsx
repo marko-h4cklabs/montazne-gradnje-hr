@@ -12,42 +12,82 @@ const AboutUs = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative bg-gradient-to-br from-primary/5 to-transparent border-l-4 border-primary p-8 rounded-lg shadow-sm">
-            <div className="flex flex-col items-center mb-6">
+            <div className="flex flex-col items-center mb-8">
               <div className="bg-primary/10 p-4 rounded-full mb-4 animate-fade-in">
                 <Heart className="w-8 h-8 text-primary" fill="currentColor" />
               </div>
+              <p className="text-2xl font-semibold text-primary text-center mb-2">
+                Vaša garaža. Naša briga.
+              </p>
               <h3 className="text-4xl font-bold text-foreground text-center mb-2">
-                Naša Misija
+                O nama
               </h3>
               <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full"></div>
             </div>
             
-            <p className="text-muted-foreground mb-8 leading-relaxed text-left text-xl">
-              Naša misija je da pružimo kvalitetne, pouzdane i estetski privlačne montažne objekte koji će služiti našim 
-              klijentima desetljećima. Kombiniramo tradicionalna znanja sa modernim tehnologijama kako bismo uvijek bili u koraku sa trendovima i zadovoljili želje i potrebe svakog kupca.
-            </p>
-            
-            <div className="space-y-4 mt-8">
-              <div className="flex items-center space-x-3 hover:translate-x-2 smooth-transition">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-foreground">23 godina iskustva</span>
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                Iz želje da ljudima pruži kvalitetna, dugotrajna i brzo izvediva montažna rješenja, Bernard Domović početkom 2000-ih pokreće obiteljski obrt Beriko koji kasnije 2019. g. prerasta u{" "}
+                <a 
+                  href="https://sudreg.pravosudje.hr/ords/r/esudreg/public/podaci-o-poslovnom-subjektu-ispis?p29_sbt_mbs=10114713&clear=29&cs=348vizioLNRO-2ct6WGCjrxUgYThMCD4RG3HUZTXll4dn2-MICdON1VTyUGuHGp9p_lx_qOrA6Xf43eH_L0fArQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-semibold"
+                >
+                  Beriko d.o.o.
+                </a>
+              </p>
+              
+              <p>
+                Ono što je započelo kao mala radionica, danas je preraslo u vodeći brend montažnih garaža i spremišta u regiji – prepoznat po pouzdanosti, preciznosti i osobnom pristupu svakom kupcu.
+              </p>
+
+              <div className="mt-8">
+                <h4 className="text-xl font-bold text-foreground mb-3">Naša priča</h4>
+                <p className="mb-4">
+                  Od prvog dana, Beriko spaja obiteljske vrijednosti i profesionalan pristup. Naš tim, koji i danas čine članovi iste obitelji, vodi se jednostavnim načelom: "Svaki objekt izrađujemo kao da ga gradimo za svoj dom."
+                </p>
+                <p>
+                  Upravo ta filozofija razlikuje nas od drugih i donijela nam je povjerenje više od preko 3000 zadovoljnih kupaca diljem Hrvatske i susjednih zemalja.
+                </p>
               </div>
-              <div className="flex items-center space-x-3 hover:translate-x-2 smooth-transition">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-foreground">Kompletna rješenja "ključ u ruke"</span>
+
+              <div className="mt-8">
+                <h4 className="text-xl font-bold text-foreground mb-3">Naša kvaliteta</h4>
+                <p>
+                  Tijekom više od dva desetljeća rada postali smo lider na tržištu montažnih objekata, s preko 3000 uspješno realiziranih projekata i stotinama pozitivnih recenzija na društvenim mrežama i Googleu. Svaka naša garaža izrađena je s pažnjom, stručnošću i odgovornošću, uz korištenje vrhunskih materijala i provjerenih konstrukcijskih rješenja.
+                </p>
               </div>
-              <div className="flex items-center space-x-3 hover:translate-x-2 smooth-transition">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-foreground">Garantirana kvaliteta i dogovoreni rokovi</span>
+
+              <div className="mt-8">
+                <h4 className="text-xl font-bold text-foreground mb-4">Zašto odabrati Beriko</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <span>Obiteljska tradicija i povjerenje koje traje više od 20 godina</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <span>Brza i precizna montaža bez kompromisa u kvaliteti</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <span>Individualan pristup svakom projektu</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <span>Dugotrajna konstrukcija otporna na vremenske uvjete</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <span>Stotine zadovoljnih kupaca koji preporučuju naš rad</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center space-x-3 hover:translate-x-2 smooth-transition">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-foreground">Više od 2000 projekata</span>
-              </div>
-              <div className="flex items-center space-x-3 hover:translate-x-2 smooth-transition">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-foreground">4 zemalja</span>
-              </div>
+
+              <p className="mt-8 text-foreground font-semibold text-lg">
+                Ako tražite trajnu, funkcionalnu i estetski usklađenu montažnu garažu, odaberite sigurnost Beriko kvalitete. Jer iza svakog našeg proizvoda stoji iskustvo, odgovornost i obiteljska predanost koja traje više od dva desetljeća.
+              </p>
             </div>
           </div>
 
