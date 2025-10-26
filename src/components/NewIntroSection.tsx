@@ -78,20 +78,20 @@ const NewIntroSection = () => {
             </p>
 
             <div className="my-8">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-cyan-300">Lokacija:</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Lokacija:</h3>
               <p className="text-justify">
                 Mjesta za postavljanje objekta mogu biti razna i uključivati većinu vaših želja a nije potrebna građevinska dozvola: uz kuće i okućnice, uz stambene zgrade i kuće u nizu, na privatnim parkiralištima, uz restorane, pokraj tvornica, radiona i servisa, kraj vikendica i kleti, u kampanjama, maslinicima i voćnjacima,...
               </p>
             </div>
 
             <div className="my-8">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-green-400">Zaštita:</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Zaštita:</h3>
               <p className="text-justify">
                 U izradi se koristi višegodišnja švedska proizvodna iskustva, prema promišljenoj koncepciji koja obuhvaća svaki detalj, a namjensko i servisno osoblje stoji vam na raspolaganju da dopremi i montira objekte na vašu željenu lokaciju. Montažna garaža pruža zaštitu od leda, kiše, snijega, sunca, oluja, životinja, UV zraka i vrućine.
               </p>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-orange-400">
+            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-yellow-400">
               AKO STE PODUZETNIK ILI IMATE HOBI - ODABERITE RADIONICU, SKLADIŠTE ILI GARAŽU
             </h2>
 
@@ -103,38 +103,38 @@ const NewIntroSection = () => {
               Ako je garaža duža od automobila, na njezinom kraju može se izgraditi mala radna ploha. Nadstrešnica služi za zaštitu automobila i brzo sušenje mokrog automobila. Zimi se stakla ne lede, a ljeti automobil ostaje u hladu.
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-pink-400">
+            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-yellow-400">
               OTKRIJTE TAJNU KAKO OČUVATI VRIJEDNOST
             </h2>
 
-            <div className="space-y-6 pl-4 border-l-4 border-pink-400">
+            <div className="space-y-6 pl-4 border-l-4 border-yellow-400">
               <div>
-                <h4 className="font-bold text-xl mb-2 text-pink-300">Automobil duže vrijeme ostaje nov:</h4>
+                <h4 className="font-bold text-xl mb-2 text-white">Automobil duže vrijeme ostaje nov:</h4>
                 <p>Garažiran automobil ima veću vrijednost kod prodaje.</p>
               </div>
 
               <div>
-                <h4 className="font-bold text-xl mb-2 text-pink-300">Prije dođete na posao:</h4>
+                <h4 className="font-bold text-xl mb-2 text-white">Prije dođete na posao:</h4>
                 <p>Ujutro nema čišćenja vjetrobranskih stakala i ne kasnite na radno mjesto.</p>
               </div>
 
               <div>
-                <h4 className="font-bold text-xl mb-2 text-pink-300">Dulji vijek akumulatora:</h4>
+                <h4 className="font-bold text-xl mb-2 text-white">Dulji vijek akumulatora:</h4>
                 <p>Zatvoreni prostor je i topliji te se automobil lakše pali a akumulator dulje traje.</p>
               </div>
 
               <div>
-                <h4 className="font-bold text-xl mb-2 text-pink-300">Zaštita od drugih vozila:</h4>
+                <h4 className="font-bold text-xl mb-2 text-white">Zaštita od drugih vozila:</h4>
                 <p>Kod otvaranja vrata ali i mimoilaženja drugih vozila automobili se oštećuju na otvorenom.</p>
               </div>
 
               <div>
-                <h4 className="font-bold text-xl mb-2 text-pink-300">Neprocijenjiva vrijednost ulaganja:</h4>
+                <h4 className="font-bold text-xl mb-2 text-white">Neprocijenjiva vrijednost ulaganja:</h4>
                 <p>Zbog svega navedenog za vas je investicija u garažu neprocjenjiva a ostaje vam i za drugi automobil. Investicija se vraća u roku od 5 godina kroz očuvaniji automobil a kod spriječavanja vandalizma vraća se trenutno.</p>
               </div>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-purple-400">
+            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-yellow-400">
               KAKO UŠTEDJETI VRIJEME I NOVAC
             </h2>
 
@@ -150,12 +150,12 @@ const NewIntroSection = () => {
               Naš sustav garaže može biti dovršen u 1/5 vremena u odnosu na većinu drugih proizvođača. Pobijediti ćemo i bilo koju cijenu konkurenata. Dostavite nam svoje dimenzije a mi ćemo ispuniti vašu želju.
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-blue-400">
+            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-yellow-400">
               MALE SITNICE KOJE ČINE VELIKE STVARI
             </h2>
 
             <div className="my-8">
-              <h3 className="text-2xl font-bold mb-4 text-blue-300">Objekti ugodni za oko:</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Objekti ugodni za oko:</h3>
               <p className="text-justify mb-4">
                 S obzirom na dizajn svojih sastavnih elemenata, objekti su tehnički precizan i lijep proizvod. Nudimo tri vrste vrata:
               </p>
@@ -167,7 +167,7 @@ const NewIntroSection = () => {
             </div>
 
             <div className="my-8">
-              <h3 className="text-2xl font-bold mb-4 text-blue-300">Dug vijek trajanja a bez održavanja:</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Dug vijek trajanja a bez održavanja:</h3>
               <p className="text-justify">
                 Nemate nikakvih briga oko održavanje objekta jer se obloge zasnivaju na kvalitetnim čeličnim, obostrano pocinčanim i bojanim profiliranim neizoliranim pločama ili izoliranim TERMOPANELIMA, a pocinčani profili čine rešetkastu konstrukciju objekta. Obloge su učvršćene pocinčanim samourezujućim vijcima a u dodatnu opremu za oblaganje krova ubrajamo samourezujuće pocinčane vijke s brtvom i filc protiv kondenzacije!
               </p>
@@ -177,20 +177,20 @@ const NewIntroSection = () => {
             </div>
 
             <div className="my-8">
-              <h3 className="text-2xl font-bold mb-4 text-blue-300">Nema kapanja kondenzata po automobilu i stvarima:</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Nema kapanja kondenzata po automobilu i stvarima:</h3>
               <p className="text-justify">
                 Sloj filca uprešan na pokrovu sprečava kondenziranje pare i kapanje u unutrašnjosti objekta. Krov može imati i oblik valovitog crijepa mediterana raznih boja koji se prvenstveno koristi zbog estetskog izgleda montažnih kućica. Montažna garaža može imati krovište koje je jednostrešno ili dvostrešno.
               </p>
             </div>
 
             <div className="my-8">
-              <h3 className="text-2xl font-bold mb-4 text-blue-300">Ugodna klima:</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Ugodna klima:</h3>
               <p className="text-justify">
                 Ispod ploča je manja temperatura u ljeti a viša u zimi što stvara ugodnu klimu u objektima.
               </p>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-emerald-400">
+            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-yellow-400">
               NAJBOLJE RJEŠENJE ZA VAŠE PROBLEME
             </h2>
 
@@ -218,7 +218,7 @@ const NewIntroSection = () => {
               <p>To nije sve. Ako naručite odmah dobiti ćete potpuno besplatno i drugi poklon. To je montaža samog objekta na vašoj lokaciji.</p>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-red-400">
+            <h2 className="text-3xl md:text-4xl font-bold my-10 text-center text-yellow-400">
               100% BEZUVJETNA GARANCIJA
             </h2>
 
