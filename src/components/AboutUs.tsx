@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Facebook, Instagram, Heart } from "lucide-react";
 import berikoFacility from "@/assets/beriko-facility.png";
+import berikoTeam from "@/assets/beriko-team.png";
 
 const AboutUs = () => {
   const handleMapClick = () => {
@@ -38,6 +39,11 @@ const AboutUs = () => {
                   <p className="mb-4">
                     Od prvog dana, Beriko spaja obiteljske vrijednosti i profesionalan pristup. Naš tim, koji i danas čine članovi iste obitelji, vodi se jednostavnim načelom: "Svaki objekt izrađujemo kao da ga gradimo za svoj dom."
                   </p>
+                  <img 
+                    src={berikoTeam} 
+                    alt="Beriko family team" 
+                    className="w-full h-auto rounded-lg shadow-md mb-4"
+                  />
                   <p>
                     Upravo ta filozofija razlikuje nas od drugih i donijela nam je povjerenje više od preko 3000 zadovoljnih kupaca diljem Hrvatske i susjednih zemalja.
                   </p>
