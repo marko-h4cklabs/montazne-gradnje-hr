@@ -20,15 +20,7 @@ const AboutUs = () => {
               
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  Iz želje da ljudima pruži kvalitetna, dugotrajna i brzo izvediva montažna rješenja, Bernard Domović početkom 2000-ih pokreće obiteljski obrt Beriko koji kasnije 2019. g. prerasta u{" "}
-                  <a 
-                    href="https://sudreg.pravosudje.hr/ords/r/esudreg/public/podaci-o-poslovnom-subjektu-ispis?p29_sbt_mbs=10114713&clear=29&cs=348vizioLNRO-2ct6WGCjrxUgYThMCD4RG3HUZTXll4dn2-MICdON1VTyUGuHGp9p_lx_qOrA6Xf43eH_L0fArQ"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline font-semibold"
-                  >
-                    Beriko d.o.o.
-                  </a>
+                  Iz želje da ljudima pruži kvalitetna, dugotrajna i brzo izvediva montažna rješenja, Bernard Domović početkom 2000-ih pokreće obiteljski obrt Beriko koji kasnije 2019. g. prerasta u Beriko d.o.o.
                 </p>
                 
                 <p>
