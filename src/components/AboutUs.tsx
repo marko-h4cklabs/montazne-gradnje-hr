@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Facebook, Instagram, Heart } from "lucide-react";
+import berikoFacility from "@/assets/beriko-facility.png";
 
 const AboutUs = () => {
   const handleMapClick = () => {
@@ -28,6 +29,11 @@ const AboutUs = () => {
                 </p>
 
                 <div className="mt-8">
+                  <img 
+                    src={berikoFacility} 
+                    alt="Beriko facility with forklift and prefabricated buildings" 
+                    className="w-full h-auto rounded-lg shadow-md mb-6"
+                  />
                   <h4 className="text-xl font-bold text-foreground mb-3">Naša priča</h4>
                   <p className="mb-4">
                     Od prvog dana, Beriko spaja obiteljske vrijednosti i profesionalan pristup. Naš tim, koji i danas čine članovi iste obitelji, vodi se jednostavnim načelom: "Svaki objekt izrađujemo kao da ga gradimo za svoj dom."
