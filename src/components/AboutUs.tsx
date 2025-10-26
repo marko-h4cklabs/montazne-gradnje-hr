@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Facebook, Instagram, Heart } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Heart, CreditCard } from "lucide-react";
 import berikoFacility from "@/assets/beriko-facility.png";
 import berikoTeam from "@/assets/beriko-team.png";
 import berikoGathering from "@/assets/beriko-gathering.png";
@@ -139,9 +139,7 @@ const AboutUs = () => {
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-3">
-                  <div className="w-8 h-8 text-beriko-blue flex items-center justify-center font-bold text-lg">
-                    €
-                  </div>
+                  <CreditCard className="w-8 h-8 text-beriko-blue" />
                   <div>
                     <p className="font-semibold text-beriko-blue mb-2">IBAN:</p>
                     <p className="text-muted-foreground text-sm">HR58 2360 0001 1025 4817 7</p>
