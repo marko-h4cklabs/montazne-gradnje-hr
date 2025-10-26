@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Home, Warehouse, Car } from "lucide-react";
+import stormZagrebImage from "@/assets/storm-zagreb-cars.jpg";
+import hailCroatiaImage from "@/assets/hail-croatia-cars.jpg";
 
 const NewIntroSection = () => {
   const navigate = useNavigate();
@@ -63,6 +65,55 @@ const NewIntroSection = () => {
             <p className="text-lg leading-relaxed text-justify mt-4">
               Svake godine, posebno u zimskoj sezoni, u Hrvatskoj nastrada od leda, snijega i olujnog nevremena sve više automobila. Praksa je nažalost pokazala da nitko, pa čak ni stanovnici urbanih sredina nisu pošteđeni od problema kako da zaštite svoje metalne ljubimce i imovinu.
             </p>
+          </div>
+
+          {/* Weather Events Section */}
+          <div className="my-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-[#1e3a8a]">
+              Nedavni vremenski događaji - 2025.
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Card 1 - Zagreb Storm */}
+              <div className="bg-white/10 rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-bold mb-3 text-center">
+                  "Oluja u Zagrebu rušila stabla na automobile"
+                </h3>
+                <p className="text-sm text-white/80 mb-4 text-center">
+                  Al Jazeera Balkans, 7. srpnja 2025.
+                </p>
+                <p className="text-base leading-relaxed mb-4 text-justify">
+                  "Snažno olujno nevrijeme pogodilo je dijelove Hrvatske. U prijepodnevnim satima uslijed oluje u Zagrebu stablo se <strong>srušilo na četiri automobila</strong>..."
+                </p>
+                <div className="rounded-lg overflow-hidden">
+                  <img 
+                    src={stormZagrebImage} 
+                    alt="Oluja u Zagrebu - stablo palo na automobile" 
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Card 2 - Hail Damage */}
+              <div className="bg-white/10 rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-bold mb-3 text-center">
+                  "Dijelove Hrvatske pogodila tuča: Auti pod ledom"
+                </h3>
+                <p className="text-sm text-white/80 mb-4 text-center">
+                  Dnevnik.hr, 17. kolovoza 2025.
+                </p>
+                <p className="text-base leading-relaxed mb-4 text-justify">
+                  "Dijelove Slavonije jutros je pogodilo nevrijeme - uz pljuskove, krenula je i tuča. Mreže u voćnjacima Gornje Vrbe i Tomice savile su se pod težinom leda, a dijelovi polja su se zabijelieli."
+                </p>
+                <div className="rounded-lg overflow-hidden">
+                  <img 
+                    src={hailCroatiaImage} 
+                    alt="Tuča u Hrvatskoj - automobili pod ledom" 
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Main headline */}
