@@ -296,12 +296,9 @@ const NewIntroSection = () => {
             </p>
           </div>
 
-          <div className="text-center flex gap-4 justify-center flex-wrap mt-12">
-            <Button onClick={handleDetailsClick} size="lg" className="bg-white text-[hsl(220,60%,30%)] hover:bg-white/90">
-              Pročitajte više
-            </Button>
+          <div className="text-center mt-12">
             <Button onClick={() => setIsServiceDialogOpen(true)} size="lg" className="bg-primary text-primary-foreground hover:bg-primary-dark font-semibold">
-              Ponuda
+              Besplatna ponuda
             </Button>
           </div>
         </div>
