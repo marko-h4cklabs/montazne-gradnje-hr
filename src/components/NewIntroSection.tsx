@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Home, Warehouse, Car } from "lucide-react";
 import stormZagrebImage from "@/assets/storm-zagreb-real.png";
-import hailCroatiaImage from "@/assets/hail-croatia-cropped.png";
+import hailCroatiaImage from "@/assets/hail-croatia-final.png";
 
 const NewIntroSection = () => {
   const navigate = useNavigate();
