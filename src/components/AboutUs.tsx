@@ -112,13 +112,12 @@ const AboutUs = () => {
                 Kontakt Informacije
               </h3>
               
-              <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
                 <div className="flex flex-col items-center text-center space-y-3">
                   <MapPin className="w-8 h-8 text-beriko-blue" />
                   <div>
                     <p className="font-semibold text-beriko-blue mb-2">Adresa:</p>
-                    <p className="text-muted-foreground">HR-48362 KLOŠTAR PODRAVSKI</p>
-                    <p className="text-muted-foreground">Stjepana Radića 2</p>
+                    <p className="text-muted-foreground">Beriko Obrt, 48362 Kloštar Pod.,S.Radića 2</p>
                   </div>
                 </div>
                 
@@ -126,7 +125,8 @@ const AboutUs = () => {
                   <Phone className="w-8 h-8 text-beriko-blue" />
                   <div>
                     <p className="font-semibold text-beriko-blue mb-2">Telefon:</p>
-                    <p className="text-muted-foreground">098 64 62 60 - Bernard Domović</p>
+                    <p className="text-muted-foreground">+385 98 64 62 60</p>
+                    <p className="text-muted-foreground text-sm">Bernard Domović</p>
                   </div>
                 </div>
                 
@@ -135,6 +135,26 @@ const AboutUs = () => {
                   <div>
                     <p className="font-semibold text-beriko-blue mb-2">Email:</p>
                     <p className="text-muted-foreground">beriko@beriko.com</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center text-center space-y-3">
+                  <div className="w-8 h-8 text-beriko-blue flex items-center justify-center font-bold text-lg">
+                    €
+                  </div>
+                  <div>
+                    <p className="font-semibold text-beriko-blue mb-2">IBAN:</p>
+                    <p className="text-muted-foreground text-sm">HR58 2360 0001 1025 4817 7</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center text-center space-y-3">
+                  <div className="w-8 h-8 text-beriko-blue flex items-center justify-center font-bold text-lg">
+                    ⇄
+                  </div>
+                  <div>
+                    <p className="font-semibold text-beriko-blue mb-2">SWIFT:</p>
+                    <p className="text-muted-foreground">ZABAHR2X</p>
                   </div>
                 </div>
               </div>
