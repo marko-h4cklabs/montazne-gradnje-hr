@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Facebook, Instagram, Heart } from "lucide-react";
 import berikoFacility from "@/assets/beriko-facility.png";
 import berikoTeam from "@/assets/beriko-team.png";
+import berikoGathering from "@/assets/beriko-gathering.png";
 
 const AboutUs = () => {
   const handleMapClick = () => {
@@ -63,6 +64,11 @@ const AboutUs = () => {
                       <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
                       <span>Obiteljska tradicija i povjerenje koje traje više od 20 godina</span>
                     </div>
+                    <img 
+                      src={berikoGathering} 
+                      alt="Beriko team gathering" 
+                      className="w-full h-auto rounded-lg shadow-md mb-3"
+                    />
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
                       <span>Brza i precizna montaža bez kompromisa u kvaliteti</span>
