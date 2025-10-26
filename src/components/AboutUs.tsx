@@ -3,6 +3,7 @@ import { MapPin, Phone, Mail, Facebook, Instagram, Heart } from "lucide-react";
 import berikoFacility from "@/assets/beriko-facility.png";
 import berikoTeam from "@/assets/beriko-team.png";
 import berikoGathering from "@/assets/beriko-gathering.png";
+import berikoTeamWork from "@/assets/beriko-team-work.png";
 
 const AboutUs = () => {
   const handleMapClick = () => {
@@ -91,6 +92,11 @@ const AboutUs = () => {
                 <p className="mt-8 text-foreground font-semibold text-lg">
                   Ako tražite trajnu, funkcionalnu i estetski usklađenu montažnu garažu, odaberite sigurnost Beriko kvalitete. Jer iza svakog našeg proizvoda stoji iskustvo, odgovornost i obiteljska predanost koja traje više od dva desetljeća.
                 </p>
+                <img 
+                  src={berikoTeamWork} 
+                  alt="Beriko team at work" 
+                  className="w-full h-auto rounded-lg shadow-md mt-6"
+                />
               </div>
             </div>
 
