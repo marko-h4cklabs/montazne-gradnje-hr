@@ -57,6 +57,12 @@ const NewIntroSection = () => {
             <p className="text-2xl md:text-3xl leading-relaxed mb-8 text-center">
               <strong>Dragi graditelju montažnog objekta,</strong>
             </p>
+            <p className="text-lg leading-relaxed text-justify mt-6">
+              dajemo svakom vlasniku dodatnu vrijednost njegovom automobilu i dva poklon bonusa ako se odazovete na niže navedenu ponudu.
+            </p>
+            <p className="text-lg leading-relaxed text-justify mt-4">
+              Svake godine, posebno u zimskoj sezoni, u Hrvatskoj nastrada od leda, snijega i olujnog nevremena sve više automobila. Praksa je nažalost pokazala da nitko, pa čak ni stanovnici urbanih sredina nisu pošteđeni od problema kako da zaštite svoje metalne ljubimce i imovinu.
+            </p>
           </div>
 
           {/* Main headline */}
