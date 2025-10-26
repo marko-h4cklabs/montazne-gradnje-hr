@@ -13,16 +13,9 @@ const AboutUs = () => {
           <div className="space-y-12">
             <div className="relative bg-gradient-to-br from-primary/5 to-transparent border-l-4 border-primary p-8 rounded-lg shadow-sm">
               <div className="flex flex-col items-center mb-8">
-                <div className="bg-primary/10 p-4 rounded-full mb-4 animate-fade-in">
-                  <Heart className="w-8 h-8 text-primary" fill="currentColor" />
-                </div>
-                <p className="text-2xl font-semibold text-primary text-center mb-2">
+                <h2 className="text-4xl font-bold text-primary text-center">
                   Vaša garaža. Naša briga.
-                </p>
-                <h3 className="text-4xl font-bold text-foreground text-center mb-2">
-                  O nama
-                </h3>
-                <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full"></div>
+                </h2>
               </div>
               
               <div className="space-y-6 text-muted-foreground leading-relaxed">
