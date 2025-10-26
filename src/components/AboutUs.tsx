@@ -12,61 +12,61 @@ const AboutUs = () => {
   };
 
   return (
-    <section className="py-12 bg-background">
+    <section className="py-8 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="space-y-8">
-            <div className="relative bg-gradient-to-br from-primary/5 to-transparent border-l-4 border-primary p-6 rounded-lg shadow-sm">
-              <div className="flex flex-col items-center mb-6">
-                <h2 className="text-3xl font-bold text-beriko-blue text-center">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-6">
+            <div className="relative bg-gradient-to-br from-primary/5 to-transparent border-l-2 border-primary p-4 rounded-lg shadow-sm">
+              <div className="flex flex-col items-center mb-4">
+                <h2 className="text-2xl font-bold text-beriko-blue text-center">
                   Vaša garaža. Naša briga.
                 </h2>
               </div>
               
-              <div className="space-y-4 text-muted-foreground leading-relaxed text-sm">
+              <div className="space-y-3 text-muted-foreground leading-relaxed text-xs">
                 <p>
                   Iz želje da ljudima pruži kvalitetna, dugotrajna i brzo izvediva montažna rješenja, Bernard Domović početkom 2000-ih pokreće obiteljski obrt Beriko koji kasnije 2019. g. prerasta u Beriko d.o.o.
                 </p>
                 <img 
                   src={berikoCertificate} 
                   alt="Beriko business registration certificate" 
-                  className="w-2/3 mx-auto h-auto rounded-lg shadow-md my-4"
+                  className="w-1/2 mx-auto h-auto rounded-lg shadow-sm my-3"
                 />
                 
                 <p>
                   Ono što je započelo kao mala radionica, danas je preraslo u vodeći brend montažnih garaža i spremišta u regiji – prepoznat po pouzdanosti, preciznosti i osobnom pristupu svakom kupcu.
                 </p>
 
-                <div className="mt-6">
+                <div className="mt-4">
                   <img 
                     src={berikoFacility} 
                     alt="Beriko facility with forklift and prefabricated buildings" 
-                    className="w-full h-auto rounded-lg shadow-md mb-4"
+                    className="w-full h-auto rounded-lg shadow-sm mb-2"
                   />
-                  <h4 className="text-lg font-bold text-foreground mb-2">Naša priča</h4>
-                  <p className="mb-3">
+                  <h4 className="text-sm font-bold text-foreground mb-1">Naša priča</h4>
+                  <p className="mb-2">
                     Od prvog dana, Beriko spaja obiteljske vrijednosti i profesionalan pristup. Naš tim, koji i danas čine članovi iste obitelji, vodi se jednostavnim načelom: "Svaki objekt izrađujemo kao da ga gradimo za svoj dom."
                   </p>
                   <img 
                     src={berikoTeam} 
                     alt="Beriko family team" 
-                    className="w-full h-auto rounded-lg shadow-md mb-3"
+                    className="w-full h-auto rounded-lg shadow-sm mb-2"
                   />
                   <p>
                     Upravo ta filozofija razlikuje nas od drugih i donijela nam je povjerenje više od preko 3000 zadovoljnih kupaca diljem Hrvatske i susjednih zemalja.
                   </p>
                 </div>
 
-                <div className="mt-6">
-                  <h4 className="text-lg font-bold text-foreground mb-2">Naša kvaliteta</h4>
+                <div className="mt-4">
+                  <h4 className="text-sm font-bold text-foreground mb-1">Naša kvaliteta</h4>
                   <p>
                     Tijekom više od dva desetljeća rada postali smo lider na tržištu montažnih objekata, s preko 3000 uspješno realiziranih projekata i stotinama pozitivnih recenzija na društvenim mrežama i Googleu. Svaka naša garaža izrađena je s pažnjom, stručnošću i odgovornošću, uz korištenje vrhunskih materijala i provjerenih konstrukcijskih rješenja.
                   </p>
                 </div>
 
-                <div className="mt-6">
-                  <h4 className="text-lg font-bold text-foreground mb-3">Zašto odabrati Beriko</h4>
-                  <div className="space-y-2">
+                <div className="mt-4">
+                  <h4 className="text-sm font-bold text-foreground mb-2">Zašto odabrati Beriko</h4>
+                  <div className="space-y-1.5">
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
                       <span>Obiteljska tradicija i povjerenje koje traje više od 20 godina</span>
@@ -74,7 +74,7 @@ const AboutUs = () => {
                     <img 
                       src={berikoGathering} 
                       alt="Beriko team gathering" 
-                      className="w-full h-auto rounded-lg shadow-md mb-2"
+                      className="w-full h-auto rounded-lg shadow-sm mb-1.5"
                     />
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
@@ -95,69 +95,69 @@ const AboutUs = () => {
                   </div>
                 </div>
 
-                <p className="mt-6 text-foreground font-semibold text-base">
+                <p className="mt-4 text-foreground font-semibold text-xs">
                   Ako tražite trajnu, funkcionalnu i estetski usklađenu montažnu garažu, odaberite sigurnost Beriko kvalitete. Jer iza svakog našeg proizvoda stoji iskustvo, odgovornost i obiteljska predanost koja traje više od dva desetljeća.
                 </p>
                 <img 
                   src={berikoTeamWork} 
                   alt="Beriko team at work" 
-                  className="w-full h-auto rounded-lg shadow-md mt-4"
+                  className="w-full h-auto rounded-lg shadow-sm mt-3"
                 />
               </div>
             </div>
 
             {/* Contact Information - Full Width */}
-            <div id="kontakt" className="bg-card p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-4 text-beriko-blue text-center">
+            <div id="kontakt" className="bg-card p-4 rounded-lg shadow-lg">
+              <h3 className="text-lg font-bold mb-3 text-beriko-blue text-center">
                 Kontakt Informacije
               </h3>
               
-              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <MapPin className="w-6 h-6 text-beriko-blue" />
+              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+                <div className="flex flex-col items-center text-center space-y-1">
+                  <MapPin className="w-5 h-5 text-beriko-blue" />
                   <div>
-                    <p className="font-semibold text-beriko-blue mb-1 text-sm">Adresa:</p>
-                    <p className="text-muted-foreground text-xs">Beriko Obrt, 48362 Kloštar Pod.,S.Radića 2</p>
+                    <p className="font-semibold text-beriko-blue mb-0.5 text-xs">Adresa:</p>
+                    <p className="text-muted-foreground text-[10px]">Beriko Obrt, 48362 Kloštar Pod.,S.Radića 2</p>
                   </div>
                 </div>
                 
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <Phone className="w-6 h-6 text-beriko-blue" />
+                <div className="flex flex-col items-center text-center space-y-1">
+                  <Phone className="w-5 h-5 text-beriko-blue" />
                   <div>
-                    <p className="font-semibold text-beriko-blue mb-1 text-sm">Telefon:</p>
-                    <p className="text-muted-foreground text-xs">+385 98 64 62 60</p>
-                    <p className="text-muted-foreground text-xs">Bernard Domović</p>
+                    <p className="font-semibold text-beriko-blue mb-0.5 text-xs">Telefon:</p>
+                    <p className="text-muted-foreground text-[10px]">+385 98 64 62 60</p>
+                    <p className="text-muted-foreground text-[10px]">Bernard Domović</p>
                   </div>
                 </div>
                 
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <Mail className="w-6 h-6 text-beriko-blue" />
+                <div className="flex flex-col items-center text-center space-y-1">
+                  <Mail className="w-5 h-5 text-beriko-blue" />
                   <div>
-                    <p className="font-semibold text-beriko-blue mb-1 text-sm">Email:</p>
-                    <p className="text-muted-foreground text-xs">beriko@beriko.com</p>
+                    <p className="font-semibold text-beriko-blue mb-0.5 text-xs">Email:</p>
+                    <p className="text-muted-foreground text-[10px]">beriko@beriko.com</p>
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <CreditCard className="w-6 h-6 text-beriko-blue" />
+                <div className="flex flex-col items-center text-center space-y-1">
+                  <CreditCard className="w-5 h-5 text-beriko-blue" />
                   <div>
-                    <p className="font-semibold text-beriko-blue mb-1 text-sm">IBAN:</p>
-                    <p className="text-muted-foreground text-xs">HR58 2360 0001 1025 4817 7</p>
+                    <p className="font-semibold text-beriko-blue mb-0.5 text-xs">IBAN:</p>
+                    <p className="text-muted-foreground text-[10px]">HR58 2360 0001 1025 4817 7</p>
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <div className="w-6 h-6 text-beriko-blue flex items-center justify-center font-bold text-base">
+                <div className="flex flex-col items-center text-center space-y-1">
+                  <div className="w-5 h-5 text-beriko-blue flex items-center justify-center font-bold text-sm">
                     ⇄
                   </div>
                   <div>
-                    <p className="font-semibold text-beriko-blue mb-1 text-sm">SWIFT:</p>
-                    <p className="text-muted-foreground text-xs">ZABAHR2X</p>
+                    <p className="font-semibold text-beriko-blue mb-0.5 text-xs">SWIFT:</p>
+                    <p className="text-muted-foreground text-[10px]">ZABAHR2X</p>
                   </div>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mt-6">
+              <div className="flex flex-col sm:flex-row gap-2 justify-center items-center mt-4">
                 <Button 
                   onClick={handleMapClick}
                   className="bg-primary hover:bg-primary-dark text-primary-foreground"
