@@ -4,6 +4,7 @@ import berikoFacility from "@/assets/beriko-facility.png";
 import berikoTeam from "@/assets/beriko-team.png";
 import berikoGathering from "@/assets/beriko-gathering.png";
 import berikoTeamWork from "@/assets/beriko-team-work.png";
+import berikoCertificate from "@/assets/beriko-certificate.png";
 
 const AboutUs = () => {
   const handleMapClick = () => {
@@ -26,6 +27,11 @@ const AboutUs = () => {
                 <p>
                   Iz želje da ljudima pruži kvalitetna, dugotrajna i brzo izvediva montažna rješenja, Bernard Domović početkom 2000-ih pokreće obiteljski obrt Beriko koji kasnije 2019. g. prerasta u Beriko d.o.o.
                 </p>
+                <img 
+                  src={berikoCertificate} 
+                  alt="Beriko business registration certificate" 
+                  className="w-full h-auto rounded-lg shadow-md my-6"
+                />
                 
                 <p>
                   Ono što je započelo kao mala radionica, danas je preraslo u vodeći brend montažnih garaža i spremišta u regiji – prepoznat po pouzdanosti, preciznosti i osobnom pristupu svakom kupcu.
