@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Home, Warehouse, Car } from "lucide-react";
 import stormZagrebImage from "@/assets/storm-zagreb-real.png";
-import hailCroatiaImage from "@/assets/hail-croatia-real.png";
+import hailCroatiaImage from "@/assets/hail-croatia-cropped.png";
 
 const NewIntroSection = () => {
   const navigate = useNavigate();
@@ -68,8 +68,8 @@ const NewIntroSection = () => {
           </div>
 
           {/* Weather Events Section */}
-          <div className="my-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-[#1e3a8a]">
+          <div className="my-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-[#1e3a8a]">
               Nedavni vremenski događaji - 2025.
             </h2>
             
