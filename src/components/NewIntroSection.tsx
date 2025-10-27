@@ -57,7 +57,7 @@ const NewIntroSection = () => {
           {/* Main intro */}
           <div className="mb-12">
             <p className="text-2xl md:text-3xl leading-relaxed mb-8 text-center">
-              <strong>Dragi graditelju montažnog objekta,</strong>
+              <strong className="text-[hsl(var(--primary))]">Dragi graditelju montažnog objekta,</strong>
             </p>
             <p className="text-lg leading-relaxed text-justify mt-6">
               dajemo svakom vlasniku dodatnu vrijednost njegovom automobilu i dva poklon bonusa ako se odazovete na niže navedenu ponudu.
