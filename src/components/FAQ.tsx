@@ -24,20 +24,13 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="relative py-12 pb-6 bg-[hsl(var(--beriko-blue))]">
-      {/* Transition wave */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -mt-[1px]">
-        <svg className="relative block w-full h-12" viewBox="0 0 1200 120" preserveAspectRatio="none" style={{ display: 'block' }}>
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
-        </svg>
-      </div>
-
+    <section id="faq" className="relative py-12 pb-6 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 animate-fade-in">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-white">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[hsl(var(--beriko-blue))]">
             Često postavljena pitanja
           </h2>
-          <p className="text-sm text-white/70 max-w-xl mx-auto">
+          <p className="text-sm text-[hsl(var(--beriko-blue))]/70 max-w-xl mx-auto">
             Brzi odgovori na vaša pitanja
           </p>
         </div>
@@ -46,24 +39,24 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="mb-3 rounded-lg overflow-hidden bg-white border border-gray-200"
+              className="mb-3 rounded-lg overflow-hidden bg-[hsl(var(--beriko-blue))] border border-[hsl(var(--beriko-blue))]"
             >
               <button
-                className="w-full text-left p-4 hover:bg-gray-50 smooth-transition flex justify-between items-center"
+                className="w-full text-left p-4 hover:bg-[hsl(var(--beriko-blue))]/90 smooth-transition flex justify-between items-center"
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
               >
-                <span className="font-medium text-gray-900 pr-4 text-sm md:text-base">
+                <span className="font-medium text-white pr-4 text-sm md:text-base">
                   {faq.question}
                 </span>
                 <ChevronDown 
-                  className={`w-5 h-5 text-[hsl(var(--beriko-yellow))] smooth-transition flex-shrink-0 ${
+                  className={`w-5 h-5 text-white smooth-transition flex-shrink-0 ${
                     openFaq === index ? 'rotate-180' : ''
                   }`}
                 />
               </button>
               
               {openFaq === index && (
-                <div className="px-4 pb-4 pt-2 text-gray-700 text-sm leading-relaxed animate-fade-in bg-gray-50 border-t border-gray-200">
+                <div className="px-4 pb-4 pt-2 text-white text-sm leading-relaxed animate-fade-in bg-[hsl(var(--beriko-blue))]/90 border-t border-white/20">
                   {faq.answer}
                 </div>
               )}
