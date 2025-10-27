@@ -103,6 +103,10 @@ const AboutUs = () => {
                   alt="Beriko team at work" 
                   className="w-3/4 mx-auto h-auto rounded-lg shadow-sm mt-3"
                 />
+                
+                <p className="mt-4 text-white leading-relaxed text-base">
+                  Od prvog dana pa sve do danas, Beriko ostaje vjeran svojoj misiji – spojiti obiteljske vrijednosti, stručnost i osobni pristup svakom projektu. Naš tim, koji i danas čine članovi iste obitelji, vodi se jednostavnim načelom: svaka garaža, spremište ili montažni objekt mora biti izrađen kao da ga radimo za svoj dom.
+                </p>
               </div>
             </div>
 
