@@ -246,7 +246,7 @@ const DetailedInfo = () => {
               </p>
               
               <p className="text-lg text-foreground leading-relaxed text-justify">
-                Mi već desetu godinu proizvodimo za vas montažne objekte. Zbog toga smo ponosni da vam možemo ponuditi montažne objekte koji imaju tolike prednosti i upotrebljivosti koje samo možete poželjeti.
+                Već tri desetljeća za vas proizvodimo montažne objekte. Zbog toga smo ponosni da vam možemo ponuditi montažne objekte koji imaju tolike prednosti i upotrebljivosti koje samo možete poželjeti.
               </p>
             </div>
           </section>

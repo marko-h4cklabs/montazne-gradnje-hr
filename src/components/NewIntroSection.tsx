@@ -260,7 +260,7 @@ const NewIntroSection = () => {
             </p>
 
             <p className="text-justify">
-              Mi već desetu godinu proizvodimo za vas montažne objekte. Zbog toga smo ponosni da vam možemo ponuditi montažne objekte koji imaju tolike prednosti i upotrebljivosti koje samo možete poželjeti.
+              Već tri desetljeća za vas proizvodimo montažne objekte. Zbog toga smo ponosni da vam možemo ponuditi montažne objekte koji imaju tolike prednosti i upotrebljivosti koje samo možete poželjeti.
             </p>
 
             <div className="bg-white/10 p-8 rounded-lg my-10 border-2 border-yellow-400">
