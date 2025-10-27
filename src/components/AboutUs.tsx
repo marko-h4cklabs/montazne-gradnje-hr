@@ -111,7 +111,7 @@ const AboutUs = () => {
             </div>
 
             {/* Contact Information - Full Width */}
-            <div id="kontakt" className="bg-white p-4 rounded-lg shadow-lg">
+            <div id="kontakt" className="bg-[hsl(var(--ivory))] p-4 rounded-lg shadow-lg">
               <h3 className="text-2xl font-bold mb-3 text-[hsl(var(--beriko-blue))] text-center">
                 Kontakt Informacije
               </h3>
