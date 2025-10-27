@@ -5,6 +5,8 @@ import berikoTeam from "@/assets/beriko-team.png";
 import berikoGathering from "@/assets/beriko-gathering.png";
 import berikoTeamWork from "@/assets/beriko-team-work.png";
 import berikoCertificate from "@/assets/beriko-certificate.png";
+import berikoRegistry1 from "@/assets/beriko-registry-1.png";
+import berikoRegistry2 from "@/assets/beriko-registry-2.png";
 
 const AboutUs = () => {
   const handleMapClick = () => {
@@ -27,11 +29,25 @@ const AboutUs = () => {
                 <p>
                   Iz želje da ljudima pruži kvalitetna, dugotrajna i brzo izvediva montažna rješenja, Bernard Domović početkom 2000-ih pokreće obiteljski obrt Beriko koji kasnije 2019. g. prerasta u Beriko d.o.o.
                 </p>
-                <img 
-                  src={berikoCertificate} 
-                  alt="Beriko business registration certificate" 
-                  className="w-1/3 mx-auto h-auto rounded-lg shadow-sm my-3"
-                />
+                <div className="flex flex-col md:flex-row gap-3 justify-center items-start my-3">
+                  <img 
+                    src={berikoCertificate} 
+                    alt="Beriko business registration certificate" 
+                    className="w-full md:w-1/3 h-auto rounded-lg shadow-sm"
+                  />
+                  <div className="flex flex-col gap-3 w-full md:w-1/2">
+                    <img 
+                      src={berikoRegistry1} 
+                      alt="Beriko court registry - company details" 
+                      className="w-full h-auto rounded-lg shadow-sm"
+                    />
+                    <img 
+                      src={berikoRegistry2} 
+                      alt="Beriko court registry - director information" 
+                      className="w-full h-auto rounded-lg shadow-sm"
+                    />
+                  </div>
+                </div>
                 
                 <p>
                   Ono što je započelo kao mala radionica, danas je preraslo u vodeći brend montažnih garaža i spremišta u regiji – prepoznat po pouzdanosti, preciznosti i osobnom pristupu svakom kupcu.
