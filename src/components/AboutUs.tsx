@@ -19,7 +19,7 @@ const AboutUs = () => {
             <div className="relative bg-gradient-to-br from-primary/5 to-transparent border-l-2 border-primary p-4 rounded-lg shadow-sm">
               <div className="flex flex-col items-center mb-4">
                 <h2 className="text-3xl font-bold text-beriko-blue text-center">
-                  Vaša garaža. Naša briga.
+                  O nama
                 </h2>
               </div>
               
