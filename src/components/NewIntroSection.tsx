@@ -38,7 +38,7 @@ const NewIntroSection = () => {
   return (
     <section className="relative bg-[hsl(220,60%,30%)] text-white">
       {/* Wave cut design */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-background overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-16 bg-[hsl(var(--ivory))] overflow-hidden">
         <svg 
           className="absolute bottom-[-1px] w-full h-16 block" 
           viewBox="0 0 1200 60" 
