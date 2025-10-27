@@ -11,7 +11,7 @@ const References = () => {
   ];
 
   return (
-    <section className="pt-4 pb-16 bg-background">
+    <section className="pt-4 pb-16 bg-[hsl(var(--ivory))]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">

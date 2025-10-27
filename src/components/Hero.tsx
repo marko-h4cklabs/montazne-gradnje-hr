@@ -143,7 +143,7 @@ const Hero = () => {
       {/* Mobile Layout */}
       <div className="md:hidden pt-[140px]">
         {/* Headline above slider */}
-        <div className="px-4 pt-6 pb-0 bg-background text-center">
+        <div className="px-4 pt-6 pb-0 bg-[hsl(var(--ivory))] text-center">
           <h1 className="text-3xl font-bold leading-tight text-[hsl(var(--beriko-blue))] mb-2">
             Vaš objekt, naša briga!
           </h1>
@@ -156,12 +156,12 @@ const Hero = () => {
         {/* Scrolling Images with Embla */}
         <div className="relative overflow-hidden">
           <div className="h-[43vh]">
-            <div className="overflow-hidden" ref={emblaRefMobile}>
+            <div className="overflow-hidden bg-[hsl(var(--ivory))]" ref={emblaRefMobile}>
               <div className="flex">
                 {images.map((image, index) => (
                   <div 
                     key={index} 
-                    className="flex-[0_0_100%] min-w-0 h-[43vh] flex items-center justify-center bg-background"
+                    className="flex-[0_0_100%] min-w-0 h-[43vh] flex items-center justify-center bg-[hsl(var(--ivory))]"
                   >
                     <img
                       src={image.src}
@@ -175,7 +175,7 @@ const Hero = () => {
           </div>
 
           {/* Slide Indicators - Below Image */}
-          <div className="py-2 bg-background flex justify-center gap-2">
+          <div className="py-2 bg-[hsl(var(--ivory))] flex justify-center gap-2">
             {images.map((_, index) => (
               <button
                 key={index}
@@ -192,7 +192,7 @@ const Hero = () => {
         </div>
         
         {/* Features 2x2 grid - Mobile */}
-        <div className="px-4 py-6 bg-background">
+        <div className="px-4 py-6 bg-[hsl(var(--ivory))]">
           <div className="max-w-xl mx-auto">
             <div className="grid grid-cols-2 gap-x-6 gap-y-6">
               {/* First row */}
@@ -228,7 +228,7 @@ const Hero = () => {
 
       {/* Desktop Layout */}
       {/* Headline above desktop slider */}
-      <div className="hidden md:block px-4 pt-[168px] pb-3 bg-background text-center">
+      <div className="hidden md:block px-4 pt-[168px] pb-3 bg-[hsl(var(--ivory))] text-center">
         <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-[hsl(var(--beriko-blue))] mb-3">
           Vaš objekt, naša briga!
         </h1>
@@ -238,7 +238,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <section className="hidden md:flex relative flex-col items-center justify-center overflow-hidden bg-background pt-4">
+      <section className="hidden md:flex relative flex-col items-center justify-center overflow-hidden bg-[hsl(var(--ivory))] pt-4">
         <div className="h-[52vh] w-full">
           <div className="overflow-hidden w-full h-full" ref={emblaRefDesktop}>
             <div className="flex h-full">
@@ -259,7 +259,7 @@ const Hero = () => {
         </div>
 
         {/* Slide Indicators - Below Image Desktop */}
-        <div className="py-6 bg-background flex justify-center gap-3">
+        <div className="py-6 bg-[hsl(var(--ivory))] flex justify-center gap-3">
           {images.map((_, index) => (
             <button
               key={index}
@@ -276,7 +276,7 @@ const Hero = () => {
       </section>
       
       {/* Features static section - Desktop */}
-      <div className="hidden md:block px-4 py-6 bg-background">
+      <div className="hidden md:block px-4 py-6 bg-[hsl(var(--ivory))]">
         <div className="max-w-6xl mx-auto">
           <div className="flex gap-8 justify-center items-center px-8">
             <div className="flex flex-col items-center text-center flex-1">
