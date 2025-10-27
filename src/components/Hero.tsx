@@ -145,7 +145,7 @@ const Hero = () => {
         {/* Headline above slider */}
         <div className="px-4 pt-6 pb-0 bg-background text-center">
           <h1 className="text-3xl font-bold leading-tight text-[hsl(var(--beriko-blue))] mb-2">
-            Brzo. Prilagodljivo. Dugotrajno.
+            Vaš objekt, naša briga!
           </h1>
           <p className="text-lg font-bold text-foreground/80">
             Montažne konstrukcije po vašoj mjeri.
@@ -229,7 +229,7 @@ const Hero = () => {
       {/* Headline above desktop slider */}
       <div className="hidden md:block px-4 pt-[168px] pb-3 bg-background text-center">
         <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-[hsl(var(--beriko-blue))] mb-3">
-          Brzo. Prilagodljivo. Dugotrajno.
+          Vaš objekt, naša briga!
         </h1>
         <p className="text-xl font-bold text-foreground/80">
           Montažne konstrukcije po vašoj mjeri.
