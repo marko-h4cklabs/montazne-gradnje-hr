@@ -226,7 +226,7 @@ const NewIntroSection = () => {
             <div className="my-8">
               <h3 className="text-2xl font-bold mb-4 text-white">Dug vijek trajanja a bez održavanja:</h3>
               <p className="text-justify">
-                Nemate nikakvih briga oko održavanje objekta jer se obloge zasnivaju na kvalitetnim čeličnim, obostrano pocinčanim i bojanim profiliranim neizoliranim pločama ili izoliranim TERMOPANELIMA, a pocinčani profili čine rešetkastu konstrukciju objekta. Obloge su učvršćene pocinčanim samourezujućim vijcima a u dodatnu opremu za oblaganje krova ubrajamo samourezujuće pocinčane vijke s brtvom i filc protiv kondenzacije!
+                Nemate nikakvih briga oko održavanje objekta jer se obloge zasnivaju na kvalitetnim čeličnim, obostrano pocinčanim i bojanim profiliranim neizoliranim pločama ili izoliranim TERMOPANELIMA, a pocinčani profili čine rešetkastu konstrukciju objekta. Obloge su učvršćene pocinčanim samourezujućim vijcima.
               </p>
               <p className="text-justify mt-4">
                 Čelična i pocinčana konstrukcija izvedena je radi antikorozivne zaštite prema uvjetima za zaštitu čeličnih konstrukcija od korozije. Zbog toga su objekti pogodni za montiranje u priobalju i na otocima.

@@ -202,10 +202,7 @@ const DetailedInfo = () => {
               <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Dug vijek trajanja a bez održavanja:</h3>
                 <p className="text-foreground leading-relaxed mb-4 text-justify">
-                  Nemate nikakvih briga oko održavanje objekta jer se obloge zasnivaju na kvalitetnim čeličnim, obostrano pocinčanim i bojanim profiliranim neizoliranim pločama ili izoliranim TERMOPANELIMA, a pocinčani profili čine rešetkastu konstrukciju objekta.
-                </p>
-                <p className="text-foreground leading-relaxed text-justify">
-                  Obloge su učvršćene pocinčanim samourezujućim vijcima a u dodatnu opremu za oblaganje krova ubrajamo samourezujuće pocinčane vijke s brtvom i filc protiv kondenzacije!
+                  Nemate nikakvih briga oko održavanje objekta jer se obloge zasnivaju na kvalitetnim čeličnim, obostrano pocinčanim i bojanim profiliranim neizoliranim pločama ili izoliranim TERMOPANELIMA, a pocinčani profili čine rešetkastu konstrukciju objekta. Obloge su učvršćene pocinčanim samourezujućim vijcima.
                 </p>
               </div>
               
