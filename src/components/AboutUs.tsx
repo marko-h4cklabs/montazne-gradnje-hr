@@ -35,7 +35,7 @@ const AboutUs = () => {
                     alt="Beriko business registration certificate" 
                     className="w-full md:w-1/3 h-auto rounded-lg shadow-sm"
                   />
-                  <div className="flex flex-col gap-3 w-full md:w-1/2">
+                  <div className="flex flex-col gap-3 w-full md:w-1/3">
                     <img 
                       src={berikoRegistry1} 
                       alt="Beriko court registry - company details" 
