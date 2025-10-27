@@ -43,7 +43,7 @@ const AboutUs = () => {
                     alt="Beriko facility with forklift and prefabricated buildings" 
                     className="w-3/4 mx-auto h-auto rounded-lg shadow-sm mb-2"
                   />
-                  <h4 className="text-xl font-bold text-white mb-1">Naša priča</h4>
+                  <h4 className="text-xl font-bold text-[hsl(var(--beriko-yellow))] mb-1">Naša priča</h4>
                   <p className="mb-2">
                     Od prvog dana, Beriko spaja obiteljske vrijednosti i profesionalan pristup. Naš tim, koji i danas čine članovi iste obitelji, vodi se jednostavnim načelom: "Svaki objekt izrađujemo kao da ga gradimo za svoj dom."
                   </p>
@@ -58,24 +58,24 @@ const AboutUs = () => {
                 </div>
 
                 <div className="mt-4">
-                  <h4 className="text-xl font-bold text-white mb-1">Naša kvaliteta</h4>
+                  <h4 className="text-xl font-bold text-[hsl(var(--beriko-yellow))] mb-1">Naša kvaliteta</h4>
                   <p>
                     Tijekom više od dva desetljeća rada postali smo lider na tržištu montažnih objekata, s preko 3000 uspješno realiziranih projekata i stotinama pozitivnih recenzija na društvenim mrežama i Googleu. Svaka naša garaža izrađena je s pažnjom, stručnošću i odgovornošću, uz korištenje vrhunskih materijala i provjerenih konstrukcijskih rješenja.
                   </p>
                 </div>
 
                 <div className="mt-4">
-                  <h4 className="text-xl font-bold text-white mb-2">Zašto odabrati Beriko</h4>
+                  <img 
+                    src={berikoGathering} 
+                    alt="Beriko team gathering" 
+                    className="w-3/4 mx-auto h-auto rounded-lg shadow-sm mb-2"
+                  />
+                  <h4 className="text-xl font-bold text-[hsl(var(--beriko-yellow))] mb-2">Zašto odabrati Beriko</h4>
                   <div className="space-y-1.5">
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                       <span>Obiteljska tradicija i povjerenje koje traje više od 20 godina</span>
                     </div>
-                    <img 
-                      src={berikoGathering} 
-                      alt="Beriko team gathering" 
-                      className="w-3/4 mx-auto h-auto rounded-lg shadow-sm mb-1.5"
-                    />
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                       <span>Brza i precizna montaža bez kompromisa u kvaliteti</span>
