@@ -236,7 +236,7 @@ const NewIntroSection = () => {
             <div className="my-8">
               <h3 className="text-2xl font-bold mb-4 text-white">Nema kapanja kondenzata po automobilu i stvarima:</h3>
               <p className="text-justify">
-                Sloj filca uprešan na pokrovu sprečava kondenziranje pare i kapanje u unutrašnjosti objekta. Krov može imati i oblik valovitog crijepa mediterana raznih boja koji se prvenstveno koristi zbog estetskog izgleda montažnih kućica. Montažna garaža može imati krovište koje je jednostrešno ili dvostrešno.
+                Termopanel spriječava kondenziranje pare i kapanje u unutrašnjosti objekta. Krov može imati i oblik valovitog crijepa mediterana raznih boja koji se prvenstveno koristi zbog estetskog izgleda montažnih kućica. Montažna garaža može imati krovište koje je jednostrešno ili dvostrešno.
               </p>
             </div>
 

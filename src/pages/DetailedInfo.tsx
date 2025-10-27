@@ -218,7 +218,7 @@ const DetailedInfo = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
                   <h3 className="text-lg font-semibold text-foreground mb-3">Nema kapanja kondenzata:</h3>
-                  <p className="text-foreground">Sloj filca uprešan na pokrovu sprečava kondenziranje pare i kapanje u unutrašnjosti objekta.</p>
+                  <p className="text-foreground">Termopanel spriječava kondenziranje pare i kapanje u unutrašnjosti objekta.</p>
                 </div>
                 
                 <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
