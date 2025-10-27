@@ -47,7 +47,7 @@ const FinalCTA = () => {
       />
       <FAQ />
       
-      <section id="posalji-upit" className="py-6 bg-white">
+      <section id="posalji-upit" className="py-6 bg-[hsl(var(--ivory))]">
         <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           
