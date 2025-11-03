@@ -149,7 +149,7 @@ const Hero = () => {
           </h1>
           <p className="text-lg font-bold text-[hsl(var(--beriko-blue))] text-center">
             Iz obiteljske radionice do vašeg doma.<br />
-            Tvrtka Beriko već dva desetljeća stvara montažne garaže s dušom – izrađene s pažnjom, iskustvom i povjerenjem koje traje.
+            Tvrtka Beriko već tri desetljeća stvara montažne garaže s dušom – izrađene s pažnjom, iskustvom i povjerenjem koje traje.
           </p>
         </div>
 
@@ -234,7 +234,7 @@ const Hero = () => {
         </h1>
         <p className="text-xl font-bold text-[hsl(var(--beriko-blue))] text-center max-w-4xl mx-auto">
           Iz obiteljske radionice do vašeg doma.<br />
-          Tvrtka Beriko već dva desetljeća stvara montažne garaže s dušom – izrađene s pažnjom, iskustvom i povjerenjem koje traje.
+          Tvrtka Beriko već tri desetljeća stvara montažne garaže s dušom – izrađene s pažnjom, iskustvom i povjerenjem koje traje.
         </p>
       </div>
 
