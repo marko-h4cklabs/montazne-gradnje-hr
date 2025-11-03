@@ -112,7 +112,7 @@ const AboutUs = () => {
                 </div>
 
                 <p className="mt-4 text-white font-semibold text-base">
-                  Ako tražite trajnu, funkcionalnu i estetski usklađenu montažnu garažu, odaberite sigurnost Beriko kvalitete. Jer iza svakog našeg proizvoda stoji iskustvo, odgovornost i obiteljska predanost koja traje više od dva desetljeća.
+                  Ako tražite trajnu, funkcionalnu i estetski usklađenu montažnu garažu, odaberite sigurnost Beriko kvalitete. Jer iza svakog našeg proizvoda stoji iskustvo, odgovornost i obiteljska predanost koja traje više od tri desetljeća.
                 </p>
                 <img 
                   src={berikoTeamWork} 
