@@ -7,13 +7,11 @@ import FinalCTA from "./FinalCTA";
 import AboutUs from "./AboutUs";
 import Footer from "./Footer";
 import NewIntroSection from "./NewIntroSection";
-import PromoBanner from "./PromoBanner";
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <PromoBanner />
       <Hero />
       <NewIntroSection />
       <div id="proizvodi">

@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
-import PromoBanner from "@/components/PromoBanner";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
@@ -12,9 +11,8 @@ const HouseInquiry = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <PromoBanner />
       
-      <main className="flex-grow pt-[140px] pb-12 bg-gradient-to-b from-background to-muted/20">
+      <main className="flex-grow pt-[100px] pb-12 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
           <Button
             variant="ghost"
