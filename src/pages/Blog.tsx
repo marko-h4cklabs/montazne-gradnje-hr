@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
+import blogHalaImage from "@/assets/blog-hala.png";
 
 const blogPosts = [
   {
@@ -25,7 +26,7 @@ const blogPosts = [
     id: 3,
     title: "Održavanje montažnih hala: Savjeti stručnjaka",
     preview: "Pravilno održavanje industrijskih montažnih hala ključno je za njihovu dugotrajnost. Saznajte koje korake poduzeti za očuvanje vaše investicije...",
-    image: "/lovable-uploads/fcc31405-5071-46a1-ac40-b422991656a3.png",
+    image: blogHalaImage,
     date: "5. siječnja 2024",
     category: "Hale"
   }
