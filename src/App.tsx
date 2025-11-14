@@ -17,6 +17,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import GaragesGallery from "./pages/GaragesGallery";
 import HousesGallery from "./pages/HousesGallery";
 import HallsGallery from "./pages/HallsGallery";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +41,8 @@ const App = () => (
           <Route path="/montazne-garaze-galerija" element={<GaragesGallery />} />
           <Route path="/montazne-kuce-galerija" element={<HousesGallery />} />
           <Route path="/montazne-hale-galerija" element={<HallsGallery />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/hvala" element={<ThankYou />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

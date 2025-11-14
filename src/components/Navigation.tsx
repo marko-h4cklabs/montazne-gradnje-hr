@@ -29,7 +29,8 @@ const Navigation = () => {
     { name: "NAŠI PROIZVODI", href: "#proizvodi" },
     { name: "O NAMA", href: "#o-nama" },
     { name: "FAQ", href: "#faq" },
-    { name: "RECENZIJE", href: "/recenzije" }
+    { name: "RECENZIJE", href: "/recenzije" },
+    { name: "BLOG", href: "/blog" }
   ];
 
   const services = [
