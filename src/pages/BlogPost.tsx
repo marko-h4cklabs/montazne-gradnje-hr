@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, User } from "lucide-react";
+import blogHalaImage from "@/assets/blog-hala.png";
 
 const blogPostsData = {
   "1": {
@@ -62,7 +63,7 @@ const blogPostsData = {
   },
   "3": {
     title: "Održavanje montažnih hala: Savjeti stručnjaka",
-    image: "/lovable-uploads/fcc31405-5071-46a1-ac40-b422991656a3.png",
+    image: blogHalaImage,
     date: "5. siječnja 2024",
     author: "Beriko Tim",
     category: "Hale",
