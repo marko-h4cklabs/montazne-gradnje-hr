@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
 import blogHalaImage from "@/assets/blog-hala.png";
+import blogHouseImage from "@/assets/blog-house.png";
 
 const blogPosts = [
   {
@@ -18,7 +19,7 @@ const blogPosts = [
     id: 2,
     title: "Kako odabrati idealnu montažnu kuću za svoju obitelj",
     preview: "Planiranje izgradnje montažne kuće zahtijeva pažljivo razmatranje brojnih faktora. U ovom članku donosimo kompletni vodič kroz proces odabira...",
-    image: "/lovable-uploads/624af0ec-f1aa-481d-bae5-9b3145b561c5.png",
+    image: blogHouseImage,
     date: "10. siječnja 2024",
     category: "Kuće"
   },
