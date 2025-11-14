@@ -7,7 +7,7 @@ import { Calendar } from "lucide-react";
 const blogPosts = [
   {
     id: 1,
-    title: "Prednosti montažnih garaža u 2024. godini",
+    title: "Prednosti montažnih garaža u 2025. godini",
     preview: "Otkrijte zašto su montažne garaže sve popularniji izbor kod vlasnika nekretnina. Brza montaža, dostupne cijene i vrhunska kvaliteta su samo neke od prednosti...",
     image: "/lovable-uploads/fcc31405-5071-46a1-ac40-b422991656a3.png",
     date: "15. siječnja 2024",

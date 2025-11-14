@@ -6,7 +6,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 
 const blogPostsData = {
   "1": {
-    title: "Prednosti montažnih garaža u 2024. godini",
+    title: "Prednosti montažnih garaža u 2025. godini",
     image: "/lovable-uploads/fcc31405-5071-46a1-ac40-b422991656a3.png",
     date: "15. siječnja 2024",
     author: "Beriko Tim",
