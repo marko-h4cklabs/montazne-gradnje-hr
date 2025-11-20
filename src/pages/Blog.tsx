@@ -40,7 +40,7 @@ const Blog = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      <main className="flex-grow pt-[100px] pb-12 bg-gradient-to-b from-background to-muted/20">
+      <main className="flex-grow pt-[100px] pb-12 bg-background">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="text-center mb-12">
@@ -57,7 +57,7 @@ const Blog = () => {
             {blogPosts.map((post) => (
               <Card 
                 key={post.id}
-                className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+                className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border-2 border-beriko-blue"
                 onClick={() => navigate(`/blog/${post.id}`)}
               >
                 <div className="relative h-48 overflow-hidden">
