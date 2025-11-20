@@ -64,11 +64,11 @@ const Reviews = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[hsl(var(--ivory))]">
       <Navigation />
       <PromoBanner />
       <main className="pt-[140px]">
-        <section className="pt-6 pb-4 bg-gradient-to-b from-background to-secondary/5">
+        <section className="pt-6 pb-4 bg-[hsl(var(--ivory))]">
           <div className="container mx-auto px-4">
             <Button
               variant="ghost"
@@ -87,7 +87,7 @@ const Reviews = () => {
           </div>
         </section>
 
-        <section className="pb-16 bg-background">
+        <section className="pb-16 bg-[hsl(var(--ivory))]">
           <div className="container mx-auto px-4">
             <div className="columns-1 md:columns-2 lg:columns-3 gap-0">
               {reviewImages.map((review, index) => (

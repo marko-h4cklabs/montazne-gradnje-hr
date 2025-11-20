@@ -40,7 +40,7 @@ const Blog = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      <main className="flex-grow pt-[100px] pb-12 bg-background">
+      <main className="flex-grow pt-[100px] pb-12 bg-[hsl(var(--ivory))]">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="text-center mb-12">
