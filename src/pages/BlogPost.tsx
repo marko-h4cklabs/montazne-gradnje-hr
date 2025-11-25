@@ -95,7 +95,7 @@ const blogPostsData = {
   "4": {
     title: "Montažna ili klasična gradnja hale?",
     image: blogMontaznaHalaImage,
-    date: "20. siječnja 2024",
+    date: "26. Studenog 2025",
     author: "Beriko Tim",
     category: "Hale",
     content: `
