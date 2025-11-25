@@ -99,7 +99,7 @@ const blogPostsData = {
     author: "Beriko Tim",
     category: "Hale",
     content: `
-      <h2><span class="text-3xl font-bold">1.</span> Usporedba troškova</h2>
+      <h2 class="text-3xl font-bold mb-6 mt-12">Usporedba troškova</h2>
       
       <h3>Montažna hala (čelik + sendvič paneli):</h3>
       <p>U pravilu 15–30 % jeftinija od klasične zidane za istu površinu i visinu.</p>
@@ -113,7 +113,7 @@ const blogPostsData = {
 
       <p><strong>Ukratko:</strong> ako pričamo o standardnoj proizvodno-skladišnoj hali, montažna će skoro uvijek biti jeftinija i u izgradnji i u vremenu do "useljivosti".</p>
 
-      <h2><span class="text-3xl font-bold">2.</span> Detaljne prednosti montažnih hala</h2>
+      <h2 class="text-3xl font-bold mb-6 mt-12">Detaljne prednosti montažnih hala</h2>
 
       <h3>Prednosti</h3>
       
@@ -152,7 +152,7 @@ const blogPostsData = {
       <p>Čelik treba kvalitetnu zaštitu (pocinčavanje, boje).</p>
       <p>Na agresivnim lokacijama (more, kemijska industrija) treba posebno paziti.</p>
 
-      <h2><span class="text-3xl font-bold">3.</span> Prednosti klasičnih zidanih hala</h2>
+      <h2 class="text-3xl font-bold mb-6 mt-12">Prednosti klasičnih zidanih hala</h2>
 
       <h3>Prednosti</h3>
 
@@ -180,7 +180,7 @@ const blogPostsData = {
       <p>Proširenje je kompliciranije (rušenje dijela zidova, novi temelji, spoj na postojeće).</p>
       <p>Teže je kasnije "otvarati" velike otvore.</p>
 
-      <h2><span class="text-3xl font-bold">4.</span> Primjeri kada odabrati što</h2>
+      <h2 class="text-3xl font-bold mb-6 mt-12">Primjeri kada odabrati što</h2>
 
       <h3>Montažna hala – bolji izbor kad:</h3>
       <p>Radi se o skladištu, logističkom centru, proizvodnji, poljoprivrednoj hali.</p>
@@ -193,7 +193,7 @@ const blogPostsData = {
       <p>Imaš specifične zahtjeve: visoke temperature, buka, vandalizam, eksplozivna okolina.</p>
       <p>Želiš arhitektonski složeniju fasadu s puno otvora i "teškim" izgledom.</p>
 
-      <h2><span class="text-3xl font-bold">5.</span> Kratki sažetak za odluku</h2>
+      <h2 class="text-3xl font-bold mb-6 mt-12">Kratki sažetak za odluku</h2>
       <p>Ako misliš na tipičnu industrijsku/poslovnu halu (skladište + malo ureda):</p>
       <p><strong>👉 Montažna čelična hala s panelima je u 90% slučajeva racionalniji izbor (brže, jeftinije, fleksibilnije).</strong></p>
     `
