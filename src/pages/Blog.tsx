@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Calendar } from "lucide-react";
 import blogHalaImage from "@/assets/blog-hala.png";
 import blogHouseImage from "@/assets/blog-house.png";
+import blogMontaznaHalaImage from "@/assets/blog-montazna-hala.png";
 
 const blogPosts = [
   {
@@ -29,6 +30,14 @@ const blogPosts = [
     preview: "Pravilno održavanje industrijskih montažnih hala ključno je za njihovu dugotrajnost. Saznajte koje korake poduzeti za očuvanje vaše investicije...",
     image: blogHalaImage,
     date: "5. siječnja 2024",
+    category: "Hale"
+  },
+  {
+    id: 4,
+    title: "Montažna ili klasična gradnja hale?",
+    preview: "Usporedba troškova, prednosti i nedostataka montažnih i klasičnih hala. Saznajte koji tip gradnje je najbolji za vaš projekt...",
+    image: blogMontaznaHalaImage,
+    date: "20. siječnja 2024",
     category: "Hale"
   }
 ];

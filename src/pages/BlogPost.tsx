@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import blogHalaImage from "@/assets/blog-hala.png";
 import blogHouseImage from "@/assets/blog-house.png";
+import blogMontaznaHalaImage from "@/assets/blog-montazna-hala.png";
 
 const blogPostsData = {
   "1": {
@@ -89,6 +90,112 @@ const blogPostsData = {
       
       <h2>Zaključak</h2>
       <p>Ulaganje u redovito održavanje vaše montažne hale isplativo je dugoročno. Preventivne mjere uvijek su ekonomičnije od popravaka nastalih zanemarivanjem. Beriko d.o.o. nudi podršku i savjetovanje za sve aspekte održavanja montažnih hala.</p>
+    `
+  },
+  "4": {
+    title: "Montažna ili klasična gradnja hale?",
+    image: blogMontaznaHalaImage,
+    date: "20. siječnja 2024",
+    author: "Beriko Tim",
+    category: "Hale",
+    content: `
+      <h2>1. Usporedba troškova (grubo, okvirno)</h2>
+      
+      <h3>Montažna hala (čelik + sendvič paneli):</h3>
+      <p>U pravilu 15–30 % jeftinija od klasične zidane za istu površinu i visinu.</p>
+      <p>Manje betona, manje zidanja, manje radnih sati na gradilištu.</p>
+      <p>Najveća stavka: čelična konstrukcija + paneli, ali to je i dalje povoljnije od kompletne zidane ovojnice.</p>
+
+      <h3>Zidana/klasična hala (beton + cigla/blok + fasada):</h3>
+      <p>Više radne snage, više slojeva (zid – izolacija – fasada).</p>
+      <p>Temelji često masivniji zbog veće težine.</p>
+      <p>Trošak po m² je veći, a gradnja sporija (što opet košta – najam opreme, nadzor itd.).</p>
+
+      <p><strong>Ukratko:</strong> ako pričamo o standardnoj proizvodno-skladišnoj hali, montažna će skoro uvijek biti jeftinija i u izgradnji i u vremenu do "useljivosti".</p>
+
+      <h2>2. Detaljne prednosti montažnih hala</h2>
+
+      <h3>Prednosti</h3>
+      
+      <h4>Brzina gradnje</h4>
+      <p>Većina posla se obavi u tvornici (rezanje, bušenje, bojanje).</p>
+      <p>Na terenu se radi montaža – često je riječ o tjednima, ne mjesecima.</p>
+
+      <h4>Fleksibilnost</h4>
+      <p>Lako se doda novi raspon (proširenje hale).</p>
+      <p>Unutarnje pregrade nisu konstruktivne – lako se mijenja raspored.</p>
+      <p>Moguće i djelomično demontirati i preseliti konstrukciju.</p>
+
+      <h4>Lakši temelji</h4>
+      <p>Čelična konstrukcija je laganija od betonsko-zidane.</p>
+      <p>Manje betona u temeljima = niži trošak i brži radovi.</p>
+
+      <h4>Dobra toplinska izolacija</h4>
+      <p>Sendvič paneli s PUR/PIR ili mineralnom vunom.</p>
+      <p>Brzo se zatvara objekt, manji toplinski mostovi ako je dobro projektirano.</p>
+
+      <h4>Manje mokrih procesa</h4>
+      <p>Manje ovisnosti o vremenu (kiša, niske temp.) jer je manje žbuke, estriha i sl.</p>
+
+      <h4>Čisto gradilište</h4>
+      <p>Manje otpada, manje šute i logističkih problema.</p>
+
+      <h3>Nedostaci</h3>
+
+      <h4>Ograničena "osjećaj" masivnosti</h4>
+      <p>Za uredske/prodajne prostore neki više vole klasičan "zidani" osjećaj.</p>
+
+      <h4>Zvučna izolacija</h4>
+      <p>Paneli znaju lošije prigušivati zvuk od masivnih zidova (rješivo dodanim slojevima, ali to košta).</p>
+
+      <h4>Korozija / održavanje</h4>
+      <p>Čelik treba kvalitetnu zaštitu (pocinčavanje, boje).</p>
+      <p>Na agresivnim lokacijama (more, kemijska industrija) treba posebno paziti.</p>
+
+      <h2>3. Prednosti klasičnih zidanih hala</h2>
+
+      <h3>Prednosti</h3>
+
+      <h4>Masivnost i trajnost</h4>
+      <p>Veći osjećaj "čvrstoće".</p>
+      <p>Kod nekih namjena (npr. vrlo visoke temperature, udarci, vandalizam) zid može biti otporniji.</p>
+
+      <h4>Zvučna masa</h4>
+      <p>Zidani zid bolje zaustavlja bukom opterećene prostore (radionice, strojevi, glazbeni prostori itd.).</p>
+
+      <h4>Otpornost na vatru</h4>
+      <p>Betonske i zidane konstrukcije često imaju prirodno veću požarnu otpornost (R/REI klase je lakše postići bez dodatne zaštite na čeliku).</p>
+
+      <h3>Nedostaci</h3>
+
+      <h4>Sporija gradnja</h4>
+      <p>Više faza, više timova (armirači, tesari, zidari, fasaderi...).</p>
+      <p>Veća šansa za kašnjenja.</p>
+
+      <h4>Skuplja gradnja</h4>
+      <p>Više materijala i više radnih sati.</p>
+      <p>Detalji toplinskih mostova i fasade traže više rada i kontrole.</p>
+
+      <h4>Manja fleksibilnost</h4>
+      <p>Proširenje je kompliciranije (rušenje dijela zidova, novi temelji, spoj na postojeće).</p>
+      <p>Teže je kasnije "otvarati" velike otvore.</p>
+
+      <h2>4. Primjeri kada odabrati što</h2>
+
+      <h3>Montažna hala – bolji izbor kad:</h3>
+      <p>Radi se o skladištu, logističkom centru, proizvodnji, poljoprivrednoj hali.</p>
+      <p>Planiraš moguće proširenje kroz par godina.</p>
+      <p>Bitni su ti brzina, cijena i velika raspona bez stupova.</p>
+      <p>Trebaš visinu za regale, mostnu dizalicu, viljuškare itd.</p>
+
+      <h3>Zidana hala – bolji izbor kad:</h3>
+      <p>Objekt ima puno ureda, trgovinu ili javni sadržaj gdje dojam igra veliku ulogu.</p>
+      <p>Imaš specifične zahtjeve: visoke temperature, buka, vandalizam, eksplozivna okolina.</p>
+      <p>Želiš arhitektonski složeniju fasadu s puno otvora i "teškim" izgledom.</p>
+
+      <h2>5. Kratki sažetak za odluku</h2>
+      <p>Ako misliš na tipičnu industrijsku/poslovnu halu (skladište + malo ureda):</p>
+      <p><strong>👉 Montažna čelična hala s panelima je u 90% slučajeva racionalniji izbor (brže, jeftinije, fleksibilnije).</strong></p>
     `
   }
 };
