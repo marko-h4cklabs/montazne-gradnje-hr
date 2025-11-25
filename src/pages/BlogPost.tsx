@@ -63,35 +63,6 @@ const blogPostsData = {
       <p>Odabir montažne kuće ne mora biti stresan proces. S pravim pristupom i stručnom podrškom, možete pronaći savršenu kuću za svoju obitelj koja će pružiti udobnost, kvalitetu i vrijednost kroz godine.</p>
     `
   },
-  "3": {
-    title: "Održavanje montažnih hala: Savjeti stručnjaka",
-    image: blogHalaImage,
-    date: "5. siječnja 2024",
-    author: "Beriko Tim",
-    category: "Hale",
-    content: `
-      <h2>Osnove održavanja industrijskih montažnih hala</h2>
-      <p>Pravilno održavanje montažnih hala ključno je za njihovu dugotrajnost i funkcionalnost. U nastavku donosimo stručne savjete za očuvanje vaše investicije.</p>
-      
-      <h3>Redoviti pregledi konstrukcije</h3>
-      <p>Preporučujemo kvartalne preglede konstrukcije kako bi se na vrijeme otkrili potencijalni problemi. Posebnu pažnju posvetite spojevima, pričvršćivačima i zavarivanjima. Bilo kakve znakove korozije ili oštećenja treba odmah adresirati.</p>
-      
-      <h3>Održavanje krova</h3>
-      <p>Krov je najizloženiji dio hale i zahtijeva redovitu pažnju. Čistite odvodnju od lišća i drugih naslaga, provjeravajte tesnjenje, i osigurajte da nema propuštanja. Nakon jakih vremenskih nepogoda, uvijek izvršite pregled.</p>
-      
-      <h3>Vanjska zaštita</h3>
-      <p>Vanjski paneli trebaju povremeno čišćenje i zaštitu. Korištenje odgovarajućih zaštitnih prevlaka može značajno produžiti životni vijek materijala. Obratite posebnu pažnju na dijelove izložene direktnom suncu ili vlazi.</p>
-      
-      <h3>Unutarnja održavanje</h3>
-      <p>Redovito čišćenje unutrašnjosti, adekvatna ventilacija, i kontrola vlažnosti sprječavaju nastanak problema poput plijesni i korozije. U industrijskim halama, također je važno redovito provjeravati sigurnosne sustave.</p>
-      
-      <h3>Dokumentacija i planiranje</h3>
-      <p>Vodite detaljnu dokumentaciju svih obavljenih održavanja i popravaka. Ovo ne samo da pomaže u planiranju budućih intervencija, već i povećava vrijednost objekta.</p>
-      
-      <h2>Zaključak</h2>
-      <p>Ulaganje u redovito održavanje vaše montažne hale isplativo je dugoročno. Preventivne mjere uvijek su ekonomičnije od popravaka nastalih zanemarivanjem. Beriko d.o.o. nudi podršku i savjetovanje za sve aspekte održavanja montažnih hala.</p>
-    `
-  },
   "4": {
     title: "Montažna ili klasična gradnja hale?",
     image: blogMontaznaHalaImage,
