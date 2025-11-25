@@ -13,7 +13,7 @@ const blogPosts = [
     title: "Montažna ili klasična gradnja hale?",
     preview: "Usporedba troškova, prednosti i nedostataka montažnih i klasičnih hala. Saznajte koji tip gradnje je najbolji za vaš projekt...",
     image: blogMontaznaHalaImage,
-    date: "20. siječnja 2024",
+    date: "26. Studenog 2025",
     category: "Hale"
   },
   {
