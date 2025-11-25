@@ -31,14 +31,6 @@ const blogPosts = [
     image: blogHouseImage,
     date: "10. siječnja 2024",
     category: "Kuće"
-  },
-  {
-    id: 3,
-    title: "Održavanje montažnih hala: Savjeti stručnjaka",
-    preview: "Pravilno održavanje industrijskih montažnih hala ključno je za njihovu dugotrajnost. Saznajte koje korake poduzeti za očuvanje vaše investicije...",
-    image: blogHalaImage,
-    date: "5. siječnja 2024",
-    category: "Hale"
   }
 ];
 
