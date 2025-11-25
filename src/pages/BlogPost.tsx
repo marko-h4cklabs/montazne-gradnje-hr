@@ -152,6 +152,10 @@ const blogPostsData = {
       <p>Čelik treba kvalitetnu zaštitu (pocinčavanje, boje).</p>
       <p>Na agresivnim lokacijama (more, kemijska industrija) treba posebno paziti.</p>
 
+      <div class="my-8">
+        <img src="/blog-brick-hall.png" alt="Klasična zidana hala u izgradnji" class="w-full rounded-lg shadow-lg" />
+      </div>
+
       <h2 class="text-3xl font-bold mb-6 mt-12">Prednosti klasičnih zidanih hala</h2>
 
       <h3>Prednosti</h3>
