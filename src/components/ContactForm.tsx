@@ -7,6 +7,8 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Send } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 interface ContactFormProps {
   onClose: () => void;
@@ -21,10 +23,22 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
     phone: "",
     email: "",
     mjestoPrebivalidta: "",
-    // Mjere objekta
+    // Dimenzije objekta (m)
     width: "",
-    depth: "",
+    length: "",
     height: "",
+    // Sekcijska vrata
+    gateWidth: "",
+    gateHeight: "",
+    // Krov
+    roofType: "",
+    // Boje
+    roofColor: "",
+    wallColor: "",
+    gateColor: "",
+    // PVC opcije
+    pvcDoor: "",
+    pvcWindow: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -43,8 +57,16 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
         selectedService,
         mjestoPrebivalidta: formData.mjestoPrebivalidta,
         width: formData.width,
-        depth: formData.depth,
+        length: formData.length,
         height: formData.height,
+        gateWidth: formData.gateWidth,
+        gateHeight: formData.gateHeight,
+        roofType: formData.roofType,
+        roofColor: formData.roofColor,
+        wallColor: formData.wallColor,
+        gateColor: formData.gateColor,
+        pvcDoor: formData.pvcDoor,
+        pvcWindow: formData.pvcWindow,
         message: formData.message,
       };
 
@@ -77,6 +99,12 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
+
+  const colorOptions = [
+    { value: "bijela", label: "Bijela" },
+    { value: "antracit", label: "Antracit" },
+    { value: "crvena", label: "Crvena" },
+  ];
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -142,10 +170,10 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
         />
       </div>
 
-      {/* Podaci I mjere objekta */}
+      {/* Dimenzije objekta */}
       <div className="border-t pt-6">
-        <h3 className="text-lg font-semibold mb-4">Podaci i mjere objekta</h3>
-        <p className="text-sm text-muted-foreground mb-4">*mjere u cm</p>
+        <h3 className="text-lg font-semibold mb-2">Dimenzije objekta</h3>
+        <p className="text-sm text-muted-foreground mb-4">*mjere u m</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -161,11 +189,11 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
         </div>
 
         <div>
-          <Label htmlFor="depth">Dubina *</Label>
+          <Label htmlFor="length">Duljina *</Label>
           <Input
-            id="depth"
-            value={formData.depth}
-            onChange={(e) => handleInputChange("depth", e.target.value)}
+            id="length"
+            value={formData.length}
+            onChange={(e) => handleInputChange("length", e.target.value)}
             className="mt-1"
             required
           />
@@ -180,6 +208,167 @@ const ContactForm = ({ onClose, selectedService }: ContactFormProps) => {
             className="mt-1"
             required
           />
+        </div>
+      </div>
+
+      {/* Sekcijska vrata */}
+      <div className="border-t pt-6">
+        <h3 className="text-lg font-semibold mb-4">Sekcijska vrata</h3>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <Label htmlFor="gateWidth">Širina (m) *</Label>
+          <Input
+            id="gateWidth"
+            value={formData.gateWidth}
+            onChange={(e) => handleInputChange("gateWidth", e.target.value)}
+            className="mt-1"
+            required
+          />
+        </div>
+
+        <div>
+          <Label htmlFor="gateHeight">Visina (m) *</Label>
+          <Input
+            id="gateHeight"
+            value={formData.gateHeight}
+            onChange={(e) => handleInputChange("gateHeight", e.target.value)}
+            className="mt-1"
+            required
+          />
+        </div>
+      </div>
+
+      {/* Krov */}
+      <div className="border-t pt-6">
+        <h3 className="text-lg font-semibold mb-4">Krov *</h3>
+        <RadioGroup
+          value={formData.roofType}
+          onValueChange={(value) => handleInputChange("roofType", value)}
+          className="flex gap-6"
+          required
+        >
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="1-voda" id="roof-1" />
+            <Label htmlFor="roof-1" className="cursor-pointer">1 voda</Label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="2-vode" id="roof-2" />
+            <Label htmlFor="roof-2" className="cursor-pointer">2 vode</Label>
+          </div>
+        </RadioGroup>
+      </div>
+
+      {/* Boje */}
+      <div className="border-t pt-6">
+        <h3 className="text-lg font-semibold mb-4">Boja</h3>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <Label htmlFor="roofColor">Krova *</Label>
+          <Select
+            value={formData.roofColor}
+            onValueChange={(value) => handleInputChange("roofColor", value)}
+            required
+          >
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite boju" />
+            </SelectTrigger>
+            <SelectContent>
+              {colorOptions.map((color) => (
+                <SelectItem key={color.value} value={color.value}>
+                  {color.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div>
+          <Label htmlFor="wallColor">Zida *</Label>
+          <Select
+            value={formData.wallColor}
+            onValueChange={(value) => handleInputChange("wallColor", value)}
+            required
+          >
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite boju" />
+            </SelectTrigger>
+            <SelectContent>
+              {colorOptions.map((color) => (
+                <SelectItem key={color.value} value={color.value}>
+                  {color.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div>
+          <Label htmlFor="gateColor">Sekcijskih vrata *</Label>
+          <Select
+            value={formData.gateColor}
+            onValueChange={(value) => handleInputChange("gateColor", value)}
+            required
+          >
+            <SelectTrigger className="mt-1">
+              <SelectValue placeholder="Odaberite boju" />
+            </SelectTrigger>
+            <SelectContent>
+              {colorOptions.map((color) => (
+                <SelectItem key={color.value} value={color.value}>
+                  {color.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+
+      {/* PVC opcije */}
+      <div className="border-t pt-6">
+        <h3 className="text-lg font-semibold mb-4">Dodatne opcije</h3>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <Label className="mb-3 block">PVC vrata jednokrilna? *</Label>
+          <RadioGroup
+            value={formData.pvcDoor}
+            onValueChange={(value) => handleInputChange("pvcDoor", value)}
+            className="flex gap-6"
+            required
+          >
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="da" id="pvc-door-da" />
+              <Label htmlFor="pvc-door-da" className="cursor-pointer">DA</Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="ne" id="pvc-door-ne" />
+              <Label htmlFor="pvc-door-ne" className="cursor-pointer">NE</Label>
+            </div>
+          </RadioGroup>
+        </div>
+
+        <div>
+          <Label className="mb-3 block">PVC prozor? *</Label>
+          <RadioGroup
+            value={formData.pvcWindow}
+            onValueChange={(value) => handleInputChange("pvcWindow", value)}
+            className="flex gap-6"
+            required
+          >
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="da" id="pvc-window-da" />
+              <Label htmlFor="pvc-window-da" className="cursor-pointer">DA</Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="ne" id="pvc-window-ne" />
+              <Label htmlFor="pvc-window-ne" className="cursor-pointer">NE</Label>
+            </div>
+          </RadioGroup>
         </div>
       </div>
 

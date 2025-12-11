@@ -16,10 +16,22 @@ interface ContactEmailRequest {
   phone: string;
   selectedService?: string;
   mjestoPrebivalidta?: string;
-  // Object dimensions
+  // Object dimensions (m)
   width?: string;
-  depth?: string;
+  length?: string;
   height?: string;
+  // Sectional doors
+  gateWidth?: string;
+  gateHeight?: string;
+  // Roof type
+  roofType?: string;
+  // Colors
+  roofColor?: string;
+  wallColor?: string;
+  gateColor?: string;
+  // PVC options
+  pvcDoor?: string;
+  pvcWindow?: string;
   message?: string;
 }
 
@@ -33,7 +45,10 @@ const handler = async (req: Request): Promise<Response> => {
     const requestData: ContactEmailRequest = await req.json();
     const { 
       firstName, lastName, email, phone, selectedService,
-      mjestoPrebivalidta, width, depth, height, message
+      mjestoPrebivalidta, width, length, height,
+      gateWidth, gateHeight, roofType,
+      roofColor, wallColor, gateColor,
+      pvcDoor, pvcWindow, message
     } = requestData;
 
     console.log("Sending contact email:", { firstName, lastName, email, selectedService });
@@ -47,11 +62,38 @@ const handler = async (req: Request): Promise<Response> => {
     }
     
     // Object dimensions
-    if (width || depth || height) {
-      detailsSection += '<h3>Podaci i mjere objekta (cm):</h3>';
-      if (width) detailsSection += `<p><strong>Širina:</strong> ${width} cm</p>`;
-      if (depth) detailsSection += `<p><strong>Dubina:</strong> ${depth} cm</p>`;
-      if (height) detailsSection += `<p><strong>Visina:</strong> ${height} cm</p>`;
+    if (width || length || height) {
+      detailsSection += '<h3>Dimenzije objekta (m):</h3>';
+      if (width) detailsSection += `<p><strong>Širina:</strong> ${width} m</p>`;
+      if (length) detailsSection += `<p><strong>Duljina:</strong> ${length} m</p>`;
+      if (height) detailsSection += `<p><strong>Visina:</strong> ${height} m</p>`;
+    }
+
+    // Sectional doors
+    if (gateWidth || gateHeight) {
+      detailsSection += '<h3>Sekcijska vrata:</h3>';
+      if (gateWidth) detailsSection += `<p><strong>Širina:</strong> ${gateWidth} m</p>`;
+      if (gateHeight) detailsSection += `<p><strong>Visina:</strong> ${gateHeight} m</p>`;
+    }
+
+    // Roof type
+    if (roofType) {
+      detailsSection += `<p><strong>Krov:</strong> ${roofType === '1-voda' ? '1 voda' : '2 vode'}</p>`;
+    }
+
+    // Colors
+    if (roofColor || wallColor || gateColor) {
+      detailsSection += '<h3>Boje:</h3>';
+      if (roofColor) detailsSection += `<p><strong>Boja krova:</strong> ${roofColor}</p>`;
+      if (wallColor) detailsSection += `<p><strong>Boja zida:</strong> ${wallColor}</p>`;
+      if (gateColor) detailsSection += `<p><strong>Boja sekcijskih vrata:</strong> ${gateColor}</p>`;
+    }
+
+    // PVC options
+    if (pvcDoor || pvcWindow) {
+      detailsSection += '<h3>Dodatne opcije:</h3>';
+      if (pvcDoor) detailsSection += `<p><strong>PVC vrata jednokrilna:</strong> ${pvcDoor.toUpperCase()}</p>`;
+      if (pvcWindow) detailsSection += `<p><strong>PVC prozor:</strong> ${pvcWindow.toUpperCase()}</p>`;
     }
     
     // Additional message
@@ -102,7 +144,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send confirmation email to the customer
     await resend.emails.send({
       from: "Beriko Montage <noreply@mail.beriko.com>",
-      to: [email],
+      to: [requestData.email],
       subject: `Hvala na upitu - Beriko Montage${selectedService ? ` (${selectedService})` : ''}`,
       html: `
         <h2>Hvala ${firstName}!</h2>
