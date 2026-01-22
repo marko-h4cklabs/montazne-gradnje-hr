@@ -143,11 +143,11 @@ const Hero = () => {
       {/* Mobile Layout */}
       <div className="md:hidden pt-20">
         {/* Headline above slider */}
-        <div className="px-4 pt-4 pb-0 bg-[hsl(var(--ivory))] text-center">
-          <h1 className="text-3xl font-bold leading-tight text-[hsl(var(--beriko-blue))] mb-2">
+        <div className="px-4 pt-3 pb-0 bg-[hsl(var(--ivory))] text-center">
+          <h1 className="text-3xl font-bold leading-tight text-[hsl(var(--beriko-blue))] mb-1">
             Vaš objekt, naša briga!
           </h1>
-          <p className="text-lg font-bold text-[hsl(var(--beriko-blue))] text-center">
+          <p className="text-base font-bold text-[hsl(var(--beriko-blue))] text-center mb-1">
             Iz obiteljske radionice do vašeg doma.<br />
             Tvrtka Beriko već tri desetljeća stvara montažne garaže s dušom – izrađene s pažnjom, iskustvom i povjerenjem koje traje.
           </p>
@@ -175,7 +175,7 @@ const Hero = () => {
           </div>
 
           {/* Slide Indicators - Below Image */}
-          <div className="py-2 bg-[hsl(var(--ivory))] flex justify-center gap-2">
+          <div className="py-1 bg-[hsl(var(--ivory))] flex justify-center gap-2">
             {images.map((_, index) => (
               <button
                 key={index}
@@ -192,9 +192,9 @@ const Hero = () => {
         </div>
         
         {/* Features 2x2 grid - Mobile */}
-        <div className="px-4 py-6 bg-[hsl(var(--ivory))]">
+        <div className="px-4 py-3 bg-[hsl(var(--ivory))]">
           <div className="max-w-xl mx-auto">
-            <div className="grid grid-cols-2 gap-x-6 gap-y-6">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-4">
               {/* First row */}
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 mb-2 rounded-full bg-[hsl(var(--beriko-blue))]/10 flex items-center justify-center">
