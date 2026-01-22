@@ -147,21 +147,21 @@ const Hero = () => {
           <h1 className="text-3xl font-bold leading-tight text-[hsl(var(--beriko-blue))] mb-1">
             Vaš objekt, naša briga!
           </h1>
-          <p className="text-base font-bold text-[hsl(var(--beriko-blue))] text-center mb-1">
+          <p className="text-base font-bold text-[hsl(var(--beriko-blue))] text-center">
             Iz obiteljske radionice do vašeg doma.<br />
             Tvrtka Beriko već tri desetljeća stvara montažne garaže s dušom – izrađene s pažnjom, iskustvom i povjerenjem koje traje.
           </p>
         </div>
 
         {/* Scrolling Images with Embla */}
-        <div className="relative overflow-hidden">
-          <div className="h-[43vh]">
+        <div className="relative overflow-hidden bg-[hsl(var(--ivory))]">
+          <div className="h-[40vh]">
             <div className="overflow-hidden bg-[hsl(var(--ivory))]" ref={emblaRefMobile}>
               <div className="flex">
                 {images.map((image, index) => (
                   <div 
                     key={index} 
-                    className="flex-[0_0_100%] min-w-0 h-[43vh] flex items-center justify-center bg-[hsl(var(--ivory))]"
+                    className="flex-[0_0_100%] min-w-0 h-[40vh] flex items-center justify-center bg-[hsl(var(--ivory))]"
                   >
                     <img
                       src={image.src}
