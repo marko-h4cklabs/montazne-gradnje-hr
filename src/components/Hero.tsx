@@ -141,9 +141,9 @@ const Hero = () => {
   return (
     <>
       {/* Mobile Layout */}
-      <div className="md:hidden pt-[140px]">
+      <div className="md:hidden pt-20">
         {/* Headline above slider */}
-        <div className="px-4 pt-6 pb-0 bg-[hsl(var(--ivory))] text-center">
+        <div className="px-4 pt-4 pb-0 bg-[hsl(var(--ivory))] text-center">
           <h1 className="text-3xl font-bold leading-tight text-[hsl(var(--beriko-blue))] mb-2">
             Vaš objekt, naša briga!
           </h1>
