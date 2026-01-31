@@ -137,7 +137,7 @@ const AboutUs = () => {
                   <MapPin className="w-5 h-5 text-[hsl(var(--beriko-blue))]" />
                   <div>
                     <p className="font-semibold text-[hsl(var(--beriko-blue))] mb-0.5 text-sm">Adresa:</p>
-                    <p className="text-gray-700 text-xs">Beriko Obrt, 48362 Kloštar Pod.,S.Radića 2</p>
+                    <p className="text-gray-700 text-xs">Beriko d.o.o., 48362 Kloštar Pod., S. Radića 2</p>
                   </div>
                 </div>
                 
